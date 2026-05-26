@@ -2,17 +2,17 @@
 
 export const siteConfig = {
   // 1. 网站标题与博主信息
-  title: "XingHuiSama の 宝藏之地",
+  title: "threetwoa の 七码处",
   faviconUrl: "https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg",
-  authorName: "XingHuiSama",
-  bio: "在代码、学术与分子动力学模拟间穿梭的普通人。近期正埋头于 GROMACS 模拟研究与神经网络计算。",
+  authorName: "threetwoa",
+  bio: "我是 threetwoa，大二软件学生，个人开发者。白天在 IDE 里跟 Bug 搏斗，晚上在 Markdown 里跟灵感私奔。欢迎来到七码处——我的数字花园，目前只种了代码和一些不成器的诗。",
 
-  navTitle: "XingHuiSama",
+  navTitle: "threetwoa",
 
   // 👇 【新增】导航栏中间的那个后缀/分隔符（默认是 の）
   navSuffix: "の",
 
-  navAfter: "宝藏之地",
+  navAfter: "七码处",
 
   // 2. 头像设置 (支持网络链接，或将图片放入 public 文件夹后使用 "/me.jpg")
   avatarUrl: "https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg",
@@ -31,18 +31,18 @@ export const siteConfig = {
   photoWallImage: "https://bu.dusays.com/2026/03/24/69c1e38b4c370.jpg",
   cloudMusicIds: ["1809646618", "3361076230", "1859390262"],
   social: {
-    github: "https://github.com/heiehiehi",
-    gitee: "https://github.com/heiehiehi",
-    google: "mailto:bilibiliwuwuwu@gmail.com",
-    email: "1124533793@qq.com",
-    qq: "1124533793",
-    wechat: "XingHuisama",
+    github: "https://github.com/Aafff623",
+    gitee: "",
+    google: "mailto:laiyif68@gmail.com",
+    email: "1012512411@qq.com",
+    qq: "1012512411",
+    wechat: "player0623",
   },
   counts: {
     photos: 128, // 照片墙数量可以手动写死或动态计算
   },
-  chatterTitle: "云端杂谈", // 你可以改成任何你喜欢的名字
-  chatterDescription: "代码、学术、提瓦特与泰拉大陆的碎片记录",
+  chatterTitle: "闲笔",
+  chatterDescription: "代码、灵感与不成器的诗",
 
   // 👇 【新增】：图床核心配置 (PicBed Configuration)
   picBedName: "图床",
@@ -50,7 +50,28 @@ export const siteConfig = {
   picBedToken: "", // 留空，等你能在后台填入并覆写
 
   // 👇 【新增】：全局背景弹幕配置
-  danmakuList: ["在干嘛呢？", "有笨蛋嘛？", "前方高能反应！", "GROMACS 跑起来了吗？", "MD 模拟什么时候才能出图啊", "Graph Neural Networks 炼丹中...", "BUG 修复进度 99%", "今天背单词了吗？", "Tailwind CSS 拯救前端", "写算法中", "睡大觉中", "到底在干嘛？"],
+  danmakuList: [
+    "git commit -m 'fix bug' 了吗？",
+    "console.log('debug')",
+    "Ctrl+C, Ctrl+V 工程师",
+    "It's not a bug, it's a feature",
+    "404 Not Found",
+    "while(true) { 学习 }",
+    "// TODO: 写代码",
+    "遥遥领先",
+    "泰裤辣",
+    "家人们谁懂啊",
+    "精神状态良好",
+    "在小小的花园里面挖呀挖",
+    "吹灭读书灯，一身都是月",
+    "人间有味是清欢",
+    "心有猛虎，细嗅蔷薇",
+    "我与我周旋久，宁作我",
+    "且将新火试新茶",
+    "七码处的风，吹过二进制森林",
+    "留白正在打盹",
+    "今天也是充满希望的一天"
+  ],
   gitalkConfig: {
     clientID: "",
     clientSecret: "",
@@ -70,6 +91,6 @@ export const siteConfig = {
     maxOutputTokens: 150,
     temperature: 0.85,
   },
-  friendLinkApplyFormat: "名称：XingHuiSamaの宝藏之地\n简介：今天我也要学习吗\n链接：https://www.xinghuisama.top\n头像：https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg",
+  friendLinkApplyFormat: "名称：threetwoaの七码处\n简介：大二软件学生的数字花园\n链接：https://www.threetwoa-digital-garden.vercel.app\n头像：https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg",
   enableLevelSystem: true,
 };
