@@ -62,7 +62,7 @@ Step 1: Obtain the lossless updater (only required for the first time)
 
 #### 1. Download the update.bat and update.py files from the project's root directory.
 
-#### 2. Move the downloaded update.bat and update.py to the outermost root directory of your local blog project (i.e., alongside the cms and frontend folders).
+#### 2. Move the downloaded update.bat and update.py to the outermost root directory of your local blog project (i.e., alongside the threetwoa-blog-manager and frontend folders).
 
 As shown below:
 
@@ -74,7 +74,7 @@ As shown below:
 #### ① Startup Script
 
 Once you have completed the environment configuration above, the basic preparation is done.
-First, enter the `cms` folder (**⚠️ Note: Do not rename this folder under any circumstances, or environment path resolution will fail!**)
+First, enter the `threetwoa-blog-manager` folder (**⚠️ Note: Do not rename this folder under any circumstances, or environment path resolution will fail!**)
 
 Double-click to run the startup script in the folder:
 `Start.bat`

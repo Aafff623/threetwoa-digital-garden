@@ -51,7 +51,7 @@ const managerSpecificConfigs = [
 const tasks = [
   {
     name: '[后台]',
-    filePath: path.resolve('./cms/siteConfig.ts'),
+    filePath: path.resolve('./threetwoa-blog-manager/siteConfig.ts'),
     // 后台需要：共用配置 + 专属图床配置
     configs: [...commonConfigs, ...managerSpecificConfigs] 
   },
