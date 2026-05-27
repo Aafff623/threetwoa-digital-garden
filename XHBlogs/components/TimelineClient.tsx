@@ -19,19 +19,21 @@ export default function TimelineClient({ posts: initialPosts, tags }: { posts: a
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const gridScrollRef = useRef<HTMLDivElement>(null);
 
-  // 🌟 核心魔法 1：强制移动端为矩阵模式
+  // 🌟 核心魔法 1：移动端强制矩阵模式，桌面端恢复时间线
   useEffect(() => {
-    const enforceMobileView = () => {
+    const enforceView = () => {
       if (window.innerWidth < 768) {
         setViewMode('card');
+      } else {
+        setViewMode('timeline');
       }
     };
 
     // 初始化检测
-    enforceMobileView();
+    enforceView();
     // 监听窗口大小变化
-    window.addEventListener('resize', enforceMobileView);
-    return () => window.removeEventListener('resize', enforceMobileView);
+    window.addEventListener('resize', enforceView);
+    return () => window.removeEventListener('resize', enforceView);
   }, []);
 
   useEffect(() => {

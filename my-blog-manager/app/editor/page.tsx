@@ -172,7 +172,7 @@ function EditorContent() {
   };
 
   return (
-    <div className="h-screen w-screen overflow-hidden relative">
+    <div className="min-h-screen relative">
 
       <AnimatePresence>
         {exitModalOpen && (
@@ -211,7 +211,7 @@ function EditorContent() {
       </div>
 
       <PageTransition>
-        <main className="mx-auto w-[96%] max-w-[1750px] flex flex-row gap-6 relative" style={{ marginTop: '144px', height: 'calc(100vh - 144px - 32px)', marginBottom: '32px' }}>
+        <main className="mx-auto w-[96%] max-w-[1750px] flex flex-row gap-6 relative pt-36 pb-8 min-h-[calc(100vh-144px)]">
 
           <button
             onClick={handleBackClick}
@@ -221,7 +221,7 @@ function EditorContent() {
             返回上一级
           </button>
 
-          <section className="flex-1 bg-white/30 dark:bg-slate-800/40 backdrop-blur-[60px] rounded-[50px] shadow-2xl border border-white/30 dark:border-white/10 flex flex-col overflow-hidden">
+          <section className="flex-1 bg-white/30 dark:bg-slate-800/40 backdrop-blur-[60px] rounded-[50px] shadow-2xl border border-white/30 dark:border-white/10 flex flex-col overflow-hidden h-[calc(100vh-180px)]">
             <RichTextEditor
               ref={editorRef}
               title={title}
@@ -233,7 +233,7 @@ function EditorContent() {
             />
           </section>
 
-          <aside className="w-[360px] shrink-0 bg-white/30 dark:bg-slate-800/40 backdrop-blur-[60px] rounded-[50px] shadow-2xl border border-white/30 dark:border-white/10 flex flex-col overflow-hidden">
+          <aside className="w-[360px] shrink-0 bg-white/30 dark:bg-slate-800/40 backdrop-blur-[60px] rounded-[50px] shadow-2xl border border-white/30 dark:border-white/10 flex flex-col overflow-hidden h-[calc(100vh-180px)]">
             <MetaMatrix
               type={docType as any} tags={tags} setTags={setTags} cover={cover} setCover={setCover} summary={summary} setSummary={setSummary} mood={mood} setMood={setMood}
               allHistoryPostTags={historyPostTags} allHistoryChatterTags={historyChatterTags} isLoadingTags={isLoadingTags}

@@ -46,8 +46,8 @@ export const siteConfig = {
 
   // 👇 【新增】：图床核心配置 (PicBed Configuration)
   picBedName: "图床",
-  picBedUrl: "", // 默认的 Lsky Pro API 地址
-  picBedToken: "", // 留空，等你能在后台填入并覆写
+  picBedUrl: "http://129.212.238.93:8089/api/v1",
+  picBedToken: "1|SgwH7MiJtTSp9rhWHNuVZf7S8G395ebOLsMiNIe1",
 
   // 👇 【新增】：全局背景弹幕配置
   danmakuList: [

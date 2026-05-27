@@ -161,7 +161,7 @@ const RichTextEditor = forwardRef<RichTextEditorHandle, EditorProps>(({ title, s
       setRenderTrigger(v => v + 1);
     },
     editorProps: {
-      attributes: { class: 'prose prose-slate dark:prose-invert prose-lg max-w-none w-full focus:outline-none min-h-full pb-60 font-serif leading-relaxed px-4 editor-content-area' }
+      attributes: { class: 'prose prose-slate dark:prose-invert prose-lg max-w-none w-full focus:outline-none min-h-0 pb-60 font-serif leading-relaxed px-4 editor-content-area' }
     },
   });
 
@@ -224,7 +224,7 @@ const RichTextEditor = forwardRef<RichTextEditorHandle, EditorProps>(({ title, s
   );
 
   return (
-    <div className="flex flex-col h-full w-full min-h-0 bg-transparent relative">
+    <div className="flex flex-col h-full w-full min-h-0 bg-transparent relative overflow-hidden">
       <style dangerouslySetInnerHTML={{ __html: `
         .editor-content-area h1 { font-size: 3rem !important; font-weight: 950 !important; margin-bottom: 2rem !important; margin-top: 3rem !important; line-height: 1.1; color: inherit; } 
         .editor-content-area h2 { font-size: 2.2rem !important; font-weight: 800 !important; margin-bottom: 1.5rem !important; margin-top: 2rem !important; } 
@@ -295,11 +295,11 @@ const RichTextEditor = forwardRef<RichTextEditorHandle, EditorProps>(({ title, s
         )}
       </div>
 
-      <div className="shrink-0 px-8 py-2.5 border-y border-white/20 dark:border-white/10 flex flex-wrap items-center gap-1.5 bg-white/10 dark:bg-black/20 backdrop-blur-md z-50">
-        <div className="flex items-center gap-1"><Btn onClick={() => editor.chain().focus().undo().run()}><Undo2 size={16}/></Btn><Btn onClick={() => editor.chain().focus().redo().run()}><Redo2 size={16}/></Btn><Btn onClick={() => editor.chain().focus().unsetAllMarks().run()}><RemoveFormatting size={16}/></Btn></div>
-        <div className="w-px h-6 bg-slate-400/20 mx-1" />
+      <div className="shrink-0 px-4 py-2.5 border-y border-white/20 dark:border-white/10 flex items-center gap-1 bg-white/10 dark:bg-black/20 backdrop-blur-md z-50 overflow-x-auto overflow-y-hidden scrollbar-none">
+        <div className="flex items-center gap-1 shrink-0"><Btn onClick={() => editor.chain().focus().undo().run()}><Undo2 size={16}/></Btn><Btn onClick={() => editor.chain().focus().redo().run()}><Redo2 size={16}/></Btn><Btn onClick={() => editor.chain().focus().unsetAllMarks().run()}><RemoveFormatting size={16}/></Btn></div>
+        <div className="w-px h-6 bg-slate-400/20 mx-1 shrink-0" />
 
-        <div className="flex items-center gap-1 bg-black/5 dark:bg-white/5 rounded-xl px-2">
+        <div className="flex items-center gap-1 bg-black/5 dark:bg-white/5 rounded-xl px-2 shrink-0">
           <ChevronDown size={12} className="text-slate-400" />
           <select
             value={currentFontSize}
@@ -313,7 +313,7 @@ const RichTextEditor = forwardRef<RichTextEditorHandle, EditorProps>(({ title, s
           </select>
         </div>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 shrink-0">
           <Btn onClick={() => editor.chain().focus().setParagraph().run()} active={editor.isActive('paragraph') && !editor.isActive('heading')} title="正文"><Type size={18}/></Btn>
           <Btn onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} active={editor.isActive('heading', { level: 1 })} title="一级标题 (#)">
             <div className="flex items-center gap-1 font-black"><Heading1 size={16}/><span className="text-[10px] opacity-60">#</span></div>
@@ -326,30 +326,30 @@ const RichTextEditor = forwardRef<RichTextEditorHandle, EditorProps>(({ title, s
           </Btn>
         </div>
 
-        <div className="w-px h-6 bg-slate-400/20 mx-1" />
-        <div className="flex items-center gap-1">
+        <div className="w-px h-6 bg-slate-400/20 mx-1 shrink-0" />
+        <div className="flex items-center gap-1 shrink-0">
           <Btn onClick={() => editor.chain().focus().toggleBold().run()} active={editor.isActive('bold')}><Bold size={16}/></Btn>
           <Btn onClick={() => editor.chain().focus().toggleItalic().run()} active={editor.isActive('italic')}><Italic size={16}/></Btn>
           <Btn onClick={() => editor.chain().focus().toggleUnderline().run()} active={editor.isActive('underline')}><UnderlineIcon size={16}/></Btn>
           <Btn onClick={() => editor.chain().focus().toggleStrike().run()} active={editor.isActive('strike')}><Strikethrough size={16}/></Btn>
           <Btn onClick={() => editor.chain().focus().toggleCodeBlock().run()} active={editor.isActive('codeBlock')}><Code2 size={16}/></Btn>
         </div>
-        <div className="w-px h-6 bg-slate-400/20 mx-1" />
-        <div className="flex items-center gap-1"><Btn onClick={() => editor.chain().focus().setTextAlign('left').run()} active={editor.isActive({ textAlign: 'left' })}><AlignLeft size={16}/></Btn><Btn onClick={() => editor.chain().focus().setTextAlign('center').run()} active={editor.isActive({ textAlign: 'center' })}><AlignCenter size={16}/></Btn><Btn onClick={() => editor.chain().focus().setTextAlign('right').run()} active={editor.isActive({ textAlign: 'right' })}><AlignRight size={16}/></Btn></div>
-        <div className="w-px h-6 bg-slate-400/20 mx-1" />
-        <div className="flex items-center gap-1"><Btn onClick={() => editor.chain().focus().toggleBulletList().run()} active={editor.isActive('bulletList')}><List size={16}/></Btn><Btn onClick={() => editor.chain().focus().toggleOrderedList().run()} active={editor.isActive('orderedList')}><ListOrdered size={16}/></Btn><Btn onClick={() => editor.chain().focus().toggleTaskList().run()} active={editor.isActive('taskList')}><ListTodo size={16}/></Btn><Btn onClick={() => editor.chain().focus().toggleBlockquote().run()} active={editor.isActive('blockquote')}><Quote size={16}/></Btn></div>
-        <div className="w-px h-6 bg-slate-400/20 mx-1" />
+        <div className="w-px h-6 bg-slate-400/20 mx-1 shrink-0" />
+        <div className="flex items-center gap-1 shrink-0"><Btn onClick={() => editor.chain().focus().setTextAlign('left').run()} active={editor.isActive({ textAlign: 'left' })}><AlignLeft size={16}/></Btn><Btn onClick={() => editor.chain().focus().setTextAlign('center').run()} active={editor.isActive({ textAlign: 'center' })}><AlignCenter size={16}/></Btn><Btn onClick={() => editor.chain().focus().setTextAlign('right').run()} active={editor.isActive({ textAlign: 'right' })}><AlignRight size={16}/></Btn></div>
+        <div className="w-px h-6 bg-slate-400/20 mx-1 shrink-0" />
+        <div className="flex items-center gap-1 shrink-0"><Btn onClick={() => editor.chain().focus().toggleBulletList().run()} active={editor.isActive('bulletList')}><List size={16}/></Btn><Btn onClick={() => editor.chain().focus().toggleOrderedList().run()} active={editor.isActive('orderedList')}><ListOrdered size={16}/></Btn><Btn onClick={() => editor.chain().focus().toggleTaskList().run()} active={editor.isActive('taskList')}><ListTodo size={16}/></Btn><Btn onClick={() => editor.chain().focus().toggleBlockquote().run()} active={editor.isActive('blockquote')}><Quote size={16}/></Btn></div>
+        <div className="w-px h-6 bg-slate-400/20 mx-1 shrink-0" />
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 shrink-0">
           <Btn onClick={() => editor.chain().focus().toggleSuperscript().run()} active={editor.isActive('superscript')}><SupIcon size={16}/></Btn>
           <Btn onClick={() => editor.chain().focus().toggleSubscript().run()} active={editor.isActive('subscript')}><SubIcon size={16}/></Btn>
           <Btn onClick={toggleLink} active={editor.isActive('link')}><Link2 size={16}/></Btn>
           <Btn onClick={onOpenImageTool}><ImageIcon size={16} className="text-indigo-500"/></Btn>
         </div>
 
-        {editor.isActive('image') && <div className="flex items-center gap-1 ml-4 bg-indigo-500/10 p-1 px-3 rounded-2xl border border-indigo-500/20 border-dashed animate-in slide-in-from-left">{['25%', '50%', '75%', '100%'].map(s => <button key={s} onClick={() => editor.chain().focus().updateAttributes('image', { width: s }).run()} className="px-2 py-1 text-[9px] font-bold hover:bg-white rounded-lg transition-all">{s}</button>)}</div>}
-        <div className="flex-1" />
-        <div className="flex items-center gap-4">
+        {editor.isActive('image') && <div className="flex items-center gap-1 ml-4 bg-indigo-500/10 p-1 px-3 rounded-2xl border border-indigo-500/20 border-dashed animate-in slide-in-from-left shrink-0">{['25%', '50%', '75%', '100%'].map(s => <button key={s} onClick={() => editor.chain().focus().updateAttributes('image', { width: s }).run()} className="px-2 py-1 text-[9px] font-bold hover:bg-white rounded-lg transition-all">{s}</button>)}</div>}
+        <div className="flex-1 min-w-[20px]" />
+        <div className="flex items-center gap-4 shrink-0">
           <div className="relative">
             <div className="flex items-center gap-1 bg-black/5 dark:bg-white/5 p-1.5 px-3 rounded-2xl border border-white/10 shadow-inner">
               <Palette size={14} className="text-slate-400 mr-2" />
@@ -380,7 +380,7 @@ const RichTextEditor = forwardRef<RichTextEditorHandle, EditorProps>(({ title, s
       {showTextPicker && <CustomColorPicker activeColor="#6366F1" recentColors={textColors} onClose={() => setShowTextPicker(false)} onSelect={(c: string) => editor.chain().focus().setColor(c).run()} onConfirm={(c: string) => { if(!textColors.includes(c)) setTextColors(p => [c, ...p].slice(0, 6)); setShowTextPicker(false); }} />}
       {showHighlightPicker && <CustomColorPicker activeColor="#FEF08A" recentColors={highlightColors} onClose={() => setShowHighlightPicker(false)} onSelect={(c: string) => editor.chain().focus().setHighlight({ color: c }).run()} onConfirm={(c: string) => { if(!highlightColors.includes(c)) setHighlightColors(p => [c, ...p].slice(0, 6)); setShowHighlightPicker(false); }} />}
 
-      <div className="flex-1 overflow-y-auto px-12 py-12 custom-scrollbar"><EditorContent editor={editor} /></div>
+      <div className="flex-1 min-h-0 overflow-y-auto px-12 py-12 custom-scrollbar"><EditorContent editor={editor} /></div>
     </div>
   );
 });
