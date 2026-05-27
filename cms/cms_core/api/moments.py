@@ -21,7 +21,7 @@ def save_moment(payload: MomentPayload):
         # 1. 获取当前 moments.py 文件所在的绝对路径 (也就是 cms_core/api 目录)
         current_dir = os.path.dirname(os.path.abspath(__file__))
 
-        # 2. 往上退两级，定位到你的博客管理端根目录 (my-blog-manager)
+        # 2. 往上退两级，定位到你的博客管理端根目录 (cms)
         project_root = os.path.abspath(os.path.join(current_dir, "..", ".."))
 
         # 3. 🎯 精准指向你指定的 moments 文件夹！

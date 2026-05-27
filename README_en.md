@@ -1,8 +1,8 @@
-# 🌟 Welcome to XHBlogs!
+# 🌟 Welcome to threetwoa-digital-garden!
 
 This is a personal blog system built with Next.js, featuring a Glassmorphism design. This project includes a frontend display and an independent local backend console. It supports Markdown writing, draft management, and image hosting configuration.
 
-This guide will take you from scratch to deploy and use XHBlogs.
+This guide will take you from scratch to deploy and use threetwoa-digital-garden.
 
 ---
 
@@ -62,7 +62,7 @@ Step 1: Obtain the lossless updater (only required for the first time)
 
 #### 1. Download the update.bat and update.py files from the project's root directory.
 
-#### 2. Move the downloaded update.bat and update.py to the outermost root directory of your local blog project (i.e., alongside the my-blog-manager and XHBlogs folders).
+#### 2. Move the downloaded update.bat and update.py to the outermost root directory of your local blog project (i.e., alongside the cms and frontend folders).
 
 As shown below:
 
@@ -74,7 +74,7 @@ As shown below:
 #### ① Startup Script
 
 Once you have completed the environment configuration above, the basic preparation is done.
-First, enter the `my-blog-manager` folder (**⚠️ Note: Do not rename this folder under any circumstances, or environment path resolution will fail!**)
+First, enter the `cms` folder (**⚠️ Note: Do not rename this folder under any circumstances, or environment path resolution will fail!**)
 
 Double-click to run the startup script in the folder:
 `Start.bat`
@@ -97,7 +97,7 @@ Set email (must be the email associated with your GitHub)
 `git config --global user.email "your_email_linked_to_github@example.com"`
 
 > **Step 2: Initialize Local Repository**
-> Enter your project folder and execute the following CMD commands: (the frontend deployment folder, which is XHBlogs here)
+> Enter your project folder and execute the following CMD commands: (the frontend deployment folder, which is frontend here)
 
 1. Initialize Git repository to generate the hidden .git folder
 `git init`
@@ -108,11 +108,11 @@ Set email (must be the email associated with your GitHub)
 
 **1. Configure Local Physical Path**
 Open the "Settings" page in the console.
-The pulled source code contains two core folders: `XHBlogs-manager` and `XHBlogs`. Please specify the local physical path of `XHBlogs` in the console.
+The pulled source code contains two core folders: `frontend-manager` and `frontend`. Please specify the local physical path of `frontend` in the console.
 
 ![选择物理路径](picture/Pasted%20image%2020260427111646.png)
 
-Example: `F:\Test2\XHBlogs`
+Example: `F:\Test2\frontend`
 
 ![填入本地BLOG物理路径](picture/Pasted%20image%2020260427112311.png)
 
@@ -140,7 +140,7 @@ Go to your GitHub repository page and navigate to the `Settings` -> `Deploy keys
 
 ![Deploy Keys](picture/Pasted%20image%2020260427113705.png)
 
-Paste the copied key into the `Key` box. The `Title` can be anything (e.g., `XHBlogs-Deploy-Key`).
+Paste the copied key into the `Key` box. The `Title` can be anything (e.g., `frontend-Deploy-Key`).
 
 > **🚨 Critical Warning**: The **Allow write access** option below MUST be checked!
 > After setting it up, click **Add key** to save.
@@ -215,7 +215,7 @@ Then return to Vercel, enter your project dashboard, and click **Settings** (or 
 
 ![进入设置](picture/Pasted%20image%2020260427123838.png)
 
-In the Domains tab, enter the domain you purchased (for example, mine is `xinghuisama.top`), and click **Add** to save:
+In the Domains tab, enter the domain you purchased (for example, mine is `threetwoa.me`), and click **Add** to save:
 
 After adding it, Vercel will provide the configuration parameters for the `A` record and `CNAME` record. Please add these parameters completely to your Alibaba Cloud DNS resolution settings:
 
@@ -227,7 +227,7 @@ After configuration is complete, wait a few minutes (DNS propagation takes time)
 
 ![Refresh](picture/Pasted%20image%2020260427124625.png)
 
-Once the status shows as normal, you can access the blog via your custom domain name! (For example: `www.xinghuisama.top`).
+Once the status shows as normal, you can access the blog via your custom domain name! (For example: `www.threetwoa.me`).
 
 ---
 
@@ -336,7 +336,7 @@ In the console's comment settings, enter your GitHub username and the name of th
 | Field Name | Suggestion |
 | --- | --- |
 | **Application name** | Custom name, e.g., `My-Blog-Comments` |
-| **Homepage URL** | The **complete address of your blog's homepage** (e.g., `[https://www.xinghuisama.top](https://www.xinghuisama.top)`) |
+| **Homepage URL** | The **complete address of your blog's homepage** (e.g., `[https://www.threetwoa.me](https://www.threetwoa.me)`) |
 | **Application description** | Optional |
 | **Authorization callback URL** | **Core parameter**: Must be your blog domain. If debugging locally frequently, you can enter `http://localhost:3000` |
 
@@ -368,7 +368,7 @@ Copy and paste this ID into the search box in the console to add the song to you
 
 ## Conclusion
 
-XHBlogs has detailed features waiting to be explored during actual use. This project aims to provide an out-of-the-box frontend static display and backend management solution. If you are a developer and feel the console operations can be optimized, you can do secondary development based on the Next.js source code, or write Markdown manually for deployment!
+threetwoa-digital-garden has detailed features waiting to be explored during actual use. This project aims to provide an out-of-the-box frontend static display and backend management solution. If you are a developer and feel the console operations can be optimized, you can do secondary development based on the Next.js source code, or write Markdown manually for deployment!
 
 **If you find this project helpful, please give me a ⭐ Star on GitHub! Every star is a driving force for continued maintenance and updates. Thank you!**
 

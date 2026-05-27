@@ -1,8 +1,8 @@
-# 🌟 欢迎使用 XHBlogs！
+# 🌟 欢迎使用 threetwoa-digital-garden！
 
 这是一个采用 Next.js 构建的高颜值、毛玻璃（Glassmorphism）风格个人博客系统。本项目自带完善的前端展示与独立的本地后台控制台，支持 Markdown 沉浸式写作、草稿管理以及便捷的图床配置。
 
-本指南将带你从零开始，轻松部署并使用 XHBlogs。
+本指南将带你从零开始，轻松部署并使用 threetwoa-digital-garden。
 
 ---
 ## 语言
@@ -50,7 +50,7 @@
 
 #### 1 下载项目根目录下的 update.bat 和 update.py 文件。
 
-#### 2  将下载好的 update.bat 和 update.py 移动到你本地博客项目的最外层根目录（也就是和 my-blog-manager、XHBlogs 文件夹放在一起的地方）。
+#### 2  将下载好的 update.bat 和 update.py 移动到你本地博客项目的最外层根目录（也就是和 cms、frontend 文件夹放在一起的地方）。
 
 如下图所示
 
@@ -63,7 +63,7 @@
 #### ① 启动脚本
 
 当你完成上述环境的配置后，恭喜你，最基础的准备工作已经搞定了！
-首先，进入 `my-blog-manager` 文件夹（**⚠️ 注意：请绝对不要重命名此文件夹，否则会导致环境路径解析失败！**）
+首先，进入 `cms` 文件夹（**⚠️ 注意：请绝对不要重命名此文件夹，否则会导致环境路径解析失败！**）
 
 双击运行文件夹中的启动脚本：
 `Start.bat`
@@ -89,7 +89,7 @@
 
 > **第二步：初始化本地仓库**
 >
-> 进入你的项目文件夹，执行以下CMD命令行操作：(及前端部署文件夹，这里是XHBlogs)
+> 进入你的项目文件夹，执行以下CMD命令行操作：(及前端部署文件夹，这里是frontend)
 
 1. 初始化 Git 仓库，生成隐藏的 .git 文件夹
    `git init`
@@ -100,11 +100,11 @@
 
 **1. 配置本地物理路径**
 打开控制台的“设置”页面。
-在拉取的源码中，包含 `XHBlogs-mananger` 和 `XHBlogs` 两个核心文件夹。请在控制台中指定 `XHBlogs` 的本地物理路径。
+在拉取的源码中，包含 `cms` 和 `frontend` 两个核心文件夹。请在控制台中指定 `frontend` 的本地物理路径。
 
 ![选择物理路径](picture/Pasted%20image%2020260427111646.png)
 
-例如：`F:\Test2\XHBlogs`
+例如：`F:\Test2\frontend`
 
 ![填入本地BLOG物理路径](picture/Pasted%20image%2020260427112311.png)
 
@@ -134,7 +134,7 @@
 
 ![Deploy Keys](picture/Pasted%20image%2020260427113705.png)
 
-将刚才复制的密钥填入 `Key` 框中，`Title` 可随意命名（例如：`XHBlogs-Deploy-Key`）。
+将刚才复制的密钥填入 `Key` 框中，`Title` 可随意命名（例如：`frontend-Deploy-Key`）。
 
 > **🚨 严重警告**：下方的 **Allow write access** 选项必须勾选！！！
 > 设置完毕后，点击 **Add key** 保存。
@@ -212,7 +212,7 @@ Vercel 默认会为你分配一个免费的二级域名：
 
 ![进入设置](picture/Pasted%20image%2020260427123838.png)
 
-在 Domains 选项卡中，输入你购买的域名（例如我的是 `xinghuisama.top`），点击 **Add** 保存：
+在 Domains 选项卡中，输入你购买的域名（例如我的是 `threetwoa.me`），点击 **Add** 保存：
 
 ![输入域名](picture/afb9fe5f-bf1e-4a8a-ae6b-379938f0924d.png)
 
@@ -226,7 +226,7 @@ Vercel 默认会为你分配一个免费的二级域名：
 
 ![Refresh](picture/Pasted%20image%2020260427124625.png)
 
-当状态显示为正常后，你就可以通过自己的专属域名访问博客了！（例如：`www.xinghuisama.top`）。
+当状态显示为正常后，你就可以通过自己的专属域名访问博客了！（例如：`www.threetwoa.me`）。
 
 ---
 
@@ -337,7 +337,7 @@ Vercel 默认会为你分配一个免费的二级域名：
 | 字段名称                       | 填写建议                                                                           |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | **Application name**           | 自定义名称，例如：`My-Blog-Comments`                                               |
-| **Homepage URL**               | 你的博客**首页完整地址** (例如 `https://www.xinghuisama.top`)                      |
+| **Homepage URL**               | 你的博客**首页完整地址** (例如 `https://www.threetwoa.me`)                      |
 | **Application description**    | 可选填                                                                             |
 | **Authorization callback URL** | **核心参数**：必须填写你的博客域名。如果经常本地调试，可填 `http://localhost:3000` |
 

@@ -10,7 +10,7 @@ from markdownify import markdownify as md
 
 router = APIRouter()
 
-# 🌟 终极物理锁死防线：绝对定位到 my-blog-manager 根目录，无视任何全局目录切换！
+# 🌟 终极物理锁死防线：绝对定位到 cms 根目录，无视任何全局目录切换！
 CURRENT_API_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_API_DIR, "..", ".."))
 

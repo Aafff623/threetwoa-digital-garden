@@ -7,7 +7,7 @@ router = APIRouter()
 # 🌟 核心修复：动态获取项目根目录
 # __file__ 是当前文件的绝对路径
 # os.path.dirname(__file__) 是 cms_core/api/
-# 再向上两级就是项目根目录 my-blog-manager/
+# 再向上两级就是项目根目录 cms/
 CURRENT_API_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_API_DIR, "..", ".."))
 
