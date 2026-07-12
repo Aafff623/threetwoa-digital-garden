@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import RouteTransition from "@/components/ui/RouteTransition";
 
 // Ensure ScrollTrigger is registered
 if (typeof window !== "undefined") {
@@ -28,7 +29,8 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       lenis.raf(time * 1000);
     };
     gsap.ticker.add(updatePhysics);
-    gsap.ticker.lagSmoothing(0);
+    // Allow lag smoothing so a heavy route mount does not pile up raf debt
+    gsap.ticker.lagSmoothing(500, 33);
 
     // Expose lenis instance to window for global access (using unknown cast to prevent ESLint no-explicit-any errors)
     (window as unknown as { lenis: unknown }).lenis = lenis;
@@ -40,5 +42,10 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     };
   }, []);
 
-  return <>{children}</>;
+  return (
+    <>
+      <RouteTransition />
+      {children}
+    </>
+  );
 }
