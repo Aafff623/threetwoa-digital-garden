@@ -1,40 +1,39 @@
-# Threetwoa Digital Garden
+<div align="center">
 
-> *个人博客与生活档案馆前端 —— 把长文、照片、足迹与私人记忆收进同一片数字花园。*
+# 三两园 · Sanliang Garden
+
+*"少写几行，多筑一境。"*
+
+个人博客与生活档案馆前端 —— 把长文、照片、足迹与私人记忆，种进同一片数字花园。
+Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Lenis
+
+<p>
+  <strong>中文</strong> · <a href="./README.en.md">English</a>
+</p>
+
+</div>
 
 <p align="center">
-  <strong>文档语言 / Language</strong><br />
-  <a href="./README.md">中文</a> · <a href="./README.en.md">English</a>
+  <img src="assets/images/readme/banner.png" alt="三两园 Sanliang Garden 横幅" width="100%" />
 </p>
 
 <p align="center">
-  <img src="assets/images/readme/banner.png" alt="Threetwoa Digital Garden 横幅" width="85%" />
+  <a href="https://threetwoa-digital-garden.vercel.app"><img src="https://img.shields.io/badge/Demo-Live-059669?style=for-the-badge&labelColor=0f172a" alt="Live Demo"></a>
+  <img src="https://img.shields.io/badge/Stack-Next.js_16_%7C_React_19_%7C_TS_%7C_Tailwind_4-3B82F6?style=for-the-badge&labelColor=0f172a" alt="Stack">
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge&labelColor=0f172a" alt="License">
+  <a href="https://github.com/Aafff623/threetwoa-digital-garden"><img src="https://img.shields.io/github/stars/Aafff623/threetwoa-digital-garden?style=for-the-badge&labelColor=0f172a" alt="GitHub Stars"></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16.2.9-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-%3E%3D20.9-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" alt="License" />
-  <img src="https://img.shields.io/badge/Status-Active-22C55E?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/Version-0.1.0-0EA5E9?style=for-the-badge" alt="Version" />
-</p>
-
-<p align="center">
-  <a href="#为什么">为什么</a> ·
-  <a href="#功能">功能</a> ·
-  <a href="#效果展示">效果展示</a> ·
-  <a href="#快速开始">快速开始</a> ·
-  <a href="#架构">架构</a> ·
-  <a href="#访问链路">访问链路</a> ·
-  <a href="#目录结构">目录结构</a> ·
-  <a href="#路线图">路线图</a> ·
-  <a href="#文档">文档</a>
+  <a href="#为什么">🏯 为什么</a> ·
+  <a href="#功能">✨ 功能</a> ·
+  <a href="#效果展示">📸 效果展示</a> ·
+  <a href="#快速开始">🚀 快速开始</a> ·
+  <a href="#架构">🏗️ 架构</a> ·
+  <a href="#访问链路">🧭 访问链路</a> ·
+  <a href="#目录结构">📂 目录结构</a> ·
+  <a href="#路线图">🗺️ 路线图</a> ·
+  <a href="#文档">📚 文档</a>
 </p>
 
 ---
@@ -43,7 +42,7 @@
 
 个人内容很少会待在同一个地方：文字在笔记软件，照片在相册，轨迹在地图，私密记忆在社交平台——各自时间线不同，导出也互不兼容。
 
-**Threetwoa Digital Garden** 把这些面收进同一套有意设计的前端：
+**三两园** 把这些面收进同一套有意设计的前端：
 
 - 把长文、短记、照片墙、足迹与时间胶囊当作同一档案的不同叶子，而不是互不相干的信息流
 - 用 Blog（本仓库）/ Admin / Server 三端分责：展示、运营、持久化边界清晰
@@ -54,21 +53,21 @@
 ## 功能
 
 <p align="center">
-  <img src="assets/images/readme/features.png" alt="功能总览：文章、照片墙、足迹、恋爱纪实、时间胶囊、成就、鱼塘、主题系统" width="85%" />
+  <img src="assets/images/readme/features.png" alt="功能总览：文章、照片墙、足迹、恋爱纪实、时间胶囊、成就、鱼塘、主题系统" width="90%" />
 </p>
 
 | 模块 | 说明 | 状态 |
-| --- | --- | --- |
-| **文章** | 列表、分类、归档、搜索与 Markdown 阅读 | ✅ 可用 |
-| **照片墙** | 瀑布流画廊，灯箱与分类浏览 | ✅ 可用 |
-| **足迹** | 地图标记与行程回顾 | ✅ 可用 |
-| **恋爱纪实** | 共同时间线、愿望清单与记忆轨 | ✅ 可用 |
-| **时间胶囊** | 写给未来的信，到期揭晓 | ✅ 可用 |
-| **成就** | 个人里程碑与收集徽章 | ✅ 可用 |
-| **鱼塘** | 访客留言、点赞与回复 | ✅ 可用 |
-| **主题系统** | 五套预设：`life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ 可用 |
-| **响应式壳层** | 自适应布局与暗色友好 token | ✅ 可用 |
-| **动效** | Lenis 平滑滚动 + GSAP ScrollTrigger | ✅ 可用 |
+| --- | --- | :---: |
+| **文章** | 列表、分类、归档、搜索与 Markdown 阅读 | ✅ |
+| **照片墙** | 瀑布流画廊，灯箱与分类浏览 | ✅ |
+| **足迹** | 地图标记与行程回顾 | ✅ |
+| **恋爱纪实** | 共同时间线、愿望清单与记忆轨 | ✅ |
+| **时间胶囊** | 写给未来的信，到期揭晓 | ✅ |
+| **成就** | 个人里程碑与收集徽章 | ✅ |
+| **鱼塘** | 访客留言、点赞与回复 | ✅ |
+| **主题系统** | 五套预设：`life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ |
+| **响应式壳层** | 自适应布局与暗色友好 token | ✅ |
+| **动效** | Lenis 平滑滚动 + GSAP ScrollTrigger | ✅ |
 
 > **边界**：v0.1 面向单人站点。Admin 负责内容管理；多租户与团队协作不在当前范围。
 
@@ -78,20 +77,21 @@
 
 ### 推荐演示路径
 
-1. 打开首页，观察首屏、导航与滚动动效  
-2. 进入 `/writing`，浏览文章列表与归档分组  
-3. 点开任意文章，查看 Markdown 正文、提示块与代码高亮  
-4. 访问 `/gallery` 与 `/about`，感受照片墙与关于页氛围  
+```
+首页 hero/导航 → /writing 文章列表 → 点开文章读 Markdown
+  → /gallery 照片墙灯箱 → /about 守园人氛围
+```
 
 ### 页面相册
 
-| 页面 | 截图 |
-| --- | --- |
-| **首页** | <img src="assets/images/readme/showcase-home.png" alt="首页" width="85%" /> |
-| **文章列表** | <img src="assets/images/readme/showcase-writing.png" alt="文章列表" width="85%" /> |
-| **文章详情** | <img src="assets/images/readme/showcase-article-detail.png" alt="文章详情" width="85%" /> |
-| **照片墙** | <img src="assets/images/readme/showcase-gallery.png" alt="照片墙" width="85%" /> |
-| **关于** | <img src="assets/images/readme/showcase-about.png" alt="关于页" width="85%" /> |
+> 点击缩略图可放大查看。
+
+| | | |
+|:---:|:---:|:---:|
+| [![首页](assets/images/readme/showcase-home.png)](assets/images/readme/showcase-home.png)<br><br>**首页**<br>hero · 导航 · 滚动动效 | [![文章列表](assets/images/readme/showcase-writing.png)](assets/images/readme/showcase-writing.png)<br><br>**文章列表**<br>归档分组 · 标签 · 搜索 | [![文章详情](assets/images/readme/showcase-article-detail.png)](assets/images/readme/showcase-article-detail.png)<br><br>**文章详情**<br>Markdown · 提示块 · 代码高亮 |
+| [![照片墙](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**照片墙**<br>瀑布流 · 灯箱 · 分类 | [![关于](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**关于**<br>守园人 · 坐标 · 自我切片 | |
+
+在线 Demo：[threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garden.vercel.app)
 
 ## 快速开始
 
@@ -145,7 +145,7 @@ npm run dev
 ## 架构
 
 <p align="center">
-  <img src="assets/images/readme/architecture.png" alt="系统架构：访客/编辑 → Blog/Admin → Spring Boot API → MySQL 与对象存储" width="85%" />
+  <img src="assets/images/readme/architecture.png" alt="系统架构：访客/编辑 → Blog/Admin → Spring Boot API → MySQL 与对象存储" width="90%" />
 </p>
 
 | 端 | 技术栈 | 职责 | 仓库 |
@@ -170,7 +170,7 @@ Client Component
 ### 技术栈分层
 
 <p align="center">
-  <img src="assets/images/readme/tech-stack.png" alt="前端技术栈分层：框架、样式、动效、数据、内容" width="85%" />
+  <img src="assets/images/readme/tech-stack.png" alt="前端技术栈分层：框架、样式、动效、数据、内容" width="90%" />
 </p>
 
 | 分层 | 选型 |
@@ -184,7 +184,7 @@ Client Component
 ## 访问链路
 
 <p align="center">
-  <img src="assets/images/readme/workflow.png" alt="访客主链路：首页 → 文章列表 → 阅读 → 生活面 → 互动" width="85%" />
+  <img src="assets/images/readme/workflow.png" alt="访客主链路：首页 → 文章列表 → 阅读 → 生活面 → 互动" width="90%" />
 </p>
 
 | 步骤 | 用户行为 | 技术侧发生了什么 |
@@ -198,7 +198,7 @@ Client Component
 ## 目录结构
 
 <p align="center">
-  <img src="assets/images/readme/structure.png" alt="仓库目录结构：src/ 树与 Server/Client/Theme 约定" width="85%" />
+  <img src="assets/images/readme/structure.png" alt="仓库目录结构：src/ 树与 Server/Client/Theme 约定" width="90%" />
 </p>
 
 ```text
@@ -211,19 +211,20 @@ src/
 ├─ icon/             # 图标映射
 ├─ interface/        # 共享 TypeScript 类型
 ├─ mock/             # 离线 / 失败兜底数据
-└─ data/             # 轻量静态内容
+└─ data/             # 轻量静态内容（品牌身份、文章、相册等）
 ```
 
 **约定**
 
 - 新接口优先放进 `src/api/*`，不要写在组件里
+- 品牌身份统一走 [`src/data/identity.ts`](./src/data/identity.ts)，不散落硬编码
 - 新页面遵循 `src/app/{route}/page.tsx`
 - 首屏优先服务端拉取并带本地回退；需要交互时再用客户端 Hook
 
 ## 路线图
 
 | 阶段 | 目标 | 状态 |
-| --- | --- | --- |
+| --- | --- | :---: |
 | MVP | 文章、照片墙、关于、主题切换 | ✅ 完成 |
 | 生活档案 | 足迹、恋爱、时间胶囊、成就、鱼塘 | ✅ 完成 |
 | 体验打磨 | 动效、加载性能、SEO | 🟡 进行中 |
@@ -235,14 +236,11 @@ src/
 | 文档 | 路径 | 说明 |
 | --- | --- | --- |
 | 开发约定 | [`CLAUDE.md`](./CLAUDE.md) | 架构、命令、环境变量与编码规范 |
+| 项目标准 | [`AGENTS.md`](./AGENTS.md) · [`CONTEXT.md`](./CONTEXT.md) · [`LANGUAGES.md`](./LANGUAGES.md) | Agent 约束、域事实、共享词表 |
 | 英文 README | [`README.en.md`](./README.en.md) | English documentation |
+| 初始化决策 | [`docs/adr/0001-apply-project-init.md`](./docs/adr/0001-apply-project-init.md) | project-init 与分支统一 ADR |
 | README 配图 brief | [`docs/output/prd/readme-diagrams/readme-diagram-brief.md`](./docs/output/prd/readme-diagrams/readme-diagram-brief.md) | 章节与配图契约 |
-| GPT 出图说明 | [`docs/output/prd/readme-diagrams/readme-image-prompts.md`](./docs/output/prd/readme-diagrams/readme-image-prompts.md) | 元素、参照与 Prompt |
-| 本地预览页 | [`readme-preview.html`](./readme-preview.html) | 静态渲染 README 与资源自检 |
-| README 资源目录 | [`assets/images/readme/`](./assets/images/readme/) | banner / 信息图 / showcase |
-| 资源说明 | [`assets/README.md`](./assets/README.md) | 媒体约定 |
-
-> **Preview 声明**：本仓是单产品站点，没有独立组件 Gallery / demo 墙；产品界面由 **效果展示（Showcase）** 覆盖。
+| 资源说明 | [`assets/README.md`](./assets/README.md) · [`assets/ASSET-MANIFEST.md`](./assets/ASSET-MANIFEST.md) | 媒体约定与资产清单 |
 
 ## 开源说明
 
@@ -250,12 +248,14 @@ src/
 
 公开部署前请检查：
 
-- `.env*` 不得包含令牌、数据库密码或云存储密钥  
-- `public/`、`assets/` 与 mock 数据中不要留下不打算公开的照片或个人信息  
-- 地图坐标、恋爱记录、时间信件等应由部署者替换为自己的数据  
+- `.env*` 不得包含令牌、数据库密码或云存储密钥
+- `public/`、`assets/` 与 mock 数据中不要留下不打算公开的照片或个人信息
+- 地图坐标、恋爱记录、时间信件等应由部署者替换为自己的数据
 
 ---
 
-<p align="center">
-  <strong>Threetwoa Digital Garden</strong> · 有意的归档 · 克制的动效 · 可回退的数据层
-</p>
+<div align="center">
+
+**三两园 · Sanliang Garden** · 有意的归档 · 克制的动效 · 可回退的数据层
+
+</div>

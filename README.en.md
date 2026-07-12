@@ -1,40 +1,39 @@
-# Threetwoa Digital Garden
+<div align="center">
 
-> *A personal blog and life-archive frontend — long-form writing, photos, footprints, and private memories in one curated surface.*
+# 三两园 · Sanliang Garden
+
+*"Code less, Architect more."*
+
+A personal blog and life-archive frontend — long-form writing, photos, footprints, and private memories, gathered into a single digital garden.
+Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Lenis
+
+<p>
+  <a href="./README.md">中文</a> · <strong>English</strong>
+</p>
+
+</div>
 
 <p align="center">
-  <strong>文档语言 / Language</strong><br />
-  <a href="./README.md">中文</a> · <a href="./README.en.md">English</a>
+  <img src="assets/images/readme/banner.png" alt="Sanliang Garden banner" width="100%" />
 </p>
 
 <p align="center">
-  <img src="assets/images/readme/banner.png" alt="Threetwoa Digital Garden banner" width="85%" />
+  <a href="https://threetwoa-digital-garden.vercel.app"><img src="https://img.shields.io/badge/Demo-Live-059669?style=for-the-badge&labelColor=0f172a" alt="Live Demo"></a>
+  <img src="https://img.shields.io/badge/Stack-Next.js_16_%7C_React_19_%7C_TS_%7C_Tailwind_4-3B82F6?style=for-the-badge&labelColor=0f172a" alt="Stack">
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge&labelColor=0f172a" alt="License">
+  <a href="https://github.com/Aafff623/threetwoa-digital-garden"><img src="https://img.shields.io/github/stars/Aafff623/threetwoa-digital-garden?style=for-the-badge&labelColor=0f172a" alt="GitHub Stars"></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16.2.9-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-%3E%3D20.9-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" alt="License" />
-  <img src="https://img.shields.io/badge/Status-Active-22C55E?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/Version-0.1.0-0EA5E9?style=for-the-badge" alt="Version" />
-</p>
-
-<p align="center">
-  <a href="#why">Why</a> ·
-  <a href="#features">Features</a> ·
-  <a href="#showcase">Showcase</a> ·
-  <a href="#quick-start">Quick Start</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#workflow">Workflow</a> ·
-  <a href="#structure">Structure</a> ·
-  <a href="#roadmap">Roadmap</a> ·
-  <a href="#docs">Docs</a>
+  <a href="#why">🏯 Why</a> ·
+  <a href="#features">✨ Features</a> ·
+  <a href="#showcase">📸 Showcase</a> ·
+  <a href="#quick-start">🚀 Quick Start</a> ·
+  <a href="#architecture">🏗️ Architecture</a> ·
+  <a href="#workflow">🧭 Workflow</a> ·
+  <a href="#structure">📂 Structure</a> ·
+  <a href="#roadmap">🗺️ Roadmap</a> ·
+  <a href="#docs">📚 Docs</a>
 </p>
 
 ---
@@ -43,32 +42,32 @@
 
 Personal content rarely lives in one place. Writing ends up in notes apps, photos in albums, travel traces on maps, and private memories on social platforms — each with its own timeline and export story.
 
-**Threetwoa Digital Garden** consolidates those surfaces into a single, intentionally designed frontend:
+**Sanliang Garden** consolidates those surfaces into a single, intentionally designed frontend:
 
-- Treat articles, short notes, galleries, footprints, and time capsules as one coherent archive rather than disconnected feeds
-- Split responsibilities across Blog (this repository), Admin, and Server so presentation, operations, and persistence stay cleanly bounded
+- Treat articles, short notes, galleries, footprints, and time capsules as different leaves of one archive, not disconnected feeds
+- Split responsibilities across Blog (this repo) / Admin / Server so presentation, operations, and persistence stay cleanly bounded
 - Use Next.js App Router for server-first rendering, with GSAP + Lenis for magazine-like motion without sacrificing structure
 
-This is not a generic CMS skin or an infinite photo feed. It is a **digital garden**: a long-lived, editable public archive you can keep growing.
+This is not a generic CMS skin or an infinite photo feed. It is a **digital garden**: a long-lived, editable public archive you keep growing.
 
 ## Features
 
 <p align="center">
-  <img src="assets/images/readme/features.png" alt="Feature map — Articles, Gallery, Footprints, Love Archive, Time Capsule, Achievements, Pond, Style System" width="85%" />
+  <img src="assets/images/readme/features.png" alt="Feature map — Articles, Gallery, Footprints, Love, Time Capsule, Achievements, Pond, Style System" width="90%" />
 </p>
 
 | Module | Description | Status |
-| --- | --- | --- |
-| **Articles** | Listing, categories, archive, search, Markdown reading | ✅ Ready |
-| **Gallery** | Masonry wall with lightbox and category browsing | ✅ Ready |
-| **Footprints** | Map markers and trip retrospectives | ✅ Ready |
-| **Love archive** | Shared timeline, wishlist, and memory rail | ✅ Ready |
-| **Time capsule** | Letters to the future with scheduled reveal | ✅ Ready |
-| **Achievements** | Personal milestones and collectible medals | ✅ Ready |
-| **Pond** | Guestbook with likes and replies | ✅ Ready |
-| **Style system** | Five presets: `life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ Ready |
-| **Responsive shell** | Adaptive layout with dark-mode-friendly tokens | ✅ Ready |
-| **Motion** | Lenis smooth scroll + GSAP ScrollTrigger | ✅ Ready |
+| --- | --- | :---: |
+| **Articles** | Listing, categories, archive, search, Markdown reading | ✅ |
+| **Gallery** | Masonry wall with lightbox and category browsing | ✅ |
+| **Footprints** | Map markers and trip retrospectives | ✅ |
+| **Love archive** | Shared timeline, wishlist, and memory rail | ✅ |
+| **Time capsule** | Letters to the future with scheduled reveal | ✅ |
+| **Achievements** | Personal milestones and collectible medals | ✅ |
+| **Pond** | Guestbook with likes and replies | ✅ |
+| **Style system** | Five presets: `life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ |
+| **Responsive shell** | Adaptive layout with dark-mode-friendly tokens | ✅ |
+| **Motion** | Lenis smooth scroll + GSAP ScrollTrigger | ✅ |
 
 > **Scope**: v0.1 targets a single personal site. Admin manages content; multi-tenant and team collaboration are out of scope.
 
@@ -78,20 +77,21 @@ Playwright captures at `1600×900`. After [Quick Start](#quick-start), walk the 
 
 ### Recommended path
 
-1. Open the home page — hero, navigation, and scroll motion  
-2. Visit `/writing` — article list and archive grouping  
-3. Open any article — Markdown body, callouts, and code highlighting  
-4. Browse `/gallery` and `/about` — photo wall and profile narrative  
+```
+Home hero/nav → /writing article list → open an article for Markdown
+  → /gallery lightbox → /about the keeper's vibe
+```
 
 ### Page gallery
 
-| Surface | Capture |
-| --- | --- |
-| **Home** | <img src="assets/images/readme/showcase-home.png" alt="Home page" width="85%" /> |
-| **Writing list** | <img src="assets/images/readme/showcase-writing.png" alt="Writing list" width="85%" /> |
-| **Article detail** | <img src="assets/images/readme/showcase-article-detail.png" alt="Article detail" width="85%" /> |
-| **Gallery** | <img src="assets/images/readme/showcase-gallery.png" alt="Gallery" width="85%" /> |
-| **About** | <img src="assets/images/readme/showcase-about.png" alt="About page" width="85%" /> |
+> Click a thumbnail to enlarge.
+
+| | | |
+|:---:|:---:|:---:|
+| [![Home](assets/images/readme/showcase-home.png)](assets/images/readme/showcase-home.png)<br><br>**Home**<br>hero · nav · scroll motion | [![Writing list](assets/images/readme/showcase-writing.png)](assets/images/readme/showcase-writing.png)<br><br>**Writing list**<br>archive groups · tags · search | [![Article](assets/images/readme/showcase-article-detail.png)](assets/images/readme/showcase-article-detail.png)<br><br>**Article**<br>Markdown · callouts · code highlight |
+| [![Gallery](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**Gallery**<br>masonry · lightbox · categories | [![About](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**About**<br>the keeper · coordinates · self-slices | |
+
+Live demo: [threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garden.vercel.app)
 
 ## Quick Start
 
@@ -145,7 +145,7 @@ Before commit, prefer `npm run lint` and `npm run build`.
 ## Architecture
 
 <p align="center">
-  <img src="assets/images/readme/architecture.png" alt="System architecture — Visitor/Editor → Blog/Admin → Spring Boot API → MySQL & Object Storage" width="85%" />
+  <img src="assets/images/readme/architecture.png" alt="System architecture — Visitor/Editor → Blog/Admin → Spring Boot API → MySQL & Object Storage" width="90%" />
 </p>
 
 | Tier | Stack | Responsibility | Repository |
@@ -170,7 +170,7 @@ Client Component
 ### Tech stack layers
 
 <p align="center">
-  <img src="assets/images/readme/tech-stack.png" alt="Frontend tech stack — Framework, Styling, Motion, Data, Content layers" width="85%" />
+  <img src="assets/images/readme/tech-stack.png" alt="Frontend tech stack — Framework, Styling, Motion, Data, Content layers" width="90%" />
 </p>
 
 | Layer | Choices |
@@ -184,7 +184,7 @@ Client Component
 ## Workflow
 
 <p align="center">
-  <img src="assets/images/readme/workflow.png" alt="Visitor journey — Landing → Browse Writing → Read Article → Explore Life → Engage" width="85%" />
+  <img src="assets/images/readme/workflow.png" alt="Visitor journey — Landing → Browse Writing → Read Article → Explore Life → Engage" width="90%" />
 </p>
 
 | Step | User action | What the stack does |
@@ -198,7 +198,7 @@ Client Component
 ## Structure
 
 <p align="center">
-  <img src="assets/images/readme/structure.png" alt="Repository structure — src/ tree and Server/Client/Theme conventions" width="85%" />
+  <img src="assets/images/readme/structure.png" alt="Repository structure — src/ tree and Server/Client/Theme conventions" width="90%" />
 </p>
 
 ```text
@@ -211,19 +211,20 @@ src/
 ├─ icon/             # Icon mappings
 ├─ interface/        # Shared TypeScript contracts
 ├─ mock/             # Offline / failure fallback fixtures
-└─ data/             # Lightweight static content
+└─ data/             # Lightweight static content (brand, articles, gallery)
 ```
 
 **Conventions**
 
 - New endpoints belong in `src/api/*`, not inline in components
+- Brand identity lives in [`src/data/identity.ts`](./src/data/identity.ts) — no scattered hardcodes
 - New routes follow `src/app/{route}/page.tsx`
 - Prefer server fetch with local fallback for first paint; use client hooks when interactivity requires it
 
 ## Roadmap
 
 | Phase | Goal | Status |
-| --- | --- | --- |
+| --- | --- | :---: |
 | MVP | Articles, gallery, about, style switching | ✅ Done |
 | Life archive | Footprints, love, time capsule, achievements, pond | ✅ Done |
 | Experience | Motion polish, loading performance, SEO | 🟡 In progress |
@@ -235,14 +236,11 @@ src/
 | Document | Path | Notes |
 | --- | --- | --- |
 | Development guide | [`CLAUDE.md`](./CLAUDE.md) | Architecture, commands, env vars, coding conventions |
+| Project standards | [`AGENTS.md`](./AGENTS.md) · [`CONTEXT.md`](./CONTEXT.md) · [`LANGUAGES.md`](./LANGUAGES.md) | Agent constraints, domain facts, shared vocabulary |
 | Chinese README | [`README.md`](./README.md) | 默认中文文档 |
+| Init decision | [`docs/adr/0001-apply-project-init.md`](./docs/adr/0001-apply-project-init.md) | project-init & branch unification ADR |
 | README diagram brief | [`docs/output/prd/readme-diagrams/readme-diagram-brief.md`](./docs/output/prd/readme-diagrams/readme-diagram-brief.md) | Section plan, asset contract |
-| GPT image prompts | [`docs/output/prd/readme-diagrams/readme-image-prompts.md`](./docs/output/prd/readme-diagrams/readme-image-prompts.md) | Per-image elements, references, prompts |
-| Local preview | [`readme-preview.html`](./readme-preview.html) | Static README render + asset self-check |
-| README assets | [`assets/images/readme/`](./assets/images/readme/) | Banner, diagrams, Playwright captures |
-| Assets note | [`assets/README.md`](./assets/README.md) | Media conventions |
-
-> **Preview note**: this repository is a single product surface. There is no separate component gallery / demo wall; product screens are covered by **Showcase** only.
+| Assets note | [`assets/README.md`](./assets/README.md) · [`assets/ASSET-MANIFEST.md`](./assets/ASSET-MANIFEST.md) | Media conventions & manifest |
 
 ## License
 
@@ -256,6 +254,8 @@ Before any public deployment, review:
 
 ---
 
-<p align="center">
-  <strong>Threetwoa Digital Garden</strong> · curated archive · intentional motion · resilient data layer
-</p>
+<div align="center">
+
+**三两园 · Sanliang Garden** · curated archive · intentional motion · resilient data layer
+
+</div>
