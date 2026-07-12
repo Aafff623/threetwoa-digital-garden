@@ -34,14 +34,16 @@
 
 | File | Purpose | Size | Method | Status |
 |---|---|---|---|---|
-| `banner.png` | README header | 1440×480 | AI image_gen → sharp crop | ✅ Done |
-| `features.png` | Feature map | 1600×900 | Editorial SVG → PNG | ✅ Done |
-| `architecture.png` | Three-tier system | 1600×900 | Editorial SVG → PNG | ✅ Done |
-| `tech-stack.png` | Frontend layers | 1600×900 | Editorial SVG → PNG | ✅ Done |
-| `workflow.png` | Visitor journey | 1600×900 | Editorial SVG → PNG | ✅ Done |
-| `structure.png` | Repo layout | 1600×1067 | Editorial SVG → PNG | ✅ Done |
+| `banner.png` | README header | 1600×533 | GPT upgraded zip | ✅ Upgraded |
+| `features.png` | Feature map | 1600×900 | GPT upgraded zip | ✅ Upgraded |
+| `architecture.png` | Three-tier system | 1600×900 | GPT upgraded zip | ✅ Upgraded |
+| `tech-stack.png` | Frontend layers | 1600×900 | GPT upgraded zip | ✅ Upgraded |
+| `workflow.png` | Visitor journey | 1600×900 | GPT upgraded zip | ✅ Upgraded |
+| `structure.png` | Repo layout | 1536×1024 | GPT upgraded zip | ✅ Upgraded |
 
-All diagrams have editable SVG sources under `assets/images/readme/_svg/`.
+Source package: `threetwoa-digital-garden-readme-assets-upgraded.zip` → overwrite `assets/images/readme/` (showcase screenshots left untouched).  
+Legacy `_svg/` drafts removed after upgraded PNGs landed.  
+`README.md` embeds all six diagrams via centered `<img src="assets/images/readme/…">` plus showcase captures.
 
 ### 2.2 Showcase (Playwright)
 

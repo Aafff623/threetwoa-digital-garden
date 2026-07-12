@@ -38,7 +38,9 @@ This is not a generic CMS skin or infinite photo feed. It is a **digital garden*
 
 ## Features
 
-![Feature map](assets/images/readme/features.png)
+<p align="center">
+  <img src="assets/images/readme/features.png" alt="Feature map — Articles, Gallery, Footprints, Love Archive, Time Capsule, Achievements, Pond, Style System" width="100%" />
+</p>
 
 | Module | Description | Status |
 | --- | --- | --- |
@@ -70,11 +72,11 @@ Playwright captures at `1600×900`. After [Quick Start](#quick-start), walk the 
 
 | Surface | Capture |
 | --- | --- |
-| **Home** | ![Home](assets/images/readme/showcase-home.png) |
-| **Writing list** | ![Writing](assets/images/readme/showcase-writing.png) |
-| **Article detail** | ![Article detail](assets/images/readme/showcase-article-detail.png) |
-| **Gallery** | ![Gallery](assets/images/readme/showcase-gallery.png) |
-| **About** | ![About](assets/images/readme/showcase-about.png) |
+| **Home** | <img src="assets/images/readme/showcase-home.png" alt="Home page" width="100%" /> |
+| **Writing list** | <img src="assets/images/readme/showcase-writing.png" alt="Writing list" width="100%" /> |
+| **Article detail** | <img src="assets/images/readme/showcase-article-detail.png" alt="Article detail" width="100%" /> |
+| **Gallery** | <img src="assets/images/readme/showcase-gallery.png" alt="Gallery" width="100%" /> |
+| **About** | <img src="assets/images/readme/showcase-about.png" alt="About page" width="100%" /> |
 
 ## Quick Start
 
@@ -127,7 +129,9 @@ Before commit, prefer `npm run lint` and `npm run build`.
 
 ## Architecture
 
-![System architecture](assets/images/readme/architecture.png)
+<p align="center">
+  <img src="assets/images/readme/architecture.png" alt="System architecture — Visitor/Editor → Blog/Admin → Spring Boot API → MySQL & Object Storage" width="100%" />
+</p>
 
 | Tier | Stack | Responsibility | Repository |
 | --- | --- | --- | --- |
@@ -150,7 +154,9 @@ Client Component
 
 ### Tech stack layers
 
-![Frontend tech stack](assets/images/readme/tech-stack.png)
+<p align="center">
+  <img src="assets/images/readme/tech-stack.png" alt="Frontend tech stack — Framework, Styling, Motion, Data, Content layers" width="100%" />
+</p>
 
 | Layer | Choices |
 | --- | --- |
@@ -162,7 +168,9 @@ Client Component
 
 ## Workflow
 
-![Visitor journey](assets/images/readme/workflow.png)
+<p align="center">
+  <img src="assets/images/readme/workflow.png" alt="Visitor journey — Landing → Browse Writing → Read Article → Explore Life → Engage" width="100%" />
+</p>
 
 | Step | User action | What the stack does |
 | --- | --- | --- |
@@ -174,7 +182,9 @@ Client Component
 
 ## Structure
 
-![Repository structure](assets/images/readme/structure.png)
+<p align="center">
+  <img src="assets/images/readme/structure.png" alt="Repository structure — src/ tree and Server/Client/Theme conventions" width="100%" />
+</p>
 
 ```text
 src/
@@ -212,8 +222,10 @@ src/
 | Development guide | [`CLAUDE.md`](./CLAUDE.md) | Architecture, commands, env vars, coding conventions |
 | Project standards | [`AGENTS.md`](./AGENTS.md) · [`CONTEXT.md`](./CONTEXT.md) · [`LANGUAGES.md`](./LANGUAGES.md) | Agent constraints, domain facts, shared vocabulary |
 | Project init spec | [`docs/knowledge/project-init.md`](./docs/knowledge/project-init.md) | Repository initialization playbook |
+| Init decision | [`docs/adr/0001-apply-project-init.md`](./docs/adr/0001-apply-project-init.md) | ADR for Phase A/B execution and branch unification |
 | README diagram brief | [`docs/output/prd/readme-diagrams/readme-diagram-brief.md`](./docs/output/prd/readme-diagrams/readme-diagram-brief.md) | Section plan, asset contract |
 | GPT image prompts | [`docs/output/prd/readme-diagrams/readme-image-prompts.md`](./docs/output/prd/readme-diagrams/readme-image-prompts.md) | Per-image elements, references, ready-to-copy prompts |
+| Asset manifest | [`assets/ASSET-MANIFEST.md`](./assets/ASSET-MANIFEST.md) | README media inventory and SVG sources |
 | README assets | [`assets/images/readme/`](./assets/images/readme/) | Banner, diagrams, Playwright showcase captures |
 | Assets note | [`assets/README.md`](./assets/README.md) | Media conventions and current asset layout |
 

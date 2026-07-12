@@ -21,4 +21,5 @@
 - 原散落在 `assets/` 根目录的产品 UI 资源（`anime-dock.png`、`footer-peekers.png`）已迁至 `public/assets/`，组件引用已同步更新。
 - 原 `assets/` 根目录下与 `public/assets/` 重复的演示媒体文件与未引用文件已清理。
 
+完整资产清单见 [`ASSET-MANIFEST.md`](./ASSET-MANIFEST.md)。  
 出图 brief、Prompt 与验收清单见 `docs/output/prd/readme-diagrams/readme-diagram-brief.md`。
