@@ -29,7 +29,7 @@ export default function HomeQuote() {
               我喜欢把这句话放在首页末尾。它提醒我，博客不只是页面的集合，而是日常事件慢慢留下来的路径。
             </p>
             <div className="flex items-center gap-3 pt-1">
-              <span className="h-px w-8 bg-gold/45" />
+              <span aria-hidden="true" className="text-sm leading-none text-gold/60">✦</span>
               <p className="text-[13px] font-medium tracking-wide text-charcoal/55 dark:text-cream/55">
                 卡洛·罗韦利 · 《时间的秩序》
               </p>

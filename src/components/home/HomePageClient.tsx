@@ -10,6 +10,7 @@ import Lightbox from "@/components/gallery/Lightbox";
 import ArticleRail from "@/components/home/ArticleRail";
 import GalleryRail from "@/components/home/GalleryRail";
 import HomeHero from "@/components/home/HomeHero";
+import { siteIdentity } from "@/data/identity";
 import HomeQuote from "@/components/home/HomeQuote";
 import SectionIntro from "@/components/home/SectionIntro";
 import StatusGrid from "@/components/home/StatusGrid";
@@ -32,41 +33,13 @@ export default function HomePageClient({
   const [selectedPhoto, setSelectedPhoto] = useState<GalleryPhoto | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
   const articlesSectionRef = useRef<HTMLElement>(null);
-  const articlesTrackRef = useRef<HTMLDivElement>(null);
   const gallerySectionRef = useRef<HTMLElement>(null);
-  const galleryTrackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-
-    const setupRail = (section: HTMLElement | null, track: HTMLDivElement | null) => {
-      if (!section || !track || reduceMotion || !isDesktop) return;
-
-      const getDistance = () => {
-        const viewport = track.parentElement?.clientWidth ?? window.innerWidth;
-        return Math.max(0, track.scrollWidth - viewport);
-      };
-
-      if (getDistance() < 80) return;
-
-      gsap.to(track, {
-        x: () => -getDistance(),
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 88px",
-          end: () => `+=${getDistance()}`,
-          pin: true,
-          scrub: 0.8,
-          invalidateOnRefresh: true,
-          anticipatePin: 1,
-        },
-      });
-    };
 
     const ctx = gsap.context(() => {
       if (reduceMotion) {
@@ -143,8 +116,6 @@ export default function HomePageClient({
         }
       );
 
-      setupRail(articlesSectionRef.current, articlesTrackRef.current);
-      setupRail(gallerySectionRef.current, galleryTrackRef.current);
     }, root);
 
     // Single deferred refresh — avoid stacked refresh storms with RouteTransition
@@ -171,9 +142,9 @@ export default function HomePageClient({
         featuredCount={featuredPosts.length}
         galleryCount={homeGallerySlices.length}
         heroBgUrl={configs?.["page.home.heroBgUrl"]}
-        welcomeText={configs?.["page.home.welcomeText"]}
-        welcomeSubtitle={configs?.["page.home.welcomeSubtitle"]}
-        logoText={configs?.["site.logo.text"]}
+        welcomeText={siteIdentity.tagline}
+        welcomeSubtitle={siteIdentity.hostLabel}
+        logoText={siteIdentity.name}
       />
 
       <section
@@ -189,7 +160,7 @@ export default function HomePageClient({
             href="/writing"
             action="全部随笔"
           />
-          <ArticleRail posts={featuredPosts} trackRef={articlesTrackRef} />
+          <ArticleRail posts={featuredPosts} />
         </div>
       </section>
 
@@ -210,18 +181,17 @@ export default function HomePageClient({
         ref={gallerySectionRef}
         className="relative border-y border-charcoal/8 px-4 py-9 dark:border-white/10 sm:px-6 md:py-11 lg:px-8"
       >
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.66fr_0.34fr] lg:items-center">
+          <GalleryRail
+            photos={homeGallerySlices}
+            onSelect={setSelectedPhoto}
+          />
           <SectionIntro
             icon={Camera}
             title="彩色相册"
             body="日常光线、旅行色彩和偶然遇见的小片段，都先以自然的颜色留在这里。"
             href="/gallery"
             action="打开相册"
-          />
-          <GalleryRail
-            photos={homeGallerySlices}
-            trackRef={galleryTrackRef}
-            onSelect={setSelectedPhoto}
           />
         </div>
       </section>

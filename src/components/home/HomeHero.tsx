@@ -126,7 +126,10 @@ export default function HomeHero({
           </div>
 
           <div className="mt-8 max-w-full space-y-5 sm:max-w-3xl">
-            <h1 className="font-hero-h text-[3.55rem] font-semibold leading-[0.95] tracking-normal text-cream drop-shadow-[0_18px_48px_rgba(0,0,0,0.28)] sm:text-7xl md:text-8xl">
+            <h1
+              style={{ fontFamily: "var(--font-ma-shan-zheng)" }}
+              className="font-hero-h text-4xl font-semibold leading-[1.15] tracking-normal text-cream drop-shadow-[0_18px_48px_rgba(0,0,0,0.28)] sm:text-5xl md:text-6xl"
+            >
               <TextType
                 text={[logoText || "三两园", welcomeText || "少写几行，多筑一境", welcomeSubtitle || "守园人"]}
                 typingSpeed={90}
@@ -139,7 +142,7 @@ export default function HomeHero({
               />
             </h1>
             <p className="max-w-[32rem] break-words text-[15px] leading-8 text-cream/78 md:text-base">
-              少写几行，多筑一境。把工作流、交付与生活切片，种进这座三两园。
+              少写几行，多筑一境。把工作流、交付与生活切片，种进这座三两园。🌱
             </p>
           </div>
 

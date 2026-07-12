@@ -2,7 +2,6 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingFooterPeekers from "@/components/ui/FloatingFooterPeekers";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import StyleConsole from "@/components/ui/StyleConsole";
 import BackToTop from "@/components/ui/BackToTop";
@@ -19,7 +18,6 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
           <Footer />
         </SmoothScroll>
       </div>
-      <FloatingFooterPeekers />
       <StyleConsole />
       <BackToTop />
       <TapeStation />

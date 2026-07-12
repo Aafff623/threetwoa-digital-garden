@@ -35,6 +35,7 @@ export default function Footer() {
           <span>{siteIdentity.copyright}</span>
           <span className="inline-block w-1 h-1 rounded-full bg-charcoal/10 dark:bg-cream/10" />
           <span>{siteIdentity.poweredBy}</span>
+          <span aria-hidden="true" className="text-sm text-gold/70">(｡･ω･｡)ﾉ♡</span>
         </p>
 
         {/* 3. 政策合规备案信息 */}

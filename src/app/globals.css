@@ -427,7 +427,8 @@ html.lenis, html.lenis body {
   }
 }
 
-/* Footer window decoration, shown only when the document bottom is reached */
+/* Footer window decoration — docked at the footer top edge. Always visible
+   here (no floating overlay on the main window, no GSAP reveal needed). */
 .footer-peekers {
   position: absolute;
   inset-inline: 0;
@@ -435,8 +436,6 @@ html.lenis, html.lenis body {
   z-index: 2;
   pointer-events: none;
   transform: translateY(calc(-100% + 8px));
-  opacity: 0;
-  visibility: hidden;
 }
 
 .footer-peekers-image {
