@@ -107,7 +107,7 @@ export const writingData: Post[] = [
   },
   {
     slug: "anniversary-celebration-diary",
-    title: "第三个春天的纪念：生活档案馆新的一页",
+    title: "第三个春天的纪念：数字花园新的一页",
     date: "2026-01-05",
     category: "Love",
     mood: "joyful",
@@ -146,7 +146,7 @@ export const writingData: Post[] = [
     description: "这是一篇专门用来测试自定义 Markdown 渲染引擎排版与样式的测试文章。涵盖了标题、列表、引用、代码块以及行内标记等元素。",
     content: `# Markdown 渲染引擎测试与排版全集
 
-这是一篇专门用来验证 Markdown 渲染引擎排版、调色与交互体验的测试文章。文章包含了行内样式 **粗体字**、*斜体字*、~~删除线~~、==文本高亮==、按键提示 <kbd>Cmd</kbd> + <kbd>K</kbd> 以及 [个人档案馆](https://github.com) 外部链接。
+这是一篇专门用来验证 Markdown 渲染引擎排版、调色与交互体验的测试文章。文章包含了行内样式 **粗体字**、*斜体字*、~~删除线~~、==文本高亮==、按键提示 <kbd>Cmd</kbd> + <kbd>K</kbd> 以及 [GitHub · Aafff623](https://github.com/Aafff623) 外部链接。
 
 ---
 
@@ -215,7 +215,7 @@ export function renderPost(post: Post): string {
 
 ## 五、胶片影像与 Lightbox 放大
 
-![生活档案馆·摄影记录](/assets/writing-camera.png)
+![数字花园·摄影记录](/assets/writing-camera.png)
 
 ## 六、小结
 

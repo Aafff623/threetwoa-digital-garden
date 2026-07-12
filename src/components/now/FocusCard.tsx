@@ -12,7 +12,7 @@ interface FocusData {
 }
 
 export default function FocusCard({ data }: { data?: FocusData }) {
-  const title = data?.title || "春风不解别离";
+  const title = data?.title || "threetwoa · Digital Garden";
   const subtitle = data?.subtitle || "Front-end Micro-Interactions";
   const desc = data?.desc || "调试精细的 GSAP 滚动裁剪层和 Lenis 触控摩擦物理模型，探寻屏幕里如同杂志纸页的沉稳质感。";
   const code = data?.code || 'gsap.to(".viewport", { ease: "power4.out" })';

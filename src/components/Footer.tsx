@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="relative z-[3] mx-auto max-w-5xl py-12 px-6 text-center text-[10px] leading-relaxed text-charcoal/50 dark:text-cream/40 font-sans tracking-widest space-y-4">
         {/* 1. 禅意诗句 */}
         <p className="font-serif text-sm font-semibold tracking-[0.25em] text-charcoal dark:text-cream mb-4">
-          春风不解别离意，今日方知我是春。
+          Code less, Architect more.
         </p>
 
         {/* 2. 强力驱动与版权声明 */}

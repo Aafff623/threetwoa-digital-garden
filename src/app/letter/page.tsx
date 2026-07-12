@@ -90,7 +90,7 @@ export default function LetterPage() {
             Letter / 岁月信箱
           </h1>
           <p className="font-sans text-xs text-charcoal/50 tracking-wider mt-2.5 max-w-[60ch] leading-relaxed">
-            投递给未来自己的时光胶囊。它们静静沉睡于「春风不解别离」逻辑舱中，将在倒计时归零时解封开启，亦可输入对应的时空秘钥提前唤醒阅读。
+            投递给未来自己的时光胶囊。它们静静沉睡于 Threetwoa Digital Garden 逻辑舱中，将在倒计时归零时解封开启，亦可输入对应的时空秘钥提前唤醒阅读。
           </p>
         </div>
 

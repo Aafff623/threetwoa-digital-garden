@@ -403,7 +403,7 @@ export default function FootprintsPageClient({
               地图组件尚未启用
             </h2>
             <p className="font-sans text-xs text-charcoal/80 dark:text-cream/70 leading-relaxed">
-              本数字档案馆的“岁月足迹”页面需要配置高德地图 API 密钥。请先在系统后台配置 Key 后再行访问。
+              本站「岁月足迹」页面需要配置高德地图 API 密钥。请先配置 Key 后再行访问（当前无 Admin 时请在环境/配置中提供）。
             </p>
           </div>
           <div className="pt-2 flex flex-col gap-3">

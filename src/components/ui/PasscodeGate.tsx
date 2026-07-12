@@ -15,7 +15,7 @@ interface PasscodeGateProps {
 export default function PasscodeGate({
   onUnlock,
   passcode = "2026",
-  title = "数字档案馆加密区",
+  title = "数字花园加密区",
   description = "本区块包含私人信件与恋爱相册。请输入访问口令（默认：2026）解锁查看。",
 }: PasscodeGateProps) {
   const [input, setInput] = useState("");

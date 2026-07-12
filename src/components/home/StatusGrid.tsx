@@ -14,7 +14,7 @@ const statusCards = [
   {
     icon: Film,
     title: "正在做",
-    value: "春风不解别离",
+    value: "threetwoa garden",
     body: "把文章、相册和生活状态重新整理成一个更像家的个人博客。",
   },
   {

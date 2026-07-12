@@ -454,7 +454,7 @@ export default function PondPage() {
         id: 1,
         nickname: "小橘子",
         avatar: "/assets/fish-1.png",
-        content: "哇，这个「春风不解别离」档案馆的页面设计太棒了！特别是背景中那种水彩质感的心情流体渲染，配上 GSAP 的阻尼 3D 偏转效果，简直把细节控的审美拿捏得死死的！加油博主！",
+        content: "哇，这个 Threetwoa Digital Garden 的页面设计太棒了！特别是背景中那种水彩质感的心情流体渲染，配上 GSAP 的阻尼 3D 偏转效果，简直把细节控的审美拿捏得死死的！加油 threetwoa！",
         category: "praise",
         status: "approved",
         isPublic: true,

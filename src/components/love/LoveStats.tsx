@@ -129,7 +129,7 @@ export default function LoveStats({ stats }: LoveStatsProps) {
             被时间认真记下的日常
           </span>
           <h2 className="mt-1 text-3xl font-semibold tracking-[-0.02em] text-charcoal dark:text-cream">
-            陪伴档案馆
+            陪伴档案馆 · threetwoa
           </h2>
         </div>
         <p className="text-sm tone-muted max-w-md font-sans">

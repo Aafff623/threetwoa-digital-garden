@@ -6,7 +6,7 @@ import AboutPageClient from "@/components/about/AboutPageClient";
 import { aboutProfile } from "@/mock/about";
 
 export async function generateMetadata(): Promise<Metadata> {
-  let title = "春风不解别离意，今日方知我是春。";
+  let title = "threetwoa · About";
   try {
     const response = await getPublicConfig();
     const configs = response.data?.data;
