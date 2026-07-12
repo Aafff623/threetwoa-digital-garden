@@ -1,0 +1,147 @@
+{
+  "label": "after-prod",
+  "base": "https://threetwoa-digital-garden.vercel.app",
+  "measuredAt": "2026-07-12T08:04:00.157Z",
+  "protocol": "Ctrl+F5 analogue (cache disabled + hard reload) → click Link → measure path/content/quiet + longtasks in 2.5s window",
+  "results": [
+    {
+      "route": "writing",
+      "href": "/writing",
+      "clickToPathMs": 3275,
+      "clickToContentMs": 3285,
+      "clickToQuietMs": 4288,
+      "longTaskCount": 2,
+      "longTaskMaxMs": 75,
+      "longTaskTotalMs": 148,
+      "tasks": [
+        {
+          "start": 3201,
+          "duration": 73
+        },
+        {
+          "start": 3534,
+          "duration": 75
+        }
+      ],
+      "finalUrl": "https://threetwoa-digital-garden.vercel.app/writing"
+    },
+    {
+      "route": "gallery",
+      "href": "/gallery",
+      "clickToPathMs": 3450,
+      "clickToContentMs": 3457,
+      "clickToQuietMs": 4489,
+      "longTaskCount": 2,
+      "longTaskMaxMs": 86,
+      "longTaskTotalMs": 169,
+      "tasks": [
+        {
+          "start": 3366,
+          "duration": 83
+        },
+        {
+          "start": 3727,
+          "duration": 86
+        }
+      ],
+      "finalUrl": "https://threetwoa-digital-garden.vercel.app/gallery"
+    },
+    {
+      "route": "about",
+      "href": "/about",
+      "clickToPathMs": 1319,
+      "clickToContentMs": 1337,
+      "clickToQuietMs": 1938,
+      "longTaskCount": 2,
+      "longTaskMaxMs": 271,
+      "longTaskTotalMs": 396,
+      "tasks": [
+        {
+          "start": 871,
+          "duration": 271
+        },
+        {
+          "start": 1181,
+          "duration": 125
+        }
+      ],
+      "finalUrl": "https://threetwoa-digital-garden.vercel.app/about"
+    },
+    {
+      "route": "love",
+      "href": "/love",
+      "clickToPathMs": 564,
+      "clickToContentMs": 581,
+      "clickToQuietMs": 1201,
+      "longTaskCount": 1,
+      "longTaskMaxMs": 79,
+      "longTaskTotalMs": 79,
+      "tasks": [
+        {
+          "start": 484,
+          "duration": 79
+        }
+      ],
+      "finalUrl": "https://threetwoa-digital-garden.vercel.app/love"
+    },
+    {
+      "route": "footprints",
+      "href": "/footprints",
+      "clickToPathMs": 2521,
+      "clickToContentMs": 2529,
+      "clickToQuietMs": 3150,
+      "longTaskCount": 1,
+      "longTaskMaxMs": 72,
+      "longTaskTotalMs": 72,
+      "tasks": [
+        {
+          "start": 2448,
+          "duration": 72
+        }
+      ],
+      "finalUrl": "https://threetwoa-digital-garden.vercel.app/footprints"
+    },
+    {
+      "route": "pond",
+      "href": "/pond",
+      "clickToPathMs": 2250,
+      "clickToContentMs": 2256,
+      "clickToQuietMs": 3201,
+      "longTaskCount": 3,
+      "longTaskMaxMs": 105,
+      "longTaskTotalMs": 282,
+      "tasks": [
+        {
+          "start": 2017,
+          "duration": 98
+        },
+        {
+          "start": 2136,
+          "duration": 105
+        },
+        {
+          "start": 2485,
+          "duration": 79
+        }
+      ],
+      "finalUrl": "https://threetwoa-digital-garden.vercel.app/pond"
+    },
+    {
+      "route": "home-from-writing",
+      "href": "/",
+      "clickToPathMs": 6364,
+      "clickToContentMs": 6375,
+      "clickToQuietMs": 6964,
+      "longTaskCount": 1,
+      "longTaskMaxMs": 58,
+      "longTaskTotalMs": 58,
+      "tasks": [
+        {
+          "start": 6272,
+          "duration": 58
+        }
+      ],
+      "finalUrl": "https://threetwoa-digital-garden.vercel.app/"
+    }
+  ]
+}
