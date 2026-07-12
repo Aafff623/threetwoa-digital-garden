@@ -142,7 +142,7 @@ export default function CertificateCard({ achievement, onClick }: CertificateCar
           <div className="text-left font-serif scale-90 origin-left">
             <div className="text-[8px] uppercase tracking-widest text-charcoal/40 dark:text-white/40">AUTHORIZED BY</div>
             <div className="text-[11px] font-bold text-charcoal/70 dark:text-white/70 italic mt-0.5 tracking-wider font-sans">
-              threetwoa
+              三两园
             </div>
           </div>
 

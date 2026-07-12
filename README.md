@@ -20,7 +20,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-%3E%3D20.9-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/License-Proprietary-6B7280?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/Status-Active-22C55E?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/Version-0.1.0-0EA5E9?style=for-the-badge" alt="Version" />
 </p>
@@ -246,7 +246,7 @@ src/
 
 ## 开源说明
 
-当前未附带开源许可证。在补充根目录 `LICENSE` 之前，**代码保留全部权利**。
+本项目采用 [MIT License](./LICENSE)。
 
 公开部署前请检查：
 

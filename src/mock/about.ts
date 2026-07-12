@@ -6,35 +6,35 @@ export const aboutProfile: AboutProfile = {
   role: siteIdentity.role,
   headline: siteIdentity.headline,
   introduction:
-    "这里不是一份冰冷的简历，而是一些关于我的切片：正在炼的工作流、已经上线的产品、黑客松留下的证据，以及一些还在生长的想法。",
+    "这里不是一份冰冷的简历，而是园子里几片叶子：正在炼的工作流、已经上线的产品、黑客松留下的证据，以及一些还在抽芽的想法。",
   tags: [
     "# Agentic Coding",
     "# Full-stack",
     "# Web3 & AI",
-    "# Workflow Builder",
+    "# 守园人",
     "# Spec-driven",
   ],
   avatar: siteIdentity.avatar,
   rotatingTexts: [...siteIdentity.rotatingTexts],
   currentStatus: {
-    title: "现在的我",
+    title: "园中近况",
     items: [
       {
-        label: "正在构建",
-        desc: "搭建 Threetwoa Digital Garden 与更多可复用的 AI 工程工作流，让「从灵感到上线」变成可重复的流程。",
+        label: "正在建造",
+        desc: "照料三两园与更多可复用的 AI 工程工作流，让「从灵感到上线」变成可重复的路径。",
       },
       {
         label: "正在探索",
-        desc: "Agentic Coding、MCP / Skills、Smart Accounts 与黑客松级全栈交付——用可验证的结果证明能力。",
+        desc: "Agentic Coding、MCP / Skills、Smart Accounts 与黑客松级全栈交付——用可验证的结果说话。",
       },
       {
         label: "正在学习",
-        desc: "把 Claude Code / Codex / GPT 的分工固化成 Skills 与规范（CONTEXT / ADR），让协作与交付更稳。",
+        desc: "把 Claude Code / Codex / GPT 的分工固化成 Skills 与规范，让协作与交付更稳。",
       },
     ],
   },
   coordinates: {
-    title: "我的坐标",
+    title: "园中坐标",
     items: [
       {
         label: "我从哪里来",
@@ -46,17 +46,17 @@ export const aboutProfile: AboutProfile = {
       },
       {
         label: "我在意什么",
-        desc: "清晰、可复用、可验证。Proof, not slides——要留下能点开的 Demo、Tx Hash 与仓库痕迹。",
+        desc: "清晰、可复用、可验证。Proof, not slides——要留下能点开的 Demo 与仓库痕迹。",
       },
       {
         label: "我想去哪里",
-        desc: "开源更多工作流能力，参加更多 Web3 / AI 黑客松，做出真正有人用的产品。",
+        desc: "开源更多工作流能力，参加更多 Web3 / AI 黑客松，做出真正有人愿意回来的小园。",
       },
     ],
   },
   fragments: {
     title: "Fragments of Me",
-    subtitle: "自我切片",
+    subtitle: "园中切片",
     items: [
       {
         category: "技术",
@@ -87,24 +87,24 @@ export const aboutProfile: AboutProfile = {
       },
       {
         category: "生活",
-        tags: ["数字花园", "学习轨迹", "项目复盘", "开源", "纪录片式记录"],
+        tags: ["三两园", "学习轨迹", "项目复盘", "开源", "慢记录"],
         desc: "收藏不会被算法冲走的痕迹",
         image: "/assets/life_snapshot.png",
       },
     ],
   },
   beliefs: {
-    title: "我相信",
+    title: "园中信条",
     subtitle: "Some Things I Believe",
     items: [
-      "我相信「Code less, Architect more.」——少堆代码，多搭可复用的结构。",
-      "我相信个人站点的意义，是保存一个正在变化的 builder，而不是一张完美海报。",
+      "我相信「少写几行，多筑一境」——少堆代码，多搭可复用的结构。",
+      "我相信个人站点的意义，是保存一个正在变化的人，而不是一张完美海报。",
       "我相信真正高级的东西，往往不是复杂，而是克制、准确和可验证。",
       "我相信证据优于口号：Demo、仓库、测试网交易，比 PPT 更诚实。",
     ],
   },
   explore: {
-    title: "继续探索",
+    title: "继续逛园",
     desc: "想再多认识一点，可以去翻文章、看相册，也可以去鱼塘留一条消息——或者直接打开 GitHub。",
     links: [
       { label: "翻开随笔", href: "/writing", icon: "notes" },
@@ -117,7 +117,7 @@ export const aboutProfile: AboutProfile = {
         external: true,
       },
     ],
-    closing: "这个花园还在生长。我也是。",
-    footerSubtitle: "About threetwoa — the one behind this garden.",
+    closing: "这座园子还在生长。我也是。",
+    footerSubtitle: `About ${siteIdentity.name} — the one who tends this garden.`,
   },
 };

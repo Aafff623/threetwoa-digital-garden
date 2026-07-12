@@ -20,7 +20,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-%3E%3D20.9-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/License-Proprietary-6B7280?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/Status-Active-22C55E?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/Version-0.1.0-0EA5E9?style=for-the-badge" alt="Version" />
 </p>
@@ -246,7 +246,7 @@ src/
 
 ## License
 
-No open-source license is attached. Until a root `LICENSE` is added, **all rights are reserved**.
+This project is released under the [MIT License](./LICENSE).
 
 Before any public deployment, review:
 

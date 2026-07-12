@@ -10,3 +10,4 @@ out/
 .pnp.*
 .yarn/*
 tsconfig.tsbuildinfo
+.vercel

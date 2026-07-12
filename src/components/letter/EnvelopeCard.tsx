@@ -187,7 +187,7 @@ export default function EnvelopeCard({ letter, unlockedIds, onClick }: EnvelopeC
         style={{ transform: "translateZ(8px)" }}
       >
         <span className="font-serif italic text-xs text-charcoal/50 uppercase tracking-wider">
-          To: 未来的 threetwoa
+          To: 未来的守园人
         </span>
         <span className="font-serif italic text-[11px] text-charcoal/40 uppercase tracking-wider">
           From: {is2027 ? "2026年夏夜 · Private Atlas" : "2026年秋分 · 逻辑信箱"}

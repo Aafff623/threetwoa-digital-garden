@@ -134,7 +134,7 @@ export default function Navbar() {
   };
 
   const logoUrl = getConfigValue("site.logo.url");
-  const logoText = getConfigValue("site.logo.text", "threetwoa");
+  const logoText = getConfigValue("site.logo.text", "三两园");
 
   const navItems = [
     { englishName: "Archive", chineseName: "年份归档", path: "/archive", previewImg: "archive.png" },
@@ -347,7 +347,7 @@ export default function Navbar() {
                 Directory
               </span>
               <span className="text-[9px] font-sans uppercase tracking-widest text-gold opacity-80">
-                Digital Garden
+                三两园
               </span>
             </div>
 

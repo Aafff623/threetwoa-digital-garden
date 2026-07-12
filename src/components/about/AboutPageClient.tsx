@@ -403,7 +403,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                 ))}
               </span>
               <RotatingText
-                texts={profile.rotatingTexts && profile.rotatingTexts.length > 0 ? profile.rotatingTexts : ["threetwoa", "architect", "builder", "hacker"]}
+                texts={profile.rotatingTexts && profile.rotatingTexts.length > 0 ? profile.rotatingTexts : ["三两园", "守园人", "architect", "builder"]}
                 mainClassName="px-4 py-1 bg-gold text-cream dark:text-zinc-900 overflow-hidden justify-center rounded-2xl text-3xl md:text-4xl lg:text-5xl font-sans font-medium select-none"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}

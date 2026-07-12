@@ -454,7 +454,7 @@ export default function PondPage() {
         id: 1,
         nickname: "小橘子",
         avatar: "/assets/fish-1.png",
-        content: "哇，这个 Threetwoa Digital Garden 的页面设计太棒了！特别是背景中那种水彩质感的心情流体渲染，配上 GSAP 的阻尼 3D 偏转效果，简直把细节控的审美拿捏得死死的！加油 threetwoa！",
+        content: "哇，这个 三两园 的页面设计太棒了！特别是背景中那种水彩质感的心情流体渲染，配上 GSAP 的阻尼 3D 偏转效果，简直把细节控的审美拿捏得死死的！加油守园人！",
         category: "praise",
         status: "approved",
         isPublic: true,
@@ -469,7 +469,7 @@ export default function PondPage() {
         tags: [{ id: 1, name: "UI", color: "#ec4899" }],
         replies: [{
           id: 1,
-          nickname: "threetwoa (博主)",
+          nickname: "守园人",
           avatar: "/life-assets/avatar.jpg",
           content: "谢谢你的喜欢！写前端最开心的就是能用代码把心里的想法‘物理显化’出来。流体背景和 3D 卡片确实调了很久，能被你注意到这些细节真的非常欣慰！",
           isAdmin: true,
@@ -496,7 +496,7 @@ export default function PondPage() {
         tags: [{ id: 2, name: "后台", color: "#3b82f6" }],
         replies: [{
           id: 2,
-          nickname: "threetwoa (博主)",
+          nickname: "守园人",
           avatar: "/life-assets/avatar.jpg",
           content: "这个改进点提得太及时了！最近重构了系统配置页面，已经把外观配置、背景切换和视频链接动态绑定的模块都完成了，目前前台已支持一键实时换肤和背景视频渲染，欢迎测试！",
           isAdmin: true,

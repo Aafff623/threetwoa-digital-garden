@@ -107,7 +107,7 @@ export const writingData: Post[] = [
   },
   {
     slug: "anniversary-celebration-diary",
-    title: "第三个春天的纪念：数字花园新的一页",
+    title: "第三个春天的纪念：三两园新的一页",
     date: "2026-01-05",
     category: "Love",
     mood: "joyful",
@@ -172,7 +172,7 @@ export const writingData: Post[] = [
 ## 二、普通引用与任务列表
 
 > 胶片的温度在于银盐的颗粒感，而数字文字的温度，则在于那些被记录下来的微小日常。
-> —— *Digital Garden · threetwoa*
+> —— *三两园 · 守园人*
 
 这里是系统运维与架构任务清单：
 
@@ -215,7 +215,7 @@ export function renderPost(post: Post): string {
 
 ## 五、胶片影像与 Lightbox 放大
 
-![数字花园·摄影记录](/assets/writing-camera.png)
+![三两园·摄影记录](/assets/writing-camera.png)
 
 ## 六、小结
 

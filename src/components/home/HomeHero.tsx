@@ -112,7 +112,7 @@ export default function HomeHero({
               <div className="relative h-full w-full overflow-hidden rounded-full">
                 <Image
                   src="/assets/avtor-boy.jpg"
-                  alt="threetwoa"
+                  alt="三两园"
                   fill
                   loading="eager"
                   sizes="44px"
@@ -128,7 +128,7 @@ export default function HomeHero({
           <div className="mt-8 max-w-full space-y-5 sm:max-w-3xl">
             <h1 className="font-hero-h text-[3.55rem] font-semibold leading-[0.95] tracking-normal text-cream drop-shadow-[0_18px_48px_rgba(0,0,0,0.28)] sm:text-7xl md:text-8xl">
               <TextType
-                text={[logoText || "threetwoa", welcomeText || "Code less, Architect more.", welcomeSubtitle || "数字花园主人"]}
+                text={[logoText || "三两园", welcomeText || "少写几行，多筑一境", welcomeSubtitle || "守园人"]}
                 typingSpeed={90}
                 deletingSpeed={50}
                 pauseDuration={2500}
@@ -139,7 +139,7 @@ export default function HomeHero({
               />
             </h1>
             <p className="max-w-[32rem] break-words text-[15px] leading-8 text-cream/78 md:text-base">
-              Code less, Architect more. 把 AI 工作流、全栈交付与生活切片，种进这座数字花园。
+              少写几行，多筑一境。把工作流、交付与生活切片，种进这座三两园。
             </p>
           </div>
 

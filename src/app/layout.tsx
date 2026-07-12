@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond, Playfair_Display, Space_Grotesk, Space_Mono, Jost, Noto_Serif_SC, Ma_Shan_Zheng } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FloatingFooterPeekers from "@/components/ui/FloatingFooterPeekers";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import StyleConsole from "@/components/ui/StyleConsole";
-import BackToTop from "@/components/ui/BackToTop";
-import TapeStation from "@/components/ui/TapeStation";
 import ThemeApplier from "@/components/ui/ThemeApplier";
+import SiteChrome from "@/components/ui/SiteChrome";
 import { fetchPublicConfigForServer } from "@/api/config";
+import { siteIdentity } from "@/data/identity";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -63,7 +58,7 @@ const maShanZheng = Ma_Shan_Zheng({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  let title = "threetwoa · Digital Garden";
+  let title: string = siteIdentity.siteTitleDefault;
   let faviconUrl = "/icon.png";
   try {
     const data = await fetchPublicConfigForServer({ next: { revalidate: 10 } });
@@ -83,7 +78,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title,
-    description: "threetwoa 的数字花园：技术随笔、项目痕迹、生活切片与可运行的工程证据。Code less, Architect more.",
+    description: siteIdentity.siteDescription,
     icons: {
       icon: faviconUrl,
     }
@@ -120,26 +115,8 @@ export default function RootLayout({
         {/* 3. 电影胶片质感颗粒图层 (z-50, 保证极弱噪点铺在最上层) */}
         <div className="film-grain" />
 
-        {/* 4. 网页主内容容器 (z-10)，拥有显式正值 z-index，保证所有文字、按钮绝对不被背景或视频遮挡 */}
-        <div className="relative z-10 min-h-full flex flex-col">
-          <SmoothScroll>
-            <Navbar />
-            <main className="grow flex flex-col">{children}</main>
-            <Footer />
-          </SmoothScroll>
-        </div>
-
-        {/* 5. 全站底部趴窗装饰，接近 footer 时停靠到 footer 顶部 */}
-        <FloatingFooterPeekers />
-
-        {/* 6. 悬浮的视觉控制中心 */}
-        <StyleConsole />
-
-        {/* 7. 全局回到顶部按钮 */}
-        <BackToTop />
-
-        {/* 8. 治愈系磁带播放器 */}
-        <TapeStation />
+        {/* 4. 前台壳层（/admin 自动精简） */}
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

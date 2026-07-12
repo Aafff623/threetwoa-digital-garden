@@ -6,7 +6,7 @@ import AboutPageClient from "@/components/about/AboutPageClient";
 import { aboutProfile } from "@/mock/about";
 
 export async function generateMetadata(): Promise<Metadata> {
-  let title = "threetwoa · About";
+  let title = "三两园 · 关于";
   try {
     const response = await getPublicConfig();
     const configs = response.data?.data;
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title,
-    description: "threetwoa 的数字花园：Agentic Coding、全栈交付与可验证的工程证据。Code less, Architect more.",
+    description: "三两园：技术随笔、项目痕迹与生活切片。少写几行，多筑一境。",
   };
 }
 

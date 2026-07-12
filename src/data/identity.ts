@@ -1,20 +1,24 @@
 /**
- * Site owner identity — sourced from GitHub profile Aafff623 / threetwoa.
- * Prefer this module for defaults when backend config is unavailable.
+ * Site identity — public brand vs technical handle.
+ * Display brand is literary; GitHub handle stays Aafff623 / threetwoa.
  */
 export const siteIdentity = {
-  /** Public display name / brand */
-  name: "threetwoa",
-  /** GitHub login */
+  /** Literary Chinese brand (UI / copy) */
+  name: "三两园",
+  /** English brand */
+  nameEn: "Sanliang Garden",
+  /** Technical / social handle (not primary UI brand) */
+  handle: "threetwoa",
   github: "Aafff623",
-  role: "数字花园主人",
-  tagline: "Code less, Architect more.",
-  headline: "把 AI 工具炼成可复用的工程工作流，也把想法做成能上线的产品。",
+  role: "守园人",
+  /** Soft literary tagline */
+  tagline: "少写几行，多筑一境",
+  taglineEn: "Code less, Architect more.",
+  headline: "在代码与生活的缝隙里，种一座只对自己负责的小园。",
   shortBio:
-    "中北大学软件工程大二。做 Agentic Coding、全栈交付与 Web3/AI 黑客松——用证据说话，而不是 PPT。",
+    "中北大学软件工程。把 AI 工作流炼成可复用的工具，也把灵感落成能打开的页面——证据比口号更重要。",
   school: "中北大学 · 软件工程",
-  identityLine:
-    "Agentic Coding Explorer · Workflow Practitioner · Web3 & AI Hackathon Builder",
+  identityLine: "Agentic Coding · 全栈交付 · Web3 / AI 黑客松",
   email: "laiyif68@gmail.com",
   githubUrl: "https://github.com/Aafff623",
   xUrl: "https://x.com/FanLaiyi26341",
@@ -24,10 +28,12 @@ export const siteIdentity = {
   youtubeUrl: "https://www.youtube.com/@laiyiFan-23",
   gardenUrl: "https://threetwoa-digital-garden.vercel.app",
   avatar: "/assets/avtor-boy.jpg",
-  copyright: "© 2026 threetwoa. All rights reserved.",
-  poweredBy: "本站由 Threetwoa Digital Garden 强力驱动",
-  siteTitleDefault: "threetwoa · Digital Garden",
+  copyright: "© 2026 三两园 · Sanliang Garden. MIT License.",
+  poweredBy: "本站由 三两园 强力驱动",
+  siteTitleDefault: "三两园 · Sanliang Garden",
   siteDescription:
-    "threetwoa 的数字花园：技术随笔、项目痕迹、生活切片与可运行的工程证据。Code less, Architect more.",
-  rotatingTexts: ["threetwoa", "architect", "builder", "hacker"],
+    "三两园：技术随笔、项目痕迹与生活切片。少写几行，多筑一境。",
+  rotatingTexts: ["三两园", "守园人", "architect", "builder"],
+  authorByline: "三两园 · 守园人",
+  hostLabel: "守园人",
 } as const;
