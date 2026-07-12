@@ -1,9 +1,16 @@
-/* 1. 鐟炲＋鐜颁唬鏉傚織鎺掔増 (Swiss Modernism 2.0) */
+/* 1. 瑞士现代杂志排版 (Swiss Modernism 2.0) */
 .style-swiss {
   --font-heading: var(--font-cormorant);
   --font-body: var(--font-inter);
   --accent-color: #C5A880;
   --accent-light-color: #DFCEB4;
+  --bg-color: #F4F1EA;
+  --bg-dark-color: #E8E2D6;
+  --fg-color: #1A1A1A;
+  --border-line-color: rgba(26, 26, 26, 0.12);
+  --surface-elevated: #FFFEFB;
+  --surface-muted: #EFEAE0;
+  --surface-glass: rgba(255, 254, 251, 0.7);
 
   --font-hero-heading: var(--font-cormorant);
   --font-hero-body: var(--font-inter);
@@ -25,4 +32,16 @@
   --font-gallery-h-val: var(--font-gallery-heading), var(--font-noto-serif-sc), var(--font-heading), Georgia, serif;
   --font-gallery-b-val: var(--font-gallery-body), var(--font-body), sans-serif;
   --font-quote-h-val: var(--font-quote-heading), var(--font-noto-serif-sc), var(--font-heading), Georgia, serif;
+}
+
+.dark.style-swiss {
+  --bg-color: #0F0F0F;
+  --bg-dark-color: #1A1A1A;
+  --fg-color: #F0F0F0;
+  --border-line-color: rgba(245, 245, 245, 0.12);
+  --accent-color: #D4B896;
+  --accent-light-color: #E8D4B8;
+  --surface-elevated: #1C1C1C;
+  --surface-muted: #161616;
+  --surface-glass: rgba(28, 28, 28, 0.88);
 }
