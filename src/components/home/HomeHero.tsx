@@ -174,7 +174,7 @@ export default function HomeHero({
                   gsap.to(icon, { rotate: 0, scale: 1, duration: 0.3, ease: "power2.out" });
                 }
               }}
-              className="inline-flex items-center gap-2 rounded-full bg-cream px-5 py-3 text-sm font-semibold text-charcoal shadow-[0_18px_42px_-24px_rgba(0,0,0,0.7)]"
+              className="inline-flex items-center gap-2 rounded-full bg-cream px-5 py-3 text-sm font-semibold text-charcoal shadow-[0_18px_42px_-24px_rgba(0,0,0,0.7)] dark:bg-cream dark:text-charcoal"
             >
               <PenLine className="h-4 w-4" />
               随笔

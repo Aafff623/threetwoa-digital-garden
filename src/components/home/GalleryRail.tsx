@@ -31,7 +31,7 @@ export default function GalleryRail({ photos, trackRef, onSelect }: GalleryRailP
                     autoPlay
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:brightness-105"
                   />
-                  <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-cream/86 px-2 py-1 text-[11px] font-medium text-charcoal/70 backdrop-blur">
+                  <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-cream/90 px-2 py-1 text-[11px] font-medium text-charcoal/80 backdrop-blur dark:bg-charcoal/90 dark:text-cream/80">
                     <Play className="h-3 w-3 fill-gold text-gold" />
                     动态
                   </span>
