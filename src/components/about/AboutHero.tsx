@@ -207,8 +207,8 @@ export default function AboutHero() {
             />
           </div>
           <div className="mt-3 flex justify-between items-center px-1">
-            <span className="text-[9px] font-mono tracking-widest text-charcoal/40 dark:text-white/40">FOCAL POINT</span>
-            <span className="text-[10px] font-serif text-charcoal/60 dark:text-white/60">銀塩記憶</span>
+            <span className="text-[9px] font-mono tracking-widest text-charcoal/50 dark:text-cream/50">FOCAL POINT</span>
+            <span className="text-[10px] font-serif text-charcoal/70 dark:text-cream/70">銀塩記憶</span>
           </div>
         </div>
 
@@ -228,8 +228,8 @@ export default function AboutHero() {
             />
           </div>
           <div className="mt-3 flex justify-between items-center px-1">
-            <span className="text-[9px] font-mono tracking-widest text-charcoal/40 dark:text-white/40">LATE NIGHTS</span>
-            <span className="text-[10px] font-serif text-charcoal/60 dark:text-white/60">咖啡与终端</span>
+            <span className="text-[9px] font-mono tracking-widest text-charcoal/50 dark:text-cream/50">LATE NIGHTS</span>
+            <span className="text-[10px] font-serif text-charcoal/70 dark:text-cream/70">咖啡与终端</span>
           </div>
         </div>
 
@@ -250,7 +250,7 @@ export default function AboutHero() {
           </div>
           <div className="mt-3 flex justify-between items-center px-1">
             <span className="text-[9px] font-mono tracking-widest text-gold">CURRENT ATTIRE</span>
-            <span className="text-[10px] font-serif text-charcoal/80 dark:text-white/80 font-medium">数字生命</span>
+            <span className="text-[10px] font-serif text-charcoal/85 dark:text-cream/85 font-medium">数字生命</span>
           </div>
         </div>
 
@@ -260,7 +260,7 @@ export default function AboutHero() {
       <div className="w-full max-w-4xl px-6 text-center z-10 mb-8">
         <h1
           ref={textRef}
-          className="font-serif text-3xl md:text-5xl lg:text-6xl font-light text-charcoal dark:text-white leading-[1.25] tracking-wide"
+          className="font-serif text-3xl md:text-5xl lg:text-6xl font-light text-charcoal dark:text-cream leading-[1.25] tracking-wide"
         >
           {charArray.map((char, idx) => (
             <span
@@ -274,7 +274,7 @@ export default function AboutHero() {
             </span>
           ))}
         </h1>
-        <p className="mt-8 font-sans text-xs md:text-sm text-charcoal/50 dark:text-white/50 tracking-widest uppercase font-light">
+        <p className="mt-8 font-sans text-xs md:text-sm text-charcoal/60 dark:text-cream/60 tracking-widest uppercase font-light">
           SCROLL DOWN TO DECLASSIFY · 向下滑动解密档案
         </p>
       </div>

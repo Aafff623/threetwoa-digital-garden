@@ -134,14 +134,14 @@ export default function HorizontalTrack() {
   }, [slides.length]);
 
   return (
-    <div ref={sectionRef} className="relative w-full overflow-hidden bg-cream-dark/30 dark:bg-zinc-950/20 border-y border-charcoal/5 dark:border-white/5 py-12 md:py-24">
+    <div ref={sectionRef} className="relative w-full overflow-hidden bg-cream-dark/50 dark:bg-[#151C18] border-y border-charcoal/10 dark:border-white/10 py-12 md:py-24">
       
       {/* 模块说明 */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 mb-8 md:mb-12 flex flex-col gap-2">
         <span className="text-[10px] font-sans font-semibold tracking-[0.25em] text-gold uppercase">
           02 / Life Pieces
         </span>
-        <h2 className="font-serif text-2xl md:text-4xl font-light text-charcoal dark:text-white">
+        <h2 className="font-serif text-2xl md:text-4xl font-light text-charcoal dark:text-cream">
           生活胶片 / 记忆的轨道
         </h2>
       </div>
@@ -158,7 +158,7 @@ export default function HorizontalTrack() {
           {slides.map((slide, idx) => (
             <div
               key={idx}
-              className="film-card flex-shrink-0 w-[80vw] max-w-[340px] md:w-[480px] md:max-w-none bg-white dark:bg-zinc-900 border border-charcoal/10 dark:border-white/10 p-5 md:p-6 rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.08)] transform hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500 ease-out select-none cursor-pointer"
+              className="film-card flex-shrink-0 w-[80vw] max-w-[340px] md:w-[480px] md:max-w-none bg-white dark:bg-zinc-900 border border-charcoal/10 dark:border-white/12 p-5 md:p-6 rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.12)] transform hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500 ease-out select-none cursor-pointer"
               style={{
                 scrollSnapAlign: "center",
                 transform: `rotate(${idx % 2 === 0 ? "-1deg" : "1.5deg"})`,
@@ -178,7 +178,7 @@ export default function HorizontalTrack() {
               {/* 手写日记文字内容 */}
               <div className="mt-6 flex flex-col gap-3">
                 <div className="flex justify-between items-baseline border-b border-charcoal/5 dark:border-white/5 pb-2">
-                  <h3 className="font-serif text-lg md:text-xl font-light text-charcoal dark:text-white">
+                  <h3 className="font-serif text-lg md:text-xl font-light text-charcoal dark:text-cream">
                     {slide.title}
                   </h3>
                   <span className="font-mono text-xs text-gold font-semibold">
@@ -187,11 +187,11 @@ export default function HorizontalTrack() {
                 </div>
                 
                 {/* 使用毛笔字/手写感字体强调故事性 */}
-                <p className="font-serif text-xs md:text-sm text-charcoal/70 dark:text-white/70 leading-relaxed font-light mt-1 min-h-[4.5em]">
+                <p className="font-serif text-xs md:text-sm text-charcoal/75 dark:text-cream/75 leading-relaxed font-light mt-1 min-h-[4.5em]">
                   {slide.quote}
                 </p>
 
-                <div className="flex justify-between items-center text-[10px] font-mono tracking-widest text-charcoal/40 dark:text-white/40 mt-2">
+                <div className="flex justify-between items-center text-[10px] font-mono tracking-widest text-charcoal/50 dark:text-cream/50 mt-2">
                   <span>METADATA</span>
                   <span>{slide.sub}</span>
                 </div>

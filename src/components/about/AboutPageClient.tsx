@@ -32,7 +32,7 @@ function AboutIcon({ name, className = "h-5 w-5" }: { name: AboutIconName; class
 function ActionLink({ link, primary = false }: { link: AboutLink; primary?: boolean }) {
   const className = primary
     ? "relative overflow-hidden inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-medium text-white dark:text-zinc-900 hover:bg-gold/90 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-px shadow-lg shadow-gold/15 group"
-    : "inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/15 bg-cream/70 px-6 py-3 text-sm font-medium text-charcoal hover:border-gold hover:bg-cream-dark transition-all duration-300 hover:-translate-y-0.5 active:translate-y-px dark:border-white/15 dark:text-cream dark:bg-zinc-900/40 dark:hover:bg-zinc-900/90";
+    : "inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/15 bg-white px-6 py-3 text-sm font-medium text-charcoal hover:border-gold hover:bg-cream-dark transition-all duration-300 hover:-translate-y-0.5 active:translate-y-px dark:border-white/15 dark:text-cream dark:bg-zinc-900 dark:hover:bg-zinc-800";
 
   if (primary) {
     return (
@@ -342,12 +342,12 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
       <section
         ref={genesisContainerRef}
         id="overview"
-        className="relative min-h-[95dvh] flex flex-col justify-between py-12 px-6 overflow-hidden select-none bg-gradient-to-b from-cream to-cream-dark text-charcoal transition-all duration-300"
+        className="relative min-h-[95dvh] flex flex-col justify-between py-12 px-6 overflow-hidden select-none bg-gradient-to-b from-cream to-cream-dark text-charcoal dark:from-[#0E1411] dark:to-[#151C18] dark:text-cream transition-colors duration-300"
       >
         {/* 适配主题色的聚光灯 (Theatrical Spotlight) */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
           <svg
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-[220%] h-[120%] opacity-40 dark:opacity-55"
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[220%] h-[120%] opacity-40 dark:opacity-30"
             style={{
               transformOrigin: "top center",
               transform: `translateX(-50%) translate3d(${spotlightOffset.x}px, ${spotlightOffset.y}px, 0)`,
@@ -381,7 +381,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
             
             {/* 页面大标题：字符高斯模糊聚焦 + 身份旋转文本 */}
             <motion.h1
-              className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-charcoal dark:text-white flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 cursor-pointer"
+              className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-charcoal dark:text-cream flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 cursor-pointer"
               onClick={handleEggClick}
               title="点击这行字 5 次有彩蛋"
             >
@@ -421,7 +421,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               initial={{ filter: "blur(8px)", opacity: 0, y: 20 }}
               animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-              className="mt-6 font-serif text-lg md:text-xl leading-relaxed text-charcoal/80 dark:text-cream/90 max-w-md lg:max-w-none"
+              className="mt-6 font-serif text-lg md:text-xl leading-relaxed text-charcoal/85 dark:text-cream/85 max-w-md lg:max-w-none"
             >
               {profile.headline}
             </motion.p>
@@ -431,7 +431,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.8, ease: "easeOut" }}
-              className="mt-4 text-xs md:text-sm text-charcoal/60 dark:text-cream/60 font-light leading-relaxed max-w-md lg:max-w-none"
+              className="mt-4 text-xs md:text-sm text-charcoal/70 dark:text-cream/70 font-light leading-relaxed max-w-md lg:max-w-none"
             >
               {profile.introduction}
             </motion.p>
@@ -446,7 +446,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               {profile.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 rounded-full bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-[10px] font-mono text-charcoal/70 dark:text-slate-300 hover:border-gold/30 hover:text-gold transition-colors duration-250"
+                  className="px-3 py-1 rounded-full bg-charcoal/5 dark:bg-white/10 border border-charcoal/10 dark:border-white/15 text-[10px] font-mono text-charcoal/75 dark:text-cream/75 hover:border-gold/30 hover:text-gold transition-colors duration-250"
                 >
                   {tag}
                 </span>
@@ -484,7 +484,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               <div className="absolute -inset-4 bg-gold/8 rounded-full blur-2xl animate-pulse pointer-events-none" />
               
               {/* 双层圆环框 */}
-              <div className="relative h-48 w-48 md:h-60 md:w-60 rounded-full p-2 border border-charcoal/10 dark:border-white/10 overflow-hidden bg-cream/30 dark:bg-zinc-900/30 backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.04)]">
+              <div className="relative h-48 w-48 md:h-60 md:w-60 rounded-full p-2 border border-charcoal/10 dark:border-white/15 overflow-hidden bg-cream/50 dark:bg-zinc-900 shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
                 <div className="relative h-full w-full rounded-full overflow-hidden border border-charcoal/15 dark:border-white/15">
                   <Image
                     src={profile.avatar || "/assets/avtor-boy.jpg"}
@@ -537,7 +537,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               {/* 卡片 1：正在构建 (lg:col-span-2) */}
               <SpotlightCard
                 spotlightColor="rgba(217, 134, 95, 0.12)"
-                className="lg:col-span-2 group relative overflow-hidden bg-cream-dark/30 dark:bg-zinc-900/15 border border-charcoal/8 dark:border-white/8 p-8 rounded-3xl min-h-80 flex flex-col md:flex-row justify-between gap-6 hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300"
+                className="lg:col-span-2 group relative overflow-hidden bg-cream-dark dark:bg-zinc-900 border border-charcoal/8 dark:border-white/8 p-8 rounded-3xl min-h-80 flex flex-col md:flex-row justify-between gap-6 hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300"
               >
                 <div className="flex-1 flex flex-col justify-between z-10">
                   <div>
@@ -571,7 +571,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                     ].map((badge) => (
                       <span
                         key={badge.label}
-                        className={`px-3 py-1.5 rounded-xl bg-cream/50 dark:bg-zinc-800/50 border border-charcoal/5 dark:border-white/5 text-xs text-charcoal/70 dark:text-cream/70 cursor-default transition-all duration-300 hover:-translate-y-0.5 ${badge.color}`}
+                        className={`px-3 py-1.5 rounded-xl bg-cream dark:bg-zinc-800 border border-charcoal/8 dark:border-white/10 text-xs text-charcoal/75 dark:text-cream/75 cursor-default transition-all duration-300 hover:-translate-y-0.5 ${badge.color}`}
                       >
                         {badge.label}
                       </span>
@@ -631,7 +631,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                 {/* 卡片 2：正在研究 */}
                 <SpotlightCard
                   spotlightColor="rgba(217, 134, 95, 0.12)"
-                  className="group relative overflow-hidden bg-cream-dark/30 dark:bg-zinc-900/15 border border-charcoal/8 dark:border-white/8 p-8 rounded-3xl min-h-80 flex flex-col justify-between hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300"
+                  className="group relative overflow-hidden bg-cream-dark dark:bg-zinc-900 border border-charcoal/8 dark:border-white/8 p-8 rounded-3xl min-h-80 flex flex-col justify-between hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300"
                 >
                   <div>
                     <span className="font-mono text-[9px] text-gold tracking-widest uppercase block mb-4 font-bold">
@@ -646,7 +646,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                   </div>
 
                   {/* 底部 SVG 证据融合网络图 */}
-                  <div className="mt-8 relative h-32 w-full flex items-center justify-center bg-cream/15 dark:bg-zinc-950/20 rounded-2xl border border-charcoal/5 dark:border-white/5 overflow-hidden">
+                  <div className="mt-8 relative h-32 w-full flex items-center justify-center bg-cream/40 dark:bg-zinc-950 rounded-2xl border border-charcoal/5 dark:border-white/5 overflow-hidden">
                     <svg className="absolute inset-0 w-full h-full" viewBox="0 0 280 120" fill="none">
                       <path
                         d="M50 30 Q140 10 140 60"
@@ -692,7 +692,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                 {/* 卡片 3：正在学习 */}
                 <SpotlightCard
                   spotlightColor="rgba(217, 134, 95, 0.12)"
-                  className="group relative overflow-hidden bg-cream-dark/30 dark:bg-zinc-900/15 border border-charcoal/8 dark:border-white/8 p-8 rounded-3xl min-h-80 flex flex-col justify-between hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300"
+                  className="group relative overflow-hidden bg-cream-dark dark:bg-zinc-900 border border-charcoal/8 dark:border-white/8 p-8 rounded-3xl min-h-80 flex flex-col justify-between hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300"
                 >
                   <div>
                     <span className="font-mono text-[9px] text-gold tracking-widest uppercase block mb-4 font-bold">
@@ -707,7 +707,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                   </div>
 
                   {/* 底部呼吸感同心圆与正弦波 */}
-                  <div className="mt-8 relative h-32 w-full flex items-center justify-center bg-cream/15 dark:bg-zinc-950/20 rounded-2xl border border-charcoal/5 dark:border-white/5 overflow-hidden">
+                  <div className="mt-8 relative h-32 w-full flex items-center justify-center bg-cream/40 dark:bg-zinc-950 rounded-2xl border border-charcoal/5 dark:border-white/5 overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-18 h-18 rounded-full bg-gradient-to-tr from-gold/15 via-rose-500/5 to-transparent blur-md animate-breath-circle-1" />
                       <div className="absolute w-12 h-12 rounded-full border border-gold/15 dark:border-gold/10 animate-breath-circle-2" />
@@ -744,7 +744,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
             <span className="text-[10px] font-semibold tracking-[0.25em] text-gold uppercase mb-3 block">
               02 / LIFE COORDINATES
             </span>
-            <h2 className="font-bento-h text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="font-bento-h text-3xl font-semibold tracking-tight sm:text-4xl text-charcoal dark:text-cream">
               我的坐标。
             </h2>
             <p className="mt-3 text-sm text-charcoal/65 dark:text-cream/65">
@@ -794,7 +794,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               
               {/* 01 起源 (左上) */}
               <div className="coordinate-card md:col-start-1 md:row-start-1 md:justify-self-end w-full max-w-md flex flex-col gap-4">
-                <div className="relative h-60 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark/30 dark:bg-zinc-900/10 shadow-md group/img">
+                <div className="relative h-60 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark dark:bg-zinc-900 shadow-md group/img">
                   <Image
                     src={profile.coordinates.items[0]?.image || "/assets/writing-tokyo.png"}
                     alt="Tokyo Origin Walk"
@@ -820,7 +820,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
 
               {/* 02 状态 (右上，带向下偏移动效) */}
               <div className="coordinate-card md:col-start-2 md:row-start-1 md:justify-self-start md:translate-y-20 w-full max-w-md flex flex-col gap-4">
-                <div className="relative h-48 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark/30 dark:bg-zinc-900/10 shadow-md group/img">
+                <div className="relative h-48 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark dark:bg-zinc-900 shadow-md group/img">
                   <Image
                     src={profile.coordinates.items[1]?.image || "/assets/writing-coffee.png"}
                     alt="Cozy Coffee Status"
@@ -845,7 +845,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
 
               {/* 03 信念 (左下，带向上偏移动效与轻微斜转) */}
               <div className="coordinate-card md:col-start-1 md:row-start-2 md:justify-self-end md:-translate-y-6 w-full max-w-md flex flex-col gap-4">
-                <div className="relative h-52 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark/30 dark:bg-zinc-900/10 shadow-md group/img transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+                <div className="relative h-52 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark dark:bg-zinc-900 shadow-md group/img transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                   <Image
                     src={profile.coordinates.items[2]?.image || "/assets/love-cooking.png"}
                     alt="Warm Cooking Belief"
@@ -870,7 +870,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
 
               {/* 04 愿景 (右下) */}
               <div className="coordinate-card md:col-start-2 md:row-start-2 md:translate-y-8 w-full max-w-md flex flex-col gap-4">
-                <div className="relative h-64 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark/30 dark:bg-zinc-900/10 shadow-md group/img">
+                <div className="relative h-64 w-full overflow-hidden rounded-2xl border border-charcoal/8 dark:border-white/8 bg-cream-dark dark:bg-zinc-900 shadow-md group/img">
                   <Image
                     src={profile.coordinates.items[3]?.image || "/assets/【哲风壁纸】剪影-壁纸-天空.png"}
                     alt="Cozy Sky Vision"
@@ -902,14 +902,14 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
       {/* 4. 自我切片区域：Bento 气泡列表 (Fragments of Me) - Bento cell 3D staggered 翻折 */}
       <section
         id="fragments"
-        className="border-t border-charcoal/10 py-18 sm:py-24 dark:border-white/10 bg-cream-dark/5"
+        className="border-t border-charcoal/10 py-18 sm:py-24 dark:border-white/10 bg-cream-dark/30 dark:bg-[#151C18]"
       >
         <div className="reveal-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <span className="text-[10px] font-semibold tracking-[0.25em] text-gold uppercase mb-3 block">
               03 / FRAGMENTS OF ME
             </span>
-            <h2 className="font-bento-h text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="font-bento-h text-3xl font-semibold tracking-tight sm:text-4xl text-charcoal dark:text-cream">
               自我切片。
             </h2>
             <p className="mt-3 text-sm text-charcoal/65 dark:text-cream/65">
@@ -927,7 +927,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                 <SpotlightCard
                   key={idx}
                   spotlightColor="rgba(217, 134, 95, 0.12)"
-                  className="bento-cell group relative overflow-hidden bg-cream-dark/50 dark:bg-zinc-900/25 border border-charcoal/10 dark:border-white/10 p-8 rounded-3xl min-h-60 flex flex-col justify-between hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300 transform-style-3d opacity-0"
+                  className="bento-cell group relative overflow-hidden bg-cream-dark dark:bg-zinc-900 border border-charcoal/10 dark:border-white/10 p-8 rounded-3xl min-h-60 flex flex-col justify-between hover:border-gold/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.03)] transition-all duration-300 transform-style-3d opacity-0"
                 >
                   <div className="z-10">
                     <span className="font-mono text-[9px] text-gold tracking-widest uppercase block mb-2 font-bold">
@@ -940,7 +940,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                     {/* 分别定制的抽屉核心视觉 */}
                     {!hasImage && idx === 0 && (
                       /* 技术专属：数据芯片堆栈 */
-                      <div className="mt-4 h-12 w-full flex items-end justify-between gap-1 px-4 bg-cream/15 dark:bg-zinc-950/20 rounded-xl border border-charcoal/5 dark:border-white/5 py-2 overflow-hidden group/stack">
+                      <div className="mt-4 h-12 w-full flex items-end justify-between gap-1 px-4 bg-cream/40 dark:bg-zinc-950 rounded-xl border border-charcoal/5 dark:border-white/5 py-2 overflow-hidden group/stack">
                         {[35, 60, 45, 80, 50, 95, 70, 40, 85, 55, 75, 30].map((h, i) => (
                           <div
                             key={i}
@@ -1002,7 +1002,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-cream dark:bg-zinc-800 px-3.5 py-1 text-[11px] font-mono text-charcoal/65 dark:text-cream/65 border border-charcoal/8 dark:border-white/10 hover:border-gold/30 hover:text-gold transition-colors duration-200"
+                        className="rounded-full bg-cream dark:bg-zinc-800 px-3.5 py-1 text-[11px] font-mono text-charcoal/75 dark:text-cream/75 border border-charcoal/10 dark:border-white/12 hover:border-gold/30 hover:text-gold transition-colors duration-200"
                       >
                         {tag}
                       </span>
@@ -1068,7 +1068,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                   className="belief-line group flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-3xl mx-auto border-b border-charcoal/5 dark:border-white/5 pb-10 last:border-0 last:pb-0 transform-gpu"
                 >
                   {/* 象征性符号 */}
-                  <div className="relative flex items-center justify-center w-14 h-14 rounded-full border border-gold/15 dark:border-gold/10 bg-cream-dark/50 dark:bg-zinc-900/40 shadow-sm shrink-0">
+                  <div className="relative flex items-center justify-center w-14 h-14 rounded-full border border-gold/20 dark:border-gold/25 bg-cream-dark dark:bg-zinc-900 shadow-sm shrink-0">
                     <div className="absolute inset-0 bg-gold/5 dark:bg-gold/3 rounded-full blur-md animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     {renderBeliefIcon()}
                   </div>
@@ -1087,11 +1087,11 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
       {/* 6. 探索区域：大卡片聚合入口 (Explore) */}
       <section
         id="explore"
-        className="border-t border-charcoal/10 py-18 sm:py-24 dark:border-white/10 bg-cream-dark/20"
+        className="border-t border-charcoal/10 py-18 sm:py-24 dark:border-white/10 bg-cream-dark/40 dark:bg-[#151C18]"
       >
         <div className="reveal-section mx-auto max-w-5xl px-6">
-          <div className="overflow-hidden rounded-3xl border border-charcoal/10 bg-cream-dark p-8 sm:p-12 lg:p-16 dark:border-white/10 dark:bg-zinc-900/35 text-center shadow-[0_20px_50px_rgba(0,0,0,0.015)]">
-            <h2 className="font-bento-h text-3xl font-semibold tracking-tight sm:text-4xl">
+          <div className="overflow-hidden rounded-3xl border border-charcoal/10 bg-cream-dark p-8 sm:p-12 lg:p-16 dark:border-white/10 dark:bg-zinc-900 text-center shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+            <h2 className="font-bento-h text-3xl font-semibold tracking-tight sm:text-4xl text-charcoal dark:text-cream">
               {profile.explore.title}
             </h2>
             <p className="mt-4 text-xs md:text-sm leading-relaxed text-charcoal/60 dark:text-cream/60 max-w-xl mx-auto font-light">
@@ -1148,7 +1148,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noreferrer" : undefined}
-                    className="group relative h-48 bg-cream/40 dark:bg-zinc-800/20 border border-charcoal/8 dark:border-white/8 rounded-2xl p-5 hover:border-gold/30 hover:shadow-[0_15px_30px_rgba(217,134,95,0.04)] transition-all duration-300 overflow-hidden flex flex-col justify-between"
+                    className="group relative h-48 bg-cream dark:bg-zinc-800 border border-charcoal/10 dark:border-white/10 rounded-2xl p-5 hover:border-gold/30 hover:shadow-[0_15px_30px_rgba(217,134,95,0.08)] transition-all duration-300 overflow-hidden flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-3.5">

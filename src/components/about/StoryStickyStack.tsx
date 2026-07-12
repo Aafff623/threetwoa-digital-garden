@@ -169,11 +169,11 @@ export default function StoryStickyStack() {
           <span className="text-[10px] font-sans font-semibold tracking-[0.25em] text-gold uppercase">
             03 / PHILOSOPHY
           </span>
-          <h2 className="font-serif text-2xl md:text-4xl font-light text-charcoal dark:text-white leading-tight">
+          <h2 className="font-serif text-2xl md:text-4xl font-light text-charcoal dark:text-cream leading-tight">
             设计执念与<br />
             灵魂切片
           </h2>
-          <p className="font-sans text-xs md:text-sm text-charcoal/50 dark:text-white/50 leading-relaxed max-w-sm">
+          <p className="font-sans text-xs md:text-sm text-charcoal/50 dark:text-cream/50 leading-relaxed max-w-sm">
             滚动滚轮，查看关于本站创建初衷、个人设计哲学与开发追求的详细叠放档案。
           </p>
         </div>
@@ -185,7 +185,7 @@ export default function StoryStickyStack() {
               key={idx}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
-              className="stack-card group relative overflow-hidden bg-white/95 dark:bg-zinc-900/95 border border-charcoal/10 dark:border-white/10 p-8 md:p-12 rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(217,134,95,0.08)] transition-shadow duration-500 transform-style-3d cursor-pointer select-none"
+              className="stack-card group relative overflow-hidden bg-white dark:bg-zinc-900 border border-charcoal/10 dark:border-white/12 p-8 md:p-12 rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_50px_rgba(217,134,95,0.12)] transition-shadow duration-500 transform-style-3d cursor-pointer select-none"
               style={{
                 top: `${idx * 24}px`, // 每一层有卡片错落的高差叠放感
                 zIndex: idx + 10,
@@ -202,22 +202,22 @@ export default function StoryStickyStack() {
                     <span className="font-mono text-xs font-semibold text-gold tracking-widest">
                       {card.num}
                     </span>
-                    <span className="font-sans text-[10px] font-semibold text-charcoal/40 dark:text-white/40 tracking-[0.2em] uppercase">
+                    <span className="font-sans text-[10px] font-semibold text-charcoal/40 dark:text-cream/40 tracking-[0.2em] uppercase">
                       {card.category}
                     </span>
                   </div>
-                  <span className="text-[9px] font-mono tracking-widest text-charcoal/30 dark:text-white/30">
+                  <span className="text-[9px] font-mono tracking-widest text-charcoal/30 dark:text-cream/30">
                     CLASSIFIED INFO
                   </span>
                 </div>
 
                 {/* 标题 */}
-                <h3 className="font-serif text-xl md:text-3xl font-light text-charcoal dark:text-white">
+                <h3 className="font-serif text-xl md:text-3xl font-light text-charcoal dark:text-cream">
                   {card.title}
                 </h3>
 
                 {/* 描述 */}
-                <p className="font-sans text-xs md:text-sm text-charcoal/70 dark:text-white/70 leading-relaxed font-light">
+                <p className="font-sans text-xs md:text-sm text-charcoal/70 dark:text-cream/70 leading-relaxed font-light">
                   {card.desc}
                 </p>
 
@@ -226,7 +226,7 @@ export default function StoryStickyStack() {
                   {card.details.map((detail, dIdx) => (
                     <li key={dIdx} className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 flex-shrink-0" />
-                      <span className="font-sans text-[11px] md:text-xs text-charcoal/60 dark:text-white/60 font-light">
+                      <span className="font-sans text-[11px] md:text-xs text-charcoal/60 dark:text-cream/60 font-light">
                         {detail}
                       </span>
                     </li>

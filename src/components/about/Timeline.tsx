@@ -80,25 +80,25 @@ export default function Timeline({ experiences }: TimelineProps) {
       {/* 时间线的主干竖线 */}
       <div
         ref={lineRef}
-        className="absolute left-[3px] top-0 bottom-0 w-[1px] bg-charcoal/15 origin-top"
+        className="absolute left-[3px] top-0 bottom-0 w-[1px] bg-charcoal/15 dark:bg-white/15 origin-top"
       />
 
       {experiences.map((exp, idx) => (
         <div key={idx} className="timeline-item relative">
           {/* 时间线交点圆环 */}
-          <div className="timeline-dot absolute -left-[32px] md:-left-[41px] top-1.5 w-2 h-2 rounded-full bg-cream border border-charcoal z-10" />
+          <div className="timeline-dot absolute -left-[32px] md:-left-[41px] top-1.5 w-2 h-2 rounded-full bg-cream dark:bg-charcoal border border-charcoal dark:border-cream z-10" />
 
           <div className="timeline-content space-y-3">
             <span className="text-[10px] font-semibold tracking-widest text-gold font-sans block">
               {exp.year}
             </span>
-            <h3 className="font-serif text-xl font-light text-charcoal leading-snug">
+            <h3 className="font-serif text-xl font-light text-charcoal dark:text-cream leading-snug">
               {exp.title}{" "}
-              <span className="text-xs md:text-sm font-sans font-light text-charcoal/50">
+              <span className="text-xs md:text-sm font-sans font-light text-charcoal/55 dark:text-cream/55">
                 @ {exp.company}
               </span>
             </h3>
-            <p className="text-xs md:text-sm font-light leading-relaxed text-charcoal/70 max-w-xl">
+            <p className="text-xs md:text-sm font-light leading-relaxed text-charcoal/75 dark:text-cream/75 max-w-xl">
               {exp.desc}
             </p>
           </div>
