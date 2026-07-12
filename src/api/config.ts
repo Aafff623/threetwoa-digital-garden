@@ -1,4 +1,4 @@
-import request, { getServerApiURL } from "./request";
+import request, { getServerApiURL, hasServerApiBaseURL } from "./request";
 import type { AxiosResponse } from "axios";
 
 export interface PublicConfigItem {
@@ -25,8 +25,21 @@ let clientInflight: Promise<PublicConfigAxios> | null = null;
  * Browser: dedupe in-flight GETs and cache payloads briefly.
  * Server: always network (SSR stays per-request).
  */
+function emptyConfigResponse(message: string): PublicConfigAxios {
+  return {
+    data: { code: -1, data: [] as PublicConfigItem[], message },
+    status: 0,
+    statusText: "ERR",
+    headers: {},
+    config: {} as PublicConfigAxios["config"],
+  } as PublicConfigAxios;
+}
+
 export function getPublicConfig(): Promise<PublicConfigAxios> {
   if (typeof window === "undefined") {
+    if (!hasServerApiBaseURL()) {
+      return Promise.resolve(emptyConfigResponse("no SERVER_API_BASE_URL"));
+    }
     return request.get("/config/public") as Promise<PublicConfigAxios>;
   }
 
@@ -48,13 +61,7 @@ export function getPublicConfig(): Promise<PublicConfigAxios> {
       return res;
     })
     .catch((err) => {
-      const empty = {
-        data: { code: -1, data: [] as PublicConfigItem[], message: "config unavailable" },
-        status: 0,
-        statusText: "ERR",
-        headers: {},
-        config: {} as PublicConfigAxios["config"],
-      } as PublicConfigAxios;
+      const empty = emptyConfigResponse("config unavailable");
       clientCache = { expires: Date.now() + NEGATIVE_TTL_MS, value: empty };
       console.warn("getPublicConfig failed, using empty cache:", err?.message || err);
       return empty;
@@ -73,6 +80,18 @@ export function invalidatePublicConfigCache() {
 }
 
 export async function fetchPublicConfigForServer(init?: Parameters<typeof fetch>[1]) {
-  const response = await fetch(getServerApiURL("/config/public"), init);
-  return response.json() as Promise<PublicConfigBody>;
+  const url = getServerApiURL("/config/public");
+  if (!url) {
+    return { code: -1, data: [] as PublicConfigItem[], message: "no SERVER_API_BASE_URL" };
+  }
+  try {
+    const response = await fetch(url, {
+      ...init,
+      // Fail fast on Vercel / cold network — UI falls back to local mock data
+      signal: init?.signal ?? AbortSignal.timeout(2500),
+    });
+    return (await response.json()) as PublicConfigBody;
+  } catch {
+    return { code: -1, data: [] as PublicConfigItem[], message: "config fetch failed" };
+  }
 }
