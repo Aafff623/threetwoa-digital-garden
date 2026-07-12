@@ -1,0 +1,99 @@
+{
+  "label": "baseline-dev",
+  "base": "http://localhost:3000",
+  "measuredAt": "2026-07-12T07:36:55.112Z",
+  "protocol": "Hard reload with cache disabled (Ctrl+F5 analogue), then click in-app link; record click→url / click→main / click→networkidle and longtask sample.",
+  "results": [
+    {
+      "route": "writing",
+      "href": "/writing",
+      "clickToUrlMs": 97,
+      "clickToMainMs": 102,
+      "clickToNetworkIdleMs": 103,
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "totalMs": 0
+      },
+      "finalUrl": "http://localhost:3000/"
+    },
+    {
+      "route": "gallery",
+      "href": "/gallery",
+      "clickToUrlMs": 54,
+      "clickToMainMs": 57,
+      "clickToNetworkIdleMs": 57,
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "totalMs": 0
+      },
+      "finalUrl": "http://localhost:3000/"
+    },
+    {
+      "route": "about",
+      "href": "/about",
+      "clickToUrlMs": 46,
+      "clickToMainMs": 48,
+      "clickToNetworkIdleMs": 49,
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "totalMs": 0
+      },
+      "finalUrl": "http://localhost:3000/"
+    },
+    {
+      "route": "love",
+      "href": "/love",
+      "clickToUrlMs": 56,
+      "clickToMainMs": 58,
+      "clickToNetworkIdleMs": 59,
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "totalMs": 0
+      },
+      "finalUrl": "http://localhost:3000/"
+    },
+    {
+      "route": "footprints",
+      "href": "/footprints",
+      "clickToUrlMs": 47,
+      "clickToMainMs": 52,
+      "clickToNetworkIdleMs": 52,
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "totalMs": 0
+      },
+      "finalUrl": "http://localhost:3000/"
+    },
+    {
+      "route": "pond",
+      "href": "/pond",
+      "clickToUrlMs": 58,
+      "clickToMainMs": 61,
+      "clickToNetworkIdleMs": 61,
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "totalMs": 0
+      },
+      "finalUrl": "http://localhost:3000/"
+    },
+    {
+      "route": "home-from-writing",
+      "href": "/",
+      "clickToUrlMs": 65,
+      "clickToMainMs": 67,
+      "clickToNetworkIdleMs": 67,
+      "longTasks": {
+        "count": 0,
+        "maxMs": 0,
+        "totalMs": 0
+      },
+      "finalUrl": "http://localhost:3000/writing"
+    }
+  ]
+}
