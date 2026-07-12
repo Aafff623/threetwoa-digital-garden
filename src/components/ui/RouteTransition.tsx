@@ -44,10 +44,10 @@ export default function RouteTransition() {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 
-    // Let the new page mount its gsap.context first, then recompute pin positions.
+    // One deferred refresh after the new page mounts contexts — avoid refresh storms.
     const t0 = window.setTimeout(() => {
       try {
-        ScrollTrigger.refresh(true);
+        ScrollTrigger.refresh();
       } catch {
         /* ignore */
       }
@@ -56,19 +56,10 @@ export default function RouteTransition() {
       } catch {
         /* ignore */
       }
-    }, 50);
-
-    const t1 = window.setTimeout(() => {
-      try {
-        ScrollTrigger.refresh();
-      } catch {
-        /* ignore */
-      }
-    }, 320);
+    }, 120);
 
     return () => {
       window.clearTimeout(t0);
-      window.clearTimeout(t1);
     };
   }, [pathname]);
 

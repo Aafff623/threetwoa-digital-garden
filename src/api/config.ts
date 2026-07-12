@@ -31,7 +31,10 @@ export function getPublicConfig(): Promise<PublicConfigAxios> {
     return clientInflight;
   }
 
-  clientInflight = (request.get("/config/public") as Promise<PublicConfigAxios>)
+  // Shorter timeout than global 15s — config is non-critical for first paint fallbacks
+  clientInflight = (request.get("/config/public", {
+    timeout: 4000,
+  }) as Promise<PublicConfigAxios>)
     .then((res) => {
       clientCache = { expires: Date.now() + CLIENT_TTL_MS, value: res };
       return res;
@@ -46,7 +49,9 @@ export function getPublicConfig(): Promise<PublicConfigAxios> {
         config: {} as PublicConfigAxios["config"],
       } as PublicConfigAxios;
       clientCache = { expires: Date.now() + NEGATIVE_TTL_MS, value: empty };
-      throw err;
+      // Resolve empty instead of rejecting so callers do not surface unhandled rejections
+      console.warn("getPublicConfig failed, using empty cache:", err?.message || err);
+      return empty;
     })
     .finally(() => {
       clientInflight = null;
