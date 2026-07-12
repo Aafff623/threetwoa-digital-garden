@@ -64,7 +64,7 @@ export default function LetterPage() {
     <div className="max-w-6xl mx-auto w-full px-4 md:px-8 py-24 md:py-32 relative">
       
       {/* 3D 书桌皮质/木质档案垫板容器 */}
-      <div className="relative bg-cream border border-charcoal/10 rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_-20px_rgba(23,33,27,0.3)] overflow-hidden">
+      <div className="relative bg-cream dark:bg-charcoal border border-charcoal/10 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_-20px_rgba(23,33,27,0.3)] overflow-hidden">
         
         {/* 精致拟真黄铜回形针 (Paper Clip) - 别在信笺的左上角 */}
         <div className="absolute top-8 left-8 w-6 h-14 border-2 border-[#D4AF37]/50 rounded-full pointer-events-none rotate-[25deg] z-20 shadow-[2px_4px_6px_rgba(0,0,0,0.15)] flex justify-center">

@@ -30,7 +30,7 @@ export default function NowPage() {
 
   return (
     <div className="max-w-6xl mx-auto w-full px-4 md:px-8 py-24 md:py-32">
-      <div className="bg-cream/90 border border-charcoal/10 rounded-3xl p-8 md:p-12 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.15)]">
+      <div className="bg-cream/90 dark:bg-charcoal/95 border border-charcoal/10 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.15)]">
         {/* 栏目头部 */}
         <div className="border-b border-charcoal/10 dark:border-white/10 pb-10 mb-12">
           <span className="text-[10px] font-sans font-semibold tracking-widest text-charcoal/40 dark:text-white/40 uppercase">

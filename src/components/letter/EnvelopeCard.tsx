@@ -122,7 +122,7 @@ export default function EnvelopeCard({ letter, unlockedIds, onClick }: EnvelopeC
     <div
       ref={cardRef}
       onClick={onClick}
-      className="group relative flex flex-col justify-between aspect-[1.5/1] w-full rounded-2xl border border-charcoal/10 bg-cream-dark p-6 md:p-8 cursor-pointer select-none overflow-hidden transition-colors duration-500 shadow-[0_10px_30px_-10px_rgba(23,33,27,0.1)] transform-gpu"
+      className="group relative flex flex-col justify-between aspect-[1.5/1] w-full rounded-2xl border border-charcoal/10 dark:border-white/10 bg-cream-dark dark:bg-charcoal p-6 md:p-8 cursor-pointer select-none overflow-hidden transition-colors duration-500 shadow-[0_10px_30px_-10px_rgba(23,33,27,0.1)] transform-gpu"
       style={{ transformStyle: "preserve-3d" }}
     >
       {/* 物理信封折边斜角纹路 - 营造牛皮纸折边叠加质感 */}

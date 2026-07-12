@@ -231,7 +231,7 @@ export default function LetterModal({
           {/* 仿真毛边网格手写信纸 (z-10) */}
           <div
             ref={paperRef}
-            className="relative w-full border border-charcoal/10 bg-cream px-8 py-10 md:px-12 md:py-14 text-left shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] rounded-2xl paper-tear-effect overflow-hidden transform-gpu"
+            className="relative w-full border border-charcoal/10 dark:border-white/10 bg-cream dark:bg-charcoal px-8 py-10 md:px-12 md:py-14 text-left shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] rounded-2xl paper-tear-effect overflow-hidden transform-gpu"
           >
             {/* 信纸上方的复古装订线/手撕撕裂口 */}
             <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-b from-charcoal/5 to-transparent border-b border-dashed border-charcoal/10" />
@@ -294,7 +294,7 @@ export default function LetterModal({
         </div>
       ) : (
         /* 如果未解锁：展示复古的口令输入拨盘/黄铜密码舱界面 */
-        <div key="lock-container" className="lock-container max-w-md w-full border border-charcoal/10 bg-cream p-8 md:p-10 text-center relative shadow-2xl rounded-3xl transform-gpu">
+        <div key="lock-container" className="lock-container max-w-md w-full border border-charcoal/10 dark:border-white/10 bg-cream dark:bg-charcoal p-8 md:p-10 text-center relative shadow-2xl rounded-3xl transform-gpu">
           {/* 四角古典黄铜边框饰条 */}
           <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/40 rounded-tl-xl" />
           <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/40 rounded-tr-xl" />

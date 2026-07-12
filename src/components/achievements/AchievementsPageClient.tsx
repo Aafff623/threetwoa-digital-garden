@@ -123,7 +123,7 @@ export default function AchievementsPageClient({ initialItems, initialMetas }: A
       className="max-w-6xl mx-auto w-full px-4 md:px-8 py-24 md:py-32 relative"
     >
       {/* 3D 纸张档案垫板大背景容器 */}
-      <div className="relative bg-cream/90 border border-charcoal/10 rounded-3xl p-6 md:p-12 shadow-[0_20px_50px_-20px_rgba(23,33,27,0.2)] overflow-hidden">
+      <div className="relative bg-cream/90 dark:bg-charcoal/95 border border-charcoal/10 dark:border-white/10 rounded-3xl p-6 md:p-12 shadow-[0_20px_50px_-20px_rgba(23,33,27,0.2)] overflow-hidden">
         
         {/* 右上角精致档案标签印花 */}
         <div className="absolute top-8 right-8 font-mono text-[8px] tracking-widest text-[#B5A891]/40 dark:text-white/20 uppercase pointer-events-none select-none text-right hidden sm:block">

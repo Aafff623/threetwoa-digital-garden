@@ -16,7 +16,7 @@ export default function ArticleRail({ posts, trackRef }: ArticleRailProps) {
         {posts.map((post) => (
           <article
             key={post.slug}
-            className="article-card-element group w-[270px] shrink-0 overflow-hidden rounded-[1.6rem] border border-charcoal/8 bg-white/72 p-3 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_-32px_rgba(26,26,26,0.38)] dark:border-white/10 dark:bg-white/8 sm:w-[320px]"
+            className="article-card-element group w-[270px] shrink-0 overflow-hidden rounded-[1.6rem] border border-charcoal/8 bg-cream p-3 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_-32px_rgba(26,26,26,0.38)] dark:border-white/12 dark:bg-charcoal sm:w-[320px]"
           >
             <Link href={`/writing/${post.slug}`} className="block">
               <div className="overflow-hidden rounded-[1.2rem]">

@@ -32,13 +32,14 @@
 .dark.style-life {
   --bg-color: #0E1411;
   --bg-dark-color: #151C18;
-  --fg-color: #E6EBE3;
-  --border-line-color: rgba(230, 235, 227, 0.12);
+  --fg-color: #E8EDE5;
+  --border-line-color: rgba(232, 237, 229, 0.12);
   --accent-color: #E8A06A;
   --accent-light-color: #F0C09A;
+  /* pigments stay fixed via globals — only canvas/surface flip */
   --surface-elevated: #1A2320;
   --surface-muted: #141B18;
-  --surface-glass: rgba(26, 35, 32, 0.82);
+  --surface-glass: rgba(26, 35, 32, 0.88);
 }
 .style-life .high-contrast-card {
   background-color: color-mix(in srgb, var(--bg-color) 92%, white 8%) !important;

@@ -145,7 +145,7 @@ const ArchiveCard = ({ item }: { item: ArchiveItem }) => {
       <div 
         ref={cardRef}
         style={{ transformStyle: "preserve-3d", perspective: 1000 }}
-        className="group relative bg-surface dark:bg-surface border border-charcoal/10 dark:border-white/10 rounded-2xl p-6 shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-500 flex flex-col justify-between min-h-[220px] overflow-hidden"
+        className="group relative bg-cream dark:bg-charcoal border border-charcoal/10 dark:border-white/12 rounded-2xl p-6 shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-500 flex flex-col justify-between min-h-[220px] overflow-hidden"
       >
         {/* 曲别针效果 */}
         <div className="absolute top-0 left-6 w-8 h-4 bg-zinc-300/40 dark:bg-zinc-800/60 rounded-b-md border-x border-b border-charcoal/5 dark:border-white/5 shadow-inner" />
@@ -187,7 +187,7 @@ const ArchiveCard = ({ item }: { item: ArchiveItem }) => {
       <div 
         ref={cardRef}
         style={{ transformStyle: "preserve-3d", perspective: 1000 }}
-        className="group relative bg-surface dark:bg-surface border border-red-900/10 dark:border-red-900/25 rounded-2xl p-6 shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(244,63,94,0.08)] transition-shadow duration-500 flex flex-col justify-between min-h-[220px] overflow-hidden"
+        className="group relative bg-cream dark:bg-charcoal border border-red-900/10 dark:border-red-900/25 rounded-2xl p-6 shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(244,63,94,0.08)] transition-shadow duration-500 flex flex-col justify-between min-h-[220px] overflow-hidden"
       >
         {/* 心形火漆印记 */}
         <div className="absolute -top-3 -right-3 w-12 h-12 rounded-full bg-red-800/10 dark:bg-red-800/20 border border-red-800/15 flex items-center justify-center rotate-12 group-hover:rotate-45 transition-transform duration-500">
@@ -231,7 +231,7 @@ const ArchiveCard = ({ item }: { item: ArchiveItem }) => {
     <div 
       ref={cardRef}
       style={{ transformStyle: "preserve-3d", perspective: 1000 }}
-      className="group relative bg-surface dark:bg-surface border border-charcoal/10 dark:border-white/10 rounded-2xl p-4 pb-5 shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-500 flex flex-col justify-between min-h-[300px] overflow-hidden"
+      className="group relative bg-cream dark:bg-charcoal border border-charcoal/10 dark:border-white/12 rounded-2xl p-4 pb-5 shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-500 flex flex-col justify-between min-h-[300px] overflow-hidden"
     >
       {/* 拍立得相框区 */}
       <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-950 border border-charcoal/5 dark:border-white/5">
@@ -697,7 +697,7 @@ export default function ArchivePage() {
   return (
     <div ref={pageRef} className="max-w-6xl mx-auto w-full px-4 md:px-8 py-24 md:py-32">
       {/* 1. 档案馆索书卡（数字索引卡） */}
-      <div className="archive-index-card bg-surface/95 dark:bg-surface backdrop-blur-md border border-charcoal/10 dark:border-white/10 rounded-3xl p-6 md:p-10 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] relative overflow-hidden mb-10">
+      <div className="archive-index-card bg-cream/95 dark:bg-charcoal/95 backdrop-blur-md border border-charcoal/10 dark:border-white/12 rounded-3xl p-6 md:p-10 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] relative overflow-hidden mb-10">
         <div className="absolute -top-12 -right-12 w-48 h-48 bg-gold/5 dark:bg-gold/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 relative z-10">
@@ -727,7 +727,7 @@ export default function ArchivePage() {
           <div 
             ref={noteRef}
             style={{ transformStyle: "preserve-3d", perspective: 1000 }}
-            className="archive-sticky-note self-start md:self-center bg-surface-muted dark:bg-surface-muted border border-charcoal/10 dark:border-white/10 p-4 rounded-xl shadow-[5px_5px_15px_rgba(0,0,0,0.03)] max-w-xs relative flex-shrink-0"
+            className="archive-sticky-note self-start md:self-center bg-cream-dark dark:bg-charcoal border border-charcoal/10 dark:border-white/12 p-4 rounded-xl shadow-[5px_5px_15px_rgba(0,0,0,0.03)] max-w-xs relative flex-shrink-0"
           >
             <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-12 h-3 bg-white/40 dark:bg-black/20 backdrop-blur-[1px] rotate-1 pointer-events-none" />
             <p className="font-ma-shan-zheng text-lg text-charcoal/80 dark:text-cream/80 leading-relaxed pt-1.5 select-none">
@@ -741,33 +741,33 @@ export default function ArchivePage() {
 
         {/* 统计指标卡 */}
         <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-charcoal/10 dark:border-white/10">
-          <div className="bg-surface-muted dark:bg-surface-muted p-4 rounded-2xl border border-charcoal/5 dark:border-white/8 flex flex-col justify-between">
-            <span className="text-[11px] text-charcoal/60 dark:text-cream/65 flex items-center gap-1.5 font-medium">
+          <div className="bg-cream-dark/80 dark:bg-charcoal p-4 rounded-2xl border border-charcoal/5 dark:border-white/10 flex flex-col justify-between">
+            <span className="text-[11px] text-charcoal/60 dark:text-cream/70 flex items-center gap-1.5 font-medium">
               <BookOpen className="w-4 h-4 text-gold" /> 随笔散文
             </span>
             <div className="mt-2 flex items-baseline gap-1">
               <span className="font-serif text-2xl md:text-3xl font-light text-charcoal dark:text-cream">{writingCount}</span>
-              <span className="text-[9px] text-charcoal/45 dark:text-cream/45 font-mono">DOCS</span>
+              <span className="text-[9px] text-charcoal/45 dark:text-cream/50 font-mono">DOCS</span>
             </div>
           </div>
           
-          <div className="bg-surface-muted dark:bg-surface-muted p-4 rounded-2xl border border-charcoal/5 dark:border-white/8 flex flex-col justify-between">
-            <span className="text-[11px] text-charcoal/60 dark:text-cream/65 flex items-center gap-1.5 font-medium">
+          <div className="bg-cream-dark/80 dark:bg-charcoal p-4 rounded-2xl border border-charcoal/5 dark:border-white/10 flex flex-col justify-between">
+            <span className="text-[11px] text-charcoal/60 dark:text-cream/70 flex items-center gap-1.5 font-medium">
               <Heart className="w-4 h-4 text-red-500" /> 恋爱纪实
             </span>
             <div className="mt-2 flex items-baseline gap-1">
               <span className="font-serif text-2xl md:text-3xl font-light text-charcoal dark:text-cream">{loveCount}</span>
-              <span className="text-[9px] text-charcoal/45 dark:text-cream/45 font-mono">NOTES</span>
+              <span className="text-[9px] text-charcoal/45 dark:text-cream/50 font-mono">NOTES</span>
             </div>
           </div>
 
-          <div className="bg-surface-muted dark:bg-surface-muted p-4 rounded-2xl border border-charcoal/5 dark:border-white/8 flex flex-col justify-between">
-            <span className="text-[11px] text-charcoal/60 dark:text-cream/65 flex items-center gap-1.5 font-medium">
+          <div className="bg-cream-dark/80 dark:bg-charcoal p-4 rounded-2xl border border-charcoal/5 dark:border-white/10 flex flex-col justify-between">
+            <span className="text-[11px] text-charcoal/60 dark:text-cream/70 flex items-center gap-1.5 font-medium">
               <Camera className="w-4 h-4 text-blue-500" /> 影像切片
             </span>
             <div className="mt-2 flex items-baseline gap-1">
               <span className="font-serif text-2xl md:text-3xl font-light text-charcoal dark:text-cream">{photoCount}</span>
-              <span className="text-[9px] text-charcoal/45 dark:text-cream/45 font-mono">PHOTOS</span>
+              <span className="text-[9px] text-charcoal/45 dark:text-cream/50 font-mono">PHOTOS</span>
             </div>
           </div>
         </div>

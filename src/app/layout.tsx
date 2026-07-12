@@ -98,7 +98,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col text-charcoal bg-transparent">
         <ThemeApplier />
         {/* 1. 全局底色层 (z-0) */}
-        <div className="fixed inset-0 z-0 bg-cream pointer-events-none" />
+        <div className="fixed inset-0 z-0 bg-page pointer-events-none" />
 
         {/* 2. 静态高定背景图片层 (z-1) */}
         <div 

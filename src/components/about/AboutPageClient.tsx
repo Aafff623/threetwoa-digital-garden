@@ -268,7 +268,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
   return (
     <main
       ref={rootRef}
-      className="w-full max-w-full overflow-x-hidden bg-cream text-charcoal font-sans"
+      className="w-full max-w-full overflow-x-hidden bg-cream text-charcoal font-sans dark:bg-charcoal dark:text-cream"
     >
       {/* CSS 扫光与轨迹动画关键帧注入 */}
       <style dangerouslySetInnerHTML={{ __html: `

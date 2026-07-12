@@ -6,18 +6,23 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+  /* Page canvas + ink (flip with theme) */
   --bg-color: #F7F8F1;
   --bg-dark-color: #EAF0E5;
   --fg-color: #223326;
   --border-line-color: rgba(34, 51, 38, 0.1);
+  /* Fixed pigments — NEVER invert (components use cream/charcoal with dark: pairs) */
+  --cream-fixed: #F7F8F1;
+  --cream-dark-fixed: #EAF0E5;
+  --charcoal-fixed: #223326;
   --font-heading: var(--font-jost);
   --font-body: var(--font-inter);
   --accent-color: #D9865F;
   --accent-light-color: #F1B894;
-  /* Elevated surfaces (cards) — light */
+  /* Elevated surfaces (cards) */
   --surface-elevated: #FFFEFB;
   --surface-muted: #F0F2E9;
-  --surface-glass: rgba(255, 255, 255, 0.55);
+  --surface-glass: rgba(255, 255, 255, 0.72);
 
   /* Section-specific font variables (Personal archive defaults) */
   --font-hero-heading: var(--font-jost);
@@ -46,25 +51,32 @@
   --font-quote-h-val: var(--font-quote-heading), var(--font-noto-serif-sc), system-ui, sans-serif;
 }
 
-/* 暗黑模式变量配置 — 更深底 + 抬升卡片面，避免惨白半透明 */
+/* Dark: only page canvas + surfaces flip. cream/charcoal pigments stay fixed. */
 .dark {
   --bg-color: #0E1411;
   --bg-dark-color: #151C18;
-  --fg-color: #E6EBE3;
-  --border-line-color: rgba(230, 235, 227, 0.12);
+  --fg-color: #E8EDE5;
+  --border-line-color: rgba(232, 237, 229, 0.12);
   --font-heading: var(--font-jost);
   --font-body: var(--font-inter);
   --accent-color: #E8A06A;
   --accent-light-color: #F0C09A;
+  /* cream/charcoal fixed — do not reassign */
   --surface-elevated: #1A2320;
   --surface-muted: #141B18;
-  --surface-glass: rgba(26, 35, 32, 0.82);
+  --surface-glass: rgba(26, 35, 32, 0.88);
 }
 
 @theme {
-  --color-cream: var(--bg-color);
-  --color-cream-dark: var(--bg-dark-color);
-  --color-charcoal: var(--fg-color);
+  /* Fixed pigments for light/dark dual-class patterns:
+     text-charcoal dark:text-cream  → dark ink / light ink
+     bg-cream dark:bg-charcoal      → light shell / dark shell */
+  --color-cream: var(--cream-fixed);
+  --color-cream-dark: var(--cream-dark-fixed);
+  --color-charcoal: var(--charcoal-fixed);
+  /* Flipping canvas (use for body / full-bleed page when not pairing dark:) */
+  --color-page: var(--bg-color);
+  --color-ink: var(--fg-color);
   --color-gold: var(--accent-color);
   --color-gold-light: var(--accent-light-color);
   --color-border-line: var(--border-line-color);
@@ -104,6 +116,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.6s cubic-bezier(0.25, 1, 0.5, 1), color 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Layout canvas layer follows page tokens */
+.bg-page {
+  background-color: var(--bg-color);
+}
+.text-ink {
+  color: var(--fg-color);
 }
 
 html {
@@ -177,11 +197,11 @@ body, header, footer, main, button, input, textarea, a,
 }
 
 /* --------------------------------------------------------------------------
-   Dark mode surfaces & media — global safety net for vibe-coded hardcodes
+   Dark mode surfaces & media
+   cream/charcoal are FIXED pigments — do not remap them to page bg/fg.
    -------------------------------------------------------------------------- */
 
-/* Prefer semantic elevated surface for common light hardcodes in dark */
-.dark .bg-white,
+/* Translucent white glass → solid elevated surface in dark */
 .dark .bg-white\/40,
 .dark .bg-white\/50,
 .dark .bg-white\/55,
@@ -189,48 +209,33 @@ body, header, footer, main, button, input, textarea, a,
 .dark .bg-white\/70,
 .dark .bg-white\/72,
 .dark .bg-white\/80,
-.dark .bg-white\/90,
-.dark .bg-\[\#F9F9F6\],
-.dark .bg-\[\#FCFAF2\],
-.dark .bg-\[\#FCF5F2\],
-.dark .bg-\[\#FDF6E2\] {
+.dark .bg-white\/90 {
+  background-color: color-mix(in srgb, var(--surface-elevated) 92%, transparent) !important;
+}
+
+.dark .bg-white {
   background-color: var(--surface-elevated) !important;
-  color: var(--fg-color);
 }
 
 .dark .bg-white\/5,
 .dark .bg-white\/\[0\.03\],
 .dark .bg-white\/8,
 .dark .bg-white\/10 {
-  background-color: color-mix(in srgb, var(--surface-elevated) 88%, white 6%) !important;
+  background-color: color-mix(in srgb, var(--surface-elevated) 70%, transparent) !important;
 }
 
-/* Glass panels on archive / writing shells */
-.dark .bg-cream\/40,
-.dark .bg-cream\/80,
-.dark .bg-cream\/90 {
-  background-color: color-mix(in srgb, var(--surface-elevated) 92%, transparent) !important;
-}
-
-/* Readable text when only light utilities were used */
-.dark .text-charcoal\/30 { color: color-mix(in srgb, var(--fg-color) 35%, transparent) !important; }
-.dark .text-charcoal\/40 { color: color-mix(in srgb, var(--fg-color) 45%, transparent) !important; }
-.dark .text-charcoal\/45 { color: color-mix(in srgb, var(--fg-color) 50%, transparent) !important; }
-.dark .text-charcoal\/50 { color: color-mix(in srgb, var(--fg-color) 55%, transparent) !important; }
-.dark .text-charcoal\/60 { color: color-mix(in srgb, var(--fg-color) 65%, transparent) !important; }
-.dark .text-charcoal\/70 { color: color-mix(in srgb, var(--fg-color) 75%, transparent) !important; }
-.dark .text-charcoal\/80 { color: color-mix(in srgb, var(--fg-color) 85%, transparent) !important; }
-
-/* Media: slightly denser in dark so bright photos don't blow out cards */
+/* Media denser in dark */
 .dark .writing-card img,
+.dark .article-card-element img,
 .dark .archive-index-card img,
 .dark img.object-cover {
-  filter: brightness(0.9) contrast(1.06) saturate(0.96);
+  filter: brightness(0.88) contrast(1.05) saturate(0.95);
 }
 
 .dark .writing-card:hover img,
+.dark .article-card-element:hover img,
 .dark .group:hover img.object-cover {
-  filter: brightness(0.94) contrast(1.05) saturate(1);
+  filter: brightness(0.93) contrast(1.04) saturate(0.98);
 }
 
 /* 动态背景视频过渡 */

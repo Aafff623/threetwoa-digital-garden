@@ -192,7 +192,7 @@ export default function Navbar() {
               gsap.to(logoA, { rotate: 0, scale: 1, duration: 0.4, ease: "power2.out" });
             }
           }}
-          className="group/logo pointer-events-auto relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-2xl border border-charcoal/10 dark:border-white/10 bg-cream/85 dark:bg-charcoal/85 px-3 py-2 shadow-[0_6px_18px_-6px_rgba(15,15,15,0.15),0_1px_2px_rgba(0,0,0,0.03)] backdrop-blur-md active:scale-[0.98] sm:px-4"
+          className="group/logo pointer-events-auto relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-2xl border border-charcoal/10 dark:border-white/12 bg-cream/90 dark:bg-surface/95 px-3 py-2 shadow-[0_6px_18px_-6px_rgba(15,15,15,0.15),0_1px_2px_rgba(0,0,0,0.03)] backdrop-blur-md active:scale-[0.98] sm:px-4"
         >
           {/* Logo 标志性小图标 */}
           {logoUrl ? (
@@ -227,7 +227,7 @@ export default function Navbar() {
         </Link>
 
         {/* 右胶囊: 导航链接与动作按钮 */}
-        <div className="pointer-events-auto relative inline-flex min-w-0 items-center gap-1 rounded-full border border-charcoal/10 bg-cream/85 px-1.5 py-1.5 shadow-[0_6px_18px_-6px_rgba(15,15,15,0.15),0_1px_2px_rgba(0,0,0,0.03)] backdrop-blur-md transition-[box-shadow,border-color] duration-300 dark:border-white/10 dark:bg-charcoal/85 sm:gap-1.5 sm:px-2">
+        <div className="pointer-events-auto relative inline-flex min-w-0 items-center gap-1 rounded-full border border-charcoal/10 bg-cream/90 px-1.5 py-1.5 shadow-[0_6px_18px_-6px_rgba(15,15,15,0.15),0_1px_2px_rgba(0,0,0,0.03)] backdrop-blur-md transition-[box-shadow,border-color] duration-300 dark:border-white/12 dark:bg-surface/95 sm:gap-1.5 sm:px-2">
           
           {/* 桌面端导航 */}
           <div 
@@ -254,7 +254,7 @@ export default function Navbar() {
                   <Link
                     href={item.path}
                     className={`relative z-10 text-[10px] uppercase tracking-widest transition-colors duration-300 font-sans py-2 px-3 rounded-full inline-block ${
-                      isActive ? "text-gold font-semibold" : "text-charcoal/60 hover:text-charcoal"
+                      isActive ? "text-gold font-semibold" : "text-charcoal/60 hover:text-charcoal dark:text-cream/70 dark:hover:text-cream"
                     }`}
                   >
                     {item.englishName}
@@ -387,9 +387,9 @@ export default function Navbar() {
             aria-label="Toggle Theme"
           >
             {theme === "light" ? (
-              <Moon className="w-3.5 h-3.5 stroke-[1.25] text-charcoal" />
+              <Moon className="w-3.5 h-3.5 stroke-[1.25] text-charcoal dark:text-cream" />
             ) : (
-              <Sun className="w-3.5 h-3.5 stroke-[1.25] text-charcoal" />
+              <Sun className="w-3.5 h-3.5 stroke-[1.25] text-charcoal dark:text-cream" />
             )}
           </button>
         </div>

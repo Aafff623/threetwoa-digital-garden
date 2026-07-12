@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer
       data-footer-peekers-anchor
-      className="relative z-10 mt-auto w-full overflow-visible border-t border-charcoal/5 bg-cream-dark dark:border-white/10"
+      className="relative z-10 mt-auto w-full overflow-visible border-t border-charcoal/5 bg-cream-dark dark:border-white/10 dark:bg-charcoal"
     >
       <FooterPeekers />
 
