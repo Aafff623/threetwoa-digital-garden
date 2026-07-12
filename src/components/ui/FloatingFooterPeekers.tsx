@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import footerPeekers from "../../../assets/footer-peekers.png";
+
+const footerPeekers = "/assets/footer-peekers.png";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -139,6 +140,8 @@ export default function FloatingFooterPeekers() {
         <Image
           src={footerPeekers}
           alt=""
+          width={1983}
+          height={319}
           sizes="(max-width: 640px) 94vw, (max-width: 1024px) 78vw, 760px"
           className="block h-auto w-full select-none"
           priority

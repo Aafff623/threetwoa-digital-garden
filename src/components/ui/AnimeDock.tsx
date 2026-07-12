@@ -1,5 +1,5 @@
 import Image from "next/image";
-import animeDock from "../../../assets/anime-dock.png";
+const animeDock = "/assets/anime-dock.png";
 
 export default function AnimeDock() {
   return (
@@ -10,6 +10,8 @@ export default function AnimeDock() {
       <Image
         src={animeDock}
         alt=""
+        width={1982}
+        height={662}
         sizes="(max-width: 640px) 86vw, (max-width: 1024px) 62vw, 576px"
         className="select-none drop-shadow-[0_18px_34px_rgba(34,51,38,0.18)]"
       />

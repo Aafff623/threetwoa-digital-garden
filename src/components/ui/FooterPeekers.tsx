@@ -1,5 +1,5 @@
 import Image from "next/image";
-import footerPeekers from "../../../assets/footer-peekers.png";
+const footerPeekers = "/assets/footer-peekers.png";
 
 export default function FooterPeekers() {
   return (
@@ -12,6 +12,8 @@ export default function FooterPeekers() {
         <Image
           src={footerPeekers}
           alt=""
+          width={1983}
+          height={319}
           sizes="(max-width: 640px) 94vw, (max-width: 1024px) 78vw, 760px"
           className="block h-auto w-full select-none"
         />

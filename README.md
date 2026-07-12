@@ -1,86 +1,90 @@
 # Threetwoa Digital Garden
 
-Threetwoa Digital Garden — a personal blog and life-archive frontend. It carries articles, images, footprints, notes, love records, time letters, achievements, and guest feedback.
+> *A personal blog and life-archive frontend — long-form writing, photos, footprints, and private memories in one curated surface.*
 
-![Next.js](https://img.shields.io/badge/Next.js-16.2.9-000000?logo=nextdotjs)
-![React](https://img.shields.io/badge/React-19.2-149ECA?logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
-
-## 项目预览
-
-<!--
-将桌面端截图保存为 docs/images/home-desktop.png 后，用下面这行替换截图占位：
-<img src="./docs/images/home-desktop.png" alt="生活档案馆首页桌面端预览" width="100%" />
--->
+<p align="center">
+  <img src="assets/images/readme/banner.png" alt="Threetwoa Digital Garden banner" width="100%" />
+</p>
 
 <div align="center">
-  <br />
-  <strong>📷 截图占位 · 首页桌面端</strong>
-  <br />
-  <sub>建议尺寸：1600 × 900</sub>
-  <br /><br /><br />
+
+  ![Next.js](https://img.shields.io/badge/Next.js-16.2.9-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+  ![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+  ![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20.9-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+  ![License](https://img.shields.io/badge/License-Proprietary-6B7280?style=for-the-badge)
+  ![Status](https://img.shields.io/badge/Status-Active-22C55E?style=for-the-badge)
+  ![Version](https://img.shields.io/badge/Version-0.1.0-0EA5E9?style=for-the-badge)
+
+  [Why](#why) · [Features](#features) · [Showcase](#showcase) · [Quick Start](#quick-start) · [Architecture](#architecture) · [Workflow](#workflow) · [Structure](#structure) · [Roadmap](#roadmap) · [Docs](#docs)
+
 </div>
 
-<!--
-将移动端截图保存为 docs/images/home-mobile.png 后，用下面这行替换截图占位：
-<img src="./docs/images/home-mobile.png" alt="生活档案馆首页移动端预览" width="360" />
--->
+---
 
-<div align="center">
-  <br />
-  <strong>📱 截图占位 · 首页移动端</strong>
-  <br />
-  <sub>建议尺寸：390 × 844</sub>
-  <br /><br /><br />
-</div>
+## Why
 
-## 三端组成
+Personal content rarely lives in one place. Writing ends up in notes apps, photos in albums, travel traces on maps, and private memories on social platforms — each with its own timeline and export story.
 
-| 项目 | 职责 | 仓库 |
+**Threetwoa Digital Garden** consolidates those surfaces into a single, intentionally designed frontend:
+
+- Treat articles, short notes, galleries, footprints, and time capsules as one coherent archive rather than disconnected feeds
+- Split responsibilities across Blog (this repo), Admin, and Server so presentation, operations, and persistence stay cleanly bounded
+- Use Next.js App Router for server-first rendering, with GSAP + Lenis for magazine-like motion without sacrificing structure
+
+This is not a generic CMS skin or infinite photo feed. It is a **digital garden**: a long-lived, editable public archive you can keep growing.
+
+## Features
+
+![Feature map](assets/images/readme/features.png)
+
+| Module | Description | Status |
 | --- | --- | --- |
-| Blog | 面向访客的博客与生活档案前台 | **当前仓库** |
-| Admin | 内容与站点配置管理后台 | [spring_admin](https://github.com/RRTiamo/spring_admin) |
-| Server | API、鉴权、数据库与文件存储 | [spring_server](https://github.com/RRTiamo/spring_server) |
+| **Articles** | Listing, categories, archive, search, Markdown reading | ✅ Ready |
+| **Gallery** | Masonry wall with lightbox and category browsing | ✅ Ready |
+| **Footprints** | Map markers and trip retrospectives | ✅ Ready |
+| **Love archive** | Shared timeline, wishlist, and memory rail | ✅ Ready |
+| **Time capsule** | Letters to the future with scheduled reveal | ✅ Ready |
+| **Achievements** | Personal milestones and collectible medals | ✅ Ready |
+| **Pond** | Guestbook with likes and replies | ✅ Ready |
+| **Style system** | Five presets: `life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ Ready |
+| **Responsive shell** | Adaptive layout with dark-mode-friendly tokens | ✅ Ready |
+| **Motion** | Lenis smooth scroll + GSAP ScrollTrigger | ✅ Ready |
 
-```mermaid
-flowchart LR
-    visitor["访客"] --> blog["Blog · Next.js"]
-    manager["管理员"] --> admin["Admin · Vue"]
-    blog --> api["Server · /api"]
-    admin --> api
-    api --> mysql[("MySQL")]
-    api --> storage["本地 / MinIO / 七牛云"]
-```
+> **Scope**: v0.1 targets a single personal site. Admin manages content; multi-tenant or team collaboration is out of scope.
 
-## 主要功能
+## Showcase
 
-- 文章列表、分类、归档、搜索与 Markdown 正文阅读
-- 照片墙、足迹地图、随笔便签与个人成就
-- “此时此刻”、关于作者和可动态配置的站点信息
-- 恋爱纪实、愿望清单、时间胶囊与岁月信箱
-- 鱼塘反馈、点赞、回复及友情链接
-- 响应式布局、明暗主题和基于 GSAP / Lenis 的页面动效
-- 服务端与浏览器端分离的 API 地址配置
+Playwright captures at `1600×900`. After [Quick Start](#quick-start), walk the recommended path below.
 
-## 技术栈
+### Recommended path
 
-- Next.js 16 App Router
-- React 19 + TypeScript 5
-- Tailwind CSS 4
-- Axios
-- GSAP + ScrollTrigger、Lenis、Framer Motion
-- Leaflet、Highlight.js
+1. Open the home page — hero, navigation, and scroll motion
+2. Visit `/writing` — article list and archive grouping
+3. Open any article — Markdown body, callouts, and code highlighting
+4. Browse `/gallery` and `/about` — photo wall and profile narrative
 
-## 本地运行
+### Page gallery
 
-### 环境要求
+| Surface | Capture |
+| --- | --- |
+| **Home** | ![Home](assets/images/readme/showcase-home.png) |
+| **Writing list** | ![Writing](assets/images/readme/showcase-writing.png) |
+| **Article detail** | ![Article detail](assets/images/readme/showcase-article-detail.png) |
+| **Gallery** | ![Gallery](assets/images/readme/showcase-gallery.png) |
+| **About** | ![About](assets/images/readme/showcase-about.png) |
+
+## Quick Start
+
+### Prerequisites
 
 - Node.js `>= 20.9.0`
-- npm
-- 已启动的 [spring_server](https://github.com/RRTiamo/spring_server)，默认地址为 `http://localhost:8080/api`
+- npm (or pnpm)
+- [spring_server](https://github.com/RRTiamo/spring_server) running at `http://localhost:8080/api` (optional for UI-only browsing; the frontend falls back to local static data)
 
-### 1. 获取项目
+### 1. Clone and install
 
 ```bash
 git clone https://github.com/Aafff623/threetwoa-digital-garden.git
@@ -88,93 +92,147 @@ cd threetwoa-digital-garden
 npm ci
 ```
 
-### 2. 配置开发环境
+### 2. Environment
 
-项目根目录创建或修改 `.env.development`：
+Create `.env.development`:
 
 ```dotenv
-# 浏览器请求地址。开发环境使用同源 /api，由 Next.js 转发。
+# Browser requests stay same-origin; Next.js rewrites forward to the API
 NEXT_PUBLIC_API_BASE_URL=/api
 
-# Server Component、SSR 和 Next.js rewrites 访问后端的地址。
+# Used by Server Components, SSR, and rewrites
 SERVER_API_BASE_URL=http://localhost:8080/api
 ```
 
-### 3. 启动
+Production builds use `.env.production` with the same keys pointed at the internal API host.
+
+### 3. Run
 
 ```bash
 npm run dev
 ```
 
-访问 [http://localhost:3000](http://localhost:3000)。
+Open [http://localhost:3000](http://localhost:3000).
 
-## 环境变量
+### Scripts
 
-| 变量 | 用途 | 开发环境建议值 |
-| --- | --- | --- |
-| `NEXT_PUBLIC_API_BASE_URL` | 浏览器端 API 基础路径，会暴露在前端构建产物中 | `/api` |
-| `SERVER_API_BASE_URL` | 服务端渲染与 rewrites 使用的后端地址 | `http://localhost:8080/api` |
-
-生产环境建议让浏览器继续访问同源 `/api`，再由反向代理转发至后端；`SERVER_API_BASE_URL` 应填写 Next.js 服务器能够访问的内部 API 地址。
-
-## 可用命令
-
-| 命令 | 说明 |
+| Command | Purpose |
 | --- | --- |
-| `npm run dev` | 启动开发服务器 |
-| `npm run lint` | 运行 ESLint |
-| `npm run build` | 创建生产构建 |
-| `npm run start` | 启动生产服务器 |
+| `npm run dev` | Development server |
+| `npm run lint` | ESLint (core-web-vitals + TypeScript) |
+| `npm run build` | Production build (`output: "standalone"`) |
+| `npm run start` | Serve the production build |
 
-提交前至少运行：
+Before commit, prefer `npm run lint` and `npm run build`.
 
-```bash
-npm run lint
-npm run build
+## Architecture
+
+![System architecture](assets/images/readme/architecture.png)
+
+| Tier | Stack | Responsibility | Repository |
+| --- | --- | --- | --- |
+| **Blog** | Next.js 16 · React 19 · TypeScript 5 · Tailwind CSS 4 | Public-facing presentation | This repository |
+| **Admin** | Vue | Content and site configuration | [spring_admin](https://github.com/RRTiamo/spring_admin) |
+| **Server** | Java Spring Boot | API, auth, persistence, files | [spring_server](https://github.com/RRTiamo/spring_server) |
+
+### Frontend data flow
+
+```text
+Server Component / RSC
+  → src/api/*                 (Axios · SERVER_API_BASE_URL)
+  → fallback src/data/* · src/mock/* when the API is unavailable
+
+Client Component
+  → src/hooks/*               (useArticles · useSysConfig · …)
+  → browser /api              (NEXT_PUBLIC_API_BASE_URL)
+  → Next.js rewrites          → spring_server
 ```
 
-## 目录结构
+### Tech stack layers
+
+![Frontend tech stack](assets/images/readme/tech-stack.png)
+
+| Layer | Choices |
+| --- | --- |
+| **Framework** | Next.js 16 App Router, React 19, TypeScript 5 |
+| **Styling** | Tailwind CSS 4, CSS variable themes, five style presets |
+| **Motion** | GSAP + ScrollTrigger, Lenis, Framer Motion |
+| **Data** | Axios, isomorphic API modules, hooks, static fallbacks |
+| **Content** | Custom Markdown renderer, Highlight.js, Leaflet |
+
+## Workflow
+
+![Visitor journey](assets/images/readme/workflow.png)
+
+| Step | User action | What the stack does |
+| --- | --- | --- |
+| 1 | Open home | RSC prefetches public config and latest posts for first paint |
+| 2 | Browse `/writing` | Client hooks load the list; failures fall back to `writingData` |
+| 3 | Open an article | App Router `[slug]` SSR-renders Markdown |
+| 4 | Switch style | `StyleConsole` writes `localStorage`; CSS variables update immediately |
+| 5 | Leave a pond message | Browser hits `/api/pond/*`, rewritten to spring_server |
+
+## Structure
+
+![Repository structure](assets/images/readme/structure.png)
 
 ```text
 src/
-├─ api/          # 统一 API 请求与接口封装
-├─ app/          # App Router 页面和布局
-├─ components/   # 页面区块与可复用组件
-├─ hooks/        # 客户端状态与数据逻辑
-├─ icon/         # 图标映射
-├─ interface/    # 核心 TypeScript 类型
-├─ mock/         # 静态兜底数据
-└─ data/         # 页面使用的轻量数据
+├─ api/              # Shared Axios clients and domain endpoints
+├─ app/              # App Router pages, layout, theme CSS
+│  └─ styles/themes/ # life · swiss · minimalist · glass · brutalist
+├─ components/       # Page sections and reusable UI
+├─ hooks/            # Client-side data and config hooks
+├─ icon/             # Icon mappings
+├─ interface/        # Shared TypeScript contracts
+├─ mock/             # Offline / failure fallback fixtures
+└─ data/             # Lightweight static content
 ```
 
-## 生产部署
+**Conventions**
 
-```bash
-npm ci
-npm run build
-npm run start
-```
+- New endpoints belong in `src/api/*`, not inline in components
+- New routes follow `src/app/{route}/page.tsx`
+- Prefer server fetch with local fallback for first paint; use client hooks when interactivity requires it
 
-项目已启用 Next.js `standalone` 输出。无论采用 Node 进程托管还是独立产物部署，都需要确保：
+## Roadmap
 
-1. `SERVER_API_BASE_URL` 在构建和运行环境中可访问。
-2. 公网 `/api` 被正确转发到 Server 的 `/api`。
-3. 上传文件或对象存储域名允许被浏览器访问。
-4. Blog、Admin 与 Server 全部使用 HTTPS，避免混合内容。
+| Phase | Goal | Status |
+| --- | --- | --- |
+| MVP | Articles, gallery, about, style switching | ✅ Done |
+| Life archive | Footprints, love, time capsule, achievements, pond | ✅ Done |
+| Experience | Motion polish, loading performance, SEO | 🟡 In progress |
+| Content ops | Admin and Server management capabilities | 🟡 In progress |
+| Distribution | i18n, RSS, Open Graph image pipeline | ⬜ Planned |
 
-## 开源与隐私检查
+## Docs
 
-这是生活归档类项目，公开仓库前请重点检查：
+| Document | Path | Notes |
+| --- | --- | --- |
+| Development guide | [`CLAUDE.md`](./CLAUDE.md) | Architecture, commands, env vars, coding conventions |
+| Project standards | [`AGENTS.md`](./AGENTS.md) · [`CONTEXT.md`](./CONTEXT.md) · [`LANGUAGES.md`](./LANGUAGES.md) | Agent constraints, domain facts, shared vocabulary |
+| Project init spec | [`docs/knowledge/project-init.md`](./docs/knowledge/project-init.md) | Repository initialization playbook |
+| README diagram brief | [`docs/output/prd/readme-diagrams/readme-diagram-brief.md`](./docs/output/prd/readme-diagrams/readme-diagram-brief.md) | Section plan, asset contract |
+| GPT image prompts | [`docs/output/prd/readme-diagrams/readme-image-prompts.md`](./docs/output/prd/readme-diagrams/readme-image-prompts.md) | Per-image elements, references, ready-to-copy prompts |
+| README assets | [`assets/images/readme/`](./assets/images/readme/) | Banner, diagrams, Playwright showcase captures |
+| Assets note | [`assets/README.md`](./assets/README.md) | Media conventions and current asset layout |
 
-- `.env*` 中不得包含令牌、数据库密码或云存储密钥。
-- `public/`、`assets/`、Mock 数据和默认内容中不得保留不准备公开的照片或个人信息。
-- 地图坐标、恋爱记录、时间信件等内容应由部署者替换为自己的数据。
-- 第三方图片、字体、音乐和地图服务应确认授权及使用条款。
+> Preview stand: this repository is a single product surface. There is no separate component gallery / demo wall; product screens are covered by **Showcase** only.
 
-## 参与贡献
+## License
 
-欢迎通过 Issue 提交问题，或通过 Pull Request 改进功能。请保持 API 请求、类型、Mock 数据和图标配置分别位于现有的 `api/`、`interface/`、`mock/` 与 `icon/` 目录中。
+No open-source license is attached. Until a root `LICENSE` is added, **all rights are reserved**.
 
-## 许可证
+Before any public deployment, review:
 
-当前仓库尚未附带开源许可证。在仓库根目录补充明确的 `LICENSE` 前，代码默认保留全部权利。
+- `.env*` must not contain tokens, database passwords, or cloud credentials
+- `public/`, `assets/`, and mock data should not ship private photos or personal information you do not intend to publish
+- Map coordinates, relationship records, and time-capsule letters should be replaced with deployer-owned content
+
+---
+
+<div align="center">
+
+**Threetwoa Digital Garden** · curated archive · intentional motion · resilient data layer
+
+</div>
