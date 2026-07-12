@@ -93,7 +93,8 @@
       vertical-align: top;
     }
     #content th { background: #f7f4ee; text-align: left; }
-    #content img {
+    /* Content diagrams / showcase: block & full width */
+    #content img[src*="assets/images/readme/"] {
       max-width: 100%;
       height: auto;
       border-radius: 12px;
@@ -101,6 +102,31 @@
       background: #fff;
       display: block;
       margin: 1rem auto;
+    }
+    /* Shields / badges: keep horizontal inline layout */
+    #content img[src*="img.shields.io"],
+    #content img[src*="shields.io"] {
+      display: inline-block;
+      width: auto;
+      max-width: none;
+      height: 28px;
+      margin: 0.2rem 0.25rem;
+      border: 0;
+      border-radius: 4px;
+      vertical-align: middle;
+      background: transparent;
+    }
+    #content p {
+      text-align: inherit;
+    }
+    #content p[align="center"],
+    #content div[align="center"] {
+      text-align: center;
+    }
+    #content p[align="center"] img[src*="assets/images/readme/"] {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     #content pre {
       overflow: auto;
@@ -153,7 +179,16 @@
       <strong>README Preview</strong>
       <span> · Threetwoa Digital Garden · local static view</span>
     </div>
-    <span id="meta">loading…</span>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <label style="font-size:0.9rem;color:var(--muted);">
+        文档
+        <select id="doc-select" style="margin-left:0.35rem;padding:0.25rem 0.45rem;border:1px solid var(--line);border-radius:6px;background:#fff;">
+          <option value="README.md" selected>中文 README.md</option>
+          <option value="README.en.md">English README.en.md</option>
+        </select>
+      </label>
+      <span id="meta">loading…</span>
+    </div>
   </div>
 
   <div class="shell">
@@ -205,27 +240,31 @@
       return bad.length === 0;
     }
 
-    async function main() {
+    async function loadDoc(name) {
       const meta = document.getElementById("meta");
       try {
-        const res = await fetch("README.md", { cache: "no-store" });
-        if (!res.ok) throw new Error(`README.md HTTP ${res.status}`);
+        const res = await fetch(name, { cache: "no-store" });
+        if (!res.ok) throw new Error(`${name} HTTP ${res.status}`);
         const md = await res.text();
         // marked preserves raw HTML in README (img tags, badges)
         document.getElementById("content").innerHTML = marked.parse(md, {
           gfm: true,
           breaks: false,
         });
-        meta.textContent = `README.md · ${(md.length / 1024).toFixed(1)} KB · ${new Date().toLocaleTimeString()}`;
+        meta.textContent = `${name} · ${(md.length / 1024).toFixed(1)} KB · ${new Date().toLocaleTimeString()}`;
         await checkAssets();
       } catch (err) {
         document.getElementById("content").innerHTML =
-          `<p style="color:#991b1b">Failed to load README.md. Serve this file from the project root (e.g. <code>npx serve .</code>).</p><pre>${String(err)}</pre>`;
+          `<p style="color:#991b1b">Failed to load ${name}. Serve from project root (e.g. <code>npx serve . -l 3456</code>).</p><pre>${String(err)}</pre>`;
         meta.textContent = "error";
       }
     }
 
-    main();
+    document.getElementById("doc-select").addEventListener("change", (e) => {
+      loadDoc(e.target.value);
+    });
+
+    loadDoc("README.md");
   </script>
 </body>
 </html>
