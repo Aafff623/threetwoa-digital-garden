@@ -27,7 +27,7 @@ export const siteIdentity = {
   blogUrl: "https://my-blogs-roan-seven.vercel.app/",
   youtubeUrl: "https://www.youtube.com/@laiyiFan-23",
   gardenUrl: "https://threetwoa-digital-garden.vercel.app",
-  avatar: "/assets/avtor-boy.jpg",
+  avatar: "/assets/avatar-female.png",
   copyright: "© 2026 三两园 · Sanliang Garden. MIT License.",
   poweredBy: "本站由 三两园 强力驱动",
   siteTitleDefault: "三两园 | 此间主人",

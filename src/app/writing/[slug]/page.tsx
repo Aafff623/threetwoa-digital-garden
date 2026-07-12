@@ -323,7 +323,7 @@ export default function PostPage() {
             <div className="flex items-center gap-3 border-y border-charcoal/5 dark:border-white/5 py-4">
               <div className="relative w-10 h-10 overflow-hidden rounded-full border border-gold/15">
                 <Image
-                  src="/assets/avtor-boy.jpg"
+                  src="/assets/avatar-female.png"
                   alt="三两园"
                   fill
                   sizes="40px"

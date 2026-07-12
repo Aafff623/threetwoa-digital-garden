@@ -111,7 +111,7 @@ export default function HomeHero({
             <div className="avatar-img-container relative h-11 w-11 overflow-hidden rounded-full border border-white/45 bg-white/55 p-0.5">
               <div className="relative h-full w-full overflow-hidden rounded-full">
                 <Image
-                  src="/assets/avtor-boy.jpg"
+                  src="/assets/avatar-female.png"
                   alt="三两园"
                   fill
                   loading="eager"
@@ -127,7 +127,7 @@ export default function HomeHero({
 
           <div className="mt-8 max-w-full space-y-5 sm:max-w-3xl">
             <h1
-              style={{ fontFamily: "var(--font-ma-shan-zheng)" }}
+              style={{ fontFamily: "var(--font-zcool-xiaowei)" }}
               className="font-hero-h text-4xl font-semibold leading-[1.15] tracking-normal text-cream drop-shadow-[0_18px_48px_rgba(0,0,0,0.28)] sm:text-5xl md:text-6xl"
             >
               <TextType

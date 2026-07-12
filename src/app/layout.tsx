@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, Playfair_Display, Space_Grotesk, Space_Mono, Jost, Noto_Serif_SC, Ma_Shan_Zheng } from "next/font/google";
+import { Inter, Cormorant_Garamond, Playfair_Display, Space_Grotesk, Space_Mono, Jost, Noto_Serif_SC, Ma_Shan_Zheng, ZCOOL_XiaoWei } from "next/font/google";
 import "./globals.css";
 import ThemeApplier from "@/components/ui/ThemeApplier";
 import SiteChrome from "@/components/ui/SiteChrome";
@@ -57,6 +57,13 @@ const maShanZheng = Ma_Shan_Zheng({
   preload: false,
 });
 
+const zcoolXiaoWei = ZCOOL_XiaoWei({
+  variable: "--font-zcool-xiaowei",
+  weight: "400",
+  subsets: ["latin"],
+  preload: false,
+});
+
 export async function generateMetadata(): Promise<Metadata> {
   const title: string = siteIdentity.siteTitleDefault;
   let faviconUrl = "/icon.png";
@@ -89,7 +96,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh"
-      className={`${inter.variable} ${cormorant.variable} ${playfair.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${jost.variable} ${notoSerifSC.variable} ${maShanZheng.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${playfair.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${jost.variable} ${notoSerifSC.variable} ${maShanZheng.variable} ${zcoolXiaoWei.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col text-charcoal bg-transparent">
         <ThemeApplier />

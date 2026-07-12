@@ -487,7 +487,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               <div className="relative h-48 w-48 md:h-60 md:w-60 rounded-full p-2 border border-charcoal/10 dark:border-white/15 overflow-hidden bg-cream/50 dark:bg-zinc-900 shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
                 <div className="relative h-full w-full rounded-full overflow-hidden border border-charcoal/15 dark:border-white/15">
                   <Image
-                    src={profile.avatar || "/assets/avtor-boy.jpg"}
+                    src={profile.avatar || "/assets/avatar-female.png"}
                     alt={profile.name}
                     fill
                     sizes="(max-width: 768px) 192px, 240px"
