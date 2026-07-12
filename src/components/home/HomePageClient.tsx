@@ -147,7 +147,14 @@ export default function HomePageClient({
       setupRail(gallerySectionRef.current, galleryTrackRef.current);
     }, root);
 
-    const refreshTimer = window.setTimeout(() => ScrollTrigger.refresh(), 250);
+    // Single deferred refresh — avoid stacked refresh storms with RouteTransition
+    const refreshTimer = window.setTimeout(() => {
+      try {
+        ScrollTrigger.refresh();
+      } catch {
+        /* ignore */
+      }
+    }, 400);
 
     return () => {
       window.clearTimeout(refreshTimer);
