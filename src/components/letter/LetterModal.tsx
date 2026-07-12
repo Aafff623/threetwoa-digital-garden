@@ -265,7 +265,7 @@ export default function LetterModal({
                 <span>书于：2026 年夏日傍晚</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="italic">Rrtiamo</span>
+                <span className="italic">threetwoa</span>
                 {/* 红色微型火漆私印 */}
                 <div className="w-5 h-5 rounded-full bg-red-800/80 flex items-center justify-center text-[7px] text-cream font-bold border border-red-700 shadow-sm">
                   印

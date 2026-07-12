@@ -2,6 +2,7 @@
 
 import FooterPeekers from "@/components/ui/FooterPeekers";
 import { useSysConfig } from "@/hooks/useSysConfig";
+import { siteIdentity } from "@/data/identity";
 
 export default function Footer() {
   const { configs } = useSysConfig();
@@ -31,9 +32,9 @@ export default function Footer() {
 
         {/* 2. 强力驱动与版权声明 */}
         <p className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 font-medium">
-          <span>© 2026 Rrtiamo. All rights reserved.</span>
+          <span>{siteIdentity.copyright}</span>
           <span className="inline-block w-1 h-1 rounded-full bg-charcoal/10 dark:bg-cream/10" />
-          <span>本网站由 Spring Breeze 强力驱动</span>
+          <span>{siteIdentity.poweredBy}</span>
         </p>
 
         {/* 3. 政策合规备案信息 */}

@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title,
-    description: "我在代码、文字和生活的缝隙里，慢慢搭建一个属于自己的小宇宙。关于 RRTiamo，此间主人。",
+    description: "threetwoa 的数字花园：Agentic Coding、全栈交付与可验证的工程证据。Code less, Architect more.",
   };
 }
 

@@ -324,14 +324,14 @@ export default function PostPage() {
               <div className="relative w-10 h-10 overflow-hidden rounded-full border border-gold/15">
                 <Image
                   src="/assets/avtor-boy.jpg"
-                  alt="Rrtiamo"
+                  alt="threetwoa"
                   fill
                   sizes="40px"
                   className="object-cover"
                 />
               </div>
               <div className="space-y-0.5">
-                <p className="text-xs font-semibold text-charcoal dark:text-cream">Rrtiamo</p>
+                <p className="text-xs font-semibold text-charcoal dark:text-cream">threetwoa</p>
                 <p className="text-[10px] text-charcoal/40 dark:text-cream/40 font-sans tracking-wide">
                   Archivist & Author
                 </p>

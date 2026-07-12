@@ -50,7 +50,7 @@ const FIREWORKS_THEMES = [
   },
   {
     type: "mix",
-    items: ["想你", "Rrtiamo", "Sweetheart", "一辈子", "始终如一", "陪着你", "落日", "阿那亚", "心动", "Love U"]
+    items: ["想你", "threetwoa", "Sweetheart", "一辈子", "始终如一", "陪着你", "落日", "阿那亚", "心动", "Love U"]
   }
 ];
 
@@ -551,7 +551,7 @@ export default function LoveHero({ onScrollDown, heroBgUrl, atmospheresJson }: L
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
                   src="/assets/avtor-boy.jpg"
-                  alt="Rrtiamo"
+                  alt="threetwoa"
                   fill
                   sizes="(max-width: 768px) 112px, 160px"
                   className="object-cover pointer-events-none"
@@ -559,7 +559,7 @@ export default function LoveHero({ onScrollDown, heroBgUrl, atmospheresJson }: L
                 />
               </div>
             </div>
-            <span className="text-xs font-sans font-medium text-white drop-shadow-md md:text-sm">Rrtiamo</span>
+            <span className="text-xs font-sans font-medium text-white drop-shadow-md md:text-sm">threetwoa</span>
           </div>
 
           {/* 左侧心电图组件 */}

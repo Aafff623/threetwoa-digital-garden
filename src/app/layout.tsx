@@ -63,7 +63,7 @@ const maShanZheng = Ma_Shan_Zheng({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  let title = "春风不解别离 | 个人生活档案馆";
+  let title = "threetwoa · Digital Garden";
   let faviconUrl = "/icon.png";
   try {
     const data = await fetchPublicConfigForServer({ next: { revalidate: 10 } });
@@ -83,7 +83,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title,
-    description: "春风得意马蹄疾，不信人间有别离。承载思想随笔、时间胶囊、恋爱纪实与日常影像的私人电子展厅。",
+    description: "threetwoa 的数字花园：技术随笔、项目痕迹、生活切片与可运行的工程证据。Code less, Architect more.",
     icons: {
       icon: faviconUrl,
     }

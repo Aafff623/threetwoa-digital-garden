@@ -262,7 +262,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
   }, []);
 
   // 标题 TrueFocus 模糊聚焦分割字符
-  const titleChars = Array.from(profile.role); // "此间主人"
+  const titleChars = Array.from(profile.role);
 
   return (
     <main
@@ -337,7 +337,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
         )}
       </AnimatePresence>
 
-      {/* 0. 首页开屏 Hero：此间主人 (Genesis Spotlight Hero) */}
+      {/* 0. About hero */}
       <section
         ref={genesisContainerRef}
         id="overview"
@@ -402,7 +402,7 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
                 ))}
               </span>
               <RotatingText
-                texts={profile.rotatingTexts && profile.rotatingTexts.length > 0 ? profile.rotatingTexts : ["rrtiamo", "builder", "creator", "dreamer"]}
+                texts={profile.rotatingTexts && profile.rotatingTexts.length > 0 ? profile.rotatingTexts : ["threetwoa", "architect", "builder", "hacker"]}
                 mainClassName="px-4 py-1 bg-gold text-cream dark:text-zinc-900 overflow-hidden justify-center rounded-2xl text-3xl md:text-4xl lg:text-5xl font-sans font-medium select-none"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
@@ -460,7 +460,14 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
               className="mt-8 flex flex-wrap justify-center lg:justify-start gap-3"
             >
               <ActionLink link={{ label: "个人博客", href: "/", icon: "compass" }} primary />
-              <ActionLink link={{ label: "GitHub", href: "https://github.com", icon: "code", external: true }} />
+              <ActionLink
+                link={{
+                  label: "GitHub",
+                  href: "https://github.com/Aafff623",
+                  icon: "code",
+                  external: true,
+                }}
+              />
             </motion.div>
           </div>
 

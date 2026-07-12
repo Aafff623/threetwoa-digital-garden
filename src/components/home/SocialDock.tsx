@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 import { GithubLogo, XLogo } from "@phosphor-icons/react";
 import gsap from "gsap";
+import { siteIdentity } from "@/data/identity";
 
 export default function SocialDock() {
   return (
@@ -28,7 +29,7 @@ export default function SocialDock() {
       className="flex items-center gap-1 rounded-full border border-white/24 bg-white/12 px-3 py-2 shadow-sm backdrop-blur-md"
     >
       <a
-        href="https://github.com"
+        href={siteIdentity.githubUrl}
         target="_blank"
         rel="noreferrer"
         onMouseEnter={(e) => {
@@ -55,7 +56,7 @@ export default function SocialDock() {
         <GithubLogo className="h-4 w-4" weight="regular" />
       </a>
       <a
-        href="https://twitter.com"
+        href={siteIdentity.xUrl}
         target="_blank"
         rel="noreferrer"
         onMouseEnter={(e) => {
@@ -82,7 +83,7 @@ export default function SocialDock() {
         <XLogo className="h-4 w-4" weight="regular" />
       </a>
       <a
-        href="mailto:contact@domain.com"
+        href={`mailto:${siteIdentity.email}`}
         onMouseEnter={(e) => {
           gsap.to(e.currentTarget, {
             scale: 1.15,

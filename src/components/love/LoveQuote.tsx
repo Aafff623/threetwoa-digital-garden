@@ -33,7 +33,7 @@ export default function LoveQuote() {
             <div className="flex items-center gap-3 pt-1">
               <span className="h-px w-8 bg-rose-500/45" />
               <p className="text-[13px] font-medium tracking-wide text-charcoal/55 dark:text-cream/55">
-                Rrtiamo & Sweetheart · 《生活档案馆》
+                threetwoa & Sweetheart · 《数字花园》
               </p>
             </div>
           </div>

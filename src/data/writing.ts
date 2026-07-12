@@ -172,7 +172,7 @@ export const writingData: Post[] = [
 ## 二、普通引用与任务列表
 
 > 胶片的温度在于银盐的颗粒感，而数字文字的温度，则在于那些被记录下来的微小日常。
-> —— *生活档案馆·Rrtiamo*
+> —— *Digital Garden · threetwoa*
 
 这里是系统运维与架构任务清单：
 

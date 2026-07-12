@@ -469,7 +469,7 @@ export default function PondPage() {
         tags: [{ id: 1, name: "UI", color: "#ec4899" }],
         replies: [{
           id: 1,
-          nickname: "RRTiamo (博主)",
+          nickname: "threetwoa (博主)",
           avatar: "/life-assets/avatar.jpg",
           content: "谢谢你的喜欢！写前端最开心的就是能用代码把心里的想法‘物理显化’出来。流体背景和 3D 卡片确实调了很久，能被你注意到这些细节真的非常欣慰！",
           isAdmin: true,
@@ -496,7 +496,7 @@ export default function PondPage() {
         tags: [{ id: 2, name: "后台", color: "#3b82f6" }],
         replies: [{
           id: 2,
-          nickname: "RRTiamo (博主)",
+          nickname: "threetwoa (博主)",
           avatar: "/life-assets/avatar.jpg",
           content: "这个改进点提得太及时了！最近重构了系统配置页面，已经把外观配置、背景切换和视频链接动态绑定的模块都完成了，目前前台已支持一键实时换肤和背景视频渲染，欢迎测试！",
           isAdmin: true,
