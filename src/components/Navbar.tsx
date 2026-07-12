@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Sun, Moon, ChevronDown } from "lucide-react";
+import { Sun, Moon, ChevronDown, Archive, PenLine, Camera, MapPin, Heart, Trophy, StickyNote, Clock, Mail, MessageCircle, User } from "lucide-react";
 import gsap from "gsap";
 import { useSysConfig } from "@/hooks/useSysConfig";
 import { siteIdentity } from "@/data/identity";
@@ -138,17 +138,17 @@ export default function Navbar() {
   const logoText = siteIdentity.name;
 
   const navItems = [
-    { englishName: "Archive", chineseName: "年份归档", path: "/archive", previewImg: "archive.png" },
-    { englishName: "Writing", chineseName: "随笔文章", path: "/writing", previewImg: "writing.png" },
-    { englishName: "Gallery", chineseName: "光影影像", path: "/gallery", previewImg: "gallery.png" },
-    { englishName: "Footprints", chineseName: "岁月足迹", path: "/footprints", previewImg: "footprints.png" },
-    { englishName: "Love", chineseName: "恋爱纪实", path: "/love", previewImg: "love.png" },
-    { englishName: "Trophy", chineseName: "成就徽章", path: "/achievements", previewImg: "trophy.png" },
-    { englishName: "Notes", chineseName: "日常碎片", path: "/notes", previewImg: "notes.png" },
-    { englishName: "Now", chineseName: "目前状态", path: "/now", previewImg: "now.png" },
-    { englishName: "Letter", chineseName: "岁月信件", path: "/letter", previewImg: "letter.png" },
-    { englishName: "Pond", chineseName: "鱼塘反馈", path: "/pond", previewImg: "pond.png" },
-    { englishName: "About", chineseName: "关于作者", path: "/about", previewImg: "about.png" },
+    { englishName: "Archive", chineseName: "年份归档", path: "/archive", previewImg: "archive.png", icon: Archive },
+    { englishName: "Writing", chineseName: "随笔文章", path: "/writing", previewImg: "writing.png", icon: PenLine },
+    { englishName: "Gallery", chineseName: "光影影像", path: "/gallery", previewImg: "gallery.png", icon: Camera },
+    { englishName: "Footprints", chineseName: "岁月足迹", path: "/footprints", previewImg: "footprints.png", icon: MapPin },
+    { englishName: "Love", chineseName: "恋爱纪实", path: "/love", previewImg: "love.png", icon: Heart },
+    { englishName: "Trophy", chineseName: "成就徽章", path: "/achievements", previewImg: "trophy.png", icon: Trophy },
+    { englishName: "Notes", chineseName: "日常碎片", path: "/notes", previewImg: "notes.png", icon: StickyNote },
+    { englishName: "Now", chineseName: "目前状态", path: "/now", previewImg: "now.png", icon: Clock },
+    { englishName: "Letter", chineseName: "岁月信件", path: "/letter", previewImg: "letter.png", icon: Mail },
+    { englishName: "Pond", chineseName: "鱼塘反馈", path: "/pond", previewImg: "pond.png", icon: MessageCircle },
+    { englishName: "About", chineseName: "关于作者", path: "/about", previewImg: "about.png", icon: User },
   ];
 
   const filteredNavItems = navItems.filter((item) => {
@@ -258,7 +258,10 @@ export default function Navbar() {
                       isActive ? "text-gold font-semibold" : "text-charcoal/60 hover:text-charcoal dark:text-cream/70 dark:hover:text-cream"
                     }`}
                   >
-                    {item.englishName}
+                    <span className="inline-flex items-center gap-1">
+                      <item.icon className="h-3 w-3 stroke-[1.6]" aria-hidden="true" />
+                      {item.englishName}
+                    </span>
                   </Link>
 
                   {/* HoverCard 预览特效 */}
@@ -300,7 +303,10 @@ export default function Navbar() {
                       : "text-charcoal/60 hover:text-charcoal dark:hover:text-cream"
                   }`}
                 >
-                  {item.englishName}
+                  <span className="inline-flex items-center gap-1">
+                    <item.icon className="h-3 w-3 stroke-[1.6]" aria-hidden="true" />
+                    {item.englishName}
+                  </span>
                 </Link>
               );
             })}
@@ -364,9 +370,10 @@ export default function Navbar() {
                       isActive ? "border-gold/30 bg-gold/5 dark:bg-gold/10" : ""
                     } ${index < 4 ? "md:hidden" : ""}`}
                   >
-                    <span className={`text-[9px] font-sans font-bold tracking-widest uppercase transition-colors duration-300 ${
+                    <span className={`inline-flex items-center gap-1 text-[9px] font-sans font-bold tracking-widest uppercase transition-colors duration-300 ${
                       isActive ? "text-gold" : "text-charcoal/80 dark:text-cream/80 group-hover:text-charcoal dark:group-hover:text-cream"
                     }`}>
+                      <item.icon className="h-3 w-3 stroke-[1.6]" aria-hidden="true" />
                       {item.englishName}
                     </span>
                     <span className="text-[8px] font-sans text-charcoal/45 dark:text-cream/45 mt-0.5 tracking-wider transition-colors duration-300 group-hover:text-charcoal/60 dark:group-hover:text-cream/60">
