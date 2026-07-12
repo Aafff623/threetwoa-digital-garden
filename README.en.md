@@ -2,10 +2,13 @@
 
 > *A personal blog and life-archive frontend — long-form writing, photos, footprints, and private memories in one curated surface.*
 
-**Language**: [中文](./README.md) · [English](./README.en.md)
+<p align="center">
+  <strong>文档语言 / Language</strong><br />
+  <a href="./README.md">中文</a> · <a href="./README.en.md">English</a>
+</p>
 
 <p align="center">
-  <img src="assets/images/readme/banner.png" alt="Threetwoa Digital Garden banner" width="100%" />
+  <img src="assets/images/readme/banner.png" alt="Threetwoa Digital Garden banner" width="85%" />
 </p>
 
 <p align="center">
@@ -51,7 +54,7 @@ This is not a generic CMS skin or an infinite photo feed. It is a **digital gard
 ## Features
 
 <p align="center">
-  <img src="assets/images/readme/features.png" alt="Feature map — Articles, Gallery, Footprints, Love Archive, Time Capsule, Achievements, Pond, Style System" width="100%" />
+  <img src="assets/images/readme/features.png" alt="Feature map — Articles, Gallery, Footprints, Love Archive, Time Capsule, Achievements, Pond, Style System" width="85%" />
 </p>
 
 | Module | Description | Status |
@@ -84,11 +87,11 @@ Playwright captures at `1600×900`. After [Quick Start](#quick-start), walk the 
 
 | Surface | Capture |
 | --- | --- |
-| **Home** | <img src="assets/images/readme/showcase-home.png" alt="Home page" width="100%" /> |
-| **Writing list** | <img src="assets/images/readme/showcase-writing.png" alt="Writing list" width="100%" /> |
-| **Article detail** | <img src="assets/images/readme/showcase-article-detail.png" alt="Article detail" width="100%" /> |
-| **Gallery** | <img src="assets/images/readme/showcase-gallery.png" alt="Gallery" width="100%" /> |
-| **About** | <img src="assets/images/readme/showcase-about.png" alt="About page" width="100%" /> |
+| **Home** | <img src="assets/images/readme/showcase-home.png" alt="Home page" width="85%" /> |
+| **Writing list** | <img src="assets/images/readme/showcase-writing.png" alt="Writing list" width="85%" /> |
+| **Article detail** | <img src="assets/images/readme/showcase-article-detail.png" alt="Article detail" width="85%" /> |
+| **Gallery** | <img src="assets/images/readme/showcase-gallery.png" alt="Gallery" width="85%" /> |
+| **About** | <img src="assets/images/readme/showcase-about.png" alt="About page" width="85%" /> |
 
 ## Quick Start
 
@@ -142,7 +145,7 @@ Before commit, prefer `npm run lint` and `npm run build`.
 ## Architecture
 
 <p align="center">
-  <img src="assets/images/readme/architecture.png" alt="System architecture — Visitor/Editor → Blog/Admin → Spring Boot API → MySQL & Object Storage" width="100%" />
+  <img src="assets/images/readme/architecture.png" alt="System architecture — Visitor/Editor → Blog/Admin → Spring Boot API → MySQL & Object Storage" width="85%" />
 </p>
 
 | Tier | Stack | Responsibility | Repository |
@@ -167,7 +170,7 @@ Client Component
 ### Tech stack layers
 
 <p align="center">
-  <img src="assets/images/readme/tech-stack.png" alt="Frontend tech stack — Framework, Styling, Motion, Data, Content layers" width="100%" />
+  <img src="assets/images/readme/tech-stack.png" alt="Frontend tech stack — Framework, Styling, Motion, Data, Content layers" width="85%" />
 </p>
 
 | Layer | Choices |
@@ -181,7 +184,7 @@ Client Component
 ## Workflow
 
 <p align="center">
-  <img src="assets/images/readme/workflow.png" alt="Visitor journey — Landing → Browse Writing → Read Article → Explore Life → Engage" width="100%" />
+  <img src="assets/images/readme/workflow.png" alt="Visitor journey — Landing → Browse Writing → Read Article → Explore Life → Engage" width="85%" />
 </p>
 
 | Step | User action | What the stack does |
@@ -195,7 +198,7 @@ Client Component
 ## Structure
 
 <p align="center">
-  <img src="assets/images/readme/structure.png" alt="Repository structure — src/ tree and Server/Client/Theme conventions" width="100%" />
+  <img src="assets/images/readme/structure.png" alt="Repository structure — src/ tree and Server/Client/Theme conventions" width="85%" />
 </p>
 
 ```text

@@ -95,7 +95,9 @@
     #content th { background: #f7f4ee; text-align: left; }
     /* Content diagrams / showcase: block & full width */
     #content img[src*="assets/images/readme/"] {
+      /* Prefer HTML width attrs (85%); cap at container */
       max-width: 100%;
+      width: auto;
       height: auto;
       border-radius: 12px;
       border: 1px solid var(--line);

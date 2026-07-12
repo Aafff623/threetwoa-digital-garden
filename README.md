@@ -2,10 +2,13 @@
 
 > *个人博客与生活档案馆前端 —— 把长文、照片、足迹与私人记忆收进同一片数字花园。*
 
-**语言**：[中文](./README.md) · [English](./README.en.md)
+<p align="center">
+  <strong>文档语言 / Language</strong><br />
+  <a href="./README.md">中文</a> · <a href="./README.en.md">English</a>
+</p>
 
 <p align="center">
-  <img src="assets/images/readme/banner.png" alt="Threetwoa Digital Garden 横幅" width="100%" />
+  <img src="assets/images/readme/banner.png" alt="Threetwoa Digital Garden 横幅" width="85%" />
 </p>
 
 <p align="center">
@@ -51,7 +54,7 @@
 ## 功能
 
 <p align="center">
-  <img src="assets/images/readme/features.png" alt="功能总览：文章、照片墙、足迹、恋爱纪实、时间胶囊、成就、鱼塘、主题系统" width="100%" />
+  <img src="assets/images/readme/features.png" alt="功能总览：文章、照片墙、足迹、恋爱纪实、时间胶囊、成就、鱼塘、主题系统" width="85%" />
 </p>
 
 | 模块 | 说明 | 状态 |
@@ -84,11 +87,11 @@
 
 | 页面 | 截图 |
 | --- | --- |
-| **首页** | <img src="assets/images/readme/showcase-home.png" alt="首页" width="100%" /> |
-| **文章列表** | <img src="assets/images/readme/showcase-writing.png" alt="文章列表" width="100%" /> |
-| **文章详情** | <img src="assets/images/readme/showcase-article-detail.png" alt="文章详情" width="100%" /> |
-| **照片墙** | <img src="assets/images/readme/showcase-gallery.png" alt="照片墙" width="100%" /> |
-| **关于** | <img src="assets/images/readme/showcase-about.png" alt="关于页" width="100%" /> |
+| **首页** | <img src="assets/images/readme/showcase-home.png" alt="首页" width="85%" /> |
+| **文章列表** | <img src="assets/images/readme/showcase-writing.png" alt="文章列表" width="85%" /> |
+| **文章详情** | <img src="assets/images/readme/showcase-article-detail.png" alt="文章详情" width="85%" /> |
+| **照片墙** | <img src="assets/images/readme/showcase-gallery.png" alt="照片墙" width="85%" /> |
+| **关于** | <img src="assets/images/readme/showcase-about.png" alt="关于页" width="85%" /> |
 
 ## 快速开始
 
@@ -142,7 +145,7 @@ npm run dev
 ## 架构
 
 <p align="center">
-  <img src="assets/images/readme/architecture.png" alt="系统架构：访客/编辑 → Blog/Admin → Spring Boot API → MySQL 与对象存储" width="100%" />
+  <img src="assets/images/readme/architecture.png" alt="系统架构：访客/编辑 → Blog/Admin → Spring Boot API → MySQL 与对象存储" width="85%" />
 </p>
 
 | 端 | 技术栈 | 职责 | 仓库 |
@@ -167,7 +170,7 @@ Client Component
 ### 技术栈分层
 
 <p align="center">
-  <img src="assets/images/readme/tech-stack.png" alt="前端技术栈分层：框架、样式、动效、数据、内容" width="100%" />
+  <img src="assets/images/readme/tech-stack.png" alt="前端技术栈分层：框架、样式、动效、数据、内容" width="85%" />
 </p>
 
 | 分层 | 选型 |
@@ -181,7 +184,7 @@ Client Component
 ## 访问链路
 
 <p align="center">
-  <img src="assets/images/readme/workflow.png" alt="访客主链路：首页 → 文章列表 → 阅读 → 生活面 → 互动" width="100%" />
+  <img src="assets/images/readme/workflow.png" alt="访客主链路：首页 → 文章列表 → 阅读 → 生活面 → 互动" width="85%" />
 </p>
 
 | 步骤 | 用户行为 | 技术侧发生了什么 |
@@ -195,7 +198,7 @@ Client Component
 ## 目录结构
 
 <p align="center">
-  <img src="assets/images/readme/structure.png" alt="仓库目录结构：src/ 树与 Server/Client/Theme 约定" width="100%" />
+  <img src="assets/images/readme/structure.png" alt="仓库目录结构：src/ 树与 Server/Client/Theme 约定" width="85%" />
 </p>
 
 ```text
