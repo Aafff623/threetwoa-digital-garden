@@ -1,11 +1,19 @@
 import request, { getServerApiURL } from "./request";
 import type { AxiosResponse } from "axios";
 
-type PublicConfigAxios = AxiosResponse<{
+export interface PublicConfigItem {
+  configKey: string;
+  configValue: string;
+  [key: string]: unknown;
+}
+
+export interface PublicConfigBody {
   code: number;
-  data?: unknown;
+  data?: PublicConfigItem[];
   message?: string;
-}>;
+}
+
+type PublicConfigAxios = AxiosResponse<PublicConfigBody>;
 
 const CLIENT_TTL_MS = 60_000;
 const NEGATIVE_TTL_MS = 5_000;
@@ -40,16 +48,14 @@ export function getPublicConfig(): Promise<PublicConfigAxios> {
       return res;
     })
     .catch((err) => {
-      // Short negative cache so concurrent mounts do not each wait full axios timeout
       const empty = {
-        data: { code: -1, data: [], message: "config unavailable" },
+        data: { code: -1, data: [] as PublicConfigItem[], message: "config unavailable" },
         status: 0,
         statusText: "ERR",
         headers: {},
         config: {} as PublicConfigAxios["config"],
       } as PublicConfigAxios;
       clientCache = { expires: Date.now() + NEGATIVE_TTL_MS, value: empty };
-      // Resolve empty instead of rejecting so callers do not surface unhandled rejections
       console.warn("getPublicConfig failed, using empty cache:", err?.message || err);
       return empty;
     })
@@ -68,5 +74,5 @@ export function invalidatePublicConfigCache() {
 
 export async function fetchPublicConfigForServer(init?: Parameters<typeof fetch>[1]) {
   const response = await fetch(getServerApiURL("/config/public"), init);
-  return response.json();
+  return response.json() as Promise<PublicConfigBody>;
 }

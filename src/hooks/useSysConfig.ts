@@ -15,7 +15,7 @@ export function useSysConfig() {
       .then((res) => res.data)
       .then((data) => {
         if (data.code === 200) {
-          setConfigs(data.data || []);
+          setConfigs(Array.isArray(data.data) ? data.data : []);
         }
       })
       .catch((err) => {

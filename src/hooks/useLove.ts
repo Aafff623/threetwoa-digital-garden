@@ -136,9 +136,9 @@ export function useLoveStats() {
         if (res?.code !== 200) {
           throw new Error("API code not 200");
         }
-        const list = res.data || [];
+        const list = Array.isArray(res.data) ? res.data : [];
         const findVal = (key: string, fallback: string) => {
-          const match = list.find((c: any) => c.configKey === key);
+          const match = list.find((c) => c.configKey === key);
           return match ? match.configValue : fallback;
         };
 

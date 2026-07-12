@@ -107,9 +107,10 @@ Each phase ends with: re-measure → commit.
 
 ## Checklist (tracker)
 
-- [ ] P0a — public config cache
-- [ ] P0b — route transition scroll hygiene
-- [ ] P1a — About motion budget
-- [ ] P1b — Home pin budget
-- [ ] P2 — prefetch / lazy guards
-- [ ] Re-measure after each phase; attach MD report
+- [x] P0a — public config cache (`92dc6f0`, issue #2 closed)
+- [x] P0b — route transition scroll hygiene (`87a219a`, issue #3 closed)
+- [x] P1a — About motion budget (`c4b90c5`, issue #4 closed)
+- [x] P1b — Home pin budget (`cc887b6`, issue #5 closed)
+- [x] Re-measure after phases (`docs/output/prd/nav-perf/latest-after-p0p1-v2.md`)
+- [ ] P2 — prefetch / lazy guards (deferred; open on demand)
+- [x] Parent PRD issue #1 closed (2026-07-12)
