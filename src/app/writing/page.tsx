@@ -150,7 +150,7 @@ export default function WritingPage() {
 
   return (
     <div className="max-w-6xl mx-auto w-full px-4 md:px-8 py-24 md:py-32">
-      <div className="bg-cream/90 dark:bg-charcoal/90 backdrop-blur-md border border-charcoal/10 dark:border-white/10 rounded-[2.5rem] p-6 md:p-12 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.12)]">
+      <div className="bg-surface/95 dark:bg-surface backdrop-blur-md border border-charcoal/10 dark:border-white/10 rounded-[2.5rem] p-6 md:p-12 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.12)]">
         {/* 头部标题与检索栏 */}
         <div className="border-b border-charcoal/8 dark:border-white/8 pb-8 mb-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-3">
@@ -166,7 +166,7 @@ export default function WritingPage() {
           </div>
 
           {/* 玻璃拟态搜索条 */}
-          <div className="relative w-full lg:max-w-xs border border-charcoal/10 dark:border-white/10 bg-white/40 dark:bg-white/5 rounded-2xl px-4 py-2.5 flex items-center focus-within:border-gold/50 transition-colors shadow-sm">
+          <div className="relative w-full lg:max-w-xs border border-charcoal/10 dark:border-white/10 bg-surface-muted/80 dark:bg-surface-muted rounded-2xl px-4 py-2.5 flex items-center focus-within:border-gold/50 transition-colors shadow-sm">
             <Search className="w-4 h-4 text-charcoal/40 dark:text-cream/40 mr-2.5 stroke-[1.8]" />
             <input
               type="text"
@@ -203,7 +203,7 @@ export default function WritingPage() {
               return (
                 <div
                   key={post.slug}
-                  className="writing-card group relative overflow-hidden rounded-[2.5rem] border border-charcoal/8 bg-white/55 dark:bg-white/[0.03] shadow-sm backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:bg-white/72 dark:hover:bg-white/8 hover:shadow-[0_20px_50px_-32px_rgba(217,134,95,0.22)] dark:border-white/10 flex flex-col md:flex-row items-stretch min-h-[420px] md:min-h-0 md:h-[250px]"
+                  className="writing-card group relative overflow-hidden rounded-[2.5rem] border border-charcoal/8 bg-surface/90 dark:bg-surface shadow-sm backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-32px_rgba(217,134,95,0.22)] dark:border-white/10 flex flex-col md:flex-row items-stretch min-h-[420px] md:min-h-0 md:h-[250px]"
                 >
                   {/* 封面图容器 - 绝对定位以支持无缝斜切分割 */}
                   <div className="writing-card-img-wrapper w-full h-48 relative shrink-0 md:absolute md:inset-y-0 md:left-0 md:w-full md:h-full md:z-10 pointer-events-none overflow-hidden rounded-[2.5rem]">

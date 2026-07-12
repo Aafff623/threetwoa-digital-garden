@@ -32,6 +32,10 @@
   --font-quote-h-val: var(--font-quote-heading), system-ui, -apple-system, sans-serif;
 }
 .dark.style-minimalist {
+  --surface-elevated: #1E293B;
+  --surface-muted: #162032;
+  --surface-glass: rgba(30, 41, 59, 0.88);
+
   --bg-color: #0F172A;
   --bg-dark-color: #1E293B;
   --fg-color: #F1F5F9;

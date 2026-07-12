@@ -1,6 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingFooterPeekers from "@/components/ui/FloatingFooterPeekers";
@@ -9,14 +8,8 @@ import StyleConsole from "@/components/ui/StyleConsole";
 import BackToTop from "@/components/ui/BackToTop";
 import TapeStation from "@/components/ui/TapeStation";
 
+/** Public site chrome (Navbar / Footer / motion shell). */
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-  const isAdmin = pathname?.startsWith("/admin");
-
-  if (isAdmin) {
-    return <div className="relative z-10 min-h-full flex flex-col">{children}</div>;
-  }
-
   return (
     <>
       <div className="relative z-10 min-h-full flex flex-col">

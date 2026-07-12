@@ -32,6 +32,10 @@
   --font-quote-h-val: var(--font-quote-heading), ui-monospace, SFMono-Regular, monospace;
 }
 .dark.style-brutalist {
+  --surface-elevated: #141414;
+  --surface-muted: #0F0F0F;
+  --surface-glass: rgba(20, 20, 20, 0.9);
+
   --bg-color: #0A0A0A;
   --bg-dark-color: #121212;
   --fg-color: #00FF55; /* 黑客终端绿 */

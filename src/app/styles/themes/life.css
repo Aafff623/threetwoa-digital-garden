@@ -30,12 +30,15 @@
   --font-quote-h-val: var(--font-quote-heading), var(--font-noto-serif-sc), system-ui, sans-serif;
 }
 .dark.style-life {
-  --bg-color: #17211B;
-  --bg-dark-color: #203027;
-  --fg-color: #F1F4EA;
-  --border-line-color: rgba(241, 244, 234, 0.12);
-  --accent-color: #F1A77C;
-  --accent-light-color: #F5C6A8;
+  --bg-color: #0E1411;
+  --bg-dark-color: #151C18;
+  --fg-color: #E6EBE3;
+  --border-line-color: rgba(230, 235, 227, 0.12);
+  --accent-color: #E8A06A;
+  --accent-light-color: #F0C09A;
+  --surface-elevated: #1A2320;
+  --surface-muted: #141B18;
+  --surface-glass: rgba(26, 35, 32, 0.82);
 }
 .style-life .high-contrast-card {
   background-color: color-mix(in srgb, var(--bg-color) 92%, white 8%) !important;

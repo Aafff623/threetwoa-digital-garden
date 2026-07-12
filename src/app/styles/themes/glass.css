@@ -32,6 +32,10 @@
   --font-quote-h-val: var(--font-quote-heading), system-ui, -apple-system, sans-serif;
 }
 .dark.style-glass {
+  --surface-elevated: #15121F;
+  --surface-muted: #100E18;
+  --surface-glass: rgba(21, 18, 31, 0.75);
+
   --bg-color: #09070F;
   --bg-dark-color: #110E1C;
   --fg-color: #F8F9FA;
