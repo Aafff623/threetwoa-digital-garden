@@ -119,42 +119,37 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
         );
       }
 
-      // 3. 震撼动效 2：价值观行滚动聚焦高亮与边缘高斯模糊淡出 (Scroll Scrub Highlight)
+      // Belief lines: opacity/transform scrub only (no filter:blur — GPU longtask budget)
       const beliefLines = Array.from(root.querySelectorAll<HTMLElement>(".belief-line"));
       if (beliefLines.length > 0 && !reduceMotion) {
         beliefLines.forEach((line) => {
-          // 滚入屏幕中央亮起动画
           gsap.fromTo(
             line,
             {
-              opacity: 0.25,
-              filter: "blur(4px)",
-              scale: 0.97,
+              opacity: 0.35,
+              y: 12,
             },
             {
               opacity: 1,
-              filter: "blur(0px)",
-              scale: 1,
+              y: 0,
               ease: "none",
               scrollTrigger: {
                 trigger: line,
-                start: "top 82%",
-                end: "top 52%",
+                start: "top 88%",
+                end: "top 55%",
                 scrub: true,
               },
             }
           );
 
-          // 滚出屏幕中央淡出模糊动画
           gsap.to(line, {
-            opacity: 0.25,
-            filter: "blur(4px)",
-            scale: 0.97,
+            opacity: 0.4,
+            y: -8,
             ease: "none",
             scrollTrigger: {
               trigger: line,
-              start: "bottom 48%",
-              end: "bottom 18%",
+              start: "bottom 45%",
+              end: "bottom 15%",
               scrub: true,
             },
           });
@@ -252,7 +247,13 @@ export default function AboutPageClient({ profile }: AboutPageClientProps) {
 
     window.addEventListener("mousemove", handleSpotlightMove);
 
-    const refreshTimer = window.setTimeout(() => ScrollTrigger.refresh(), 350);
+    const refreshTimer = window.setTimeout(() => {
+      try {
+        ScrollTrigger.refresh();
+      } catch {
+        /* ignore */
+      }
+    }, 400);
 
     return () => {
       window.clearTimeout(refreshTimer);
