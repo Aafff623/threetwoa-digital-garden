@@ -58,15 +58,11 @@ const maShanZheng = Ma_Shan_Zheng({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  let title: string = siteIdentity.siteTitleDefault;
+  const title: string = siteIdentity.siteTitleDefault;
   let faviconUrl = "/icon.png";
   try {
     const data = await fetchPublicConfigForServer({ next: { revalidate: 10 } });
     if (data.code === 200 && Array.isArray(data.data)) {
-      const titleItem = data.data.find((c: any) => c.configKey === "site.title.default");
-      if (titleItem?.configValue) {
-        title = titleItem.configValue;
-      }
       const favItem = data.data.find((c: any) => c.configKey === "site.favicon.url");
       if (favItem?.configValue) {
         faviconUrl = favItem.configValue;

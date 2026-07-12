@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Sun, Moon, ChevronDown } from "lucide-react";
 import gsap from "gsap";
 import { useSysConfig } from "@/hooks/useSysConfig";
+import { siteIdentity } from "@/data/identity";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -134,7 +135,7 @@ export default function Navbar() {
   };
 
   const logoUrl = getConfigValue("site.logo.url");
-  const logoText = getConfigValue("site.logo.text", "三两园");
+  const logoText = siteIdentity.name;
 
   const navItems = [
     { englishName: "Archive", chineseName: "年份归档", path: "/archive", previewImg: "archive.png" },

@@ -30,7 +30,7 @@ export const siteIdentity = {
   avatar: "/assets/avtor-boy.jpg",
   copyright: "© 2026 三两园 · Sanliang Garden. MIT License.",
   poweredBy: "本站由 三两园 强力驱动",
-  siteTitleDefault: "三两园 · Sanliang Garden",
+  siteTitleDefault: "三两园 | 此间主人",
   siteDescription:
     "三两园：技术随笔、项目痕迹与生活切片。少写几行，多筑一境。",
   rotatingTexts: ["三两园", "守园人", "architect", "builder"],

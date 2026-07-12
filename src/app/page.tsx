@@ -62,6 +62,10 @@ async function getPublicConfigs(): Promise<Record<string, string>> {
       data.data.forEach((item: any) => {
         configMap[item.configKey] = item.configValue;
       });
+      // Brand identity is owned by src/data/identity.ts; drop these backend values
+      // so legacy author names (e.g. RRTiamo) don't leak into the serialized payload.
+      delete configMap["site.logo.text"];
+      delete configMap["site.title.default"];
       return configMap;
     }
   } catch (err) {
