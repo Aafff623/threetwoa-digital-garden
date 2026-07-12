@@ -1,6 +1,6 @@
-# My House · 生活档案馆（Blog）
+# Threetwoa Digital Garden
 
-一个面向个人博客与私人生活归档的前台站点。它不只承载文章，也用于整理影像、足迹、近况、恋爱记录、时间信件、成就与访客反馈。
+Threetwoa Digital Garden — a personal blog and life-archive frontend. It carries articles, images, footprints, notes, love records, time letters, achievements, and guest feedback.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.2.9-000000?logo=nextdotjs)
 ![React](https://img.shields.io/badge/React-19.2-149ECA?logo=react&logoColor=white)
@@ -83,8 +83,8 @@ flowchart LR
 ### 1. 获取项目
 
 ```bash
-git clone https://github.com/RRTiamo/spring_blogs.git
-cd spring_blogs
+git clone https://github.com/Aafff623/threetwoa-digital-garden.git
+cd threetwoa-digital-garden
 npm ci
 ```
 
