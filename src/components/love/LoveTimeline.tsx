@@ -383,7 +383,11 @@ export default function LoveTimeline({ entries }: LoveTimelineProps) {
                             alt={entry.title}
                             fill
                             sizes="360px"
-                            className="object-cover group-hover/card:scale-105 transition-transform duration-700 ease-out"
+                            loading="lazy"
+                            className="object-cover opacity-0 transition duration-700 ease-out group-hover/card:scale-105"
+                            onLoad={(e) => {
+                              (e.target as HTMLImageElement).style.opacity = "1";
+                            }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
                           
