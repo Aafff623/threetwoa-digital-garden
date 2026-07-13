@@ -4,10 +4,24 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Sun, Moon, ChevronDown, Archive, PenLine, Camera, MapPin, Heart, Trophy, StickyNote, Clock, Mail, MessageCircle, User } from "lucide-react";
+import { Sun, Moon, ChevronDown, Archive, PenLine, Camera, MapPin, Heart, Trophy, StickyNote, Clock, Mail, MessageCircle, User, type LucideIcon } from "lucide-react";
 import gsap from "gsap";
 import { useSysConfig } from "@/hooks/useSysConfig";
 import { siteIdentity } from "@/data/identity";
+
+const iconColors: Record<string, string> = {
+  Archive:     "#6b7280",   // slate — archive
+  Writing:     "#3b82f6",   // blue — writing
+  Gallery:     "#6b7280",   // gray — gallery
+  Footprints:  "#10b981",   // emerald — footprints
+  Love:        "#ec4899",   // pink — love
+  Trophy:      "#f59e0b",   // amber — achievements
+  Notes:       "#8b5cf6",   // violet — notes
+  Now:         "#ef4444",   // red — now
+  Letter:      "#6366f1",   // indigo — letters
+  Pond:        "#06b6d4",   // cyan — pond
+  About:       "#84cc16",   // lime — about
+};
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -259,7 +273,7 @@ export default function Navbar() {
                     }`}
                   >
                     <span className="inline-flex items-center gap-1">
-                      <item.icon className="h-3 w-3 stroke-[1.6]" aria-hidden="true" />
+                      <item.icon className="h-3 w-3 stroke-[1.6]" color={iconColors[item.englishName]} aria-hidden="true" />
                       {item.englishName}
                     </span>
                   </Link>
@@ -304,7 +318,7 @@ export default function Navbar() {
                   }`}
                 >
                   <span className="inline-flex items-center gap-1">
-                    <item.icon className="h-3 w-3 stroke-[1.6]" aria-hidden="true" />
+                    <item.icon className="h-3 w-3 stroke-[1.6]" color={iconColors[item.englishName]} aria-hidden="true" />
                     {item.englishName}
                   </span>
                 </Link>
@@ -373,7 +387,7 @@ export default function Navbar() {
                     <span className={`inline-flex items-center gap-1 text-[9px] font-sans font-bold tracking-widest uppercase transition-colors duration-300 ${
                       isActive ? "text-gold" : "text-charcoal/80 dark:text-cream/80 group-hover:text-charcoal dark:group-hover:text-cream"
                     }`}>
-                      <item.icon className="h-3 w-3 stroke-[1.6]" aria-hidden="true" />
+                      <item.icon className="h-3 w-3 stroke-[1.6]" color={iconColors[item.englishName]} aria-hidden="true" />
                       {item.englishName}
                     </span>
                     <span className="text-[8px] font-sans text-charcoal/45 dark:text-cream/45 mt-0.5 tracking-wider transition-colors duration-300 group-hover:text-charcoal/60 dark:group-hover:text-cream/60">
@@ -384,24 +398,21 @@ export default function Navbar() {
               })}
             </div>
           </div>
-
-          {/* 细分界线 */}
-          <div className="h-4 w-[1px] bg-charcoal/10 dark:bg-white/10" />
-
-          {/* 明暗主题切换按钮 */}
-          <button
-            onClick={toggleTheme}
-            className="relative cursor-pointer overflow-hidden rounded-full border border-charcoal/10 p-2 text-charcoal transition-all hover:border-charcoal hover:bg-charcoal/5 active:scale-95 dark:border-white/10 dark:hover:border-white dark:hover:bg-white/5"
-            aria-label="Toggle Theme"
-          >
-            {theme === "light" ? (
-              <Moon className="w-3.5 h-3.5 stroke-[1.25] text-charcoal dark:text-cream" />
-            ) : (
-              <Sun className="w-3.5 h-3.5 stroke-[1.25] text-charcoal dark:text-cream" />
-            )}
-          </button>
         </div>
       </nav>
+
+      {/* 主题切换 — 独立于导航胶囊，固定在页面右上角 */}
+      <button
+        onClick={toggleTheme}
+        className="pointer-events-auto fixed right-4 top-5 z-50 cursor-pointer rounded-full border border-charcoal/10 bg-cream/90 p-2.5 text-charcoal shadow-[0_6px_18px_-6px_rgba(15,15,15,0.15),0_1px_2px_rgba(0,0,0,0.03)] backdrop-blur-md transition-all hover:border-charcoal hover:bg-cream hover:shadow-[0_12px_24px_-8px_rgba(15,15,15,0.25)] active:scale-95 dark:border-white/12 dark:bg-surface/95 dark:text-cream dark:hover:border-white dark:hover:bg-surface sm:right-6 sm:top-6"
+        aria-label="Toggle Theme"
+      >
+        {theme === "light" ? (
+          <Moon className="w-4 h-4 stroke-[1.25]" />
+        ) : (
+          <Sun className="w-4 h-4 stroke-[1.25]" />
+        )}
+      </button>
     </header>
   );
 }
