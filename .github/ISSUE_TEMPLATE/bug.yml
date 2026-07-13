@@ -1,0 +1,84 @@
+name: 🐛 Bug 报告
+description: 报告一个 Bug —— 按 docs/knowledge/project-init.md §5.2 范式填写
+title: "fix(scope): <简述>"
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        按本仓 `docs/knowledge/project-init.md` §5.2 的 Bug Issue 范式填写。
+        - **仅模糊描述** → 留空「根因 / 修复方向 / 接手引导」，保留 `needs-triage`，交诊断 Agent 补全。
+        - **已定位根因** → 尽量填全，事后移除 `needs-triage`，方便修复 Agent 直接接手。
+
+        角色分工：发现 → 诊断（OpenCode·DeepSeek）→ 修复（Claude Code·GLM）→ Review（用户）。
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 用户视角——什么操作、预期什么、实际发生了什么（1-3 句）
+      placeholder: "在 /writing 页 hover 导航 WORDS → 下拉出现 → 鼠标下移到 Writing 子项途中，面板消失，无法点击。"
+    validations:
+      required: true
+  - type: textarea
+    id: root-cause
+    attributes:
+      label: 根因
+      description: 技术视角——哪个文件、哪行、什么机制导致。未知则留空待诊断。
+      placeholder: "Navbar.tsx:392 的 mt-2 在按钮与 absolute 下拉面板间留了 8px 死区；面板不撑开 group/nav hover 盒，穿间隙时 group-hover 失效。"
+    validations:
+      required: false
+  - type: textarea
+    id: repro-auto
+    attributes:
+      label: 复现 · 自动化脚本
+      description: 若有 scripts/repro-*.mjs，贴路径 + 运行命令 + 关键输出。无则留空。
+      placeholder: |
+        node scripts/repro-navbar-bug.mjs
+        → GAP 8px, dropdown opacity=0
+    validations:
+      required: false
+  - type: textarea
+    id: repro-manual
+    attributes:
+      label: 复现 · 手动步骤
+      description: 任何人都能照着走一遍的分步操作。
+      placeholder: |
+        1. 桌面视口（>=768px）打开首页
+        2. hover 导航 WORDS
+        3. 鼠标缓慢下移到 Writing 子项
+        4. 观察：面板在到达前消失
+    validations:
+      required: true
+  - type: textarea
+    id: code-locations
+    attributes:
+      label: 关键代码位置
+      description: 表格——文件 | 行号 | 问题
+      placeholder: |
+        | 文件 | 行号 | 问题 |
+        |---|---|---|
+        | src/components/Navbar.tsx | 392 | mt-2 8px 死区 |
+    validations:
+      required: false
+  - type: textarea
+    id: fix-direction
+    attributes:
+      label: 修复方向（供修复 Agent 参考）
+      description: 1-2 个可选方案，含 diff 或思路。
+      placeholder: |
+        方案 A: mt-2 pt-1 → pt-3（margin 死区改 padding 桥接）
+        方案 B: JS + setTimeout 延迟清除 hoveredGroup
+    validations:
+      required: false
+  - type: textarea
+    id: handoff
+    attributes:
+      label: 接手 Agent 引导
+      description: 1. 怎么复现确认  2. 怎么修  3. 怎么验证  4. 提交流程
+      placeholder: |
+        1. 跑 repro 脚本确认 Bug
+        2. 选方案 A 实施
+        3. 重跑 repro 验证 opacity=1 且子项可点击
+        4. npm run lint 通过后 commit（Closes #N）
+    validations:
+      required: false
