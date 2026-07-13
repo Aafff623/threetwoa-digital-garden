@@ -389,7 +389,7 @@ export default function Navbar() {
                   </button>
 
                   {/* 二级悬浮面板：子项列表 + 预览缩略图（hover 或键盘 focus-within 时显示） */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 pt-1 opacity-0 translate-y-2 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:translate-y-0 group-hover/nav:pointer-events-auto group-focus-within/nav:opacity-100 group-focus-within/nav:translate-y-0 group-focus-within/nav:pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-[100]">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 translate-y-2 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:translate-y-0 group-hover/nav:pointer-events-auto group-focus-within/nav:opacity-100 group-focus-within/nav:translate-y-0 group-focus-within/nav:pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-[100]">
                     <div className="flex gap-2 p-2 bg-cream dark:bg-charcoal border border-charcoal/10 dark:border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
                       {/* 子项列表 */}
                       <div className="flex flex-col w-44">
