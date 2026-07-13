@@ -11,3 +11,4 @@ out/
 .yarn/*
 tsconfig.tsbuildinfo
 .vercel
+.playwright-mcp/
