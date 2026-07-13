@@ -81,7 +81,8 @@ Playwright captures at `1600×900`. After [Quick Start](#quick-start), walk the 
 
 ```
 Home hero / nav → /writing article list → open an article for Markdown
-  → /gallery lightbox → /about author profile
+  → /gallery lightbox → /love relationship archive → /about author profile
+  → /notes fragments → /achievements badges → /pond guestbook
 ```
 
 ### Page gallery
@@ -91,7 +92,10 @@ Home hero / nav → /writing article list → open an article for Markdown
 | | | |
 |:---:|:---:|:---:|
 | [![Home](assets/images/readme/showcase-home.png)](assets/images/readme/showcase-home.png)<br><br>**Home**<br>hero · nav · scroll-driven motion | [![Writing list](assets/images/readme/showcase-writing.png)](assets/images/readme/showcase-writing.png)<br><br>**Writing list**<br>archive groups · tags · search | [![Article](assets/images/readme/showcase-article-detail.png)](assets/images/readme/showcase-article-detail.png)<br><br>**Article**<br>Markdown · callouts · code highlight |
-| [![Gallery](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**Gallery**<br>masonry · lightbox · categories | [![About](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**About**<br>author profile · coordinates · self-slices | |
+| [![Gallery](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**Gallery**<br>masonry · lightbox · categories | [![About](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**About**<br>author profile · coordinates · self-slices | [![Letter](assets/images/readme/showcase-letter.png)](assets/images/readme/showcase-letter.png)<br><br>**Letter**<br>time capsule · countdown · reveal |
+| [![Archive](assets/images/readme/showcase-archive.png)](assets/images/readme/showcase-archive.png)<br><br>**Archive**<br>yearly index · timeline | [![Notes](assets/images/readme/showcase-notes.png)](assets/images/readme/showcase-notes.png)<br><br>**Notes**<br>short form · lightweight entries | [![Now](assets/images/readme/showcase-now.png)](assets/images/readme/showcase-now.png)<br><br>**Now**<br>reading · listening · doing |
+| [![Pond](assets/images/readme/showcase-pond.png)](assets/images/readme/showcase-pond.png)<br><br>**Pond**<br>guestbook · likes · replies | [![Footprints](assets/images/readme/showcase-footprints.png)](assets/images/readme/showcase-footprints.png)<br><br>**Footprints**<br>map markers · trip review | [![Love](assets/images/readme/showcase-love.png)](assets/images/readme/showcase-love.png)<br><br>**Love**<br>timeline · wishlist · memory rail |
+| [![Achievements](assets/images/readme/showcase-achievements.png)](assets/images/readme/showcase-achievements.png)<br><br>**Achievements**<br>milestones · collectible badges | | |
 
 Live demo: [threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garden.vercel.app)
 

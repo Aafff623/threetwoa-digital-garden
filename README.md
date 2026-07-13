@@ -80,8 +80,9 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 ### 推荐演示路径
 
 ```
-首页 hero / 导航 → /writing 文章列表 → 点击文章阅读 Markdown
-  → /gallery 照片墙灯箱 → /about 作者简介
+首页 hero / 导航 → /writing 文章列表 → 点开一篇 Markdown 阅读
+  → /gallery 照片墙 → /love 恋爱纪实 → /about 关于作者
+  → /notes 碎片 → /achievements 成就 → /pond 鱼塘反馈
 ```
 
 ### 页面相册
@@ -91,7 +92,10 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 | | | |
 |:---:|:---:|:---:|
 | [![首页](assets/images/readme/showcase-home.png)](assets/images/readme/showcase-home.png)<br><br>**首页**<br>hero · 导航 · 滚动动效 | [![文章列表](assets/images/readme/showcase-writing.png)](assets/images/readme/showcase-writing.png)<br><br>**文章列表**<br>归档分组 · 标签 · 搜索 | [![文章详情](assets/images/readme/showcase-article-detail.png)](assets/images/readme/showcase-article-detail.png)<br><br>**文章详情**<br>Markdown · 提示块 · 代码高亮 |
-| [![照片墙](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**照片墙**<br>瀑布流 · 灯箱 · 分类 | [![关于](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**关于**<br>作者简介 · 坐标 · 自我切片 | |
+| [![照片墙](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**照片墙**<br>瀑布流 · 灯箱 · 分类 | [![关于](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**关于**<br>作者简介 · 坐标 · 自我切片 | [![岁月信件](assets/images/readme/showcase-letter.png)](assets/images/readme/showcase-letter.png)<br><br>**岁月信件**<br>时间胶囊 · 倒计时 · 揭晓 |
+| [![年份归档](assets/images/readme/showcase-archive.png)](assets/images/readme/showcase-archive.png)<br><br>**年份归档**<br>按年索引 · 时间线 | [![日常碎片](assets/images/readme/showcase-notes.png)](assets/images/readme/showcase-notes.png)<br><br>**日常碎片**<br>短内容 · 轻量记录 | [![当前状态](assets/images/readme/showcase-now.png)](assets/images/readme/showcase-now.png)<br><br>**当前状态**<br>正在读 · 正在听 · 正在做 |
+| [![鱼塘反馈](assets/images/readme/showcase-pond.png)](assets/images/readme/showcase-pond.png)<br><br>**鱼塘反馈**<br>留言 · 点赞 · 回复 | [![足迹](assets/images/readme/showcase-footprints.png)](assets/images/readme/showcase-footprints.png)<br><br>**足迹**<br>地图标点 · 行程回顾 | [![恋爱纪实](assets/images/readme/showcase-love.png)](assets/images/readme/showcase-love.png)<br><br>**恋爱纪实**<br>时间线 · 愿望清单 · 记忆轨 |
+| [![成就徽章](assets/images/readme/showcase-achievements.png)](assets/images/readme/showcase-achievements.png)<br><br>**成就徽章**<br>里程碑 · 可收集徽章 | | |
 
 在线 Demo：[threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garden.vercel.app)
 

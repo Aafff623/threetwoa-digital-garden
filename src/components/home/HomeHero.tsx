@@ -126,9 +126,7 @@ export default function HomeHero({
           </div>
 
           <div className="mt-8 max-w-full space-y-5 sm:max-w-3xl">
-            <h1
-              style={{ fontFamily: "var(--font-zcool-xiaowei)" }}
-              className="font-hero-h text-4xl font-semibold leading-[1.15] tracking-normal text-cream drop-shadow-[0_18px_48px_rgba(0,0,0,0.28)] sm:text-5xl md:text-6xl"
+            <h1 className="font-hero-h text-[3.55rem] font-semibold leading-[0.95] tracking-normal text-cream drop-shadow-[0_18px_48px_rgba(0,0,0,0.28)] sm:text-7xl md:text-8xl"
             >
               <TextType
                 text={[logoText || "三两园", welcomeText || "少写几行，多筑一境", welcomeSubtitle || "守园人"]}
