@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -260,9 +260,13 @@ export default function Navbar() {
     }
   };
 
-  const filteredGroups = navGroups
-    .map((g) => ({ ...g, items: g.items.filter(isItemEnabled) }))
-    .filter((g) => g.items.length > 0);
+  const filteredGroups = useMemo(
+    () =>
+      navGroups
+        .map((g) => ({ ...g, items: g.items.filter(isItemEnabled) }))
+        .filter((g) => g.items.length > 0),
+    [isPageEnabled]
+  );
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-3 z-50 px-3 sm:top-5 sm:px-6 lg:px-8">
@@ -363,9 +367,11 @@ export default function Navbar() {
                     setHoveredItem(null);
                   }}
                 >
-                  {/* 一级大类触发器（不跳转，仅展开二级） */}
+                  {/* 一级大类触发器（不跳转，仅展开二级；键盘 Tab 聚焦时通过 focus-within 展开） */}
                   <button
                     type="button"
+                    aria-haspopup="menu"
+                    aria-expanded={hoveredGroup === group.id}
                     className={`relative z-10 inline-flex items-center gap-1 text-[10px] uppercase tracking-widest transition-colors duration-300 font-sans py-2 px-3 rounded-full ${
                       isActive
                         ? "text-gold font-semibold"
@@ -382,8 +388,8 @@ export default function Navbar() {
                     />
                   </button>
 
-                  {/* 二级悬浮面板：子项列表 + 预览缩略图 */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 pt-1 opacity-0 translate-y-2 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:translate-y-0 group-hover/nav:pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-[100]">
+                  {/* 二级悬浮面板：子项列表 + 预览缩略图（hover 或键盘 focus-within 时显示） */}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 pt-1 opacity-0 translate-y-2 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:translate-y-0 group-hover/nav:pointer-events-auto group-focus-within/nav:opacity-100 group-focus-within/nav:translate-y-0 group-focus-within/nav:pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-[100]">
                     <div className="flex gap-2 p-2 bg-cream dark:bg-charcoal border border-charcoal/10 dark:border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
                       {/* 子项列表 */}
                       <div className="flex flex-col w-44">
@@ -424,8 +430,8 @@ export default function Navbar() {
                         })}
                       </div>
 
-                      {/* 子项预览缩略图（跟随 hoveredItem，默认组首项） */}
-                      <div className="relative w-36 h-32 rounded-xl overflow-hidden shrink-0">
+                      {/* 子项预览缩略图（跟随 hoveredItem，默认组首项；高度随子项列表拉伸） */}
+                      <div className="relative w-36 self-stretch min-h-32 rounded-xl overflow-hidden shrink-0">
                         <Image
                           src={`/assets/preview/${previewItem.previewImg}`}
                           alt={previewItem.englishName}
@@ -450,8 +456,9 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* 手机端"菜单"汉堡折叠触发按钮 */}
+          {/* 手机端"菜单"汉堡折叠触发按钮（onMouseDown 阻止冒泡，避免与 click-outside 竞态） */}
           <button
+            onMouseDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
               setIsMenuOpen(!isMenuOpen);
