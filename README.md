@@ -4,10 +4,10 @@
 
 *"少写几行，多筑一境。"*
 
-个人博客与生活档案馆前端 —— 把长文、照片、足迹与私人记忆，种进同一片数字花园。
+个人博客与生活数字档案前端 — 将文章、影像、足迹与私人记忆整合为统一数字花园的展示层。
 Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Lenis
 
-> 本项目继承自上游博客系统，致敬原作者。
+> 项目继承自上游博客系统，致敬原作者。
 
 <p>
   <strong>中文</strong> · <a href="./README.en.md">English</a>
@@ -42,15 +42,15 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 
 ## 为什么
 
-个人内容很少会待在同一个地方：文字在笔记软件，照片在相册，轨迹在地图，私密记忆在社交平台——各自时间线不同，导出也互不兼容。
+个人内容鲜少居于一处：文章在笔记应用，照片在相册，轨迹散落地图，私密记忆寄存社交平台 — 彼此时间线割裂，导出格式互不兼容。
 
-**三两园** 把这些面收进同一套有意设计的前端：
+**三两园** 将这些切面收敛至一套有意识设计的前端壳层：
 
-- 把长文、短记、照片墙、足迹与时间胶囊当作同一档案的不同叶子，而不是互不相干的信息流
-- 用 Blog（本仓库）/ Admin / Server 三端分责：展示、运营、持久化边界清晰
-- 以 Next.js App Router 做服务端优先渲染，GSAP + Lenis 提供杂志式动效，同时不牺牲结构
+- 文章、笔记、照片墙、足迹与时间胶囊，视为同一档案的不同分枝，而非独立信息流
+- Blog（本仓库）/ Admin / Server 三端分责：展示、运营、持久化，边界明确
+- Next.js App Router 服务端优先渲染；GSAP + Lenis 提供编辑级叙事的动效体验，同时不破坏语义结构
 
-这不是通用 CMS 皮肤，也不是无限瀑布相册。它是一座可以持续浇灌、修剪、生长的 **数字花园**。
+这不是通用 CMS 皮囊，也不是无限瀑布流相册。这是一座可持续浇灌、修剪、生长的 **数字花园**。
 
 ## 功能
 
@@ -60,18 +60,18 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 
 | 模块 | 说明 | 状态 |
 | --- | --- | :---: |
-| **文章** | 列表、分类、归档、搜索与 Markdown 阅读 | ✅ |
-| **照片墙** | 瀑布流画廊，灯箱与分类浏览 | ✅ |
-| **足迹** | 地图标记与行程回顾 | ✅ |
-| **恋爱纪实** | 共同时间线、愿望清单与记忆轨 | ✅ |
-| **时间胶囊** | 写给未来的信，到期揭晓 | ✅ |
-| **成就** | 个人里程碑与收集徽章 | ✅ |
-| **鱼塘** | 访客留言、点赞与回复 | ✅ |
-| **主题系统** | 五套预设：`life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ |
-| **响应式壳层** | 自适应布局与暗色友好 token | ✅ |
-| **动效** | Lenis 平滑滚动 + GSAP ScrollTrigger | ✅ |
+| **文章** | 列表、分类、归档、全文搜索、Markdown 渲染 | ✅ |
+| **照片墙** | 瀑布流布局，灯箱预览，按分类筛选 | ✅ |
+| **足迹** | 地图标点与行程回顾 | ✅ |
+| **恋爱纪实** | 双人时间线、愿望清单与记忆轨道 | ✅ |
+| **时间胶囊** | 定向未来信件，到期揭晓 | ✅ |
+| **成就** | 个人里程碑与可收集徽章体系 | ✅ |
+| **鱼塘** | 访客留言、点赞与逐条回复 | ✅ |
+| **主题系统** | 五套视觉预设：`life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ |
+| **响应式壳层** | 自适应栅格、暗色模式设计令牌 | ✅ |
+| **动效** | Lenis 平滑滚动、GSAP ScrollTrigger 滚动驱动动画 | ✅ |
 
-> **边界**：v0.1 面向单人站点。Admin 负责内容管理；多租户与团队协作不在当前范围。
+> **边界**：v0.1 面向单人站点。后台 Admin 负责内容管理；多租户与团队协作不在当前范围。
 
 ## 效果展示
 
@@ -80,8 +80,8 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 ### 推荐演示路径
 
 ```
-首页 hero/导航 → /writing 文章列表 → 点开文章读 Markdown
-  → /gallery 照片墙灯箱 → /about 守园人氛围
+首页 hero / 导航 → /writing 文章列表 → 点击文章阅读 Markdown
+  → /gallery 照片墙灯箱 → /about 作者简介
 ```
 
 ### 页面相册
@@ -91,7 +91,7 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 | | | |
 |:---:|:---:|:---:|
 | [![首页](assets/images/readme/showcase-home.png)](assets/images/readme/showcase-home.png)<br><br>**首页**<br>hero · 导航 · 滚动动效 | [![文章列表](assets/images/readme/showcase-writing.png)](assets/images/readme/showcase-writing.png)<br><br>**文章列表**<br>归档分组 · 标签 · 搜索 | [![文章详情](assets/images/readme/showcase-article-detail.png)](assets/images/readme/showcase-article-detail.png)<br><br>**文章详情**<br>Markdown · 提示块 · 代码高亮 |
-| [![照片墙](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**照片墙**<br>瀑布流 · 灯箱 · 分类 | [![关于](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**关于**<br>守园人 · 坐标 · 自我切片 | |
+| [![照片墙](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**照片墙**<br>瀑布流 · 灯箱 · 分类 | [![关于](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**关于**<br>作者简介 · 坐标 · 自我切片 | |
 
 在线 Demo：[threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garden.vercel.app)
 
@@ -101,7 +101,7 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 
 - Node.js `>= 20.9.0`
 - npm（或 pnpm）
-- 已启动的 [spring_server](https://github.com/Aafff623/spring_server)，默认 `http://localhost:8080/api`（仅预览 UI 时可省略；前端会回退到本地静态数据）
+- （可选）已启动的 [spring_server](https://github.com/Aafff623/spring_server)，默认 `http://localhost:8080/api`；仅预览 UI 可省略，前端将自动回退至本地静态数据
 
 ### 1. 克隆与安装
 
@@ -142,7 +142,7 @@ npm run dev
 | `npm run build` | 生产构建（`output: "standalone"`） |
 | `npm run start` | 启动生产服务 |
 
-提交前建议至少执行 `npm run lint` 与 `npm run build`。
+提交前请至少执行 `npm run lint` 与 `npm run build`。
 
 ## 架构
 
@@ -189,13 +189,13 @@ Client Component
   <img src="assets/images/readme/workflow.png" alt="访客主链路：首页 → 文章列表 → 阅读 → 生活面 → 互动" width="90%" />
 </p>
 
-| 步骤 | 用户行为 | 技术侧发生了什么 |
+| 步骤 | 用户行为 | 技术侧 |
 | --- | --- | --- |
 | 1 | 打开首页 | RSC 预取公共配置与最新文章，首屏直出 |
-| 2 | 浏览 `/writing` | 客户端 Hook 拉取列表；失败则回退 `writingData` |
+| 2 | 浏览 `/writing` | 客户端 Hook 拉取列表；失败回退至 `writingData` 静态数据 |
 | 3 | 进入文章详情 | App Router `[slug]` 服务端渲染 Markdown |
 | 4 | 切换主题 | `StyleConsole` 写入 `localStorage`，CSS 变量即时生效 |
-| 5 | 鱼塘留言 | 浏览器请求 `/api/pond/*`，由 rewrite 转到 spring_server |
+| 5 | 鱼塘留言 | 浏览器请求 `/api/pond/*`，Next.js rewrites 转发至 spring_server |
 
 ## 目录结构
 
@@ -218,10 +218,10 @@ src/
 
 **约定**
 
-- 新接口优先放进 `src/api/*`，不要写在组件里
-- 品牌身份统一走 [`src/data/identity.ts`](./src/data/identity.ts)，不散落硬编码
-- 新页面遵循 `src/app/{route}/page.tsx`
-- 首屏优先服务端拉取并带本地回退；需要交互时再用客户端 Hook
+- 新接口优先纳入 `src/api/*`，避免在组件内散落请求逻辑
+- 品牌身份统一走 [`src/data/identity.ts`](./src/data/identity.ts)，禁止硬编码
+- 新路由遵循 `src/app/{route}/page.tsx`
+- 首屏优先服务端获取并附带本地回退；需要交互时再用客户端 Hook
 
 ## 路线图
 
@@ -229,9 +229,9 @@ src/
 | --- | --- | :---: |
 | MVP | 文章、照片墙、关于、主题切换 | ✅ 完成 |
 | 生活档案 | 足迹、恋爱、时间胶囊、成就、鱼塘 | ✅ 完成 |
-| 体验打磨 | 动效、加载性能、SEO | 🟡 进行中 |
-| 内容运营 | Admin 与 Server 管理能力补齐 | 🟡 进行中 |
-| 分发能力 | i18n、RSS、Open Graph 出图 | ⬜ 规划中 |
+| 体验打磨 | 动效优化、加载性能、SEO | 🟡 进行中 |
+| 内容运营 | Admin 与 Server 管理功能完善 | 🟡 进行中 |
+| 多平台分发 | i18n、RSS、Open Graph 自动化出图 | ⬜ 规划中 |
 
 ## 文档
 
@@ -248,16 +248,16 @@ src/
 
 本项目采用 [MIT License](./LICENSE)。
 
-公开部署前请检查：
+公开部署前请核查：
 
-- `.env*` 不得包含令牌、数据库密码或云存储密钥
-- `public/`、`assets/` 与 mock 数据中不要留下不打算公开的照片或个人信息
-- 地图坐标、恋爱记录、时间信件等应由部署者替换为自己的数据
+- `.env*` 不得包含令牌、数据库密码或云存储访问密钥
+- `public/`、`assets/` 与 mock 数据中，移除不应公开的个人影像与敏感信息
+- 地图坐标、恋爱记录、时间胶囊信件等，应由部署者替换为自有数据
 
 ---
 
 <div align="center">
 
-**三两园 · Sanliang Garden** · 有意的归档 · 克制的动效 · 可回退的数据层
+**三两园 · Sanliang Garden** · 有意识的归档 · 克制的动效 · 可降级的数据层
 
 </div>

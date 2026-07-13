@@ -4,7 +4,7 @@
 
 *"Code less, Architect more."*
 
-A personal blog and life-archive frontend — long-form writing, photos, footprints, and private memories, gathered into a single digital garden.
+A personal blog and life-archive frontend — unifying long-form articles, photography, travel footprints, and private memories within a single digital garden.
 Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Lenis
 
 > Forked from the upstream blog system. Attribution to the original author.
@@ -42,15 +42,15 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 
 ## Why
 
-Personal content rarely lives in one place. Writing ends up in notes apps, photos in albums, travel traces on maps, and private memories on social platforms — each with its own timeline and export story.
+Personal content rarely lives in one place. Writing ends up in notes apps, photos in albums, travel traces on maps, and private memories on social platforms — each with its own timeline and incompatible export formats.
 
-**Sanliang Garden** consolidates those surfaces into a single, intentionally designed frontend:
+**Sanliang Garden** consolidates these surfaces into a single, intentionally designed frontend shell:
 
-- Treat articles, short notes, galleries, footprints, and time capsules as different leaves of one archive, not disconnected feeds
-- Split responsibilities across Blog (this repo) / Admin / Server so presentation, operations, and persistence stay cleanly bounded
-- Use Next.js App Router for server-first rendering, with GSAP + Lenis for magazine-like motion without sacrificing structure
+- Treat articles, notes, galleries, footprints, and time capsules as different branches of one archive, not disconnected feeds
+- Split responsibilities across Blog (this repo), Admin, and Server so presentation, operations, and persistence remain cleanly bounded
+- Use Next.js App Router for server-first rendering; GSAP + Lenis for editorial-grade motion without compromising semantic structure
 
-This is not a generic CMS skin or an infinite photo feed. It is a **digital garden**: a long-lived, editable public archive you keep growing.
+This is not a generic CMS skin or an infinite photo feed. It is a **digital garden**: a long-lived, maintainable public archive you keep cultivating.
 
 ## Features
 
@@ -60,18 +60,18 @@ This is not a generic CMS skin or an infinite photo feed. It is a **digital gard
 
 | Module | Description | Status |
 | --- | --- | :---: |
-| **Articles** | Listing, categories, archive, search, Markdown reading | ✅ |
-| **Gallery** | Masonry wall with lightbox and category browsing | ✅ |
+| **Articles** | Listing, categories, archive, full-text search, Markdown rendering | ✅ |
+| **Gallery** | Masonry layout with lightbox and category browsing | ✅ |
 | **Footprints** | Map markers and trip retrospectives | ✅ |
 | **Love archive** | Shared timeline, wishlist, and memory rail | ✅ |
 | **Time capsule** | Letters to the future with scheduled reveal | ✅ |
-| **Achievements** | Personal milestones and collectible medals | ✅ |
-| **Pond** | Guestbook with likes and replies | ✅ |
+| **Achievements** | Personal milestones and collectible badge system | ✅ |
+| **Pond** | Guestbook with likes and per-thread replies | ✅ |
 | **Style system** | Five presets: `life` / `swiss` / `minimalist` / `glass` / `brutalist` | ✅ |
-| **Responsive shell** | Adaptive layout with dark-mode-friendly tokens | ✅ |
-| **Motion** | Lenis smooth scroll + GSAP ScrollTrigger | ✅ |
+| **Responsive shell** | Adaptive grid, dark-mode design tokens | ✅ |
+| **Motion** | Lenis smooth scroll, GSAP ScrollTrigger scroll-driven animation | ✅ |
 
-> **Scope**: v0.1 targets a single personal site. Admin manages content; multi-tenant and team collaboration are out of scope.
+> **Scope**: v0.1 targets a single personal site. The Admin dashboard manages content; multi-tenant and team collaboration are out of scope.
 
 ## Showcase
 
@@ -80,8 +80,8 @@ Playwright captures at `1600×900`. After [Quick Start](#quick-start), walk the 
 ### Recommended path
 
 ```
-Home hero/nav → /writing article list → open an article for Markdown
-  → /gallery lightbox → /about the keeper's vibe
+Home hero / nav → /writing article list → open an article for Markdown
+  → /gallery lightbox → /about author profile
 ```
 
 ### Page gallery
@@ -90,8 +90,8 @@ Home hero/nav → /writing article list → open an article for Markdown
 
 | | | |
 |:---:|:---:|:---:|
-| [![Home](assets/images/readme/showcase-home.png)](assets/images/readme/showcase-home.png)<br><br>**Home**<br>hero · nav · scroll motion | [![Writing list](assets/images/readme/showcase-writing.png)](assets/images/readme/showcase-writing.png)<br><br>**Writing list**<br>archive groups · tags · search | [![Article](assets/images/readme/showcase-article-detail.png)](assets/images/readme/showcase-article-detail.png)<br><br>**Article**<br>Markdown · callouts · code highlight |
-| [![Gallery](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**Gallery**<br>masonry · lightbox · categories | [![About](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**About**<br>the keeper · coordinates · self-slices | |
+| [![Home](assets/images/readme/showcase-home.png)](assets/images/readme/showcase-home.png)<br><br>**Home**<br>hero · nav · scroll-driven motion | [![Writing list](assets/images/readme/showcase-writing.png)](assets/images/readme/showcase-writing.png)<br><br>**Writing list**<br>archive groups · tags · search | [![Article](assets/images/readme/showcase-article-detail.png)](assets/images/readme/showcase-article-detail.png)<br><br>**Article**<br>Markdown · callouts · code highlight |
+| [![Gallery](assets/images/readme/showcase-gallery.png)](assets/images/readme/showcase-gallery.png)<br><br>**Gallery**<br>masonry · lightbox · categories | [![About](assets/images/readme/showcase-about.png)](assets/images/readme/showcase-about.png)<br><br>**About**<br>author profile · coordinates · self-slices | |
 
 Live demo: [threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garden.vercel.app)
 
@@ -101,7 +101,7 @@ Live demo: [threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garde
 
 - Node.js `>= 20.9.0`
 - npm (or pnpm)
-- [spring_server](https://github.com/Aafff623/spring_server) running at `http://localhost:8080/api` (optional for UI-only browsing; the frontend falls back to local static data)
+- (Optional) [spring_server](https://github.com/Aafff623/spring_server) running at `http://localhost:8080/api`; omit for UI-only preview — the frontend falls back to local static data
 
 ### 1. Clone and install
 
@@ -123,7 +123,7 @@ NEXT_PUBLIC_API_BASE_URL=/api
 SERVER_API_BASE_URL=http://localhost:8080/api
 ```
 
-Production builds use `.env.production` with the same keys pointed at the internal API host.
+Production builds use `.env.production` with the same keys directed at the internal API host.
 
 ### 3. Run
 
@@ -142,7 +142,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run build` | Production build (`output: "standalone"`) |
 | `npm run start` | Serve the production build |
 
-Before commit, prefer `npm run lint` and `npm run build`.
+Before commit, run `npm run lint` and `npm run build`.
 
 ## Architecture
 
@@ -192,10 +192,10 @@ Client Component
 | Step | User action | What the stack does |
 | --- | --- | --- |
 | 1 | Open home | RSC prefetches public config and latest posts for first paint |
-| 2 | Browse `/writing` | Client hooks load the list; failures fall back to `writingData` |
+| 2 | Browse `/writing` | Client hooks load the list; failures fall back to static `writingData` |
 | 3 | Open an article | App Router `[slug]` SSR-renders Markdown |
 | 4 | Switch style | `StyleConsole` writes `localStorage`; CSS variables update immediately |
-| 5 | Leave a pond message | Browser hits `/api/pond/*`, rewritten to spring_server |
+| 5 | Leave a pond message | Browser hits `/api/pond/*`, Next.js rewrites forward to spring_server |
 
 ## Structure
 
@@ -218,8 +218,8 @@ src/
 
 **Conventions**
 
-- New endpoints belong in `src/api/*`, not inline in components
-- Brand identity lives in [`src/data/identity.ts`](./src/data/identity.ts) — no scattered hardcodes
+- New endpoints belong in `src/api/*` — avoid scattering request logic inside components
+- Brand identity lives in [`src/data/identity.ts`](./src/data/identity.ts) — no hard-coded values elsewhere
 - New routes follow `src/app/{route}/page.tsx`
 - Prefer server fetch with local fallback for first paint; use client hooks when interactivity requires it
 
@@ -230,7 +230,7 @@ src/
 | MVP | Articles, gallery, about, style switching | ✅ Done |
 | Life archive | Footprints, love, time capsule, achievements, pond | ✅ Done |
 | Experience | Motion polish, loading performance, SEO | 🟡 In progress |
-| Content ops | Admin and Server management capabilities | 🟡 In progress |
+| Content ops | Admin and Server management refinement | 🟡 In progress |
 | Distribution | i18n, RSS, Open Graph image pipeline | ⬜ Planned |
 
 ## Docs
@@ -251,13 +251,13 @@ This project is released under the [MIT License](./LICENSE).
 Before any public deployment, review:
 
 - `.env*` must not contain tokens, database passwords, or cloud credentials
-- `public/`, `assets/`, and mock data should not ship private photos or personal information you do not intend to publish
+- `public/`, `assets/`, and mock data must not ship private images or personal information you do not intend to publish
 - Map coordinates, relationship records, and time-capsule letters should be replaced with deployer-owned content
 
 ---
 
 <div align="center">
 
-**三两园 · Sanliang Garden** · curated archive · intentional motion · resilient data layer
+**三两园 · Sanliang Garden** · intentional archive · restrained motion · degradable data layer
 
 </div>
