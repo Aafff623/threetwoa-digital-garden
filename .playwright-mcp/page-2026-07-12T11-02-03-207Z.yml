@@ -1,0 +1,391 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - banner:
+      - navigation:
+        - link "三两园©2026" [ref=f5e3] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f5e8]:
+          - generic [ref=f5e9]:
+            - generic [ref=f5e10]:
+              - link "Archive" [ref=f5e11] [cursor=pointer]:
+                - /url: /archive
+              - generic:
+                - generic:
+                  - img "Archive"
+                  - generic:
+                    - generic: Archive
+                    - generic: 年份归档
+            - generic [ref=f5e12]:
+              - link "Writing" [ref=f5e13] [cursor=pointer]:
+                - /url: /writing
+              - generic:
+                - generic:
+                  - img "Writing"
+                  - generic:
+                    - generic: Writing
+                    - generic: 随笔文章
+            - generic [ref=f5e14]:
+              - link "Gallery" [ref=f5e15] [cursor=pointer]:
+                - /url: /gallery
+              - generic:
+                - generic:
+                  - img "Gallery"
+                  - generic:
+                    - generic: Gallery
+                    - generic: 光影影像
+            - generic [ref=f5e16]:
+              - link "Footprints" [ref=f5e17] [cursor=pointer]:
+                - /url: /footprints
+              - generic:
+                - generic:
+                  - img "Footprints"
+                  - generic:
+                    - generic: Footprints
+                    - generic: 岁月足迹
+            - generic [ref=f5e18]:
+              - link "Love" [ref=f5e19] [cursor=pointer]:
+                - /url: /love
+              - generic:
+                - generic:
+                  - img "Love"
+                  - generic:
+                    - generic: Love
+                    - generic: 恋爱纪实
+            - generic [ref=f5e20]:
+              - link "Trophy" [ref=f5e21] [cursor=pointer]:
+                - /url: /achievements
+              - generic:
+                - generic:
+                  - img "Trophy"
+                  - generic:
+                    - generic: Trophy
+                    - generic: 成就徽章
+            - generic [ref=f5e22]:
+              - link "Notes" [ref=f5e23] [cursor=pointer]:
+                - /url: /notes
+              - generic:
+                - generic:
+                  - img "Notes"
+                  - generic:
+                    - generic: Notes
+                    - generic: 日常碎片
+            - generic [ref=f5e24]:
+              - link "Now" [ref=f5e25] [cursor=pointer]:
+                - /url: /now
+              - generic:
+                - generic:
+                  - img "Now"
+                  - generic:
+                    - generic: Now
+                    - generic: 目前状态
+            - generic [ref=f5e26]:
+              - link "Letter" [ref=f5e27] [cursor=pointer]:
+                - /url: /letter
+              - generic:
+                - generic:
+                  - img "Letter"
+                  - generic:
+                    - generic: Letter
+                    - generic: 岁月信件
+            - generic [ref=f5e28]:
+              - link "Pond" [ref=f5e29] [cursor=pointer]:
+                - /url: /pond
+              - generic:
+                - generic:
+                  - img "Pond"
+                  - generic:
+                    - generic: Pond
+                    - generic: 鱼塘反馈
+            - generic [ref=f5e30]:
+              - link "About" [ref=f5e31] [cursor=pointer]:
+                - /url: /about
+              - generic:
+                - generic:
+                  - img "About"
+                  - generic:
+                    - generic: About
+                    - generic: 关于作者
+          - generic:
+            - generic:
+              - generic: Directory
+              - generic: 三两园
+            - generic:
+              - link "Love 恋爱纪实":
+                - /url: /love
+                - generic: Love
+                - generic: 恋爱纪实
+              - link "Trophy 成就徽章":
+                - /url: /achievements
+                - generic: Trophy
+                - generic: 成就徽章
+              - link "Notes 日常碎片":
+                - /url: /notes
+                - generic: Notes
+                - generic: 日常碎片
+              - link "Now 目前状态":
+                - /url: /now
+                - generic: Now
+                - generic: 目前状态
+              - link "Letter 岁月信件":
+                - /url: /letter
+                - generic: Letter
+                - generic: 岁月信件
+              - link "Pond 鱼塘反馈":
+                - /url: /pond
+                - generic: Pond
+                - generic: 鱼塘反馈
+              - link "About 关于作者":
+                - /url: /about
+                - generic: About
+                - generic: 关于作者
+          - button "Toggle Theme" [ref=f5e33] [cursor=pointer]
+    - main [ref=f5e36]:
+      - generic [ref=f5e37]:
+        - generic [ref=f5e43]:
+          - generic [ref=f5e44]:
+            - generic [ref=f5e45] [cursor=pointer]:
+              - img "三两园" [ref=f5e48]
+              - generic [ref=f5e49]: 个人博客 / 生活记录 / 彩色相册
+            - generic [ref=f5e50]:
+              - heading "RR |" [level=1] [ref=f5e51]:
+                - generic [ref=f5e52]:
+                  - text: RR
+                  - generic [ref=f5e53]: "|"
+              - paragraph [ref=f5e54]: 少写几行，多筑一境。把工作流、交付与生活切片，种进这座三两园。
+            - generic [ref=f5e55]:
+              - link "随笔" [ref=f5e56] [cursor=pointer]:
+                - /url: /writing
+              - link "相册" [ref=f5e59] [cursor=pointer]:
+                - /url: /gallery
+              - generic [ref=f5e63]:
+                - link "GitHub" [ref=f5e64] [cursor=pointer]:
+                  - /url: https://github.com/Aafff623
+                - link "X" [ref=f5e67] [cursor=pointer]:
+                  - /url: https://x.com/FanLaiyi26341
+                - link "Email" [ref=f5e70] [cursor=pointer]:
+                  - /url: mailto:laiyif68@gmail.com
+          - generic [ref=f5e74]:
+            - generic [ref=f5e75]:
+              - generic [ref=f5e79]: 3 篇精选文章
+              - generic [ref=f5e81]: 4 个相册切片
+            - link "进入首页" [ref=f5e82] [cursor=pointer]:
+              - /url: "#home-sections"
+        - generic [ref=f5e87]:
+          - generic [ref=f5e88]:
+            - generic [ref=f5e92]:
+              - heading "精选文章" [level=2] [ref=f5e93]
+              - paragraph [ref=f5e94]: 最近最想被读到的几篇，关于旅途、咖啡馆、代码和一些没那么急着说完的念头。
+            - link "全部随笔" [ref=f5e95] [cursor=pointer]:
+              - /url: /writing
+          - generic [ref=f5e100]:
+            - article [ref=f5e101]:
+              - link "系统存储与图床配置指南 2026-07-02 思考 thoughtful 系统存储与图床配置指南 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。 继续阅读" [ref=f5e102] [cursor=pointer]:
+                - /url: /writing/config-guide
+                - img "系统存储与图床配置指南" [ref=f5e106]
+                - generic [ref=f5e107]:
+                  - generic [ref=f5e108]:
+                    - generic [ref=f5e109]: 2026-07-02
+                    - generic [ref=f5e110]: 思考
+                    - generic [ref=f5e111]: thoughtful
+                  - heading "系统存储与图床配置指南" [level=2] [ref=f5e112]
+                  - paragraph [ref=f5e113]: 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。
+                  - generic [ref=f5e114]: 继续阅读
+            - article [ref=f5e118]:
+              - link "某一天的东京雨夜 2026-07-07 旅行 quiet 某一天的东京雨夜 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。 继续阅读" [ref=f5e119] [cursor=pointer]:
+                - /url: /writing/tokyo-rainy-night
+                - img "某一天的东京雨夜" [ref=f5e123]
+                - generic [ref=f5e124]:
+                  - generic [ref=f5e125]:
+                    - generic [ref=f5e126]: 2026-07-07
+                    - generic [ref=f5e127]: 旅行
+                    - generic [ref=f5e128]: quiet
+                  - heading "某一天的东京雨夜" [level=2] [ref=f5e129]
+                  - paragraph [ref=f5e130]: 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。
+                  - generic [ref=f5e131]: 继续阅读
+            - article [ref=f5e135]:
+              - link "银盐的温度：关于胶片与时间的低语 2026-07-10 思考 thoughtful 银盐的温度：关于胶片与时间的低语 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？ 继续阅读" [ref=f5e136] [cursor=pointer]:
+                - /url: /writing/analog-photography-thoughts
+                - img "银盐的温度：关于胶片与时间的低语" [ref=f5e140]
+                - generic [ref=f5e141]:
+                  - generic [ref=f5e142]:
+                    - generic [ref=f5e143]: 2026-07-10
+                    - generic [ref=f5e144]: 思考
+                    - generic [ref=f5e145]: thoughtful
+                  - heading "银盐的温度：关于胶片与时间的低语" [level=2] [ref=f5e146]
+                  - paragraph [ref=f5e147]: 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？
+                  - generic [ref=f5e148]: 继续阅读
+        - generic [ref=f5e153]:
+          - generic [ref=f5e154]:
+            - generic [ref=f5e159]:
+              - heading "此时状态" [level=2] [ref=f5e160]
+              - paragraph [ref=f5e161]: 不是仪表盘，更像一张小便签。记录正在读、正在做和正在循环的声音。
+            - link "完整状态" [ref=f5e162] [cursor=pointer]:
+              - /url: /now
+          - generic [ref=f5e167]:
+            - generic [ref=f5e168]:
+              - paragraph [ref=f5e172]: 正在读
+              - heading "《时间的秩序》" [level=3] [ref=f5e173]
+              - paragraph [ref=f5e174]: 把夜晚留给物理、散文和几页慢读。读到好的句子就收进手账。
+            - generic [ref=f5e175]:
+              - paragraph [ref=f5e179]: 正在做
+              - heading "三两园" [level=3] [ref=f5e180]
+              - paragraph [ref=f5e181]: 把文章、相册和生活状态重新整理成一个更像家的个人博客。
+            - generic [ref=f5e182]:
+              - paragraph [ref=f5e188]: 正在听
+              - heading "Bill Evans Trio" [level=3] [ref=f5e189]
+              - paragraph [ref=f5e190]: 钢琴声很轻，适合写代码、整理照片，也适合把页面留白收紧一点。
+            - generic [ref=f5e191]:
+              - paragraph [ref=f5e195]: 正在读
+              - heading "《时间的秩序》" [level=3] [ref=f5e196]
+              - paragraph [ref=f5e197]: 把夜晚留给物理、散文和几页慢读。读到好的句子就收进手账。
+            - generic [ref=f5e198]:
+              - paragraph [ref=f5e202]: 正在做
+              - heading "三两园" [level=3] [ref=f5e203]
+              - paragraph [ref=f5e204]: 把文章、相册和生活状态重新整理成一个更像家的个人博客。
+            - generic [ref=f5e205]:
+              - paragraph [ref=f5e211]: 正在听
+              - heading "Bill Evans Trio" [level=3] [ref=f5e212]
+              - paragraph [ref=f5e213]: 钢琴声很轻，适合写代码、整理照片，也适合把页面留白收紧一点。
+            - generic [ref=f5e214]:
+              - paragraph [ref=f5e218]: 正在读
+              - heading "《时间的秩序》" [level=3] [ref=f5e219]
+              - paragraph [ref=f5e220]: 把夜晚留给物理、散文和几页慢读。读到好的句子就收进手账。
+            - generic [ref=f5e221]:
+              - paragraph [ref=f5e225]: 正在做
+              - heading "三两园" [level=3] [ref=f5e226]
+              - paragraph [ref=f5e227]: 把文章、相册和生活状态重新整理成一个更像家的个人博客。
+            - generic [ref=f5e228]:
+              - paragraph [ref=f5e234]: 正在听
+              - heading "Bill Evans Trio" [level=3] [ref=f5e235]
+              - paragraph [ref=f5e236]: 钢琴声很轻，适合写代码、整理照片，也适合把页面留白收紧一点。
+        - generic [ref=f5e239]:
+          - generic [ref=f5e240]:
+            - generic [ref=f5e245]:
+              - heading "彩色相册" [level=2] [ref=f5e246]
+              - paragraph [ref=f5e247]: 日常光线、旅行色彩和偶然遇见的小片段，都先以自然的颜色留在这里。
+            - link "打开相册" [ref=f5e248] [cursor=pointer]:
+              - /url: /gallery
+          - generic [ref=f5e253]:
+            - button "深夜霓虹下的人行道 2026-06-18 City Sidewalk, Night 深夜霓虹下的人行道 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。 Contax T2 / Fujifilm Superia 400" [ref=f5e254]:
+              - img "深夜霓虹下的人行道" [ref=f5e258]
+              - generic [ref=f5e259]:
+                - generic [ref=f5e260]:
+                  - generic [ref=f5e261]: 2026-06-18
+                  - generic [ref=f5e262]: City Sidewalk, Night
+                - heading "深夜霓虹下的人行道" [level=2] [ref=f5e266]
+                - paragraph [ref=f5e267]: 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。
+                - paragraph [ref=f5e268]: Contax T2 / Fujifilm Superia 400
+            - button "卡通少女的午后遐思 2026-05-24 Dreamy Studio 卡通少女的午后遐思 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。 Digital Art Studio / RGB Digital" [ref=f5e272]:
+              - img "卡通少女的午后遐思" [ref=f5e276]
+              - generic [ref=f5e277]:
+                - generic [ref=f5e278]:
+                  - generic [ref=f5e279]: 2026-05-24
+                  - generic [ref=f5e280]: Dreamy Studio
+                - heading "卡通少女的午后遐思" [level=2] [ref=f5e284]
+                - paragraph [ref=f5e285]: 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。
+                - paragraph [ref=f5e286]: Digital Art Studio / RGB Digital
+            - button "仰望平流层：地球边缘 2026-04-12 Above the Clouds 仰望平流层：地球边缘 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。 Hasselblad 503CX / Kodak Ektar 100" [ref=f5e290]:
+              - img "仰望平流层：地球边缘" [ref=f5e294]
+              - generic [ref=f5e295]:
+                - generic [ref=f5e296]:
+                  - generic [ref=f5e297]: 2026-04-12
+                  - generic [ref=f5e298]: Above the Clouds
+                - heading "仰望平流层：地球边缘" [level=2] [ref=f5e302]
+                - paragraph [ref=f5e303]: 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。
+                - paragraph [ref=f5e304]: Hasselblad 503CX / Kodak Ektar 100
+            - button "孤山亭子与励志格言 2026-03-05 Mountain Summit 孤山亭子与励志格言 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。 Canon F-1 / Kodak Portra 160" [ref=f5e308]:
+              - img "孤山亭子与励志格言" [ref=f5e312]
+              - generic [ref=f5e313]:
+                - generic [ref=f5e314]:
+                  - generic [ref=f5e315]: 2026-03-05
+                  - generic [ref=f5e316]: Mountain Summit
+                - heading "孤山亭子与励志格言" [level=2] [ref=f5e320]
+                - paragraph [ref=f5e321]: 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。
+                - paragraph [ref=f5e322]: Canon F-1 / Kodak Portra 160
+        - generic [ref=f5e327]:
+          - generic: ”
+          - generic [ref=f5e333]:
+            - paragraph [ref=f5e334]: 世界不是物体的集合，而是事件的集合。
+            - paragraph [ref=f5e335]: 我喜欢把这句话放在首页末尾。它提醒我，博客不只是页面的集合，而是日常事件慢慢留下来的路径。
+            - paragraph [ref=f5e338]: 卡洛·罗韦利 · 《时间的秩序》
+    - contentinfo [ref=f5e339]:
+      - generic [ref=f5e340]:
+        - paragraph [ref=f5e341]: 少写几行，多筑一境
+        - paragraph [ref=f5e342]:
+          - generic [ref=f5e343]: © 2026 三两园 · Sanliang Garden. MIT License.
+          - generic [ref=f5e345]: 本站由 三两园 强力驱动
+        - paragraph [ref=f5e346]:
+          - link "滇ICP备2025004561号-1" [ref=f5e347] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn/
+          - link "滇公网安备 53090202000123号" [ref=f5e349] [cursor=pointer]:
+            - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53090202000123
+        - paragraph [ref=f5e350]: 本网站部分内容来源于网络，仅供学习与参考。本网站一切内容不代表本站立场，并不代表本站赞同其观点和对其真实性负责。
+  - generic [ref=f5e351]:
+    - button [ref=f5e352] [cursor=pointer]
+    - generic:
+      - generic: UI PRO MAX 控制台
+      - generic:
+        - generic: Adjustment Mode / 调整机制
+        - generic:
+          - button "手动选择"
+          - button "时间自动"
+          - button "滚动自动"
+      - generic:
+        - generic: Visual Styles / 视觉风格库
+        - generic:
+          - button "生活档案 彩色影像、柔和卡片、个人博客默认风格":
+            - generic:
+              - generic: 生活档案
+              - paragraph: 彩色影像、柔和卡片、个人博客默认风格
+          - button "瑞士画报 经典报刊网格、优雅衬线体、双线描边":
+            - generic:
+              - generic: 瑞士画报
+              - paragraph: 经典报刊网格、优雅衬线体、双线描边
+          - button "极致极简 无界扁平卡片、微型圆角、深邃静谧":
+            - generic:
+              - generic: 极致极简
+              - paragraph: 无界扁平卡片、微型圆角、深邃静谧
+          - button "赛博拟玻 半透毛玻璃、霓虹浮光背影、迷幻光影":
+            - generic:
+              - generic: 赛博拟玻
+              - paragraph: 半透毛玻璃、霓虹浮光背影、迷幻光影
+          - button "黑客粗野 等宽黑客字体、2px粗线实框、硬边缘阴影":
+            - generic:
+              - generic: 黑客粗野
+              - paragraph: 等宽黑客字体、2px粗线实框、硬边缘阴影
+      - generic:
+        - generic: UI-UX-Pro-Max v1.0
+        - generic: Atlas Edition
+  - button "返回顶部"
+  - generic [ref=f5e354]:
+    - generic:
+      - generic:
+        - generic:
+          - generic: PAUSED
+          - generic: "CH: DUAL-MIX"
+        - generic:
+          - generic:
+            - generic: You Must Believe in Spring - Bill Evans
+            - generic: You Must Believe in Spring - Bill Evans
+      - generic:
+        - generic:
+          - generic: A-SIDE
+          - generic: TYPE I
+      - generic:
+        - button "上一首"
+        - button "播放"
+        - button "下一首"
+      - generic:
+        - generic:
+          - generic: BGM
+          - slider: "0.5"
+          - generic: 50%
+        - generic:
+          - generic: WIND
+          - slider [disabled]: "0.4"
+          - generic: "OFF"
+        - generic:
+          - button "林间细雨 (Rain)"
+          - button "白噪风声 (Wind)"
+    - button "治愈音乐电台" [ref=f5e355] [cursor=pointer]
+  - alert [ref=f5e361]

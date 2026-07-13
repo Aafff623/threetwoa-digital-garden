@@ -7,8 +7,8 @@
 **Threetwoa Digital Garden** 是一个个人博客与生活归档前端，属于三件套系统的公开展示层：
 
 - **Blog**（本仓库）：Next.js 16 App Router 前端
-- **Admin**：Vue 管理后台（[spring_admin](https://github.com/RRTiamo/spring_admin)）
-- **Server**：Java Spring Boot API（[spring_server](https://github.com/RRTiamo/spring_server)）
+- **Admin**：Vue 管理后台（[spring_admin](https://github.com/Aafff623/spring_admin)）
+- **Server**：Java Spring Boot API（[spring_server](https://github.com/Aafff623/spring_server)）
 
 ## 2. 领域术语
 

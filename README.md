@@ -7,6 +7,8 @@
 个人博客与生活档案馆前端 —— 把长文、照片、足迹与私人记忆，种进同一片数字花园。
 Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Lenis
 
+> 本项目继承自上游博客系统，致敬原作者。
+
 <p>
   <strong>中文</strong> · <a href="./README.en.md">English</a>
 </p>
@@ -99,7 +101,7 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 
 - Node.js `>= 20.9.0`
 - npm（或 pnpm）
-- 已启动的 [spring_server](https://github.com/RRTiamo/spring_server)，默认 `http://localhost:8080/api`（仅预览 UI 时可省略；前端会回退到本地静态数据）
+- 已启动的 [spring_server](https://github.com/Aafff623/spring_server)，默认 `http://localhost:8080/api`（仅预览 UI 时可省略；前端会回退到本地静态数据）
 
 ### 1. 克隆与安装
 
@@ -151,8 +153,8 @@ npm run dev
 | 端 | 技术栈 | 职责 | 仓库 |
 | --- | --- | --- | --- |
 | **Blog** | Next.js 16 · React 19 · TypeScript 5 · Tailwind CSS 4 | 面向访客的展示前台 | 本仓库 |
-| **Admin** | Vue | 内容与站点配置后台 | [spring_admin](https://github.com/RRTiamo/spring_admin) |
-| **Server** | Java Spring Boot | API、鉴权、持久化与文件 | [spring_server](https://github.com/RRTiamo/spring_server) |
+| **Admin** | Vue | 内容与站点配置后台 | [spring_admin](https://github.com/Aafff623/spring_admin) |
+| **Server** | Java Spring Boot | API、鉴权、持久化与文件 | [spring_server](https://github.com/Aafff623/spring_server) |
 
 ### 前端数据流
 

@@ -1,0 +1,454 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - banner:
+      - navigation:
+        - link "三两园©2026" [ref=f4e3] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f4e8]:
+          - generic [ref=f4e9]:
+            - generic [ref=f4e10]:
+              - link "Archive" [ref=f4e11] [cursor=pointer]:
+                - /url: /archive
+              - generic:
+                - generic:
+                  - img "Archive"
+                  - generic:
+                    - generic: Archive
+                    - generic: 年份归档
+            - generic [ref=f4e12]:
+              - link "Writing" [ref=f4e13] [cursor=pointer]:
+                - /url: /writing
+              - generic:
+                - generic:
+                  - img "Writing"
+                  - generic:
+                    - generic: Writing
+                    - generic: 随笔文章
+            - generic [ref=f4e14]:
+              - link "Gallery" [ref=f4e15] [cursor=pointer]:
+                - /url: /gallery
+              - generic:
+                - generic:
+                  - img "Gallery"
+                  - generic:
+                    - generic: Gallery
+                    - generic: 光影影像
+            - generic [ref=f4e16]:
+              - link "Footprints" [ref=f4e17] [cursor=pointer]:
+                - /url: /footprints
+              - generic:
+                - generic:
+                  - img "Footprints"
+                  - generic:
+                    - generic: Footprints
+                    - generic: 岁月足迹
+            - generic [ref=f4e18]:
+              - link "Love" [ref=f4e19] [cursor=pointer]:
+                - /url: /love
+              - generic:
+                - generic:
+                  - img "Love"
+                  - generic:
+                    - generic: Love
+                    - generic: 恋爱纪实
+            - generic [ref=f4e20]:
+              - link "Trophy" [ref=f4e21] [cursor=pointer]:
+                - /url: /achievements
+              - generic:
+                - generic:
+                  - img "Trophy"
+                  - generic:
+                    - generic: Trophy
+                    - generic: 成就徽章
+            - generic [ref=f4e22]:
+              - link "Notes" [ref=f4e23] [cursor=pointer]:
+                - /url: /notes
+              - generic:
+                - generic:
+                  - img "Notes"
+                  - generic:
+                    - generic: Notes
+                    - generic: 日常碎片
+            - generic [ref=f4e24]:
+              - link "Now" [ref=f4e25] [cursor=pointer]:
+                - /url: /now
+              - generic:
+                - generic:
+                  - img "Now"
+                  - generic:
+                    - generic: Now
+                    - generic: 目前状态
+            - generic [ref=f4e26]:
+              - link "Letter" [ref=f4e27] [cursor=pointer]:
+                - /url: /letter
+              - generic:
+                - generic:
+                  - img "Letter"
+                  - generic:
+                    - generic: Letter
+                    - generic: 岁月信件
+            - generic [ref=f4e28]:
+              - link "Pond" [ref=f4e29] [cursor=pointer]:
+                - /url: /pond
+              - generic:
+                - generic:
+                  - img "Pond"
+                  - generic:
+                    - generic: Pond
+                    - generic: 鱼塘反馈
+            - generic [ref=f4e30]:
+              - link "About" [ref=f4e31] [cursor=pointer]:
+                - /url: /about
+              - generic:
+                - generic:
+                  - img "About"
+                  - generic:
+                    - generic: About
+                    - generic: 关于作者
+          - generic:
+            - generic:
+              - generic: Directory
+              - generic: 三两园
+            - generic:
+              - link "Love 恋爱纪实":
+                - /url: /love
+                - generic: Love
+                - generic: 恋爱纪实
+              - link "Trophy 成就徽章":
+                - /url: /achievements
+                - generic: Trophy
+                - generic: 成就徽章
+              - link "Notes 日常碎片":
+                - /url: /notes
+                - generic: Notes
+                - generic: 日常碎片
+              - link "Now 目前状态":
+                - /url: /now
+                - generic: Now
+                - generic: 目前状态
+              - link "Letter 岁月信件":
+                - /url: /letter
+                - generic: Letter
+                - generic: 岁月信件
+              - link "Pond 鱼塘反馈":
+                - /url: /pond
+                - generic: Pond
+                - generic: 鱼塘反馈
+              - link "About 关于作者":
+                - /url: /about
+                - generic: About
+                - generic: 关于作者
+          - button "Toggle Theme" [ref=f4e33] [cursor=pointer]
+    - main [ref=f4e36]:
+      - main [ref=f4e37]:
+        - generic [ref=f4e38]:
+          - generic [ref=f4e39]: INDEX / 自我索引
+          - generic [ref=f4e41]:
+            - generic [ref=f4e42]:
+              - heading "守 园 人 三两园" [level=1] [ref=f4e43] [cursor=pointer]:
+                - generic [ref=f4e44]:
+                  - generic [ref=f4e45]: 守
+                  - generic [ref=f4e46]: 园
+                  - generic [ref=f4e47]: 人
+                - generic [ref=f4e48]:
+                  - generic [ref=f4e49]: 三两园
+                  - generic [ref=f4e51]:
+                    - generic [ref=f4e52]: 三
+                    - generic [ref=f4e53]: 两
+                    - generic [ref=f4e54]: 园
+              - paragraph [ref=f4e55]: 在代码与生活的缝隙里，种一座只对自己负责的小园。
+              - paragraph [ref=f4e56]: 这里不是一份冰冷的简历，而是园子里几片叶子：正在炼的工作流、已经上线的产品、黑客松留下的证据，以及一些还在抽芽的想法。
+              - generic [ref=f4e57]:
+                - generic [ref=f4e58]: "# Agentic Coding"
+                - generic [ref=f4e59]: "# Full-stack"
+                - generic [ref=f4e60]: "# Web3 & AI"
+                - generic [ref=f4e61]: "# 守园人"
+                - generic [ref=f4e62]: "# Spec-driven"
+              - generic [ref=f4e63]:
+                - link "个人博客" [ref=f4e64] [cursor=pointer]:
+                  - /url: /
+                - link "GitHub" [ref=f4e68] [cursor=pointer]:
+                  - /url: https://github.com/Aafff623
+            - img "三两园" [ref=f4e76]
+          - link "SCROLL TO DECLASSIFY 继续了解 ︾" [ref=f4e78] [cursor=pointer]:
+            - /url: "#currently"
+            - generic [ref=f4e79]: SCROLL TO DECLASSIFY
+            - generic [ref=f4e80]: 继续了解 ︾
+        - generic [ref=f4e82]:
+          - generic [ref=f4e83]:
+            - generic [ref=f4e84]: 01 / CURRENT STATUS
+            - heading "现状轨迹。" [level=2] [ref=f4e85]
+            - paragraph [ref=f4e86]: 我目前的主要精力和探索方向，在数字、学术与感知的缝隙中慢慢前行。
+          - generic [ref=f4e87]:
+            - generic [ref=f4e88]:
+              - generic [ref=f4e89]:
+                - generic [ref=f4e90]:
+                  - generic [ref=f4e91]:
+                    - generic [ref=f4e92]: 01 / BUILDING
+                    - generic [ref=f4e96]: ACTIVE
+                  - heading "正在建造" [level=3] [ref=f4e97]
+                  - paragraph [ref=f4e98]: 照料三两园与更多可复用的 AI 工程工作流，让「从灵感到上线」变成可重复的路径。
+                - generic [ref=f4e99]:
+                  - generic [ref=f4e100]: 随笔 ✍️
+                  - generic [ref=f4e101]: 项目 🛠️
+                  - generic [ref=f4e102]: 恋爱记录 💖
+                  - generic [ref=f4e103]: 灵感碎片 💡
+              - generic [ref=f4e104]:
+                - generic [ref=f4e105]: compiler.log
+                - generic [ref=f4e111]:
+                  - generic [ref=f4e112]:
+                    - generic [ref=f4e113]: "1"
+                    - generic [ref=f4e114]: const archive = "my_house";
+                  - generic [ref=f4e115]:
+                    - generic [ref=f4e116]: "2"
+                    - generic [ref=f4e117]: const status = "compiling";
+                  - generic [ref=f4e118]:
+                    - generic [ref=f4e119]: "3"
+                    - generic [ref=f4e120]: let progress = 100;
+                  - generic [ref=f4e121]:
+                    - generic [ref=f4e122]: "4"
+                    - generic [ref=f4e123]: "// Modules initialized:"
+                  - generic [ref=f4e124]:
+                    - generic [ref=f4e125]: "5"
+                    - generic [ref=f4e126]: const modules = [
+                  - generic [ref=f4e127]:
+                    - generic [ref=f4e128]: "6"
+                    - generic [ref=f4e129]: "\"writing\", \"gallery\", \"love\""
+                  - generic [ref=f4e130]:
+                    - generic [ref=f4e131]: "7"
+                    - generic [ref=f4e132]: "];"
+                - generic [ref=f4e133]:
+                  - generic [ref=f4e134]: Antigravity Engine
+                  - generic [ref=f4e135]: ● System Ready
+            - generic [ref=f4e136]:
+              - generic [ref=f4e137]:
+                - generic [ref=f4e138]:
+                  - generic [ref=f4e139]: 02 / RESEARCHING
+                  - heading "正在探索" [level=3] [ref=f4e140]
+                  - paragraph [ref=f4e141]: Agentic Coding、MCP / Skills、Smart Accounts 与黑客松级全栈交付——用可验证的结果说话。
+                - img [ref=f4e143]:
+                  - generic [ref=f4e147]: Evid. A
+                  - generic [ref=f4e149]: Evid. B
+                  - generic [ref=f4e151]: Context
+                  - generic [ref=f4e154]: Truth
+                  - generic [ref=f4e156]: p(T|E)=0.94
+              - generic [ref=f4e157]:
+                - generic [ref=f4e158]:
+                  - generic [ref=f4e159]: 03 / AESTHETICS
+                  - heading "正在学习" [level=3] [ref=f4e160]
+                  - paragraph [ref=f4e161]: 把 Claude Code / Codex / GPT 的分工固化成 Skills 与规范，让协作与交付更稳。
+                - generic [ref=f4e162]: "Hz: 0.25 (calm)"
+        - generic [ref=f4e171]:
+          - generic [ref=f4e172]:
+            - generic [ref=f4e173]: 02 / LIFE COORDINATES
+            - heading "我的坐标。" [level=2] [ref=f4e174]
+            - paragraph [ref=f4e175]: 展示我是如何成为现在这个人的，在不同的坐标维度上记录痕迹。
+          - generic [ref=f4e176]:
+            - generic:
+              - generic:
+                - generic: PAST / 起源
+                - generic: FUTURE / 愿景
+              - generic:
+                - generic: EXPLORATION / 探索
+                - generic: EXPERIENCE / 经历
+              - generic: QUADRANT II / BELIEF
+              - generic: QUADRANT I / STATUS
+              - generic: QUADRANT III / ORIGIN
+              - generic: QUADRANT IV / VISION
+            - generic [ref=f4e178]:
+              - generic [ref=f4e179]:
+                - img "Tokyo Origin Walk" [ref=f4e181]
+                - generic [ref=f4e183]:
+                  - generic [ref=f4e184]: 01 / ORIGIN
+                  - heading "我从哪里来" [level=3] [ref=f4e185]
+                  - paragraph [ref=f4e186]: 中北大学 · 软件工程。从一个把功能堆出来的人，慢慢变成在意结构、证据与体验的 builder。
+              - generic [ref=f4e187]:
+                - img "Cozy Coffee Status" [ref=f4e189]
+                - generic [ref=f4e191]:
+                  - generic [ref=f4e192]: 02 / CURRENT STATUS
+                  - heading "我正在做什么" [level=3] [ref=f4e193]
+                  - paragraph [ref=f4e194]: 把 AI 编码工具当成工程系统来用：规划、执行、审查闭环，同时交付前端视觉与后端业务。
+              - generic [ref=f4e195]:
+                - img "Warm Cooking Belief" [ref=f4e197]
+                - generic [ref=f4e199]:
+                  - generic [ref=f4e200]: 03 / BELIEFS
+                  - heading "我在意什么" [level=3] [ref=f4e201]
+                  - paragraph [ref=f4e202]: 清晰、可复用、可验证。Proof, not slides——要留下能点开的 Demo 与仓库痕迹。
+              - generic [ref=f4e203]:
+                - img "Cozy Sky Vision" [ref=f4e205]
+                - generic [ref=f4e207]:
+                  - generic [ref=f4e208]: 04 / VISION
+                  - heading "我想去哪里" [level=3] [ref=f4e209]
+                  - paragraph [ref=f4e210]: 开源更多工作流能力，参加更多 Web3 / AI 黑客松，做出真正有人愿意回来的小园。
+        - generic [ref=f4e212]:
+          - generic [ref=f4e213]:
+            - generic [ref=f4e214]: 03 / FRAGMENTS OF ME
+            - heading "自我切片。" [level=2] [ref=f4e215]
+            - paragraph [ref=f4e216]: 这些碎片化的自我特征，是构筑起这个小宇宙的有机版图。
+          - generic [ref=f4e217]:
+            - generic [ref=f4e218]:
+              - generic [ref=f4e219]:
+                - generic [ref=f4e220]: FRAGMENT / 技术
+                - heading "从前端交互到后端业务全链路交付" [level=3] [ref=f4e221]
+              - generic [ref=f4e235]:
+                - generic [ref=f4e236]: React
+                - generic [ref=f4e237]: Next.js
+                - generic [ref=f4e238]: TypeScript
+                - generic [ref=f4e239]: Vue
+                - generic [ref=f4e240]: Java
+                - generic [ref=f4e241]: Spring Boot
+                - generic [ref=f4e242]: Python
+                - generic [ref=f4e243]: FastAPI
+            - generic [ref=f4e244]:
+              - generic [ref=f4e245]:
+                - generic [ref=f4e246]: FRAGMENT / 工作流
+                - heading "把 AI 工具炼成可复用的工程资产" [level=3] [ref=f4e247]
+                - generic: VERIFIED EVIDENCE
+              - generic [ref=f4e248]:
+                - generic [ref=f4e249]: Claude Code
+                - generic [ref=f4e250]: Codex
+                - generic [ref=f4e251]: MCP
+                - generic [ref=f4e252]: Skills
+                - generic [ref=f4e253]: Spec-driven
+                - generic [ref=f4e254]: ADR
+            - generic [ref=f4e255]:
+              - generic [ref=f4e256]:
+                - generic [ref=f4e257]: FRAGMENT / Web3 & AI
+                - heading "黑客松里用链上证据说话" [level=3] [ref=f4e258]
+              - generic [ref=f4e259]:
+                - generic [ref=f4e260]: Ethers
+                - generic [ref=f4e261]: Smart Accounts
+                - generic [ref=f4e262]: Hackathon
+                - generic [ref=f4e263]: AgentCFO
+                - generic [ref=f4e264]: Testnet
+            - generic [ref=f4e265]:
+              - generic [ref=f4e266]:
+                - generic [ref=f4e267]: FRAGMENT / 生活
+                - heading "收藏不会被算法冲走的痕迹" [level=3] [ref=f4e268]
+                - generic [ref=f4e269] [cursor=pointer]:
+                  - img "生活" [ref=f4e271]
+                  - generic [ref=f4e272]: 生活
+              - generic [ref=f4e273]:
+                - generic [ref=f4e274]: 三两园
+                - generic [ref=f4e275]: 学习轨迹
+                - generic [ref=f4e276]: 项目复盘
+                - generic [ref=f4e277]: 开源
+                - generic [ref=f4e278]: 慢记录
+        - generic [ref=f4e280]:
+          - generic [ref=f4e281]: 04 / BELIEFS
+          - heading "Some Things I Believe" [level=2] [ref=f4e282]
+          - generic [ref=f4e283]:
+            - paragraph [ref=f4e289]: “ 我相信「少写几行，多筑一境」——少堆代码，多搭可复用的结构。 ”
+            - paragraph [ref=f4e296]: “ 我相信个人站点的意义，是保存一个正在变化的人，而不是一张完美海报。 ”
+            - paragraph [ref=f4e302]: “ 我相信真正高级的东西，往往不是复杂，而是克制、准确和可验证。 ”
+            - paragraph [ref=f4e308]: “ 我相信证据优于口号：Demo、仓库、测试网交易，比 PPT 更诚实。 ”
+        - generic [ref=f4e311]:
+          - heading "继续逛园" [level=2] [ref=f4e312]
+          - paragraph [ref=f4e313]: 想再多认识一点，可以去翻文章、看相册，也可以去鱼塘留一条消息——或者直接打开 GitHub。
+          - generic [ref=f4e314]:
+            - link "EXPLORE / 01 翻开随笔 MEMORIES" [ref=f4e315] [cursor=pointer]:
+              - /url: /writing
+              - generic [ref=f4e316]:
+                - generic [ref=f4e317]: EXPLORE / 01
+                - heading "翻开随笔" [level=3] [ref=f4e322]
+              - generic [ref=f4e323]: MEMORIES
+            - link "EXPLORE / 02 看看影像 git push origin main SYSTEM READY" [ref=f4e329] [cursor=pointer]:
+              - /url: /gallery
+              - generic [ref=f4e330]:
+                - generic [ref=f4e331]: EXPLORE / 02
+                - heading "看看影像" [level=3] [ref=f4e336]
+              - generic [ref=f4e337]:
+                - generic [ref=f4e338]: git push origin main
+                - generic [ref=f4e339]: SYSTEM READY
+            - link "EXPLORE / 03 去鱼塘冒泡 POND ACTIVE" [ref=f4e340] [cursor=pointer]:
+              - /url: /pond
+              - generic [ref=f4e341]:
+                - generic [ref=f4e342]: EXPLORE / 03
+                - heading "去鱼塘冒泡" [level=3] [ref=f4e347]
+              - generic [ref=f4e348]: POND ACTIVE
+            - link "EXPLORE / 04 GitHub 印 DEAR YOU" [ref=f4e350] [cursor=pointer]:
+              - /url: https://github.com/Aafff623
+              - generic [ref=f4e351]:
+                - generic [ref=f4e352]: EXPLORE / 04
+                - heading "GitHub" [level=3] [ref=f4e357]
+              - generic [ref=f4e358]:
+                - generic [ref=f4e359]: 印
+                - generic [ref=f4e361]: DEAR YOU
+          - generic [ref=f4e362]:
+            - paragraph [ref=f4e363]: 这座园子还在生长。我也是。
+            - paragraph [ref=f4e364]: About 三两园 — the one who tends this garden.
+    - contentinfo [ref=f4e365]:
+      - generic [ref=f4e366]:
+        - paragraph [ref=f4e367]: 少写几行，多筑一境
+        - paragraph [ref=f4e368]:
+          - generic [ref=f4e369]: © 2026 三两园 · Sanliang Garden. MIT License.
+          - generic [ref=f4e371]: 本站由 三两园 强力驱动
+        - paragraph [ref=f4e372]: 本网站部分内容来源于网络，仅供学习与参考。本网站一切内容不代表本站立场，并不代表本站赞同其观点和对其真实性负责。
+  - generic [ref=f4e373]:
+    - button [ref=f4e374] [cursor=pointer]
+    - generic:
+      - generic: UI PRO MAX 控制台
+      - generic:
+        - generic: Adjustment Mode / 调整机制
+        - generic:
+          - button "手动选择"
+          - button "时间自动"
+          - button "滚动自动"
+      - generic:
+        - generic: Visual Styles / 视觉风格库
+        - generic:
+          - button "生活档案 彩色影像、柔和卡片、个人博客默认风格":
+            - generic:
+              - generic: 生活档案
+              - paragraph: 彩色影像、柔和卡片、个人博客默认风格
+          - button "瑞士画报 经典报刊网格、优雅衬线体、双线描边":
+            - generic:
+              - generic: 瑞士画报
+              - paragraph: 经典报刊网格、优雅衬线体、双线描边
+          - button "极致极简 无界扁平卡片、微型圆角、深邃静谧":
+            - generic:
+              - generic: 极致极简
+              - paragraph: 无界扁平卡片、微型圆角、深邃静谧
+          - button "赛博拟玻 半透毛玻璃、霓虹浮光背影、迷幻光影":
+            - generic:
+              - generic: 赛博拟玻
+              - paragraph: 半透毛玻璃、霓虹浮光背影、迷幻光影
+          - button "黑客粗野 等宽黑客字体、2px粗线实框、硬边缘阴影":
+            - generic:
+              - generic: 黑客粗野
+              - paragraph: 等宽黑客字体、2px粗线实框、硬边缘阴影
+      - generic:
+        - generic: UI-UX-Pro-Max v1.0
+        - generic: Atlas Edition
+  - button "返回顶部"
+  - generic [ref=f4e376]:
+    - generic:
+      - generic:
+        - generic:
+          - generic: PAUSED
+          - generic: "CH: DUAL-MIX"
+        - generic:
+          - generic:
+            - generic: You Must Believe in Spring - Bill Evans
+            - generic: You Must Believe in Spring - Bill Evans
+      - generic:
+        - generic:
+          - generic: A-SIDE
+          - generic: TYPE I
+      - generic:
+        - button "上一首"
+        - button "播放"
+        - button "下一首"
+      - generic:
+        - generic:
+          - generic: BGM
+          - slider: "0.5"
+          - generic: 50%
+        - generic:
+          - generic: WIND
+          - slider [disabled]: "0.4"
+          - generic: "OFF"
+        - generic:
+          - button "林间细雨 (Rain)"
+          - button "白噪风声 (Wind)"
+    - button "治愈音乐电台" [ref=f4e377] [cursor=pointer]

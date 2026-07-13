@@ -1,0 +1,529 @@
+- generic [active] [ref=f18e1]:
+  - generic [ref=f18e2]:
+    - banner:
+      - navigation:
+        - link "三两园©2026" [ref=f18e3] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f18e8]:
+          - generic [ref=f18e9]:
+            - generic [ref=f18e10]:
+              - link [ref=f18e11] [cursor=pointer]:
+                - /url: /archive
+              - generic:
+                - generic:
+                  - img "Archive"
+                  - generic:
+                    - generic: Archive
+                    - generic: 年份归档
+            - generic [ref=f18e16]:
+              - link [ref=f18e17] [cursor=pointer]:
+                - /url: /writing
+              - generic:
+                - generic:
+                  - img "Writing"
+                  - generic:
+                    - generic: Writing
+                    - generic: 随笔文章
+            - generic [ref=f18e21]:
+              - link [ref=f18e22] [cursor=pointer]:
+                - /url: /gallery
+              - generic:
+                - generic:
+                  - img "Gallery"
+                  - generic:
+                    - generic: Gallery
+                    - generic: 光影影像
+            - generic [ref=f18e27]:
+              - link [ref=f18e28] [cursor=pointer]:
+                - /url: /footprints
+              - generic:
+                - generic:
+                  - img "Footprints"
+                  - generic:
+                    - generic: Footprints
+                    - generic: 岁月足迹
+            - generic [ref=f18e33]:
+              - link [ref=f18e34] [cursor=pointer]:
+                - /url: /love
+              - generic:
+                - generic:
+                  - img "Love"
+                  - generic:
+                    - generic: Love
+                    - generic: 恋爱纪实
+            - generic [ref=f18e38]:
+              - link [ref=f18e39] [cursor=pointer]:
+                - /url: /achievements
+              - generic:
+                - generic:
+                  - img "Trophy"
+                  - generic:
+                    - generic: Trophy
+                    - generic: 成就徽章
+            - generic [ref=f18e47]:
+              - link [ref=f18e48] [cursor=pointer]:
+                - /url: /notes
+              - generic:
+                - generic:
+                  - img "Notes"
+                  - generic:
+                    - generic: Notes
+                    - generic: 日常碎片
+            - generic [ref=f18e53]:
+              - link [ref=f18e54] [cursor=pointer]:
+                - /url: /now
+              - generic:
+                - generic:
+                  - img "Now"
+                  - generic:
+                    - generic: Now
+                    - generic: 目前状态
+            - generic [ref=f18e59]:
+              - link [ref=f18e60] [cursor=pointer]:
+                - /url: /letter
+              - generic:
+                - generic:
+                  - img "Letter"
+                  - generic:
+                    - generic: Letter
+                    - generic: 岁月信件
+            - generic [ref=f18e65]:
+              - link [ref=f18e66] [cursor=pointer]:
+                - /url: /pond
+              - generic:
+                - generic:
+                  - img "Pond"
+                  - generic:
+                    - generic: Pond
+                    - generic: 鱼塘反馈
+            - generic [ref=f18e70]:
+              - link [ref=f18e71] [cursor=pointer]:
+                - /url: /about
+              - generic:
+                - generic:
+                  - img "About"
+                  - generic:
+                    - generic: About
+                    - generic: 关于作者
+          - generic:
+            - generic:
+              - generic: Directory
+              - generic: 三两园
+            - generic:
+              - link "Love 恋爱纪实":
+                - /url: /love
+                - generic: Love
+                - generic: 恋爱纪实
+              - link "Trophy 成就徽章":
+                - /url: /achievements
+                - generic: Trophy
+                - generic: 成就徽章
+              - link "Notes 日常碎片":
+                - /url: /notes
+                - generic: Notes
+                - generic: 日常碎片
+              - link "Now 目前状态":
+                - /url: /now
+                - generic: Now
+                - generic: 目前状态
+              - link "Letter 岁月信件":
+                - /url: /letter
+                - generic: Letter
+                - generic: 岁月信件
+              - link "Pond 鱼塘反馈":
+                - /url: /pond
+                - generic: Pond
+                - generic: 鱼塘反馈
+              - link "About 关于作者":
+                - /url: /about
+                - generic: About
+                - generic: 关于作者
+          - button "Toggle Theme" [ref=f18e77] [cursor=pointer]
+    - main [ref=f18e80]:
+      - generic [ref=f18e82]:
+        - generic [ref=f18e88]:
+          - generic [ref=f18e89]:
+            - generic [ref=f18e90] [cursor=pointer]:
+              - img "三两园" [ref=f18e93]
+              - generic [ref=f18e94]: 个人博客 / 生活记录 / 彩色相册
+            - generic [ref=f18e95]:
+              - heading "|" [level=1] [ref=f18e96]
+              - paragraph [ref=f18e99]: 少写几行，多筑一境。把工作流、交付与生活切片，种进这座三两园。🌱
+            - generic [ref=f18e100]:
+              - link "随笔" [ref=f18e101] [cursor=pointer]:
+                - /url: /writing
+              - link "相册" [ref=f18e104] [cursor=pointer]:
+                - /url: /gallery
+              - generic [ref=f18e108]:
+                - link "GitHub" [ref=f18e109] [cursor=pointer]:
+                  - /url: https://github.com/Aafff623
+                - link "X" [ref=f18e112] [cursor=pointer]:
+                  - /url: https://x.com/FanLaiyi26341
+                - link "Email" [ref=f18e115] [cursor=pointer]:
+                  - /url: mailto:laiyif68@gmail.com
+          - generic [ref=f18e119]:
+            - generic [ref=f18e120]:
+              - generic [ref=f18e124]: 3 篇精选文章
+              - generic [ref=f18e126]: 4 个相册切片
+            - link "进入首页" [ref=f18e127] [cursor=pointer]:
+              - /url: "#home-sections"
+        - generic [ref=f18e131]:
+          - generic [ref=f18e132]:
+            - generic [ref=f18e136]:
+              - heading "精选文章" [level=2] [ref=f18e137]
+              - paragraph [ref=f18e138]: 最近最想被读到的几篇，关于旅途、咖啡馆、代码和一些没那么急着说完的念头。
+            - link "全部随笔" [ref=f18e139] [cursor=pointer]:
+              - /url: /writing
+          - generic [ref=f18e144]:
+            - article [ref=f18e145]:
+              - link "系统存储与图床配置指南 2026-07-02 思考 thoughtful 系统存储与图床配置指南 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。 继续阅读" [ref=f18e146] [cursor=pointer]:
+                - /url: /writing/config-guide
+                - img "系统存储与图床配置指南" [ref=f18e150]
+                - generic [ref=f18e151]:
+                  - generic [ref=f18e152]:
+                    - generic [ref=f18e153]: 2026-07-02
+                    - generic [ref=f18e154]: 思考
+                    - generic [ref=f18e155]: thoughtful
+                  - heading "系统存储与图床配置指南" [level=2] [ref=f18e156]
+                  - paragraph [ref=f18e157]: 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。
+                  - generic [ref=f18e158]: 继续阅读
+            - article [ref=f18e162]:
+              - link "某一天的东京雨夜 2026-07-07 旅行 quiet 某一天的东京雨夜 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。 继续阅读" [ref=f18e163] [cursor=pointer]:
+                - /url: /writing/tokyo-rainy-night
+                - img "某一天的东京雨夜" [ref=f18e167]
+                - generic [ref=f18e168]:
+                  - generic [ref=f18e169]:
+                    - generic [ref=f18e170]: 2026-07-07
+                    - generic [ref=f18e171]: 旅行
+                    - generic [ref=f18e172]: quiet
+                  - heading "某一天的东京雨夜" [level=2] [ref=f18e173]
+                  - paragraph [ref=f18e174]: 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。
+                  - generic [ref=f18e175]: 继续阅读
+            - article [ref=f18e179]:
+              - link "银盐的温度：关于胶片与时间的低语 2026-07-10 思考 thoughtful 银盐的温度：关于胶片与时间的低语 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？ 继续阅读" [ref=f18e180] [cursor=pointer]:
+                - /url: /writing/analog-photography-thoughts
+                - img "银盐的温度：关于胶片与时间的低语" [ref=f18e184]
+                - generic [ref=f18e185]:
+                  - generic [ref=f18e186]:
+                    - generic [ref=f18e187]: 2026-07-10
+                    - generic [ref=f18e188]: 思考
+                    - generic [ref=f18e189]: thoughtful
+                  - heading "银盐的温度：关于胶片与时间的低语" [level=2] [ref=f18e190]
+                  - paragraph [ref=f18e191]: 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？
+                  - generic [ref=f18e192]: 继续阅读
+            - article [ref=f18e196]:
+              - link "系统存储与图床配置指南 2026-07-02 思考 thoughtful 系统存储与图床配置指南 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。 继续阅读" [ref=f18e197] [cursor=pointer]:
+                - /url: /writing/config-guide
+                - img "系统存储与图床配置指南" [ref=f18e201]
+                - generic [ref=f18e202]:
+                  - generic [ref=f18e203]:
+                    - generic [ref=f18e204]: 2026-07-02
+                    - generic [ref=f18e205]: 思考
+                    - generic [ref=f18e206]: thoughtful
+                  - heading "系统存储与图床配置指南" [level=2] [ref=f18e207]
+                  - paragraph [ref=f18e208]: 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。
+                  - generic [ref=f18e209]: 继续阅读
+            - article [ref=f18e213]:
+              - link "某一天的东京雨夜 2026-07-07 旅行 quiet 某一天的东京雨夜 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。 继续阅读" [ref=f18e214] [cursor=pointer]:
+                - /url: /writing/tokyo-rainy-night
+                - img "某一天的东京雨夜" [ref=f18e218]
+                - generic [ref=f18e219]:
+                  - generic [ref=f18e220]:
+                    - generic [ref=f18e221]: 2026-07-07
+                    - generic [ref=f18e222]: 旅行
+                    - generic [ref=f18e223]: quiet
+                  - heading "某一天的东京雨夜" [level=2] [ref=f18e224]
+                  - paragraph [ref=f18e225]: 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。
+                  - generic [ref=f18e226]: 继续阅读
+            - article [ref=f18e230]:
+              - link "银盐的温度：关于胶片与时间的低语 2026-07-10 思考 thoughtful 银盐的温度：关于胶片与时间的低语 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？ 继续阅读" [ref=f18e231] [cursor=pointer]:
+                - /url: /writing/analog-photography-thoughts
+                - img "银盐的温度：关于胶片与时间的低语" [ref=f18e235]
+                - generic [ref=f18e236]:
+                  - generic [ref=f18e237]:
+                    - generic [ref=f18e238]: 2026-07-10
+                    - generic [ref=f18e239]: 思考
+                    - generic [ref=f18e240]: thoughtful
+                  - heading "银盐的温度：关于胶片与时间的低语" [level=2] [ref=f18e241]
+                  - paragraph [ref=f18e242]: 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？
+                  - generic [ref=f18e243]: 继续阅读
+            - article [ref=f18e247]:
+              - link "系统存储与图床配置指南 2026-07-02 思考 thoughtful 系统存储与图床配置指南 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。 继续阅读" [ref=f18e248] [cursor=pointer]:
+                - /url: /writing/config-guide
+                - img "系统存储与图床配置指南" [ref=f18e252]
+                - generic [ref=f18e253]:
+                  - generic [ref=f18e254]:
+                    - generic [ref=f18e255]: 2026-07-02
+                    - generic [ref=f18e256]: 思考
+                    - generic [ref=f18e257]: thoughtful
+                  - heading "系统存储与图床配置指南" [level=2] [ref=f18e258]
+                  - paragraph [ref=f18e259]: 如何配置本地存储、MinIO 以及七牛云 Kodo 图床，实现博客媒体文件的高速渲染与稳定存放。本文为博主占位指南，内容可在此处或后台文章管理中自由编辑修改。
+                  - generic [ref=f18e260]: 继续阅读
+            - article [ref=f18e264]:
+              - link "某一天的东京雨夜 2026-07-07 旅行 quiet 某一天的东京雨夜 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。 继续阅读" [ref=f18e265] [cursor=pointer]:
+                - /url: /writing/tokyo-rainy-night
+                - img "某一天的东京雨夜" [ref=f18e269]
+                - generic [ref=f18e270]:
+                  - generic [ref=f18e271]:
+                    - generic [ref=f18e272]: 2026-07-07
+                    - generic [ref=f18e273]: 旅行
+                    - generic [ref=f18e274]: quiet
+                  - heading "某一天的东京雨夜" [level=2] [ref=f18e275]
+                  - paragraph [ref=f18e276]: 东京的雨在晚上八点开始下大。新宿街头的霓虹被水汽模糊成一团团暖色调的色块，我们在一家窄小的黑胶唱片店里避雨。
+                  - generic [ref=f18e277]: 继续阅读
+            - article [ref=f18e281]:
+              - link "银盐的温度：关于胶片与时间的低语 2026-07-10 思考 thoughtful 银盐的温度：关于胶片与时间的低语 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？ 继续阅读" [ref=f18e282] [cursor=pointer]:
+                - /url: /writing/analog-photography-thoughts
+                - img "银盐的温度：关于胶片与时间的低语" [ref=f18e286]
+                - generic [ref=f18e287]:
+                  - generic [ref=f18e288]:
+                    - generic [ref=f18e289]: 2026-07-10
+                    - generic [ref=f18e290]: 思考
+                    - generic [ref=f18e291]: thoughtful
+                  - heading "银盐的温度：关于胶片与时间的低语" [level=2] [ref=f18e292]
+                  - paragraph [ref=f18e293]: 为什么在数码像素高达一亿的今天，我们依然着迷于 36 张快门限制 of 银盐胶片？
+                  - generic [ref=f18e294]: 继续阅读
+        - generic [ref=f18e299]:
+          - generic [ref=f18e300]:
+            - generic [ref=f18e305]:
+              - heading "此时状态" [level=2] [ref=f18e306]
+              - paragraph [ref=f18e307]: 不是仪表盘，更像一张小便签。记录正在读、正在做和正在循环的声音。
+            - link "完整状态" [ref=f18e308] [cursor=pointer]:
+              - /url: /now
+          - generic [ref=f18e313]:
+            - generic [ref=f18e314]:
+              - paragraph [ref=f18e318]: 正在读
+              - heading "《时间的秩序》" [level=3] [ref=f18e319]
+              - paragraph [ref=f18e320]: 把夜晚留给物理、散文和几页慢读。读到好的句子就收进手账。
+            - generic [ref=f18e321]:
+              - paragraph [ref=f18e325]: 正在做
+              - heading "三两园" [level=3] [ref=f18e326]
+              - paragraph [ref=f18e327]: 把文章、相册和生活状态重新整理成一个更像家的个人博客。
+            - generic [ref=f18e328]:
+              - paragraph [ref=f18e334]: 正在听
+              - heading "Bill Evans Trio" [level=3] [ref=f18e335]
+              - paragraph [ref=f18e336]: 钢琴声很轻，适合写代码、整理照片，也适合把页面留白收紧一点。
+            - generic [ref=f18e337]:
+              - paragraph [ref=f18e341]: 正在读
+              - heading "《时间的秩序》" [level=3] [ref=f18e342]
+              - paragraph [ref=f18e343]: 把夜晚留给物理、散文和几页慢读。读到好的句子就收进手账。
+            - generic [ref=f18e344]:
+              - paragraph [ref=f18e348]: 正在做
+              - heading "三两园" [level=3] [ref=f18e349]
+              - paragraph [ref=f18e350]: 把文章、相册和生活状态重新整理成一个更像家的个人博客。
+            - generic [ref=f18e351]:
+              - paragraph [ref=f18e357]: 正在听
+              - heading "Bill Evans Trio" [level=3] [ref=f18e358]
+              - paragraph [ref=f18e359]: 钢琴声很轻，适合写代码、整理照片，也适合把页面留白收紧一点。
+            - generic [ref=f18e360]:
+              - paragraph [ref=f18e364]: 正在读
+              - heading "《时间的秩序》" [level=3] [ref=f18e365]
+              - paragraph [ref=f18e366]: 把夜晚留给物理、散文和几页慢读。读到好的句子就收进手账。
+            - generic [ref=f18e367]:
+              - paragraph [ref=f18e371]: 正在做
+              - heading "三两园" [level=3] [ref=f18e372]
+              - paragraph [ref=f18e373]: 把文章、相册和生活状态重新整理成一个更像家的个人博客。
+            - generic [ref=f18e374]:
+              - paragraph [ref=f18e380]: 正在听
+              - heading "Bill Evans Trio" [level=3] [ref=f18e381]
+              - paragraph [ref=f18e382]: 钢琴声很轻，适合写代码、整理照片，也适合把页面留白收紧一点。
+        - generic [ref=f18e384]:
+          - generic [ref=f18e386]:
+            - button "深夜霓虹下的人行道 2026-06-18 City Sidewalk, Night 深夜霓虹下的人行道 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。 Contax T2 / Fujifilm Superia 400" [ref=f18e387]:
+              - img "深夜霓虹下的人行道" [ref=f18e391]
+              - generic [ref=f18e392]:
+                - generic [ref=f18e393]:
+                  - generic [ref=f18e394]: 2026-06-18
+                  - generic [ref=f18e395]: City Sidewalk, Night
+                - heading "深夜霓虹下的人行道" [level=2] [ref=f18e399]
+                - paragraph [ref=f18e400]: 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。
+                - paragraph [ref=f18e401]: Contax T2 / Fujifilm Superia 400
+            - button "卡通少女的午后遐思 2026-05-24 Dreamy Studio 卡通少女的午后遐思 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。 Digital Art Studio / RGB Digital" [ref=f18e405]:
+              - img "卡通少女的午后遐思" [ref=f18e409]
+              - generic [ref=f18e410]:
+                - generic [ref=f18e411]:
+                  - generic [ref=f18e412]: 2026-05-24
+                  - generic [ref=f18e413]: Dreamy Studio
+                - heading "卡通少女的午后遐思" [level=2] [ref=f18e417]
+                - paragraph [ref=f18e418]: 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。
+                - paragraph [ref=f18e419]: Digital Art Studio / RGB Digital
+            - button "仰望平流层：地球边缘 2026-04-12 Above the Clouds 仰望平流层：地球边缘 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。 Hasselblad 503CX / Kodak Ektar 100" [ref=f18e423]:
+              - img "仰望平流层：地球边缘" [ref=f18e427]
+              - generic [ref=f18e428]:
+                - generic [ref=f18e429]:
+                  - generic [ref=f18e430]: 2026-04-12
+                  - generic [ref=f18e431]: Above the Clouds
+                - heading "仰望平流层：地球边缘" [level=2] [ref=f18e435]
+                - paragraph [ref=f18e436]: 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。
+                - paragraph [ref=f18e437]: Hasselblad 503CX / Kodak Ektar 100
+            - button "孤山亭子与励志格言 2026-03-05 Mountain Summit 孤山亭子与励志格言 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。 Canon F-1 / Kodak Portra 160" [ref=f18e441]:
+              - img "孤山亭子与励志格言" [ref=f18e445]
+              - generic [ref=f18e446]:
+                - generic [ref=f18e447]:
+                  - generic [ref=f18e448]: 2026-03-05
+                  - generic [ref=f18e449]: Mountain Summit
+                - heading "孤山亭子与励志格言" [level=2] [ref=f18e453]
+                - paragraph [ref=f18e454]: 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。
+                - paragraph [ref=f18e455]: Canon F-1 / Kodak Portra 160
+            - button "深夜霓虹下的人行道 2026-06-18 City Sidewalk, Night 深夜霓虹下的人行道 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。 Contax T2 / Fujifilm Superia 400" [ref=f18e459]:
+              - img "深夜霓虹下的人行道" [ref=f18e463]
+              - generic [ref=f18e464]:
+                - generic [ref=f18e465]:
+                  - generic [ref=f18e466]: 2026-06-18
+                  - generic [ref=f18e467]: City Sidewalk, Night
+                - heading "深夜霓虹下的人行道" [level=2] [ref=f18e471]
+                - paragraph [ref=f18e472]: 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。
+                - paragraph [ref=f18e473]: Contax T2 / Fujifilm Superia 400
+            - button "卡通少女的午后遐思 2026-05-24 Dreamy Studio 卡通少女的午后遐思 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。 Digital Art Studio / RGB Digital" [ref=f18e477]:
+              - img "卡通少女的午后遐思" [ref=f18e481]
+              - generic [ref=f18e482]:
+                - generic [ref=f18e483]:
+                  - generic [ref=f18e484]: 2026-05-24
+                  - generic [ref=f18e485]: Dreamy Studio
+                - heading "卡通少女的午后遐思" [level=2] [ref=f18e489]
+                - paragraph [ref=f18e490]: 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。
+                - paragraph [ref=f18e491]: Digital Art Studio / RGB Digital
+            - button "仰望平流层：地球边缘 2026-04-12 Above the Clouds 仰望平流层：地球边缘 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。 Hasselblad 503CX / Kodak Ektar 100" [ref=f18e495]:
+              - img "仰望平流层：地球边缘" [ref=f18e499]
+              - generic [ref=f18e500]:
+                - generic [ref=f18e501]:
+                  - generic [ref=f18e502]: 2026-04-12
+                  - generic [ref=f18e503]: Above the Clouds
+                - heading "仰望平流层：地球边缘" [level=2] [ref=f18e507]
+                - paragraph [ref=f18e508]: 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。
+                - paragraph [ref=f18e509]: Hasselblad 503CX / Kodak Ektar 100
+            - button "孤山亭子与励志格言 2026-03-05 Mountain Summit 孤山亭子与励志格言 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。 Canon F-1 / Kodak Portra 160" [ref=f18e513]:
+              - img "孤山亭子与励志格言" [ref=f18e517]
+              - generic [ref=f18e518]:
+                - generic [ref=f18e519]:
+                  - generic [ref=f18e520]: 2026-03-05
+                  - generic [ref=f18e521]: Mountain Summit
+                - heading "孤山亭子与励志格言" [level=2] [ref=f18e525]
+                - paragraph [ref=f18e526]: 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。
+                - paragraph [ref=f18e527]: Canon F-1 / Kodak Portra 160
+            - button "深夜霓虹下的人行道 2026-06-18 City Sidewalk, Night 深夜霓虹下的人行道 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。 Contax T2 / Fujifilm Superia 400" [ref=f18e531]:
+              - img "深夜霓虹下的人行道" [ref=f18e535]
+              - generic [ref=f18e536]:
+                - generic [ref=f18e537]:
+                  - generic [ref=f18e538]: 2026-06-18
+                  - generic [ref=f18e539]: City Sidewalk, Night
+                - heading "深夜霓虹下的人行道" [level=2] [ref=f18e543]
+                - paragraph [ref=f18e544]: 城市的霓虹反射在微湿的人行道上。路灯把行人的影子拉得很长。深邃的蓝色调中透着都市的孤独感。
+                - paragraph [ref=f18e545]: Contax T2 / Fujifilm Superia 400
+            - button "卡通少女的午后遐思 2026-05-24 Dreamy Studio 卡通少女的午后遐思 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。 Digital Art Studio / RGB Digital" [ref=f18e549]:
+              - img "卡通少女的午后遐思" [ref=f18e553]
+              - generic [ref=f18e554]:
+                - generic [ref=f18e555]:
+                  - generic [ref=f18e556]: 2026-05-24
+                  - generic [ref=f18e557]: Dreamy Studio
+                - heading "卡通少女的午后遐思" [level=2] [ref=f18e561]
+                - paragraph [ref=f18e562]: 柔和明亮的色彩描绘出一位少女静静凝视前方的状态，洋溢着二次元独有的手绘艺术风情与空气感。
+                - paragraph [ref=f18e563]: Digital Art Studio / RGB Digital
+            - button "仰望平流层：地球边缘 2026-04-12 Above the Clouds 仰望平流层：地球边缘 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。 Hasselblad 503CX / Kodak Ektar 100" [ref=f18e567]:
+              - img "仰望平流层：地球边缘" [ref=f18e571]
+              - generic [ref=f18e572]:
+                - generic [ref=f18e573]:
+                  - generic [ref=f18e574]: 2026-04-12
+                  - generic [ref=f18e575]: Above the Clouds
+                - heading "仰望平流层：地球边缘" [level=2] [ref=f18e579]
+                - paragraph [ref=f18e580]: 从高空俯瞰地球，淡蓝的大气层边缘与厚重的云海重叠，形成了一种无声的壮丽视角。
+                - paragraph [ref=f18e581]: Hasselblad 503CX / Kodak Ektar 100
+            - button "孤山亭子与励志格言 2026-03-05 Mountain Summit 孤山亭子与励志格言 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。 Canon F-1 / Kodak Portra 160" [ref=f18e585]:
+              - img "孤山亭子与励志格言" [ref=f18e589]
+              - generic [ref=f18e590]:
+                - generic [ref=f18e591]:
+                  - generic [ref=f18e592]: 2026-03-05
+                  - generic [ref=f18e593]: Mountain Summit
+                - heading "孤山亭子与励志格言" [level=2] [ref=f18e597]
+                - paragraph [ref=f18e598]: 立于山巅乱石之中的古典凉亭，旁侧印刻着励志文字，在破晓的薄雾中显示出坚毅的物理哲学意味。
+                - paragraph [ref=f18e599]: Canon F-1 / Kodak Portra 160
+          - generic [ref=f18e603]:
+            - generic [ref=f18e608]:
+              - heading "彩色相册" [level=2] [ref=f18e609]
+              - paragraph [ref=f18e610]: 日常光线、旅行色彩和偶然遇见的小片段，都先以自然的颜色留在这里。
+            - link "打开相册" [ref=f18e611] [cursor=pointer]:
+              - /url: /gallery
+        - generic [ref=f18e616]:
+          - generic: ”
+          - generic [ref=f18e622]:
+            - paragraph [ref=f18e623]: 世界不是物体的集合，而是事件的集合。
+            - paragraph [ref=f18e624]: 我喜欢把这句话放在首页末尾。它提醒我，博客不只是页面的集合，而是日常事件慢慢留下来的路径。
+            - generic [ref=f18e625]:
+              - generic [ref=f18e626]: ✦
+              - paragraph [ref=f18e627]: 卡洛·罗韦利 · 《时间的秩序》
+    - contentinfo [ref=f18e628]:
+      - generic [ref=f18e629]:
+        - paragraph [ref=f18e630]: 少写几行，多筑一境
+        - paragraph [ref=f18e631]:
+          - generic [ref=f18e632]: © 2026 三两园 · Sanliang Garden. MIT License.
+          - generic [ref=f18e634]: 本站由 三两园 强力驱动
+          - generic [ref=f18e635]: (｡･ω･｡)ﾉ♡
+        - paragraph [ref=f18e636]: 本网站部分内容来源于网络，仅供学习与参考。本网站一切内容不代表本站立场，并不代表本站赞同其观点和对其真实性负责。
+  - generic [ref=f18e637]:
+    - button [ref=f18e638] [cursor=pointer]
+    - generic:
+      - generic: UI PRO MAX 控制台
+      - generic:
+        - generic: Adjustment Mode / 调整机制
+        - generic:
+          - button "手动选择"
+          - button "时间自动"
+          - button "滚动自动"
+      - generic:
+        - generic: Visual Styles / 视觉风格库
+        - generic:
+          - button "生活档案 彩色影像、柔和卡片、个人博客默认风格":
+            - generic:
+              - generic: 生活档案
+              - paragraph: 彩色影像、柔和卡片、个人博客默认风格
+          - button "瑞士画报 经典报刊网格、优雅衬线体、双线描边":
+            - generic:
+              - generic: 瑞士画报
+              - paragraph: 经典报刊网格、优雅衬线体、双线描边
+          - button "极致极简 无界扁平卡片、微型圆角、深邃静谧":
+            - generic:
+              - generic: 极致极简
+              - paragraph: 无界扁平卡片、微型圆角、深邃静谧
+          - button "赛博拟玻 半透毛玻璃、霓虹浮光背影、迷幻光影":
+            - generic:
+              - generic: 赛博拟玻
+              - paragraph: 半透毛玻璃、霓虹浮光背影、迷幻光影
+          - button "黑客粗野 等宽黑客字体、2px粗线实框、硬边缘阴影":
+            - generic:
+              - generic: 黑客粗野
+              - paragraph: 等宽黑客字体、2px粗线实框、硬边缘阴影
+      - generic:
+        - generic: UI-UX-Pro-Max v1.0
+        - generic: Atlas Edition
+  - button "返回顶部"
+  - generic [ref=f18e640]:
+    - generic:
+      - generic:
+        - generic:
+          - generic: PAUSED
+          - generic: "CH: DUAL-MIX"
+        - generic:
+          - generic:
+            - generic: You Must Believe in Spring - Bill Evans
+            - generic: You Must Believe in Spring - Bill Evans
+      - generic:
+        - generic:
+          - generic: A-SIDE
+          - generic: TYPE I
+      - generic:
+        - button "上一首"
+        - button "播放"
+        - button "下一首"
+      - generic:
+        - generic:
+          - generic: BGM
+          - slider: "0.5"
+          - generic: 50%
+        - generic:
+          - generic: WIND
+          - slider [disabled]: "0.4"
+          - generic: "OFF"
+        - generic:
+          - button "林间细雨 (Rain)"
+          - button "白噪风声 (Wind)"
+    - button "治愈音乐电台" [ref=f18e641] [cursor=pointer]

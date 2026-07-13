@@ -2,6 +2,7 @@
 
 > Agent 硬约束、任务流摘要与路径速查表。  
 > 与 `docs/agents/workflow.md` 共同构成任务流门禁。
+> **Output Style**: `humanizer-output-style` skill — 统一语气与去 AI 味。详见 `skills/humanizer-output-style/SKILL.md`
 
 ## 1. 硬约束
 

@@ -18,7 +18,7 @@ The project has no test runner configured yet; there is no `npm test`.
 ## Development prerequisites
 
 - Node.js >= 20.9.0
-- The Java backend [spring_server](https://github.com/RRTiamo/spring_server) running, default `http://localhost:8080/api`
+- The Java backend [spring_server](https://github.com/Aafff623/spring_server) running, default `http://localhost:8080/api`
 
 ## Environment variables
 

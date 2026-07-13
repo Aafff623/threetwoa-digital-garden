@@ -7,6 +7,8 @@
 A personal blog and life-archive frontend — long-form writing, photos, footprints, and private memories, gathered into a single digital garden.
 Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Lenis
 
+> Forked from the upstream blog system. Attribution to the original author.
+
 <p>
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
@@ -99,7 +101,7 @@ Live demo: [threetwoa-digital-garden.vercel.app](https://threetwoa-digital-garde
 
 - Node.js `>= 20.9.0`
 - npm (or pnpm)
-- [spring_server](https://github.com/RRTiamo/spring_server) running at `http://localhost:8080/api` (optional for UI-only browsing; the frontend falls back to local static data)
+- [spring_server](https://github.com/Aafff623/spring_server) running at `http://localhost:8080/api` (optional for UI-only browsing; the frontend falls back to local static data)
 
 ### 1. Clone and install
 
@@ -151,8 +153,8 @@ Before commit, prefer `npm run lint` and `npm run build`.
 | Tier | Stack | Responsibility | Repository |
 | --- | --- | --- | --- |
 | **Blog** | Next.js 16 · React 19 · TypeScript 5 · Tailwind CSS 4 | Public-facing presentation | This repository |
-| **Admin** | Vue | Content and site configuration | [spring_admin](https://github.com/RRTiamo/spring_admin) |
-| **Server** | Java Spring Boot | API, auth, persistence, files | [spring_server](https://github.com/RRTiamo/spring_server) |
+| **Admin** | Vue | Content and site configuration | [spring_admin](https://github.com/Aafff623/spring_admin) |
+| **Server** | Java Spring Boot | API, auth, persistence, files | [spring_server](https://github.com/Aafff623/spring_server) |
 
 ### Frontend data flow
 
