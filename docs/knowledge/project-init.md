@@ -156,7 +156,9 @@ assets/
 │   ├── avatar/
 │   └── icon/
 ├── video/
-└── decks/                     # 演示文稿（PPT / Keynote 源文件，曾属 output/ppt/）
+├── theme/
+│   ├── ppt/                    # 演示文稿（PPT / Keynote 源文件）
+│   └── script/                 # 逐字稿 / 项目介绍稿
 ```
 
 | 路径 | 职责 |
@@ -165,7 +167,8 @@ assets/
 | `assets/images/readme/` | banner / architecture / features / tech-stack / workflow / structure / **preview-*** / showcase-* |
 | `assets/images/avatar/` · `icon/` | 文档或演示槽位（业务 `public/` 仍归应用自身） |
 | `assets/video/` | 演示视频 |
-| `assets/decks/` | 演示文稿源文件（PPT / Keynote） |
+| `assets/theme/ppt/` | 演示文稿源文件（PPT / Keynote） |
+| `assets/theme/script/` | 逐字稿 / 项目介绍稿 / 演讲脚本 |
 | `assets/README.md` | 媒体约定与还原说明 |
 
 **禁止**新建 `docs/images/`。
@@ -381,7 +384,7 @@ Preview 源码落在产品层（如 `src/website-preview/`、`src/.../outputs/`�
 4. docs 骨架：agents（仅 workflow/deliver/archive/domain/issue-tracker/triage-labels）、
    adr、knowledge、glossary、commit-history、output/{report,prd,handoff}。
    不要创建 docs/agents/language.md 或 docs/agents/context.md。
-5. assets 骨架：backup · images/{readme,avatar,icon} · video · decks · assets/README.md。
+5. assets 骨架：backup · images/{readme,avatar,icon} · video · theme/{ppt,script} · assets/README.md。
    禁止 docs/images/；旧图迁到 assets/images/readme。
 6. 外来 zip/图/文按规范融合；迁移清单给我确认。
 7. 本阶段不写业务功能代码。
@@ -508,7 +511,8 @@ shipped | partial | reverted
 | PRD | `docs/output/prd/{theme}/` |
 | Handoff | `docs/output/handoff/{theme}/`（多重职责见 `docs/agents/handoff.md`） |
 | Commit 攒批 | `docs/commit-history/`（维护规范见本文档 §5.1） |
-| 演示文稿 | `assets/decks/` |
+| 演示文稿 | `assets/theme/ppt/` |
+| 逐字稿 | `assets/theme/script/` |
 | 配图输出 | `assets/images/readme/`（含 `preview-shell.png` · `showcase-*.png`） |
 | 上游备份 | `assets/backup/` |
 | README Polish skill | `readme-polish` |
