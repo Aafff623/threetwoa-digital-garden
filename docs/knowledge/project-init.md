@@ -70,6 +70,9 @@ Gate             你 Review 本轮 init 产物 → 再开第一个业务 theme
 | 4 | 外部资产清单 | zip、旧 docs/images、原型图、品牌包…从哪来、迁到哪 |
 | 5 | 产品层根 | 如 `src/` / `frontend/` / 多包 monorepo 边界 |
 | 6 | 首个业务 theme 名 | 可选；未定则 Phase A 只做骨架 |
+| 7 | 项目预期 | 规模 / 受众 / 核心产物（网站？库？工具？），决定 README 口吻与资产侧重 |
+| 8 | Handoff 形式 | 启用哪些场景（`handoff.md` §2 的 A–E），默认只 A；B–E 按需 |
+| 9 | 输出语气与格式 | 是否产出项目级 `docs/agents/voice.md`（覆盖全局 caveman/humanizer）；默认建 |
 
 确认后再写盘；有冲突先停。
 
@@ -116,24 +119,26 @@ docs/
 ├── README.md
 ├── agents/              # workflow · deliver · archive · domain
 │                        # · issue-tracker · triage-labels
+│                        # · voice（输出语气，可选）
 │                        # （不要 language.md / context.md）
 ├── adr/                 # 000N-kebab-title.md
 ├── contexts/            # 可选：{weapp,admin,api}/CONTEXT.md
 ├── knowledge/           # 可迁移知识（可放本文件副本）
+├── glossary/            # 人 ⇄ Agent 认知对齐术语库（如 frontend-ui.md）
 ├── commit-history/      # commit 攒批记录（原 history/）
-└── output/
-    ├── prd/{theme}/           # PRD / 调研报告（原 reports/）
-    ├── prd/archive/
+└── output/                    # 仅三类产物
+    ├── report/{theme}/        # 调研分析报告（与 PRD 分离）
+    ├── prd/{theme}/           # PRD（产品需求文档）
     ├── handoff/{theme}/{task}.md
-    ├── handoff/archive/
-    └── ppt/                   # 演示文稿（或 decks/，二选一写进 AGENTS）
+    └── */archive/             # 各类过时产物归档（见 docs/agents/archive.md）
 ```
 
 业务流程对齐：
 
 ```text
 Issue（GitHub 或 Local Markdown）
-  → docs/output/prd/{theme}/prd.md      # 调研 + 需求
+  → docs/output/report/{theme}/        # 调研分析（可选，先于 PRD）
+  → docs/output/prd/{theme}/prd.md     # PRD（需求）
   → 拆解 To-Do / 子任务
   → docs/output/handoff/{theme}/{task}.md
   → 实施 → Review → archive
@@ -149,7 +154,8 @@ assets/
 │   ├── readme/                # README 配图 + Showcase
 │   ├── avatar/
 │   └── icon/
-└── video/
+├── video/
+└── decks/                     # 演示文稿（PPT / Keynote 源文件，曾属 output/ppt/）
 ```
 
 | 路径 | 职责 |
@@ -158,6 +164,7 @@ assets/
 | `assets/images/readme/` | banner / architecture / features / tech-stack / workflow / structure / **preview-*** / showcase-* |
 | `assets/images/avatar/` · `icon/` | 文档或演示槽位（业务 `public/` 仍归应用自身） |
 | `assets/video/` | 演示视频 |
+| `assets/decks/` | 演示文稿源文件（PPT / Keynote） |
 | `assets/README.md` | 媒体约定与还原说明 |
 
 **禁止**新建 `docs/images/`。
@@ -168,7 +175,8 @@ assets/
 - [ ] `setup-matt-pocock-skills` 决策已落盘；`## Agent skills` 路径真实  
 - [ ] 根：`AGENTS` / `CLAUDE` / `CONTEXT` / `LANGUAGES` /（`CONTEXT-MAP`）  
 - [ ] `docs/agents` **无** `language.md`、`context.md`  
-- [ ] `docs/output/prd` · `handoff` · `docs/commit-history` · `adr` · `knowledge`  
+- [ ] `docs/output/{report,prd,handoff}` · `docs/commit-history` · `adr` · `knowledge` · `glossary`  
+- [ ] 若 #9 启用：`docs/agents/voice.md` 已产出  
 - [ ] `assets/` + `assets/README.md`；外部资产已融合或迁移清单已关闭  
 - [ ] ADR-0000（或等价）已说明采用 ADR  
 - [ ] 无密钥入库；无本机绝对路径作唯一说明  
@@ -188,7 +196,8 @@ assets/
 | 产品向范文 | [xianghai-yuntu](https://github.com/Aafff623/xianghai-yuntu) · [ResumeWise](https://github.com/Aafff623/ResumeWise) · [civil-service-exam-tracker](https://github.com/Aafff623/civil-service-exam-tracker) · [web3career-study-track](https://github.com/Aafff623/web3career-study-track) |
 | 含金量标杆 | [agent-cfo](https://github.com/San-Y108/agent-cfo)（黑客松 README 范式） |
 | Preview 落地参照 | Campus Explorer：`website-preview`（静态演示墙）· `component-packs/outputs`（组件 Gallery） |
-| 配图 brief | `docs/output/prd/readme-diagrams/readme-diagram-brief.md`（或等价 theme 名） |
+| 配图 brief（契约层） | `docs/output/prd/readme-diagrams/readme-diagram-brief.md`：章节地图 + 资产清单 + 设计语言 + 验收 |
+| 出图 prompt（执行层） | `docs/output/prd/readme-diagrams/readme-image-prompts.md`：每张图详细 prompt，投喂 GPT image-to-image |
 | 终稿图目录 | **`assets/images/readme/`** |
 
 ### 3.2 README Polish 覆盖范围
@@ -307,15 +316,20 @@ Preview 源码落在产品层（如 `src/website-preview/`、`src/.../outputs/`�
 
 1. **读仓 + 确认**：定位、栈、受众、已有 README 优劣；是否需要 Preview 站 → 向用户确认。  
 2. **对标范文**：按项目类型选「产品演示向」或「黑客松叙事向」，**禁止照抄他仓业务文案**。  
-3. **结构草稿**：列出章节与配图节点（含 Preview / Showcase）→ brief。  
-4. **出图 Prompt**：交给用户在 GPT Image 等工具生成 → 落盘 `assets/images/readme/`。  
-5. **组装 README**：结构 + 样式 + 图引用 + **Preview 模块** + Showcase（占位或实图）。  
-6. **用户 Review** 文案、图、路径是否与 CONTEXT / LANGUAGES 一致。
+3. **结构草稿 → brief（契约层）**：列章节与配图节点（含 Preview / Showcase）→ `readme-diagram-brief.md`（章节地图 + 资产清单 + 设计语言 + 验收）。  
+4. **出图规范 MD（执行层，关键产物）**：Agent 结合**项目实际 + 主题色 + 主题元素**，为每张契约图产出详细出图说明 → `readme-image-prompts.md`：
+   - §0 全局规范：项目定位 · 视觉总调（色板 / 材质 / 光影）· 出图优先级 · 命名契约 · **给 GPT 的系统指令模板**（可粘贴到对话开头）；
+   - 每张图：基本信息 · 一句话描述 · 详细描述 · 参照信息 · 元素清单 · 构图建议 · **英文 Prompt（直接喂 GPT image-to-image）** · 中文补充提示。
+   - 范例：本仓 `readme-image-prompts.md`。  
+5. **出图**：用户把 `readme-image-prompts.md` 投给 GPT image-to-image 生成图 → 落盘 `assets/images/readme/`。**Agent 不直接生图**（多数模型无能力），只产出可投喂的规范 MD。  
+6. **组装 README**：结构 + 样式 + 图引用 + **Preview 模块** + Showcase（占位或实图）。  
+7. **用户 Review** 文案、图、路径是否与 CONTEXT / LANGUAGES 一致。
 
 ### 3.8 Phase B 验收
 
 - [ ] README 章节完整、扫读友好，与范文意图对齐（非照抄）  
 - [ ] 配图契约文件名与引用一致（缺失项已占位说明）  
+- [ ] **出图规范 MD**（`readme-image-prompts.md`）已产出：全局规范 + 每张图 prompt（可投喂 GPT image-to-image）  
 - [ ] **Preview**：独立小节或已声明省略理由；启动 / 浏览 / 壳图或占位齐全（§3.5）  
 - [ ] Showcase 路径或占位已写  
 - [ ] 快速开始可执行；演示依赖写清  
@@ -331,13 +345,14 @@ Preview 源码落在产品层（如 `src/website-preview/`、`src/.../outputs/`�
 每阶段结束先停，等我 Review。
 
 ## Phase A — 资产 · 融合 · 对齐
-1. 先与我确认：Issue tracker、triage、单/多 CONTEXT、外部资产清单、产品层根目录。
+1. 先与我确认：Issue tracker、triage、单/多 CONTEXT、外部资产清单、产品层根目录、项目预期、handoff 形式（A–E 场景，见 `docs/agents/handoff.md`）。
 2. 运行 setup-matt-pocock-skills（一次只确认一项，确认后再写盘）。
-3. 落盘根入口：AGENTS / CLAUDE / CONTEXT / LANGUAGES /（CONTEXT-MAP）/ README 初稿。
+3. 落盘根入口：AGENTS / CLAUDE / CONTEXT / LANGUAGES /（CONTEXT-MAP）/ README 初稿；
+   若 §2.1 #9 启用，另产出 `docs/agents/voice.md`（项目级输出语气与格式规范，覆盖全局 caveman/humanizer）。
 4. docs 骨架：agents（仅 workflow/deliver/archive/domain/issue-tracker/triage-labels）、
-   adr、knowledge、commit-history、output/{prd,handoff,ppt}。
+   adr、knowledge、glossary、commit-history、output/{report,prd,handoff}。
    不要创建 docs/agents/language.md 或 docs/agents/context.md。
-5. assets 骨架：backup · images/{readme,avatar,icon} · video · assets/README.md。
+5. assets 骨架：backup · images/{readme,avatar,icon} · video · decks · assets/README.md。
    禁止 docs/images/；旧图迁到 assets/images/readme。
 6. 外来 zip/图/文按规范融合；迁移清单给我确认。
 7. 本阶段不写业务功能代码。
@@ -362,7 +377,8 @@ Preview 源码落在产品层（如 `src/website-preview/`、`src/.../outputs/`�
 ## 5. 日常业务流（init 完成之后）
 
 ```text
-Issue(Epic) → docs/output/prd/{theme}/prd.md (draft)
+Issue(Epic) → docs/output/report/{theme}/   # 调研（可选）
+  → docs/output/prd/{theme}/prd.md (draft)
   → 你 approved
   → docs/output/handoff/{theme}/{task}.md
   → 实施 → awaiting-review【停】
@@ -370,6 +386,55 @@ Issue(Epic) → docs/output/prd/{theme}/prd.md (draft)
 ```
 
 硬约束：PRD 未批准不写功能代码；一任务一 handoff；Review 先于 commit。详见 `AGENTS.md` / `workflow.md`。
+
+---
+
+## 5.1 commit-history 维护规范
+
+> `docs/commit-history/` 是 commit 攒批的**面向主题的可读摘要**，给"只看代码之外的人"快速了解每个 theme 干了什么。不是 git log 的复制，不逐条翻译 commit。
+
+**何时写**
+- 每个 theme 一轮 Review 通过、原子 commit 之后。
+- 多个小 commit 可合并为一条主题摘要。
+
+**文件命名**
+
+```text
+docs/commit-history/{YYYY-MM-DD}-{theme}.md
+```
+
+同日同 theme 多轮 → 追加序号 `-01` `-02`。
+
+**字段模板**
+
+```markdown
+# {theme} · {date}
+
+## Status
+shipped | partial | reverted
+
+## Commits
+- `{hash}` type(scope): subject
+
+## 做了什么
+3–5 句主题摘要（不是逐 commit 翻译）。
+
+## 关联
+- PRD / handoff / Issue 路径
+- 关键文件
+
+## 回滚
+- revert 哪几个 hash / 配置开关
+```
+
+**谁写**
+- 执行 Agent 在 commit 后起草。
+- 用户 Review 时校对，可要求 Agent 补全。
+
+**反模式**
+- ❌ 只贴 git log，无主题摘要。
+- ❌ 记录无关 commit（纯格式化 / chore）。
+- ❌ 长期不更新（本仓此前即处于此空壳状态）。
 
 ---
 
@@ -408,10 +473,13 @@ Issue(Epic) → docs/output/prd/{theme}/prd.md (draft)
 | 本规范 | 根或 `docs/knowledge/project-init.md` |
 | 共享词汇 | 根 `LANGUAGES.md` |
 | 领域事实 | 根 `CONTEXT.md` |
+| 界面术语库 | `docs/glossary/frontend-ui.md` |
 | 任务流 | `docs/agents/workflow.md` |
-| PRD / 调研 | `docs/output/prd/{theme}/` |
-| Handoff | `docs/output/handoff/{theme}/` |
-| Commit 攒批 | `docs/commit-history/` |
+| 调研报告 | `docs/output/report/{theme}/` |
+| PRD | `docs/output/prd/{theme}/` |
+| Handoff | `docs/output/handoff/{theme}/`（多重职责见 `docs/agents/handoff.md`） |
+| Commit 攒批 | `docs/commit-history/`（维护规范见本文档 §5.1） |
+| 演示文稿 | `assets/decks/` |
 | 配图输出 | `assets/images/readme/`（含 `preview-shell.png` · `showcase-*.png`） |
 | 上游备份 | `assets/backup/` |
 | README Polish skill | `readme-polish` |

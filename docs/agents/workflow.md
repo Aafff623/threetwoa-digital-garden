@@ -6,6 +6,7 @@
 
 ```text
 Issue (GitHub 或 .scratch/{feature}.md)
+  → docs/output/report/{theme}/        # 调研分析（可选，先于 PRD）
   → docs/output/prd/{theme}/prd.md (draft)
   → 用户 approved
   → 拆解为子任务
@@ -33,8 +34,8 @@ Issue (GitHub 或 .scratch/{feature}.md)
 ### 2.3 Handoff
 
 - 路径：`docs/output/handoff/{theme}/{task}.md`
-- 一任务一 handoff。
-- 包含：背景、改动点、验收步骤、回滚方式。
+- 一任务一 handoff；职责与五种场景（项目内 / 跨 agent / 跨工具 / 跨项目 / 跨小组）见 `handoff.md`。
+- 至少包含：背景、改动点、验收步骤、回滚方式；跨边界时加「给下一个执行者」段。
 
 ### 2.4 实施
 
@@ -51,8 +52,8 @@ Issue (GitHub 或 .scratch/{feature}.md)
 ### 2.6 Commit / Archive
 
 - 原子 commit，一条逻辑改动一次 commit。
-- 多任务攒批可记录在 `docs/commit-history/{date}-{theme}.md`。
-- 过时 PRD / handoff 移入对应 `archive/` 子目录。
+- commit 后按 `docs/knowledge/project-init.md` §5.1 维护 `docs/commit-history/{date}-{theme}.md`（命名 / 字段 / 反模式见该规范）。
+- 过时 report / PRD / handoff 移入对应 `archive/` 子目录（见 `archive.md`）。
 
 ## 3. 门禁
 

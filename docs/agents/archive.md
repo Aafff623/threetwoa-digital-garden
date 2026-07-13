@@ -4,7 +4,7 @@
 
 ## 1. 归档范围
 
-- 已完成的 PRD / 调研报告
+- 已完成的调研报告（report）/ PRD
 - 已关闭的 handoff 文档
 - 过时的 commit-history 摘要
 
@@ -12,6 +12,7 @@
 
 | 来源 | 目标 |
 |---|---|
+| `docs/output/report/{theme}/` | `docs/output/report/archive/{theme}/` |
 | `docs/output/prd/{theme}/prd.md` | `docs/output/prd/archive/{theme}/prd.md` |
 | `docs/output/prd/{theme}/` 下其他文件 | `docs/output/prd/archive/{theme}/` |
 | `docs/output/handoff/{theme}/{task}.md` | `docs/output/handoff/archive/{theme}/{task}.md` |

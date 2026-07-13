@@ -12,6 +12,7 @@
 | 领域术语 / 硬约束 | `CONTEXT.md` |
 | 共享用词 | `LANGUAGES.md` |
 | Agent 流程 / 门禁 | `AGENTS.md` + `docs/agents/workflow.md` |
+| 界面组件术语 | `docs/glossary/frontend-ui.md` |
 | 人读摘要 / 运行说明 | `README.md` |
 
 禁止在 `docs/agents/` 下维护 `language.md` 或 `context.md`。
@@ -25,9 +26,11 @@
 ### 1.3 目录规范
 
 - 媒体资产入 `assets/`，禁止 `docs/images/`。
-- PRD / 调研入 `docs/output/prd/{theme}/`。
-- Handoff 入 `docs/output/handoff/{theme}/`。
-- Commit 攒批入 `docs/commit-history/`。
+- 调研报告入 `docs/output/report/{theme}/`。
+- PRD 入 `docs/output/prd/{theme}/`。
+- Handoff 入 `docs/output/handoff/{theme}/`（职责见 `docs/agents/handoff.md`）。
+- 演示文稿入 `assets/decks/`。
+- Commit 攒批入 `docs/commit-history/`（维护见 `docs/knowledge/project-init.md` §5.1）。
 - ADR 入 `docs/adr/000N-kebab-title.md`。
 - 可迁移知识入 `docs/knowledge/`。
 
@@ -48,19 +51,25 @@
 | 领域定义 | `docs/agents/domain.md` |
 | Issue tracker | `docs/agents/issue-tracker.md` |
 | Triage 标签 | `docs/agents/triage-labels.md` |
-| PRD / 调研 | `docs/output/prd/{theme}/prd.md` |
+| 界面术语库 | `docs/glossary/frontend-ui.md` |
+| 输出语气规范 | `docs/agents/voice.md` |
+| 调研报告 | `docs/output/report/{theme}/` |
+| PRD | `docs/output/prd/{theme}/prd.md` |
 | Handoff | `docs/output/handoff/{theme}/{task}.md` |
+| Handoff 规范 | `docs/agents/handoff.md` |
 | Commit 历史 | `docs/commit-history/` |
 | ADR | `docs/adr/` |
 | README 配图 | `assets/images/readme/` |
 | 文档头像 | `assets/images/avatar/` |
 | 文档图标 | `assets/images/icon/` |
 | 演示视频 | `assets/video/` |
+| 演示文稿 | `assets/decks/` |
 
 ## 3. 日常业务流
 
 ```text
 Issue(Epic)
+  → docs/output/report/{theme}/        # 调研（可选，先于 PRD）
   → docs/output/prd/{theme}/prd.md (draft)
   → 用户 approved
   → 拆解为子任务

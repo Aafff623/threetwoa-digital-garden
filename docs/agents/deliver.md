@@ -14,7 +14,7 @@
 
 - 涉及新领域术语时更新 `CONTEXT.md`。
 - 涉及新共享用词时更新 `LANGUAGES.md`。
-- PRD / handoff 按 `workflow.md` 路径存放。
+- PRD 按 `workflow.md` 路径存放；handoff 按场景套 `docs/agents/handoff.md` 模板。
 
 ## 3. Review 检查单
 
