@@ -58,6 +58,18 @@
 - 应用自身静态资源：`public/` 下。
 - 禁止 `docs/images/`。
 
+### 3.5 导航分组
+
+- 顶层导航按 4 大类组织（`navGroups` in `src/components/Navbar.tsx`）：
+  - **Words 文字**：Writing · Notes · Archive
+  - **Visual 影像**：Gallery · Footprints
+  - **Life 生活**：Love · Trophy · Now · Letter
+  - **About 关于**：About · Pond
+- 桌面 / 平板（≥ `md`）：4 个大类胶囊，hover 展开二级面板（子项列表 + `previewImg` 缩略图）；GSAP pill 跟随一级大类。
+- 手机（< `md`）：汉堡面板内大类用 accordion（tap 展开），无 hover。
+- 子项着色用 `iconColors[englishName]`；大类色取该组主子项色。
+- 后台开关（`page.*.enable`）过滤子项；某组子项全禁用则整组隐藏。
+
 ## 4. 技术栈事实
 
 | 层级 | 技术 |

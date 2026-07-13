@@ -4,7 +4,26 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Sun, Moon, ChevronDown, Archive, PenLine, Camera, MapPin, Heart, Trophy, StickyNote, Clock, Mail, MessageCircle, User, type LucideIcon } from "lucide-react";
+import {
+  Sun,
+  Moon,
+  ChevronDown,
+  Archive,
+  PenLine,
+  Camera,
+  MapPin,
+  Heart,
+  Trophy,
+  StickyNote,
+  Clock,
+  Mail,
+  MessageCircle,
+  User,
+  BookOpen,
+  Images,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
 import gsap from "gsap";
 import { useSysConfig } from "@/hooks/useSysConfig";
 import { siteIdentity } from "@/data/identity";
@@ -23,17 +42,87 @@ const iconColors: Record<string, string> = {
   About:       "#84cc16",   // lime — about
 };
 
+type NavItem = {
+  englishName: string;
+  chineseName: string;
+  path: string;
+  previewImg: string;
+  icon: LucideIcon;
+};
+
+type NavGroup = {
+  id: string;
+  englishName: string;
+  chineseName: string;
+  icon: LucideIcon;
+  color: string;
+  items: NavItem[];
+};
+
+// 顶层 4 大类：Words / Visual / Life / About。子项按后台开关过滤，整组为空则隐藏。
+const navGroups: NavGroup[] = [
+  {
+    id: "words",
+    englishName: "Words",
+    chineseName: "文字",
+    icon: BookOpen,
+    color: "#3b82f6",
+    items: [
+      { englishName: "Writing", chineseName: "随笔文章", path: "/writing", previewImg: "writing.png", icon: PenLine },
+      { englishName: "Notes", chineseName: "日常碎片", path: "/notes", previewImg: "notes.png", icon: StickyNote },
+      { englishName: "Archive", chineseName: "年份归档", path: "/archive", previewImg: "archive.png", icon: Archive },
+    ],
+  },
+  {
+    id: "visual",
+    englishName: "Visual",
+    chineseName: "影像",
+    icon: Images,
+    color: "#10b981",
+    items: [
+      { englishName: "Gallery", chineseName: "光影影像", path: "/gallery", previewImg: "gallery.png", icon: Camera },
+      { englishName: "Footprints", chineseName: "岁月足迹", path: "/footprints", previewImg: "footprints.png", icon: MapPin },
+    ],
+  },
+  {
+    id: "life",
+    englishName: "Life",
+    chineseName: "生活",
+    icon: Sparkles,
+    color: "#ec4899",
+    items: [
+      { englishName: "Love", chineseName: "恋爱纪实", path: "/love", previewImg: "love.png", icon: Heart },
+      { englishName: "Trophy", chineseName: "成就徽章", path: "/achievements", previewImg: "trophy.png", icon: Trophy },
+      { englishName: "Now", chineseName: "目前状态", path: "/now", previewImg: "now.png", icon: Clock },
+      { englishName: "Letter", chineseName: "岁月信件", path: "/letter", previewImg: "letter.png", icon: Mail },
+    ],
+  },
+  {
+    id: "about",
+    englishName: "About",
+    chineseName: "关于",
+    icon: User,
+    color: "#E8A06A",
+    items: [
+      { englishName: "About", chineseName: "关于作者", path: "/about", previewImg: "about.png", icon: User },
+      { englishName: "Pond", chineseName: "鱼塘反馈", path: "/pond", previewImg: "pond.png", icon: MessageCircle },
+    ],
+  },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [hoveredPath, setHoveredPath] = useState<string | null>(null);
+  const [hoveredGroup, setHoveredGroup] = useState<string | null>(null);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pillRef = useRef<HTMLDivElement>(null);
   const navContainerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // 点击外部自动收起菜单
+  // 点击外部自动收起手机菜单
   useEffect(() => {
     if (!isMenuOpen) return;
 
@@ -52,7 +141,7 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
 
-  // GSAP 控制折叠菜单展开与收起动画
+  // GSAP 控制手机菜单面板展开与收起动画
   useEffect(() => {
     if (!menuRef.current) return;
 
@@ -87,7 +176,7 @@ export default function Navbar() {
   useEffect(() => {
     const savedTheme = localStorage.getItem("atlas_theme") as "light" | "dark" | null;
     const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
+
     const initialTheme = savedTheme || (userPrefersDark ? "dark" : "light");
     if (initialTheme === "dark") {
       document.documentElement.classList.add("dark");
@@ -111,13 +200,13 @@ export default function Navbar() {
     }
   };
 
-  // 使用 GSAP 控制导航背景滑块 (GSAP Menu Pill Tracker)
+  // GSAP 控制一级大类胶囊背景滑块 (跟随 hoveredGroup)
   useEffect(() => {
     if (!pillRef.current || !navContainerRef.current) return;
 
-    if (hoveredPath) {
+    if (hoveredGroup) {
       const targetEl = navContainerRef.current.querySelector(
-        `[data-path="${hoveredPath}"]`
+        `[data-group="${hoveredGroup}"]`
       ) as HTMLElement;
       if (targetEl) {
         gsap.to(pillRef.current, {
@@ -139,7 +228,7 @@ export default function Navbar() {
         overwrite: "auto",
       });
     }
-  }, [hoveredPath]);
+  }, [hoveredGroup]);
 
   const { configs, isPageEnabled } = useSysConfig();
 
@@ -151,36 +240,36 @@ export default function Navbar() {
   const logoUrl = getConfigValue("site.logo.url");
   const logoText = siteIdentity.name;
 
-  const navItems = [
-    { englishName: "Archive", chineseName: "年份归档", path: "/archive", previewImg: "archive.png", icon: Archive },
-    { englishName: "Writing", chineseName: "随笔文章", path: "/writing", previewImg: "writing.png", icon: PenLine },
-    { englishName: "Gallery", chineseName: "光影影像", path: "/gallery", previewImg: "gallery.png", icon: Camera },
-    { englishName: "Footprints", chineseName: "岁月足迹", path: "/footprints", previewImg: "footprints.png", icon: MapPin },
-    { englishName: "Love", chineseName: "恋爱纪实", path: "/love", previewImg: "love.png", icon: Heart },
-    { englishName: "Trophy", chineseName: "成就徽章", path: "/achievements", previewImg: "trophy.png", icon: Trophy },
-    { englishName: "Notes", chineseName: "日常碎片", path: "/notes", previewImg: "notes.png", icon: StickyNote },
-    { englishName: "Now", chineseName: "目前状态", path: "/now", previewImg: "now.png", icon: Clock },
-    { englishName: "Letter", chineseName: "岁月信件", path: "/letter", previewImg: "letter.png", icon: Mail },
-    { englishName: "Pond", chineseName: "鱼塘反馈", path: "/pond", previewImg: "pond.png", icon: MessageCircle },
-    { englishName: "About", chineseName: "关于作者", path: "/about", previewImg: "about.png", icon: User },
-  ];
+  // 按后台开关过滤子项；某组子项全被禁用则整组隐藏
+  const isItemEnabled = (item: NavItem) => {
+    switch (item.path) {
+      case "/footprints":
+        return isPageEnabled("page.footprints.enable", true);
+      case "/love":
+        return isPageEnabled("page.love.enable", true);
+      case "/letter":
+        return isPageEnabled("page.letter.enable", true);
+      case "/now":
+        return isPageEnabled("page.now.enable", true);
+      case "/pond":
+        return isPageEnabled("page.pond.enable", true);
+      case "/about":
+        return isPageEnabled("page.about.enable", true);
+      default:
+        return true;
+    }
+  };
 
-  const filteredNavItems = navItems.filter((item) => {
-    if (item.path === "/footprints") return isPageEnabled("page.footprints.enable", true);
-    if (item.path === "/love") return isPageEnabled("page.love.enable", true);
-    if (item.path === "/letter") return isPageEnabled("page.letter.enable", true);
-    if (item.path === "/now") return isPageEnabled("page.now.enable", true);
-    if (item.path === "/pond") return isPageEnabled("page.pond.enable", true);
-    if (item.path === "/about") return isPageEnabled("page.about.enable", true);
-    return true;
-  });
+  const filteredGroups = navGroups
+    .map((g) => ({ ...g, items: g.items.filter(isItemEnabled) }))
+    .filter((g) => g.items.length > 0);
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-3 z-50 px-3 sm:top-5 sm:px-6 lg:px-8">
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-3">
         {/* 左胶囊: Logo */}
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           onMouseEnter={(e) => {
             gsap.to(e.currentTarget, {
               y: -3,
@@ -243,58 +332,116 @@ export default function Navbar() {
 
         {/* 右胶囊: 导航链接与动作按钮 */}
         <div className="pointer-events-auto relative inline-flex min-w-0 items-center gap-1 rounded-full border border-charcoal/10 bg-cream/90 px-1.5 py-1.5 shadow-[0_6px_18px_-6px_rgba(15,15,15,0.15),0_1px_2px_rgba(0,0,0,0.03)] backdrop-blur-md transition-[box-shadow,border-color] duration-300 dark:border-white/12 dark:bg-surface/95 sm:gap-1.5 sm:px-2">
-          
-          {/* 桌面端导航 */}
-          <div 
+
+          {/* 桌面 / 平板端：一级大类胶囊 + 悬浮二级面板 */}
+          <div
             ref={navContainerRef}
-            className="hidden lg:flex items-center space-x-1 relative"
-            onMouseLeave={() => setHoveredPath(null)}
+            className="hidden md:flex items-center space-x-1 relative"
           >
-            {/* GSAP 驱动的背景滑动气泡 */}
+            {/* GSAP 驱动的背景滑动气泡（跟随一级大类） */}
             <div
               ref={pillRef}
               className="absolute left-0 top-0 rounded-full bg-charcoal/10 dark:bg-white/10 border border-charcoal/5 dark:border-white/5 pointer-events-none opacity-0"
               style={{ zIndex: 0 }}
             />
 
-            {filteredNavItems.map((item) => {
-              const isActive = pathname === item.path;
+            {filteredGroups.map((group) => {
+              const isActive = group.items.some((it) => pathname === it.path);
+              const previewItem =
+                group.items.find((it) => it.path === hoveredItem) ?? group.items[0];
               return (
-                <div 
-                  key={item.path} 
-                  data-path={item.path}
+                <div
+                  key={group.id}
+                  data-group={group.id}
                   className="relative group/nav"
-                  onMouseEnter={() => setHoveredPath(item.path)}
+                  onMouseEnter={() => {
+                    setHoveredGroup(group.id);
+                    setHoveredItem(null);
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredGroup(null);
+                    setHoveredItem(null);
+                  }}
                 >
-                  <Link
-                    href={item.path}
-                    className={`relative z-10 text-[10px] uppercase tracking-widest transition-colors duration-300 font-sans py-2 px-3 rounded-full inline-block ${
-                      isActive ? "text-gold font-semibold" : "text-charcoal/60 hover:text-charcoal dark:text-cream/70 dark:hover:text-cream"
+                  {/* 一级大类触发器（不跳转，仅展开二级） */}
+                  <button
+                    type="button"
+                    className={`relative z-10 inline-flex items-center gap-1 text-[10px] uppercase tracking-widest transition-colors duration-300 font-sans py-2 px-3 rounded-full ${
+                      isActive
+                        ? "text-gold font-semibold"
+                        : "text-charcoal/60 hover:text-charcoal dark:text-cream/70 dark:hover:text-cream"
                     }`}
                   >
-                    <span className="inline-flex items-center gap-1">
-                      <item.icon className="h-3 w-3 stroke-[1.6]" color={iconColors[item.englishName]} aria-hidden="true" />
-                      {item.englishName}
-                    </span>
-                  </Link>
+                    <group.icon className="h-3 w-3 stroke-[1.6]" color={group.color} aria-hidden="true" />
+                    {group.englishName}
+                    <ChevronDown
+                      className={`w-2.5 h-2.5 opacity-50 transition-transform duration-300 ${
+                        hoveredGroup === group.id ? "rotate-180" : ""
+                      }`}
+                      aria-hidden="true"
+                    />
+                  </button>
 
-                  {/* HoverCard 预览特效 */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 pt-2 opacity-0 translate-y-3 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:translate-y-0 group-hover/nav:pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-[100]">
-                    <div className="w-56 h-36 bg-cream dark:bg-charcoal border border-charcoal/10 dark:border-white/10 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.25)] relative">
-                      <Image
-                        src={`/assets/preview/${item.previewImg}`}
-                        alt={item.englishName}
-                        fill
-                        sizes="224px"
-                        className="object-cover transition-transform duration-700 ease-out group-hover/nav:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent flex flex-col justify-end p-4">
-                        <span className="text-white text-[11px] font-sans font-semibold tracking-widest uppercase">
-                          {item.englishName}
-                        </span>
-                        <span className="text-cream/80 text-[10px] font-sans font-light mt-0.5 tracking-wider">
-                          {item.chineseName}
-                        </span>
+                  {/* 二级悬浮面板：子项列表 + 预览缩略图 */}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 pt-1 opacity-0 translate-y-2 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:translate-y-0 group-hover/nav:pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-[100]">
+                    <div className="flex gap-2 p-2 bg-cream dark:bg-charcoal border border-charcoal/10 dark:border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
+                      {/* 子项列表 */}
+                      <div className="flex flex-col w-44">
+                        {group.items.map((item) => {
+                          const itemActive = pathname === item.path;
+                          return (
+                            <Link
+                              key={item.path}
+                              href={item.path}
+                              onMouseEnter={() => setHoveredItem(item.path)}
+                              className={`flex items-center gap-2 px-2.5 py-2 rounded-xl text-left transition-colors ${
+                                itemActive
+                                  ? "bg-gold/10"
+                                  : "hover:bg-charcoal/5 dark:hover:bg-white/5"
+                              }`}
+                            >
+                              <item.icon
+                                className="h-3 w-3 stroke-[1.6] shrink-0"
+                                color={iconColors[item.englishName]}
+                                aria-hidden="true"
+                              />
+                              <span className="flex flex-col leading-tight">
+                                <span
+                                  className={`text-[10px] font-sans font-semibold tracking-widest uppercase ${
+                                    itemActive
+                                      ? "text-gold"
+                                      : "text-charcoal/80 dark:text-cream/80"
+                                  }`}
+                                >
+                                  {item.englishName}
+                                </span>
+                                <span className="text-[8px] font-sans text-charcoal/45 dark:text-cream/45 tracking-wider">
+                                  {item.chineseName}
+                                </span>
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+
+                      {/* 子项预览缩略图（跟随 hoveredItem，默认组首项） */}
+                      <div className="relative w-36 h-32 rounded-xl overflow-hidden shrink-0">
+                        <Image
+                          src={`/assets/preview/${previewItem.previewImg}`}
+                          alt={previewItem.englishName}
+                          fill
+                          sizes="144px"
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
+                        <div className="absolute bottom-1.5 left-2 right-2">
+                          <span className="block text-white text-[9px] font-sans font-semibold uppercase tracking-widest">
+                            {previewItem.englishName}
+                          </span>
+                          <span className="block text-cream/70 text-[8px] font-sans tracking-wider mt-0.5">
+                            {previewItem.chineseName}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -303,45 +450,7 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* 平板端平铺导航 (显示前 4 个项) */}
-          <div className="hidden md:flex lg:hidden items-center space-x-1">
-            {filteredNavItems.slice(0, 4).map((item) => {
-              const isActive = pathname === item.path;
-              return (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={`rounded-full px-2.5 py-1.5 font-sans text-[9px] uppercase tracking-wider transition-all ${
-                    isActive
-                      ? "text-gold font-semibold bg-charcoal/5 dark:bg-white/5"
-                      : "text-charcoal/60 hover:text-charcoal dark:hover:text-cream"
-                  }`}
-                >
-                  <span className="inline-flex items-center gap-1">
-                    <item.icon className="h-3 w-3 stroke-[1.6]" color={iconColors[item.englishName]} aria-hidden="true" />
-                    {item.englishName}
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* 平板端“更多”折叠触发按钮 */}
-          {filteredNavItems.length > 4 && (
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsMenuOpen(!isMenuOpen);
-              }}
-              className="hidden md:flex lg:hidden items-center gap-0.5 rounded-full px-2.5 py-1.5 font-sans text-[9px] uppercase tracking-wider transition-all text-charcoal/60 hover:text-charcoal hover:bg-charcoal/5 dark:text-cream/60 dark:hover:text-cream dark:hover:bg-white/5 cursor-pointer"
-              aria-label="Toggle More Menu"
-            >
-              <span>More</span>
-              <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isMenuOpen ? "rotate-180" : ""}`} />
-            </button>
-          )}
-
-          {/* 手机端“菜单”汉堡折叠触发按钮 */}
+          {/* 手机端"菜单"汉堡折叠触发按钮 */}
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -358,10 +467,10 @@ export default function Navbar() {
             <span>Menu</span>
           </button>
 
-          {/* 折叠下拉导航面板 */}
+          {/* 手机端折叠面板：大类 accordion（tap 展开） */}
           <div
             ref={menuRef}
-            className="absolute top-full right-0 mt-3 w-[280px] md:w-[320px] rounded-3xl border border-charcoal/10 bg-cream/95 p-3.5 shadow-[0_20px_50px_rgba(15,15,15,0.15)] backdrop-blur-md dark:border-white/10 dark:bg-charcoal/95 pointer-events-none opacity-0 scale-95 origin-top-right transition-all z-[100]"
+            className="absolute top-full right-0 mt-3 w-[300px] max-w-[calc(100vw-1.5rem)] rounded-3xl border border-charcoal/10 bg-cream/95 p-3 shadow-[0_20px_50px_rgba(15,15,15,0.15)] backdrop-blur-md dark:border-white/10 dark:bg-charcoal/95 pointer-events-none opacity-0 scale-95 origin-top-right z-[100] md:hidden"
           >
             <div className="flex items-center justify-between px-2 pb-2 mb-2 border-b border-charcoal/5 dark:border-white/5">
               <span className="text-[9px] font-sans font-semibold uppercase tracking-widest text-charcoal/40 dark:text-cream/40">
@@ -372,28 +481,70 @@ export default function Navbar() {
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-1.5">
-              {filteredNavItems.map((item, index) => {
-                const isActive = pathname === item.path;
+            <div className="flex flex-col">
+              {filteredGroups.map((group) => {
+                const isActive = group.items.some((it) => pathname === it.path);
+                const isOpen = openGroup === group.id;
                 return (
-                  <Link
-                    key={item.path}
-                    href={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`group flex flex-col justify-center items-start p-2.5 rounded-2xl border border-charcoal/5 dark:border-white/5 bg-cream-dark/20 dark:bg-charcoal/20 hover:bg-cream-dark/60 dark:hover:bg-charcoal/60 hover:border-charcoal/10 dark:hover:border-white/10 transition-all duration-300 active:scale-[0.98] ${
-                      isActive ? "border-gold/30 bg-gold/5 dark:bg-gold/10" : ""
-                    } ${index < 4 ? "md:hidden" : ""}`}
+                  <div
+                    key={group.id}
+                    className="border-b border-charcoal/5 dark:border-white/5 last:border-0"
                   >
-                    <span className={`inline-flex items-center gap-1 text-[9px] font-sans font-bold tracking-widest uppercase transition-colors duration-300 ${
-                      isActive ? "text-gold" : "text-charcoal/80 dark:text-cream/80 group-hover:text-charcoal dark:group-hover:text-cream"
-                    }`}>
-                      <item.icon className="h-3 w-3 stroke-[1.6]" color={iconColors[item.englishName]} aria-hidden="true" />
-                      {item.englishName}
-                    </span>
-                    <span className="text-[8px] font-sans text-charcoal/45 dark:text-cream/45 mt-0.5 tracking-wider transition-colors duration-300 group-hover:text-charcoal/60 dark:group-hover:text-cream/60">
-                      {item.chineseName}
-                    </span>
-                  </Link>
+                    <button
+                      type="button"
+                      onClick={() => setOpenGroup(isOpen ? null : group.id)}
+                      className="w-full flex items-center gap-2 py-2.5 px-1 text-left cursor-pointer"
+                      aria-expanded={isOpen}
+                    >
+                      <group.icon className="h-3.5 w-3.5 stroke-[1.6] shrink-0" color={group.color} aria-hidden="true" />
+                      <span
+                        className={`text-[10px] font-sans font-bold tracking-widest uppercase ${
+                          isActive ? "text-gold" : "text-charcoal/80 dark:text-cream/80"
+                        }`}
+                      >
+                        {group.englishName}
+                      </span>
+                      <span className="text-[8px] font-sans text-charcoal/40 dark:text-cream/40 tracking-wider ml-auto mr-1">
+                        {group.chineseName} · {group.items.length}
+                      </span>
+                      <ChevronDown
+                        className={`w-3 h-3 text-charcoal/40 dark:text-cream/40 transition-transform duration-300 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {isOpen && (
+                      <div className="grid grid-cols-2 gap-1.5 pb-2.5">
+                        {group.items.map((item) => {
+                          const itemActive = pathname === item.path;
+                          return (
+                            <Link
+                              key={item.path}
+                              href={item.path}
+                              onClick={() => setIsMenuOpen(false)}
+                              className={`group flex flex-col justify-center items-start gap-0.5 p-2.5 rounded-2xl border transition-all duration-300 active:scale-[0.98] ${
+                                itemActive
+                                  ? "border-gold/30 bg-gold/5 dark:bg-gold/10"
+                                  : "border-charcoal/5 dark:border-white/5 bg-cream-dark/20 dark:bg-charcoal/20 hover:bg-cream-dark/60 dark:hover:bg-charcoal/60 hover:border-charcoal/10 dark:hover:border-white/10"
+                              }`}
+                            >
+                              <span className="inline-flex items-center gap-1 text-[9px] font-sans font-bold tracking-widest uppercase text-charcoal/80 dark:text-cream/80">
+                                <item.icon
+                                  className="h-2.5 w-2.5 stroke-[1.6]"
+                                  color={iconColors[item.englishName]}
+                                  aria-hidden="true"
+                                />
+                                {item.englishName}
+                              </span>
+                              <span className="text-[8px] font-sans text-charcoal/45 dark:text-cream/45 tracking-wider">
+                                {item.chineseName}
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
