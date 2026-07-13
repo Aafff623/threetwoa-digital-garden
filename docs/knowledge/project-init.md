@@ -415,6 +415,11 @@ Issue(Epic) → docs/output/report/{theme}/   # 调研（可选）
   → docs/output/handoff/{theme}/{task}.md
   → 实施 → awaiting-review【停】
   → 你通过 → commit / docs/commit-history / archive
+
+Bug 发现 → OpenCode 诊断（根因 + 复现脚本）
+  → GitHub Issue（完整模板）
+  → Claude Code 修复 → 复现脚本验证
+  → 你 Review → commit（Closes #N）
 ```
 
 硬约束：PRD 未批准不写功能代码；一任务一 handoff；Review 先于 commit。详见 `AGENTS.md` / `workflow.md`。
@@ -470,6 +475,72 @@ shipped | partial | reverted
 
 ---
 
+## 5.2 Bug Issue 管理范式
+
+> 发现的 Bug 统一走 GitHub Issue 管理，包含根因分析、复现步骤与修复 Agent 接手引导。
+
+**何时走此流程**
+
+- 用户报告或自查发现 Bug
+- 区分「模糊描述」和「已定位根因」：
+  - 仅模糊描述 → 先由诊断 Agent 分析、复现、定位根因
+  - 已确认根因 → 直接打开 Issue，填写完整模板
+
+**Issue 模板结构**
+
+```markdown
+## 问题描述
+<!-- 用户视角：什么操作、预期什么、实际发生了什么，1-3 句 -->
+
+
+## 根因
+<!-- 技术视角：哪个文件、哪行、什么机制导致问题 -->
+
+
+## 复现
+
+### 自动化复现（如有脚本）
+<!-- 脚本路径 + 运行命令 + 关键输出 -->
+
+### 手动复现
+<!-- 分步操作，任何人都能照着走一遍 -->
+
+
+## 关键代码位置
+<!-- 表格式：文件 | 行号 | 问题 -->
+
+
+## 修复方向（供修复 Agent 参考）
+<!-- 1-2 个可选方案，含 diff 或思路 -->
+
+
+## 接手 Agent 引导
+<!-- 1. 怎么复现确认  2. 怎么修  3. 怎么验证  4. 提交流程 -->
+```
+
+**角色分工（诊断 → 修复 分离）**
+
+| 阶段 | 人员 / 模型 | 产出 |
+|---|---|---|
+| 发现 | 用户 / 自查 | 问题描述 |
+| 诊断 | OpenCode · DeepSeek | 根因定位 + Playwright/TDD 复现脚本 + Issue 撰写 |
+| 修复 | Claude Code · GLM | 代码修复 + 验证通过 + commit |
+| Review | 用户 | 验收关闭 |
+
+**反模式**
+
+- ❌ Bug 修完不写 Issue，直接 commit（丢失根因与决策链）
+- ❌ Issue 只有标题 + 一句话描述（接手 Agent 无从下手）
+- ❌ 同一个人 / 模型既诊断又修复（缺乏交叉验证）
+
+**关联路径**
+
+- Issue 编号写入对应 commit 的 body（`Closes #N`）
+- 修复完成后，Issue 中补充实际修复方案与验证结果
+- 复现脚本放在 `scripts/repro-*.mjs`，可反复运行
+
+---
+
 ## 6. 一页 Checklist
 
 ### Phase A
@@ -511,6 +582,8 @@ shipped | partial | reverted
 | PRD | `docs/output/prd/{theme}/` |
 | Handoff | `docs/output/handoff/{theme}/`（多重职责见 `docs/agents/handoff.md`） |
 | Commit 攒批 | `docs/commit-history/`（维护规范见本文档 §5.1） |
+| Bug 复现脚本 | `scripts/repro-*.mjs`（可反复运行验证） |
+| Bug Issue 规范 | 本文档 §5.2 |
 | 演示文稿 | `assets/theme/ppt/` |
 | 逐字稿 | `assets/theme/script/` |
 | 配图输出 | `assets/images/readme/`（含 `preview-shell.png` · `showcase-*.png`） |
