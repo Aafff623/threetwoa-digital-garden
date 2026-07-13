@@ -72,7 +72,7 @@ Gate             你 Review 本轮 init 产物 → 再开第一个业务 theme
 | 6 | 首个业务 theme 名 | 可选；未定则 Phase A 只做骨架 |
 | 7 | 项目预期 | 规模 / 受众 / 核心产物（网站？库？工具？），决定 README 口吻与资产侧重 |
 | 8 | Handoff 形式 | 启用哪些场景（`handoff.md` §2 的 A–E），默认只 A；B–E 按需 |
-| 9 | 输出语气与格式 | 是否产出项目级 `docs/agents/voice.md`（覆盖全局 caveman/humanizer）；默认建 |
+| 9 | 输出语气与格式 | 是否产出项目级 `docs/agents/voice.md`（覆盖全局 `humanizer-output-style` skill）；默认建 |
 
 确认后再写盘；有冲突先停。
 
@@ -83,9 +83,10 @@ Gate             你 Review 本轮 init 产物 → 再开第一个业务 theme
 | 1 | **`setup-matt-pocock-skills`** | 探查仓库 → 写入 `issue-tracker.md`、`triage-labels.md`、`domain.md`；在 `AGENTS.md` / `CLAUDE.md` 挂 `## Agent skills` |
 | 2 | 对齐 **`docs/agents/`** 流程件 | **仅**：`workflow.md`、`deliver.md`、`archive.md`、`domain.md`、`issue-tracker.md`、`triage-labels.md` |
 | 3 | 写入根入口 | `AGENTS.md`、`CLAUDE.md`、`CONTEXT.md`、`LANGUAGES.md`、`CONTEXT-MAP.md`（多端）、`README.md` 初稿 |
-| 4 | 骨架目录 | 见 §2.4 `docs/`、§2.5 `assets/` |
-| 5 | **外部资产融合** | 见 §2.3 |
-| 6 | （可选）**`to-issues`** / **`to-prd`** / **`triage`** | 首个业务 theme 已定时再用 |
+| 4 | **引用 `humanizer-output-style` skill** | 在 `AGENTS.md` / `CLAUDE.md` 顶部写入输出语气引用（见 §2.8）；若项目用 opencode，可选复制 SKILL.md 到 `.opencode/skills/` |
+| 5 | 骨架目录 | 见 §2.4 `docs/`、§2.5 `assets/` |
+| 6 | **外部资产融合** | 见 §2.3 |
+| 7 | （可选）**`to-issues`** / **`to-prd`** / **`triage`** | 首个业务 theme 已定时再用 |
 
 ### 2.3 外部资产融合
 
@@ -173,7 +174,7 @@ assets/
 
 - [ ] 与用户的关键确认项已对齐（§2.1）  
 - [ ] `setup-matt-pocock-skills` 决策已落盘；`## Agent skills` 路径真实  
-- [ ] 根：`AGENTS` / `CLAUDE` / `CONTEXT` / `LANGUAGES` /（`CONTEXT-MAP`）  
+- [ ] 根：`AGENTS` / `CLAUDE` / `CONTEXT` / `LANGUAGES` /（`CONTEXT-MAP`）；AGENTS/CLAUDE 已引用 `humanizer-output-style` skill  
 - [ ] `docs/agents` **无** `language.md`、`context.md`  
 - [ ] `docs/output/{report,prd,handoff}` · `docs/commit-history` · `adr` · `knowledge` · `glossary`  
 - [ ] 若 #9 启用：`docs/agents/voice.md` 已产出  
@@ -183,7 +184,34 @@ assets/
 
 ---
 
-## 3. Phase B — README Polish
+### 2.8 Humanizer Skill 安装
+
+> 确保项目 Agent 默认使用 `humanizer-output-style` 语气（非 AI 腔）。两种方案：
+
+| 方案 | 做法 | 适用 |
+|------|------|------|
+| **A · 引用全局** | 在项目 `AGENTS.md` / `CLAUDE.md` 顶部写 `> **Output Style**: humanizer-output-style skill → ~/.config/opencode/skills/...` | 单人单机，无需独立维护 |
+| **B · 复制到项目** | 复制 SKILL.md 到 `.opencode/skills/humanizer-output-style/SKILL.md` | 团队共用，或需独立调整语气 |
+
+**AGENTS.md 引用模板**（方案 A）：
+
+```markdown
+# AGENTS.md
+
+> **Output Style**: `humanizer-output-style` skill — 统一语气风格与去 AI 味配置。加载路径：`skills/humanizer-output-style/SKILL.md`
+```
+
+**CLAUDE.md 引用模板**（方案 A）：
+
+```markdown
+# CLAUDE.md
+
+> **Output Style**: `humanizer-output-style` — see `~/.claude/skills/humanizer-output-style/SKILL.md`
+```
+
+若项目选了方案 B，Agent 复制后需用 `read` 验证复制件中文可读。
+
+---
 
 > 结构、样式、图片、配图、**Preview**、Showcase **同属本 Phase**。  
 > 执行时加载全局 skill：**`readme-polish`**。
@@ -348,7 +376,8 @@ Preview 源码落在产品层（如 `src/website-preview/`、`src/.../outputs/`�
 1. 先与我确认：Issue tracker、triage、单/多 CONTEXT、外部资产清单、产品层根目录、项目预期、handoff 形式（A–E 场景，见 `docs/agents/handoff.md`）。
 2. 运行 setup-matt-pocock-skills（一次只确认一项，确认后再写盘）。
 3. 落盘根入口：AGENTS / CLAUDE / CONTEXT / LANGUAGES /（CONTEXT-MAP）/ README 初稿；
-   若 §2.1 #9 启用，另产出 `docs/agents/voice.md`（项目级输出语气与格式规范，覆盖全局 caveman/humanizer）。
+    在 AGENTS.md / CLAUDE.md 顶部引用 `humanizer-output-style` skill（见 §2.8）；
+    若 §2.1 #9 启用，另产出 `docs/agents/voice.md`（项目级输出语气与格式规范，覆盖全局 humanizer）。
 4. docs 骨架：agents（仅 workflow/deliver/archive/domain/issue-tracker/triage-labels）、
    adr、knowledge、glossary、commit-history、output/{report,prd,handoff}。
    不要创建 docs/agents/language.md 或 docs/agents/context.md。
@@ -444,7 +473,7 @@ shipped | partial | reverted
 
 - [ ] 需求 / tracker / CONTEXT 形态 / 外部资产清单已与用户确认  
 - [ ] `setup-matt-pocock-skills` 完成并写盘  
-- [ ] 根：`AGENTS` / `CLAUDE` / `CONTEXT` / `LANGUAGES` /（`CONTEXT-MAP`）  
+- [ ] 根：`AGENTS` / `CLAUDE` / `CONTEXT` / `LANGUAGES` /（`CONTEXT-MAP`）；AGENTS/CLAUDE 已引用 `humanizer-output-style` skill  
 - [ ] `docs/agents` 无 language.md、无 context.md  
 - [ ] `docs/output/prd` · `handoff` · `docs/commit-history`  
 - [ ] `assets/` 就绪；外部资产已融合或迁移关闭  

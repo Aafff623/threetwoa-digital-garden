@@ -1,7 +1,7 @@
 # voice.md — 项目输出语气与格式规范
 
 > 本仓 Agent 对外输出（README / commit / handoff / 文档 / 面向用户的回复）默认遵循的语气与格式。
-> **与全局的关系**：全局有 `caveman`（压缩输出）等通用 skill，规划中的 `humanizer` 负责把 AI 输出"人化 / 规范化"；本文件是**项目级覆盖**——项目内冲突时以本文件为准。
+> **与全局的关系**：全局有 `humanizer-output-style` skill（路径 `~/.config/opencode/skills/humanizer-output-style/SKILL.md`）负责统一输出语气与去 AI 味；本文件是**项目级覆盖**——项目内冲突时以本文件为准。
 > **初始化时**：按 `project-init.md` §2.1 #9 与用户确认后填写；每项目语气不同，**勿照抄**。
 
 ---
