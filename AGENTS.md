@@ -30,7 +30,7 @@
 - 调研报告入 `docs/output/report/{theme}/`。
 - PRD 入 `docs/output/prd/{theme}/`。
 - Handoff 入 `docs/output/handoff/{theme}/`（职责见 `docs/agents/handoff.md`）。
-- 演示文稿入 `assets/decks/`。
+- 演示文稿入 `assets/theme/ppt/`，逐字稿 / 项目介绍稿入 `assets/theme/script/`。
 - Commit 攒批入 `docs/commit-history/`（维护见 `docs/knowledge/project-init.md` §5.1）。
 - ADR 入 `docs/adr/000N-kebab-title.md`。
 - 可迁移知识入 `docs/knowledge/`。
@@ -64,7 +64,8 @@
 | 文档头像 | `assets/images/avatar/` |
 | 文档图标 | `assets/images/icon/` |
 | 演示视频 | `assets/video/` |
-| 演示文稿 | `assets/decks/` |
+| 演示文稿 | `assets/theme/ppt/` |
+| 逐字稿 / 介绍稿 | `assets/theme/script/` |
 
 ## 3. 日常业务流
 

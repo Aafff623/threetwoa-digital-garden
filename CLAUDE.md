@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+> **Output Style**: `humanizer-output-style` skill — 统一语气与去 AI 味。详见 `skills/humanizer-output-style/SKILL.md`
+
 ## Project overview
 
 Threetwoa Digital Garden — a personal blog and life-archive frontend built with Next.js 16 App Router, React 19, TypeScript 5 and Tailwind CSS 4. It is the public-facing piece of a three-part system: this Blog (Next.js), an Admin dashboard (Vue, spring_admin), and a Java API server (spring_server).

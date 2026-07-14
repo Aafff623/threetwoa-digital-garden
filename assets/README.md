@@ -12,6 +12,8 @@
 | `images/avatar/` | 文档或演示槽位头像 |
 | `images/icon/` | 文档或演示槽位图标 |
 | `video/` | 演示视频 |
+| `theme/ppt/` | 演示文稿 |
+| `theme/script/` | 逐字稿 / 项目介绍稿 |
 
 ## 当前状态
 

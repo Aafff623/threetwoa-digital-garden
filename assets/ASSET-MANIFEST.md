@@ -13,6 +13,8 @@
 | `assets/images/avatar/` | 文档或演示槽位头像 |
 | `assets/images/icon/` | 文档或演示槽位图标 |
 | `assets/video/` | 演示视频 |
+| `assets/theme/ppt/` | 演示文稿 |
+| `assets/theme/script/` | 逐字稿 / 项目介绍稿 |
 
 ## README 契约图
 
