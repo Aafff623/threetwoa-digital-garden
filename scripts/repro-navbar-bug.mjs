@@ -8,7 +8,8 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1600, height: 900 } });
 
-  await page.goto("http://localhost:3000", { waitUntil: "networkidle" });
+  // domcontentloaded: dev 模式下 HMR websocket 长连，networkidle 永不触发会 30s 超时。
+  await page.goto("http://localhost:3000", { waitUntil: "domcontentloaded" });
   await page.waitForTimeout(1000);
 
   // Find the Words category button
