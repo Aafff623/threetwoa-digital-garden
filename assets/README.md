@@ -5,23 +5,23 @@
 
 ## 目录约定
 
-| 路径 | 用途 |
-|---|---|
-| `backup/` | 上游 zip / 原版源码只读备份 |
-| `images/readme/` | README 配图：banner、features、architecture、tech-stack、workflow、structure、preview-*、showcase-* |
-| `images/avatar/` | 文档或演示槽位头像 |
-| `images/icon/` | 文档或演示槽位图标 |
-| `video/` | 演示视频 |
-| `theme/ppt/` | 演示文稿 |
-| `theme/script/` | 逐字稿 / 项目介绍稿 |
+| 路径 | 用途 | 何时建 |
+|---|---|---|
+| `backup/` | 上游 zip / 原版只读备份 | 有上游原版时 |
+| `images/readme/` | README 契约图 + Showcase | 默认 |
+| `images/avatar/` | 文档/演示头像 | 有图时 |
+| `images/icon/` | 文档/演示图标 | 有图时 |
+| `video/` | 演示视频 | 有视频时 |
+| `ppt/` | 演示文稿源文件 | 做演示时 |
+| `speeches/` | 逐字稿 / 介绍稿 | 有稿件时 |
+
+空槽**不**用 `.gitkeep` 占位。已移除空的 `theme/`、`video/`、`images/icon/`。
 
 ## 当前状态
 
-- `assets/images/readme/showcase-*.png` 已用 Playwright 从本地 dev server 截取。
-- `assets/images/readme/` 已包含 banner、features、architecture、tech-stack、workflow、structure 等契约图（含对应 `_svg/` 可编辑源）。
-- `assets/images/avatar/avtor-boy.jpg` 与 `avtor-girl.jpg` 已归位为文档/演示头像。
-- 原散落在 `assets/` 根目录的产品 UI 资源（`anime-dock.png`、`footer-peekers.png`）已迁至 `public/assets/`，组件引用已同步更新。
-- 原 `assets/` 根目录下与 `public/assets/` 重复的演示媒体文件与未引用文件已清理。
+- `images/readme/`：banner · features · architecture · tech-stack · workflow · structure 齐全；`showcase-*.png` 为 Playwright 真机截图。
+- `images/avatar/`：`avtor-boy.jpg` · `avtor-girl.jpg`。
+- 本仓**无** Preview Gallery 壳图（单产品，Showcase 为主）。
+- 出图 brief / Prompt：`docs/outputs/prd/readme-diagrams/`。
 
-完整资产清单见 [`ASSET-MANIFEST.md`](./ASSET-MANIFEST.md)。  
-出图 brief、Prompt 与验收清单见 `docs/output/prd/readme-diagrams/readme-diagram-brief.md`。
+完整清单见 [`ASSET-MANIFEST.md`](./ASSET-MANIFEST.md)。

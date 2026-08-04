@@ -1,0 +1,170 @@
+{
+  "label": "diagnostic-production-reduced-motion",
+  "base": "http://localhost:3000",
+  "measuredAt": "2026-07-14T09:55:28.070Z",
+  "protocol": "Ctrl+F5 analogue (cache disabled + hard reload) → click Link → measure path/content/quiet + longtasks in 2.5s window",
+  "results": [
+    {
+      "route": "writing",
+      "href": "/writing",
+      "clickToPathMs": 518,
+      "clickToContentMs": 537,
+      "clickToQuietMs": 1316,
+      "longTaskCount": 2,
+      "longTaskMaxMs": 61,
+      "longTaskTotalMs": 115,
+      "tasks": [
+        {
+          "start": 408,
+          "duration": 54
+        },
+        {
+          "start": 602,
+          "duration": 61
+        }
+      ],
+      "finalUrl": "http://localhost:3000/writing"
+    },
+    {
+      "route": "gallery",
+      "href": "/gallery",
+      "clickToPathMs": 366,
+      "clickToContentMs": 434,
+      "clickToQuietMs": 2421,
+      "longTaskCount": 4,
+      "longTaskMaxMs": 208,
+      "longTaskTotalMs": 515,
+      "tasks": [
+        {
+          "start": 481,
+          "duration": 104
+        },
+        {
+          "start": 618,
+          "duration": 208
+        },
+        {
+          "start": 1122,
+          "duration": 75
+        },
+        {
+          "start": 1537,
+          "duration": 128
+        }
+      ],
+      "finalUrl": "http://localhost:3000/gallery"
+    },
+    {
+      "route": "about",
+      "href": "/about",
+      "clickToPathMs": 3651,
+      "clickToContentMs": 3765,
+      "clickToQuietMs": 4440,
+      "longTaskCount": 3,
+      "longTaskMaxMs": 332,
+      "longTaskTotalMs": 456,
+      "tasks": [
+        {
+          "start": 3184,
+          "duration": 332
+        },
+        {
+          "start": 3520,
+          "duration": 71
+        },
+        {
+          "start": 3704,
+          "duration": 53
+        }
+      ],
+      "finalUrl": "http://localhost:3000/about"
+    },
+    {
+      "route": "love",
+      "href": "/love",
+      "clickToPathMs": 201,
+      "clickToContentMs": 273,
+      "clickToQuietMs": 791,
+      "longTaskCount": 1,
+      "longTaskMaxMs": 71,
+      "longTaskTotalMs": 71,
+      "tasks": [
+        {
+          "start": 111,
+          "duration": 71
+        }
+      ],
+      "finalUrl": "http://localhost:3000/love"
+    },
+    {
+      "route": "footprints",
+      "href": "/footprints",
+      "clickToPathMs": 165,
+      "clickToContentMs": 180,
+      "clickToQuietMs": 559,
+      "longTaskCount": 0,
+      "longTaskMaxMs": 0,
+      "longTaskTotalMs": 0,
+      "tasks": [],
+      "finalUrl": "http://localhost:3000/footprints"
+    },
+    {
+      "route": "pond",
+      "href": "/pond",
+      "clickToPathMs": 409,
+      "clickToContentMs": 672,
+      "clickToQuietMs": 1284,
+      "longTaskCount": 3,
+      "longTaskMaxMs": 124,
+      "longTaskTotalMs": 323,
+      "tasks": [
+        {
+          "start": 240,
+          "duration": 124
+        },
+        {
+          "start": 409,
+          "duration": 105
+        },
+        {
+          "start": 527,
+          "duration": 94
+        }
+      ],
+      "finalUrl": "http://localhost:3000/pond"
+    },
+    {
+      "route": "home-from-writing",
+      "href": "/",
+      "clickToPathMs": 858,
+      "clickToContentMs": 1011,
+      "clickToQuietMs": 1921,
+      "longTaskCount": 5,
+      "longTaskMaxMs": 166,
+      "longTaskTotalMs": 455,
+      "tasks": [
+        {
+          "start": 157,
+          "duration": 58
+        },
+        {
+          "start": 321,
+          "duration": 51
+        },
+        {
+          "start": 647,
+          "duration": 166
+        },
+        {
+          "start": 933,
+          "duration": 78
+        },
+        {
+          "start": 1081,
+          "duration": 102
+        }
+      ],
+      "finalUrl": "http://localhost:3000/"
+    }
+  ]
+}

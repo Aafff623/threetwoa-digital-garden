@@ -1,4 +1,4 @@
-# Asset Manifest — Threetwoa Digital Garden
+﻿# Asset Manifest — Threetwoa Digital Garden
 
 > 本文件记录 `assets/` 目录下所有非代码媒体的来源、用途与维护状态。  
 > 应用自身的静态资源见 `public/assets/`，不在本清单范围内。
@@ -13,8 +13,8 @@
 | `assets/images/avatar/` | 文档或演示槽位头像 |
 | `assets/images/icon/` | 文档或演示槽位图标 |
 | `assets/video/` | 演示视频 |
-| `assets/theme/ppt/` | 演示文稿 |
-| `assets/theme/script/` | 逐字稿 / 项目介绍稿 |
+| `assets/ppt/` | 演示文稿 |
+| `assets/speeches/` | 逐字稿 / 项目介绍稿 |
 
 ## README 契约图
 
@@ -54,6 +54,6 @@
 
 ## 维护责任
 
-- 新增 README 配图必须按 [readme-diagram-brief.md](../docs/output/prd/readme-diagrams/readme-diagram-brief.md) 的契约文件名落盘。
+- 新增 README 配图必须按 [readme-diagram-brief.md](../docs/outputs/prd/readme-diagrams/readme-diagram-brief.md) 的契约文件名落盘。
 - Showcase 截图更新后需同步更新本清单的 "Showcase 截图" 表。
 - 可编辑 SVG 源文件应随 PNG 一起更新，确保未来可修改。

@@ -4,9 +4,11 @@
 
 ## 1. Tracker 形态
 
-本仓库使用 **本地 Markdown Issue tracker**，路径：
+本仓库使用 **本地 Markdown Issue tracker**：
 
 ```text
+.scratch/<feature>/
+# 或兼容单文件：
 .scratch/{feature-name}.md
 ```
 
@@ -32,15 +34,14 @@ needs-triage | needs-info | ready-for-agent | ready-for-human | wontfix
 ## 3. 与 PRD / Handoff 的关系
 
 - Issue 是触发点，通常对应一个 Epic。
-- 明确后产出 `docs/output/prd/{theme}/prd.md`。
-- 任务拆解后产出 `docs/output/handoff/{theme}/{task}.md`。
+- 明确后产出 `docs/outputs/prd/{theme}/prd.md`。
+- 任务拆解后产出 `docs/outputs/handoff/{theme}/{task}.md`。
 
 ## 4. 状态流转
 
 ```text
-needs-triage → ready-for-agent → awaiting-review → done
-       ↑            ↓                  ↓
-   needs-info    ready-for-human    archived
+needs-triage → needs-info → ready-for-agent → （实施）→ ready-for-human / closed
+                                    ↘ wontfix
 ```
 
-状态含义见 `triage-labels.md`。
+标签词汇见 `triage-labels.md`。

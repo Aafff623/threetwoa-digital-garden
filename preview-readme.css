@@ -1,0 +1,108 @@
+/* README 本地预览壳样式 · 三两园 */
+:root {
+  --bg: #f6f4ef;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e7e2d8;
+  --link: #3b6d5a;
+  --accent: #5f7a66;
+  --toolbar: rgba(255, 254, 251, 0.94);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(143, 175, 150, 0.14), transparent 42%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: var(--toolbar);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+.toolbar h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.toolbar .hint {
+  flex: 1;
+  min-width: 220px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.toolbar button {
+  border: 1px solid var(--border);
+  background: #fffefb;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.toolbar button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.toolbar > a {
+  color: var(--link);
+  font-size: 13px;
+  text-decoration: none;
+}
+.toolbar > a:hover { text-decoration: underline; }
+.status {
+  padding: 10px 20px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+.status.error {
+  background: #fff8f8;
+  color: #b42318;
+}
+.status.ok {
+  background: #f3faf4;
+  color: #1a7f37;
+}
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  background: #fffefb;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 2.25rem 3rem;
+}
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+}
+.markdown-body table {
+  display: table;
+  width: 100%;
+}
+.markdown-body blockquote {
+  border-left: 4px solid #c99b9b;
+}
+.footer-note {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}

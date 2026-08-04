@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # 三两园 · Sanliang Garden
 
@@ -72,6 +72,15 @@ This is not a generic CMS skin or an infinite photo feed. It is a **digital gard
 | **Motion** | Lenis smooth scroll, GSAP ScrollTrigger scroll-driven animation | ✅ |
 
 > **Scope**: v0.1 targets a single personal site. The Admin dashboard manages content; multi-tenant and team collaboration are out of scope.
+
+## Preview
+
+This is a **single-product** app — no asset Gallery / component preview site (`preview-shell.png` not used). Product demos live under **Showcase** below. To preview README rendering locally:
+
+```bash
+python -m http.server 8095
+# open http://127.0.0.1:8095/preview-readme.html
+```
 
 ## Showcase
 
@@ -245,7 +254,7 @@ src/
 | Project standards | [`AGENTS.md`](./AGENTS.md) · [`CONTEXT.md`](./CONTEXT.md) · [`LANGUAGES.md`](./LANGUAGES.md) | Agent constraints, domain facts, shared vocabulary |
 | Chinese README | [`README.md`](./README.md) | 默认中文文档 |
 | Init decision | [`docs/adr/0001-apply-project-init.md`](./docs/adr/0001-apply-project-init.md) | project-init & branch unification ADR |
-| README diagram brief | [`docs/output/prd/readme-diagrams/readme-diagram-brief.md`](./docs/output/prd/readme-diagrams/readme-diagram-brief.md) | Section plan, asset contract |
+| README diagram brief | [`docs/outputs/prd/readme-diagrams/readme-diagram-brief.md`](./docs/outputs/prd/readme-diagrams/readme-diagram-brief.md) | Section plan, asset contract |
 | Assets note | [`assets/README.md`](./assets/README.md) · [`assets/ASSET-MANIFEST.md`](./assets/ASSET-MANIFEST.md) | Media conventions & manifest |
 
 ## License

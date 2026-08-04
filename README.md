@@ -27,15 +27,16 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 </p>
 
 <p align="center">
-  <a href="#为什么">🏯 为什么</a> ·
-  <a href="#功能">✨ 功能</a> ·
-  <a href="#效果展示">📸 效果展示</a> ·
-  <a href="#快速开始">🚀 快速开始</a> ·
-  <a href="#架构">🏗️ 架构</a> ·
-  <a href="#访问链路">🧭 访问链路</a> ·
-  <a href="#目录结构">📂 目录结构</a> ·
-  <a href="#路线图">🗺️ 路线图</a> ·
-  <a href="#文档">📚 文档</a>
+  <a href="#为什么">为什么</a> ·
+  <a href="#功能">功能</a> ·
+  <a href="#preview">Preview</a> ·
+  <a href="#showcase">Showcase</a> ·
+  <a href="#快速开始">快速开始</a> ·
+  <a href="#架构">架构</a> ·
+  <a href="#访问链路">访问链路</a> ·
+  <a href="#目录结构">目录结构</a> ·
+  <a href="#路线图">路线图</a> ·
+  <a href="#文档">文档</a>
 </p>
 
 ---
@@ -73,7 +74,24 @@ Next.js 16 App Router · React 19 · TypeScript 5 · Tailwind CSS 4 · GSAP + Le
 
 > **边界**：v0.1 面向单人站点。后台 Admin 负责内容管理；多租户与团队协作不在当前范围。
 
-## 效果展示
+## Preview
+
+本仓是**单产品 Web 应用**，不维护资产 Gallery / 组件预览站（无 `preview-shell.png`、无 `src/website-preview/`）。
+
+对外演示以下方 **Showcase** 真机相册为主。若只需校对 README 排版，使用仓库根的本地预览壳：
+
+```bash
+# 在仓库根执行（勿用 file://）
+python -m http.server 8095
+# 浏览器打开 http://127.0.0.1:8095/preview-readme.html
+```
+
+| 产物 | 回答的问题 |
+|---|---|
+| `preview-readme.html` | README 渲染出来长什么样？ |
+| `showcase-*.png` | 产品主链路长什么样？ |
+
+## Showcase
 
 以下为 Playwright 在 `1600×900` 视口下的真机截图。完成本地 [快速开始](#快速开始) 后，可按推荐路径自行走查。
 
@@ -145,6 +163,8 @@ npm run dev
 | `npm run lint` | ESLint（core-web-vitals + TypeScript） |
 | `npm run build` | 生产构建（`output: "standalone"`） |
 | `npm run start` | 启动生产服务 |
+| `npm test` | Vitest |
+| `python -m http.server 8095` | README 本地预览壳 |
 
 提交前请至少执行 `npm run lint` 与 `npm run build`。
 
@@ -208,16 +228,22 @@ Client Component
 </p>
 
 ```text
-src/
-├─ api/              # 统一 Axios 与领域接口
-├─ app/              # App Router 页面、布局、主题 CSS
-│  └─ styles/themes/ # life · swiss · minimalist · glass · brutalist
-├─ components/       # 页面区块与可复用 UI
-├─ hooks/            # 客户端数据与配置 Hook
-├─ icon/             # 图标映射
-├─ interface/        # 共享 TypeScript 类型
-├─ mock/             # 离线 / 失败兜底数据
-└─ data/             # 轻量静态内容（品牌身份、文章、相册等）
+spring_blogs/
+├─ src/                    # 产品层
+│  ├─ api/                 # 统一 Axios 与领域接口
+│  ├─ app/                 # App Router 页面、布局、主题 CSS
+│  │  └─ styles/themes/    # life · swiss · minimalist · glass · brutalist
+│  ├─ components/          # 页面区块与可复用 UI
+│  ├─ hooks/ · data/ · mock/
+│  └─ icon/ · interface/
+├─ assets/images/readme/   # README 契约图 + Showcase
+├─ docs/
+│  ├─ agents/              # 任务流（无 language.md / context.md）
+│  ├─ adr/ · glossary/ · knowledge/
+│  └─ outputs/             # report · prd · handoff · commit-history
+├─ preview-readme.{html,css,js}
+├─ AGENTS.md · CONTEXT.md · LANGUAGES.md · CLAUDE.md
+└─ public/                 # 应用静态资源
 ```
 
 **约定**
@@ -226,6 +252,17 @@ src/
 - 品牌身份统一走 [`src/data/identity.ts`](./src/data/identity.ts)，禁止硬编码
 - 新路由遵循 `src/app/{route}/page.tsx`
 - 首屏优先服务端获取并附带本地回退；需要交互时再用客户端 Hook
+
+### Key docs
+
+| 文档 | 路径 |
+|---|---|
+| Agent 门禁 | [`AGENTS.md`](./AGENTS.md) |
+| 领域事实 | [`CONTEXT.md`](./CONTEXT.md) |
+| 共享用词 | [`LANGUAGES.md`](./LANGUAGES.md) |
+| 任务流 | [`docs/agents/workflow.md`](./docs/agents/workflow.md) |
+| ADR | [`docs/adr/`](./docs/adr/) |
+| 配图 brief | [`docs/outputs/prd/readme-diagrams/`](./docs/outputs/prd/readme-diagrams/) |
 
 ## 路线图
 
@@ -244,8 +281,9 @@ src/
 | 开发约定 | [`CLAUDE.md`](./CLAUDE.md) | 架构、命令、环境变量与编码规范 |
 | 项目标准 | [`AGENTS.md`](./AGENTS.md) · [`CONTEXT.md`](./CONTEXT.md) · [`LANGUAGES.md`](./LANGUAGES.md) | Agent 约束、域事实、共享词表 |
 | 英文 README | [`README.en.md`](./README.en.md) | English documentation |
-| 初始化决策 | [`docs/adr/0001-apply-project-init.md`](./docs/adr/0001-apply-project-init.md) | project-init 与分支统一 ADR |
-| README 配图 brief | [`docs/output/prd/readme-diagrams/readme-diagram-brief.md`](./docs/output/prd/readme-diagrams/readme-diagram-brief.md) | 章节与配图契约 |
+| Init 迁移 ADR | [`docs/adr/0003-migrate-outputs-plural-and-cursor-rules.md`](./docs/adr/0003-migrate-outputs-plural-and-cursor-rules.md) | `docs/outputs` + Cursor MDC |
+| 五维调研 | [`docs/outputs/report/project-init-full-2026-08-04/`](./docs/outputs/report/project-init-full-2026-08-04/) | Full 模式老项目调研 |
+| README 配图 brief | [`docs/outputs/prd/readme-diagrams/readme-diagram-brief.md`](./docs/outputs/prd/readme-diagrams/readme-diagram-brief.md) | 章节与配图契约 |
 | 资源说明 | [`assets/README.md`](./assets/README.md) · [`assets/ASSET-MANIFEST.md`](./assets/ASSET-MANIFEST.md) | 媒体约定与资产清单 |
 
 ## 开源说明
