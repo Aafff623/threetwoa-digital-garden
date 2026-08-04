@@ -1,10 +1,8 @@
 ﻿# README Diagram Brief — Threetwoa Digital Garden
 
-> Phase B asset contract for `README.md`.  
-> Final images: `assets/images/readme/`.  
-> SVG sources: `assets/images/readme/_svg/`（已随本次配图包落盘，可编辑源）。  
-> **GPT 出图完整说明**（基本信息 / 详细描述 / 参照 / 元素 / Prompt）：  
-> [`readme-image-prompts.md`](./readme-image-prompts.md)
+> Phase B asset contract for `README.md`。  
+> Final images: `assets/images/readme/`。  
+> **GPT / MiniMax 出图完整说明**：[`readme-image-prompts.md`](./readme-image-prompts.md)
 
 ---
 
@@ -13,18 +11,18 @@
 | # | Section | Anchor | Assets |
 |---:|---|---|---|
 | 1 | Header | — | `banner.png` + shields |
-| 2 | Why | `#why` | narrative only |
-| 3 | Features | `#features` | `features.png` + table |
-| 4 | Showcase | `#showcase` | `showcase-*.png` |
-| 5 | Quick Start | `#quick-start` | commands |
-| 6 | Architecture | `#architecture` | `architecture.png` + `tech-stack.png` |
-| 7 | Workflow | `#workflow` | `workflow.png` |
-| 8 | Structure | `#structure` | `structure.png` + tree |
-| 9 | Roadmap | `#roadmap` | status table |
-| 10 | Docs | `#docs` | links |
-| 11 | License | `#license` | legal note |
+| 2 | 为什么 | `#为什么` | narrative only |
+| 3 | 功能 | `#功能` | `features.png` + table |
+| 4 | Preview | `#preview` | 书面声明省略 Gallery；`preview-readme.*` 启动说明 |
+| 5 | Showcase | `#showcase` | `showcase-*.png`（13） |
+| 6 | 快速开始 | `#快速开始` | commands |
+| 7 | 架构 | `#架构` | `architecture.png` + `tech-stack.png` |
+| 8 | 访问链路 | `#访问链路` | `workflow.png` |
+| 9 | 目录结构 | `#目录结构` | `structure.png` + tree（禁止 `<details>`） |
+| 10 | 路线图 | `#路线图` | status table |
+| 11 | 文档 | `#文档` | links |
 
-**Preview**: single-product app — no Preview gallery shell; Showcase only.
+**Preview**：单产品 Web 应用 — **无** Preview Gallery / `preview-shell.png`；对外以 Showcase 为主。
 
 ---
 
@@ -32,28 +30,35 @@
 
 ### 2.1 Diagrams / banner
 
-| File | Purpose | Size | Method | Status |
+| File | Purpose | Size（磁盘） | Method | Status |
 |---|---|---|---|---|
-| `banner.png` | README header | 1600×533 | GPT upgraded zip | ✅ Upgraded |
-| `features.png` | Feature map | 1600×900 | GPT upgraded zip | ✅ Upgraded |
-| `architecture.png` | Three-tier system | 1600×900 | GPT upgraded zip | ✅ Upgraded |
-| `tech-stack.png` | Frontend layers | 1600×900 | GPT upgraded zip | ✅ Upgraded |
-| `workflow.png` | Visitor journey | 1600×900 | GPT upgraded zip | ✅ Upgraded |
-| `structure.png` | Repo layout | 1536×1024 | GPT upgraded zip | ✅ Upgraded |
+| `banner.png` | README header | 2172×724 | GPT upgraded zip | ✅ |
+| `features.png` | Feature map | 1672×941 | GPT upgraded zip | ✅ |
+| `architecture.png` | Three-tier system | 1672×941 | GPT upgraded zip | ✅ |
+| `tech-stack.png` | Frontend layers | 1672×941 | GPT upgraded zip | ✅ |
+| `workflow.png` | Visitor journey | 1672×941 | GPT upgraded zip | ✅ |
+| `structure.png` | Repo layout | 1536×1024 | GPT upgraded zip | ✅ |
 
-Source package: `threetwoa-digital-garden-readme-assets-upgraded.zip` → overwrite `assets/images/readme/` (showcase screenshots left untouched).  
 Legacy `_svg/` drafts removed after upgraded PNGs landed.  
-`README.md` embeds all six diagrams via centered `<img src="assets/images/readme/…">` plus showcase captures.
+`README.md` / `README.en.md` 均嵌入上述六图 + Showcase。
 
-### 2.2 Showcase (Playwright)
+### 2.2 Showcase (Playwright · 1600×900)
 
 | File | Scene | Status |
 |---|---|---|
-| `showcase-home.png` | Home / Landing | ✅ Present |
-| `showcase-writing.png` | Writing list | ✅ Present |
-| `showcase-article-detail.png` | Article detail | ✅ Present |
-| `showcase-gallery.png` | Gallery | ✅ Present |
-| `showcase-about.png` | About | ✅ Present |
+| `showcase-home.png` | Home / Landing | ✅ |
+| `showcase-writing.png` | Writing list | ✅ |
+| `showcase-article-detail.png` | Article detail | ✅ |
+| `showcase-gallery.png` | Gallery | ✅ |
+| `showcase-about.png` | About | ✅ |
+| `showcase-letter.png` | Letter / time capsule | ✅ |
+| `showcase-archive.png` | Yearly archive | ✅ |
+| `showcase-notes.png` | Notes | ✅ |
+| `showcase-now.png` | Now | ✅ |
+| `showcase-pond.png` | Pond guestbook | ✅ |
+| `showcase-footprints.png` | Footprints | ✅ |
+| `showcase-love.png` | Love archive | ✅ |
+| `showcase-achievements.png` | Achievements | ✅ |
 
 ---
 
@@ -64,41 +69,32 @@ Legacy `_svg/` drafts removed after upgraded PNGs landed.
 | Background | Warm cream `#F7F4EE` → parchment `#EDE8DF` |
 | Card surface | Off-white `#FFFEFB` |
 | Accents | Sage / sky / violet / amber / rose (by layer role) |
-| Typography | Inter (UI) · JetBrains Mono (paths) |
+| Typography | Editorial serif for brand · clean sans for UI labels |
 | Tone | Editorial digital garden — not cyber-dark |
 
 ---
 
-## 4. Banner prompt (source)
+## 4. Acceptance
 
-```text
-A wide cinematic banner for a GitHub project README (horizontal landscape).
-Project: Threetwoa Digital Garden — personal blog and life archive.
-Soft editorial digital-garden still life: floating polaroid frames, folded letters
-with wax seals, map pins on a muted globe, sage-green leafy vines, faint code-editor
-glow on paper, grid-notebook texture.
-Palette: warm cream, sage green, dusty rose, charcoal, parchment.
-No faces, no readable text, no logos, no neon, no corporate stock look.
-```
-
----
-
-## 5. Acceptance
-
-- [x] README sections match the map above
-- [x] All assets under `assets/images/readme/`
-- [x] SVG sources under `assets/images/readme/_svg/`
-- [x] Showcase captures present (no empty placeholders)
-- [x] Quick Start commands copy-pasteable
-- [x] No `docs/images/` paths
-- [x] Docs table only links real files
-- [x] Badges: `for-the-badge`, accurate stack versions, proprietary license, active status
+- [x] README 章节与上表地图一致（含 Preview 省略声明）
+- [x] 全部契约图在 `assets/images/readme/`
+- [x] `_svg/` 已退役（以 Prompt 为改图源）
+- [x] Showcase 13 张齐全（无空占位）
+- [x] Quick Start 命令可复制
+- [x] 无 `docs/images/` 路径
+- [x] Docs 表仅链真实文件
+- [x] 徽章：`for-the-badge`；License = MIT；栈版本与仓一致
+- [x] 目录结构 / Key docs **直接呈现**（无 `<details>`）
 
 ---
 
 ## 2026-08-04 project-init Full
 
-- 契约说明图与 Showcase 已齐全 → **本轮跳过重生图**。
-- 单产品：无 Preview Gallery；README 预览壳为根目录 preview-readme.*（端口 8095）。
-- 产物路径统一为 docs/outputs/（复数）。
+- 契约说明图与 Showcase 已齐全 → **跳过重生图**。
+- 单产品：无 Preview Gallery；README 预览壳为根目录 `preview-readme.*`（端口 8095）。
+- 产物路径统一为 `docs/outputs/`（复数）。
 
+## 2026-08-05 project-init 细致 Review
+
+- 抽检：五 MDC 与用户级 MATCH；根入口 / agents / ADR-0000 / voice / preview-readme 齐全。
+- 补齐：ASSET-MANIFEST · brief 与磁盘对齐；移除空 `backup/`；**不**重生图；**不**提交 src 业务 WIP。

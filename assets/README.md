@@ -15,13 +15,14 @@
 | `ppt/` | 演示文稿源文件 | 做演示时 |
 | `speeches/` | 逐字稿 / 介绍稿 | 有稿件时 |
 
-空槽**不**用 `.gitkeep` 占位。已移除空的 `theme/`、`video/`、`images/icon/`。
+空槽**不**用 `.gitkeep` 占位。已移除空的 `theme/`、`video/`、`images/icon/`、`backup/`。
 
 ## 当前状态
 
-- `images/readme/`：banner · features · architecture · tech-stack · workflow · structure 齐全；`showcase-*.png` 为 Playwright 真机截图。
+- `images/readme/`：6 张契约图（banner · features · architecture · tech-stack · workflow · structure）齐全；`showcase-*.png` 共 13 张（Playwright 真机截图）。
 - `images/avatar/`：`avtor-boy.jpg` · `avtor-girl.jpg`。
-- 本仓**无** Preview Gallery 壳图（单产品，Showcase 为主）。
+- 本仓**无** Preview Gallery 壳图（单产品，Showcase 为主）；README 本地预览壳见根 `preview-readme.html`（端口 8095）。
 - 出图 brief / Prompt：`docs/outputs/prd/readme-diagrams/`。
+- `_svg/` 可编辑源已随升级 PNG 移除；改图走 Prompt 重生。
 
 完整清单见 [`ASSET-MANIFEST.md`](./ASSET-MANIFEST.md)。

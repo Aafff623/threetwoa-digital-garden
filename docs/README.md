@@ -18,6 +18,7 @@
 ## 当前状态
 
 - 2026-08-04：Full init 迁移完成（ADR-0003）；`docs/output` → `docs/outputs`。
+- 2026-08-05：细致 Review 抽检补缺（清单/brief 对齐；删空 `assets/backup/`）→ `outputs/report/project-init-refine-2026-08-05/`。
 - 调研报告：`outputs/report/project-init-full-2026-08-04/`。
 - README 配图 brief：`outputs/prd/readme-diagrams/`。
 - 本地 Issue：`.scratch/`（见 `agents/issue-tracker.md`）。
